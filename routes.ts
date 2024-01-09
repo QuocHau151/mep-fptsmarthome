@@ -9,6 +9,8 @@ export const publicRoutes = [
   "/giai-phap",
   "/can-ho-mau",
   "/ho-tro",
+  "/new-verification",
+  "/admin",
 ];
 
 /**
@@ -16,7 +18,13 @@ export const publicRoutes = [
  * These routes will redirect logged in users to /settings
  * @type {string[]}
  */
-export const authRoutes = ["/login", "/register", "/auth-error"];
+export const authRoutes = [
+  "/login",
+  "/register",
+  "/auth-error",
+  "/reset",
+  "/new-password",
+];
 
 /**
  * The prefix for API authentication routes

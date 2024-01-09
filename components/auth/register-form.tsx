@@ -31,6 +31,7 @@ export default function RegisterForm() {
       email: "",
       password: "",
       name: "",
+      phone: "",
     },
   });
   const onSubmit = (values: z.infer<typeof RegisterSchema>) => {
@@ -43,6 +44,7 @@ export default function RegisterForm() {
       });
     });
   };
+
   return (
     <>
       <Form {...form}>
@@ -53,12 +55,28 @@ export default function RegisterForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="Họ và Tên"
+                      placeholder="Tên Khách Hàng"
+                      type="text"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            ></FormField>
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      disabled={isPending}
+                      placeholder="Số điện thoại khách hàng"
                       type="text"
                     />
                   </FormControl>
@@ -71,12 +89,11 @@ export default function RegisterForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="abc@gmail.com"
+                      placeholder="Email"
                       type="email"
                     />
                   </FormControl>
@@ -89,12 +106,11 @@ export default function RegisterForm() {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="*******"
+                      placeholder="Password"
                       type="password"
                     />
                   </FormControl>

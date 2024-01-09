@@ -29,6 +29,7 @@ const navs = [
 ];
 export default function Bottom_Nav() {
   const user = useCurrentUser();
+
   const handleLogout = () => {
     logout();
   };

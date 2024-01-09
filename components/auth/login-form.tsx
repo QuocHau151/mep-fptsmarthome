@@ -42,8 +42,8 @@ export default function LoginForm() {
     setSuccess("");
     startTransition(() => {
       login(values).then((data) => {
-        setSuccess((data as { success?: string }).success);
         setError(data?.error);
+        setSuccess(data?.success);
       });
     });
   };
@@ -100,7 +100,7 @@ export default function LoginForm() {
               </label>
             </div>
             <Link
-              href="/"
+              href="/reset"
               className="text-sm font-medium text-slate-500 leading-none"
             >
               Quên mật khẩu
@@ -108,11 +108,7 @@ export default function LoginForm() {
           </div>
           <FormError message={error || urlError} />
           <FormSuccess message={success || ""} />
-          <Button
-            type="submit"
-            disabled={isPending}
-            className="w-full h-12 bg-orange-600 "
-          >
+          <Button type="submit" disabled={isPending} className="w-full h-12  ">
             Đăng nhập
           </Button>
         </form>

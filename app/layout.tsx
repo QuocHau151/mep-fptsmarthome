@@ -4,6 +4,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
+import { Toaster } from "@/components/ui/sonner";
 
 const work_sans = Work_Sans({
   subsets: ["latin"],
@@ -23,7 +24,10 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <body className={work_sans.className}>{children}</body>
+        <body className={work_sans.className}>
+          <Toaster />
+          {children}
+        </body>
       </html>
     </SessionProvider>
   );
