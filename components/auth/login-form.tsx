@@ -37,7 +37,9 @@ export default function LoginForm() {
       password: "",
     },
   });
+
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
+    console.log(values);
     setError("");
     setSuccess("");
     startTransition(() => {
@@ -47,6 +49,7 @@ export default function LoginForm() {
       });
     });
   };
+
   return (
     <>
       <Form {...form}>

@@ -4,8 +4,8 @@ import React from "react";
 export default function Footer() {
   return (
     <div className="w-full h-[516px] bg-black text-gray-200 flex items-start justify-between px-[100px] py-[70px] mx-auto gap-6">
-      <div className="flex flex-col basis-1/4 items-center my-auto font-light">
-        <Image src="/logofptsh.png" width={250} height={100} alt="" />
+      <div className="flex flex-col basis-1/4 items-center my-auto font-light gap-10">
+        <Image src="/assets/logofptsh.png" width={500} height={200} alt="" />
         <h4 className="text-h6 text-center">Công ty Cổ phần Viễn thông FPT</h4>
       </div>
       <div className=" flex flex-col items-start gap-[35px] font-light basis-1/4 mr-[-50px]">

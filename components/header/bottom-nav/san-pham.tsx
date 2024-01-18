@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Product() {
   return (
-    <div className=" absolute top-12 left-0 bg-slate-300 w-[100vw] h-[500px] z-10">
-      <div className=" grid grid-cols-4 grid-rows-2 py-[50px] px-[100px] items-center justify-center gap-4 gap-y-10">
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+    <div className=" absolute top-12 left-0 bg-slate-300 w-[100vw] h-min z-10">
+      <div className=" grid grid-cols-4 grid-rows-2 py-[30px] px-[30px] items-center justify-center h-full gap-y-6 ">
+        <div className="flex items-start justify-center gap-2 ">
           <Image
             src="/assets/images/product/Bộ Điều Khiển Trung Tâm1.png"
             width={150}
@@ -28,7 +28,7 @@ export default function Product() {
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2 ">
           <Image
             src="/assets/images/product/1692088715-Light-Led-Bulb.png"
             width={150}
@@ -43,38 +43,38 @@ export default function Product() {
               Đèn thông minh
             </Link>
             <Link
-              href="/den-thong-minh/den-led-downlight-thong-minh"
+              href="/den-thong-minh/den-led-downlight"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Đèn LED Downlight Thông Minh
+              Đèn LED Downlight
             </Link>
             <Link
-              href="/den-thong-minh/den-led-bulb-thong-minh"
+              href="/den-thong-minh/den-led-bulb"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Đèn LED Bulb Thông Minhh
+              Đèn LED Bulb
             </Link>
             <Link
-              href="/den-thong/minh/den-led-panel-thong-minh"
+              href="/den-thong-minh/den-led-panel"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Đèn LED Panel Thông Minh
+              Đèn LED Panel
             </Link>
             <Link
-              href="/den-thong-minh/den-led-day-thong-minh"
+              href="/den-thong-minh/den-led-day"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Đèn LED Dây Thông Minh
+              Đèn LED Dây
             </Link>
             <Link
               href="/den-thong-minh/den-led-tracklight-thong-minh"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Đèn LED Tracklight Thông Minh
+              Đèn LED Tracklight
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2 ">
           <Image
             src="/assets/images/product/1692090463-Cam-bien-chuyen-dong.png"
             width={150}
@@ -114,7 +114,7 @@ export default function Product() {
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2">
           <Image
             src="/assets/images/product/1692151116-cong-tac-thong-minh-page-thiet-bi.png"
             width={150}
@@ -148,7 +148,7 @@ export default function Product() {
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2 ">
           <Image
             src="/assets/images/product/1692088539-Bo-Dieu-Khien-Rem.png"
             width={150}
@@ -160,7 +160,7 @@ export default function Product() {
               href="/bo-rem-cua"
               className="font-semibold hover:text-orange-600 text-2xl mb-4"
             >
-              Bộ rèm cửa
+              Bộ rèm cửa thông minh
             </Link>
             <Link
               href="/bo-rem-cua/dong-co-rem-thong-minh"
@@ -172,24 +172,25 @@ export default function Product() {
               href="/bo-rem-cua/bo-dieu-khien-rem-cua-thong-minh"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Bộ Điều Khiển Rèm Cửa Thông Minh
+              Bộ Điều Khiển Rèm Cửa
             </Link>
             <Link
               href="/bo-rem-cua/ray-rem-dien-thong-minh"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Ray Rèm Điện Thông Minh
+              Ray Rèm Điện
             </Link>
             <Link
               href="/bo-rem-cua/cong-tac-dieu-khien-cua-thong-minh"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Công Tắc Điều Khiển Rèm Cửa Thông Minh
+              Công Tắc Điều Khiển Rèm Cửa
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2">
           <Image
+            className=""
             src="/assets/images/product/1692151096-o-cam-thong-minh-page-thiet-bi.png"
             width={150}
             height={150}
@@ -200,13 +201,13 @@ export default function Product() {
               href="/phu-kien"
               className="font-semibold hover:text-orange-600 text-2xl mb-4"
             >
-              Phụ kiện
+              Phụ kiện thông minh
             </Link>
             <Link
               href="/phu-kien/o-cam-thong-minh-wifi"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Ổ Cắm Thông Minh WiFi
+              Ổ Cắm Thông Minh
             </Link>
             <Link
               href="/phu-kien/bo-dieu-khien-hong-ngoai"
@@ -234,7 +235,7 @@ export default function Product() {
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2 ">
           <Image
             src="/assets/images/product/1692088791-Khoa-YAle.png"
             width={150}
@@ -262,7 +263,7 @@ export default function Product() {
             </Link>
           </div>
         </div>
-        <div className="flex items-start justify-center gap-2 px-[20px]">
+        <div className="flex items-start justify-center gap-2 ">
           <Image
             src="/assets/images/product/1692088779-Camera-SE.png"
             width={150}

@@ -13,13 +13,18 @@ enum UserRole {
   USER
 }
 
-
+enum StateUser {
+ Pending
+ Done
+ Cancel
+}
 model User {
   id            String    @id @default(cuid())
   name          String?
   phone         String?
   email         String?   @unique
   emailVerified DateTime?
+  state         StateUser @default(Pending)
   image         String?
   password      String?
   role          UserRole @default(USER)
@@ -60,4 +65,17 @@ model PasswordResetToken {
   token String @unique
   expires DateTime
 @@unique([email, token])
+}
+
+model Product { 
+  id String @id @default(cuid())
+  name String?
+   category String?
+  price String?
+  image String?
+  type String?
+  color String?
+  button String?
+  power String?
+  expires DateTime?
 }

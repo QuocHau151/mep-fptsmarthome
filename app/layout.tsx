@@ -26,7 +26,7 @@ export default async function RootLayout({
       <html lang="en">
         <body className={work_sans.className}>
           <Toaster />
-          {children}
+          <main>{children}</main>
         </body>
       </html>
     </SessionProvider>

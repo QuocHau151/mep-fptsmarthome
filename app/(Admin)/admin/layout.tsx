@@ -1,6 +1,5 @@
-import LeftBar from "@/components/admin/left-bar";
-import NavBar from "@/components/admin/nav";
-
+import Header from "@/components/admin/header";
+import SideBar from "@/components/admin/sidebar";
 import { RoleGate } from "@/components/auth/role-gate";
 import { UserRole } from "@prisma/client";
 
@@ -13,9 +12,11 @@ export default function AdminLayout({
     <html lang="en">
       <body>
         <RoleGate allowedRole={UserRole.ADMIN}>
-          <LeftBar />
-          <NavBar />
-          {children}
+          <Header />
+          <div className="flex items-start">
+            <SideBar />
+            {children}
+          </div>
         </RoleGate>
       </body>
     </html>

@@ -75,7 +75,6 @@ export default function SecuritySolution() {
         style={{}}
         spaceBetween={30}
         slidesPerView={6}
-        centeredSlides={true}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,

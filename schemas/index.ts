@@ -31,3 +31,22 @@ export const NewPasswordSchema = z.object({
     message: "Minimum of 6 characters required",
   }),
 });
+export const ProductSchema = z.object({
+  name: z.string().min(1, {
+    message: "Name is required",
+  }),
+  price: z.string().min(1, {
+    message: "Price is required",
+  }),
+  category: z.string().min(1, {
+    message: "Category is required",
+  }),
+});
+export const UserSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  email: z.string(),
+  phone: z.string(),
+  verify: z.string(),
+  state: z.string(),
+});

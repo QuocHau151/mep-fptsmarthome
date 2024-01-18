@@ -17,8 +17,13 @@ export const RoleGate = ({ children, allowedRole }: RoleGateProps) => {
   const role = useCurrentRole();
   const router = useRouter();
   const handleLogout = async () => {
-    await logout();
-    await router.push("/login");
+    try {
+      await logout();
+      await router.push("/login");
+    } catch (error) {
+      console.error("Failed to log out:", error);
+      // You could also show an error message to the user here
+    }
   };
   if (role !== allowedRole) {
     return (

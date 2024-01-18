@@ -20,3 +20,19 @@ export const getUserById = async (id: string) => {
     return null;
   }
 };
+export const getInfoUser = async (id: string) => {
+  try {
+    const user = await db.user.findMany({
+      where: { id },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        phone: true,
+      },
+    });
+    return user;
+  } catch {
+    return null;
+  }
+};
