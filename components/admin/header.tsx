@@ -22,33 +22,32 @@ export default function Header() {
   function createMarkup(messages: any) {
     return { __html: messages };
   }
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      image: "",
-      title: "Congratulations!",
-      message: "Your OS has been updated.",
-      time: "1hr",
-    },
-  ]);
+  // const [messages, setMessages] = useState([
+  //   {
+  //     id: 1,
+  //     image: "",
+  //     title: "Congratulations!",
+  //     message: "Your OS has been updated.",
+  //     time: "1hr",
+  //   },
+  // ]);
 
-  const removeMessage = (value: number) => {
-    setMessages(messages.filter((user) => user.id !== value));
-  };
+  // const removeMessage = (value: number) => {
+  //   setMessages(messages.filter((user) => user.id !== value));
+  // };
 
-  const [notifications, setNotifications] = useState([
-    {
-      id: 1,
-      profile: "",
-      message:
-        '<strong class="text-sm mr-1">John Doe</strong>invite you to <strong>Prototyping</strong>',
-      time: "45 min ago",
-    },
-  ]);
+  // const [notifications, setNotifications] = useState([
+  //   {
+  //     id: 1,
+  //     profile: "",
+  //     messages: "",
+  //     time: "45 min ago",
+  //   },
+  // ]);
 
-  const removeNotification = (value: number) => {
-    setNotifications(notifications.filter((user) => user.id !== value));
-  };
+  // const removeNotification = (value: number) => {
+  //   setNotifications(notifications.filter((user) => user.id !== value));
+  // };
   const [search, setSearch] = useState(false);
   const handleLogout = () => {
     logout();
@@ -117,7 +116,7 @@ export default function Header() {
                   </h4>
                 </div>
               </li>
-              {messages.length > 0 ? (
+              {/* {messages.length > 0 ? (
                 <>
                   <li onClick={(e) => e.stopPropagation()}>
                     {messages.map((message) => {
@@ -164,7 +163,7 @@ export default function Header() {
                     No data available.
                   </button>
                 </li>
-              )}
+              )} */}
             </ul>
           </Dropdown>
         </div>
@@ -183,14 +182,14 @@ export default function Header() {
               <li onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center justify-between px-4 py-2 font-semibold">
                   <h4 className="text-lg">Notification</h4>
-                  {notifications.length ? (
+                  {/* {notifications.length ? (
                     <span className="">{notifications.length}New</span>
                   ) : (
                     ""
-                  )}
+                  )} */}
                 </div>
               </li>
-              {notifications.length > 0 ? (
+              {/* {notifications.length > 0 ? (
                 <>
                   {notifications.map((notification) => {
                     return (
@@ -214,7 +213,7 @@ export default function Header() {
                             <div className="ltr:pr-3 rtl:pl-3">
                               <h6
                                 dangerouslySetInnerHTML={{
-                                  __html: notification.message,
+                                  __html: notification.messages,
                                 }}
                               ></h6>
                               <span className="block text-xs font-normal dark:text-gray-500">
@@ -258,7 +257,7 @@ export default function Header() {
                     No data available.
                   </button>
                 </li>
-              )}
+              )} */}
             </ul>
           </Dropdown>
         </div>

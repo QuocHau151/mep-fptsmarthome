@@ -19,3 +19,14 @@ export const getProductByName = async (name: string) => {
     return null;
   }
 };
+
+export const getOrderById = async (id: string) => {
+  try {
+    const orders = await db.order.findUnique({
+      where: { id }, // Add the 'id' property with a default value
+    });
+    return orders;
+  } catch {
+    return null;
+  }
+};

@@ -102,9 +102,9 @@ export default function SideBar() {
                 </Link>
                 <Link
                   className="px-10 hover:bg-gray-700 block h-10 pt-2 "
-                  href="/admin/bran-dshop"
+                  href="/admin/brandshop"
                 >
-                  {pathname === "/admin/brand-shop" ? (
+                  {pathname === "/admin/brandshop" ? (
                     <span className="text-orange-900">Brand Shop</span>
                   ) : (
                     "Brand Shop"

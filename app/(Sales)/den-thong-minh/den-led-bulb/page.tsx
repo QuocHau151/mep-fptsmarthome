@@ -1,7 +1,46 @@
+"use client";
+import { fetchProduct } from "@/actions/fetchProduct";
+import { Button } from "@/components/ui/button";
+import { useStore } from "@/store/useStore";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 export default function Page() {
+  const [products, setProducts] = useState<ProductData[]>([]);
+  const addToCart = useStore((state) => state.addToCart);
+  const cart = useStore((state) => state.cart);
+
+  const fetchData = async () => {
+    try {
+      const res = await fetchProduct();
+      setProducts(res as unknown as ProductData[]);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const [selectedOptions, setSelectedOptions] = useState({
+    id: "LBBR0115",
+  });
+
+  const handleChange = (event: any) => {
+    setSelectedOptions({
+      ...selectedOptions,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const option = products.find((item) => item.id === selectedOptions.id);
+
+  const handleAddToCart = (product: ProductData) => {
+    addToCart(product);
+  };
+  console.log(cart);
   return (
     <div className="">
       <div className="text-center flex flex-col py-[100px] bg-slate-100">
@@ -12,7 +51,54 @@ export default function Page() {
           <h2 className=" text-[48px] text-slate-800 font-semibold">
             Đèn thông minh tại FPT Smart Home
           </h2>
-          <div></div>
+          <div className="flex items-start justify-center gap-10 pt-[50px]">
+            <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
+              <Image
+                src={option?.image ?? ""}
+                width={1000}
+                height={500}
+                alt=""
+              />
+            </div>
+            <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
+              <div className="flex flex-col items-center pt-[50px] ">
+                <h1 className="text-[27px] font-semibold">
+                  Đèn LED Downlight Thông Minh
+                </h1>
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                  <h4 className=" flex items-center">
+                    Thương hiệu:
+                    <p className="font-semibold">FPT Smart Home</p>
+                  </h4>
+                  <h4>Mã Sản phẩm: {option?.id} </h4>
+                </div>
+              </div>
+
+              <div className="pt-2 border-b-[1px] border-black pb-[20px]">
+                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
+                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+              </div>
+              <div className="py-4">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                  Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
+                </p>
+                <div className="flex items-center justify-center gap-2 w-full">
+                  <Button
+                    onClick={() => option && handleAddToCart(option)}
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                  >
+                    <Link href="/checkout"> Mua ngay</Link>
+                  </Button>
+                  <Button
+                    onClick={() => option && handleAddToCart(option)}
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                  >
+                    Thêm vào giỏ hàng
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="text-center flex flex-col py-[100px] ">

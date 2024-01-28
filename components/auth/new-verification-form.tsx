@@ -41,7 +41,7 @@ export const NewVerificationForm = () => {
 
   const onLogin = useCallback(() => {
     router.push("/login");
-  }, []);
+  }, [router]);
 
   return (
     <div>

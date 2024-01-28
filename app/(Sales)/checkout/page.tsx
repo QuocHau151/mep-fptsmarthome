@@ -17,33 +17,38 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useStore } from "@/store/useStore";
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Tên Khách hàng không được để trống",
-  }),
-  phone: z.string().min(2, {
-    message: "Số điện thoại không được để trống",
-  }),
-  email: z.string().min(2, {
-    message: "Email không được để trống",
-  }),
-  address: z.string().min(2, {
-    message: "Địa chỉ không được để trống",
-  }),
-});
+import { formCheckoutSchema } from "@/schemas";
+import { createOrder } from "@/actions/order";
+import { formatToNumber, formatToString } from "@/hook/useCurrency";
 
 export default function Checkout() {
-  const [price, setPrice] = useState(0);
   const cart = useStore((state) => state.cart);
   const removeFromCart = useStore((state) => state.removeFromCart);
   const increaseQuantity = useStore((state) => state.increaseQuantity);
   const decreaseQuantity = useStore((state) => state.decreaseQuantity);
-  const total = useStore((state) =>
-    state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
-  );
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const handlePrice = (price: number, quantity: number) => {
+    let totalPrice = 0;
+    cart.forEach((item) => {
+      const unique = Number(formatToNumber(price.toString()));
+      totalPrice = unique * quantity;
+    });
+    const format = formatToString(totalPrice.toString());
+    return format;
+  };
+  const total = useStore((state) =>
+    state.cart.reduce(
+      (sum, item) =>
+        sum + Number(formatToNumber(item.price.toString())) * item.quantity,
+      0
+    )
+  );
+  const handleTotalPrice = (total: number) => {
+    const format = formatToString(total.toString());
+    return format;
+  };
+  const form = useForm<z.infer<typeof formCheckoutSchema>>({
+    resolver: zodResolver(formCheckoutSchema),
     defaultValues: {
       username: "",
       phone: "",
@@ -51,17 +56,25 @@ export default function Checkout() {
       address: "",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
-  const totalPrice = () => {
-    let total = 0;
-    cart.forEach((product) => {
-      total += product.price * product.quantity;
-    });
-    setPrice(total);
+
+  const onSubmit = (values: z.infer<typeof formCheckoutSchema>) => {
+    const order = {
+      formValues: values,
+      total: total,
+      cart: cart,
+    };
+
+    const result = {
+      name: order.formValues.username,
+      phone: order.formValues.phone,
+      email: order.formValues.email,
+      address: order.formValues.address,
+      items_id: order.cart.map((item) => item.id),
+      items_name: order.cart.map((item) => item.name),
+      items_price: order.cart.map((item) => item.price.toString()),
+      items_quantity: order.cart.map((item) => item.quantity.toString()),
+    };
+    createOrder(result);
   };
   return (
     <div className="flex items-start justify-center gap-8 p-10 bg-slate-400">
@@ -106,7 +119,9 @@ export default function Checkout() {
                   +
                 </button>
               </div>
-              <p className="px-8">{product.price * product.quantity}</p>
+              <p className="px-8">
+                {handlePrice(product.price, product.quantity)}
+              </p>
               <CiTrash
                 onClick={() => removeFromCart(product.id)}
                 className="w-[25px] h-[25px]"
@@ -169,13 +184,16 @@ export default function Checkout() {
             <div>
               <div className="flex items-center justify-between py-6 border-b-[1px]">
                 <p>Tạm tính </p>
-                <p className=" text-[18px] font-semibold">{total} VNĐ</p>
+                <p className=" text-[18px] font-semibold">
+                  {" "}
+                  {handleTotalPrice(total)} VNĐ
+                </p>
               </div>
               <div className="flex items-center justify-between py-4">
                 <p>Tổng</p>
                 <div className=" flex flex-col items-end">
                   <p className="text-[25px] text-orange-600 font-semibold">
-                    {total} VNĐ
+                    {handleTotalPrice(total)} VNĐ
                   </p>
                   <span>(Chưa bao gồm VAT)</span>
                 </div>

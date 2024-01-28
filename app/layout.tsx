@@ -4,7 +4,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 
 const work_sans = Work_Sans({
   subsets: ["latin"],

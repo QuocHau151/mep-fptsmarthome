@@ -227,14 +227,62 @@ export default function Nav() {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Cart</SheetTitle>
+                <SheetTitle className="text-[20px]  text-center w-full h-min mt-4  rounded-xl  p-2 border-b-[1px] border-black bg-slate-100">
+                  Cart
+                </SheetTitle>
                 <SheetDescription></SheetDescription>
               </SheetHeader>
               <div>
                 <div>
                   {cart.map((item) => (
                     <div key={item.id} className="flex flex-col ">
-                      <h5 className="text-[18px] font-semibold ">
+                      <div className="flex items-center justify-between p-2 border-b-[1px] w-full">
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src={item.image}
+                            width={40}
+                            height={40}
+                            alt=""
+                          />
+                          <div>
+                            <h5 className="text-[14px] font-semibold ">
+                              {item.name}
+                            </h5>
+                            <p className="text-[12px]">
+                              {item.type} {item.button} {item.color}
+                              {item.connect}{item.power} {item.type_key}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2">
+                          <p className="text-orange-500 font-semibold">
+                            {item.price}
+                          </p>
+                          <div className="flex items-center gap-2 text-[12px]">
+                            <button
+                              className="border-[1px] border-black px-[4px] hover:bg-orange-500"
+                              onClick={() => decreaseQuantity(item.id)}
+                            >
+                              -
+                            </button>
+                            <p>{item.quantity}</p>
+                            <button
+                              className="border-[1px] border-black px-[4px]  hover:bg-orange-500"
+                              onClick={() => increaseQuantity(item.id)}
+                            >
+                              +
+                            </button>
+                          </div>
+                          <button
+                            className="text-[12px] hover:text-orange-500"
+                            onClick={() => removeFromCart(item.id)}
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                      <div className=""></div>
+                      {/* <h5 className="text-[18px] font-semibold ">
                         {item.name}
                       </h5>
                       <p>
@@ -253,12 +301,12 @@ export default function Nav() {
                       </div>
                       <button onClick={() => removeFromCart(item.id)}>
                         Remove from cart
-                      </button>
+                      </button> */}
                     </div>
                   ))}
                 </div>
               </div>
-              <SheetFooter>
+              <SheetFooter className="flex items-center mt-6">
                 <SheetClose asChild>
                   {/* checkout */}
                   <Button type="submit">

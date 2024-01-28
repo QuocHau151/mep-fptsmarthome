@@ -7,20 +7,20 @@ export default function Support() {
       <div className="flex flex-col  items-start justify-center px-4 py-6 text-[16px] gap-2 font-medium">
         <Link
           className="border-b border-slate-500 py-[2px] hover:text-orange-500 hover:border-orange-500"
-          href="/lien-he/lien-he-truc-tiep"
+          href="/ho-tro/lien-he-truc-tiep"
         >
           Liên hệ trực tiếp
         </Link>
         <Link
           className="border-b border-slate-500 py-[2px] hover:text-orange-500 hover:border-orange-500"
-          href="/lien-he/doi-tac"
+          href="/ho-tro/doi-tac"
         >
           Đối tác
         </Link>
 
         <Link
           className="border-b border-slate-500 py-[2px] hover:text-orange-500 hover:border-orange-500"
-          href="/lien-he/brandshop"
+          href="/ho-tro/brandshop"
         >
           BrandShop
         </Link>

@@ -67,7 +67,7 @@ export default function Product() {
               Đèn LED Dây
             </Link>
             <Link
-              href="/den-thong-minh/den-led-tracklight-thong-minh"
+              href="/den-thong-minh/den-led-tracklight"
               className="text-p font-regular hover:text-orange-600 "
             >
               Đèn LED Tracklight
@@ -141,10 +141,16 @@ export default function Product() {
               Công Tắc Cảm Ứng Hera
             </Link>
             <Link
-              href="cong-tac-thong-minh/nut-bam-ngu-canh-khong-day"
+              href="/cong-tac-thong-minh/nut-bam-ngu-canh-khong-day"
               className="text-p font-regular hover:text-orange-600 "
             >
               Nút Bấm Ngữ Cảnh Không Dây
+            </Link>
+            <Link
+              href="/cong-tac-thong-minh/cong-tac-cua-cuon-thong-minh-athena"
+              className="text-p font-regular hover:text-orange-600 "
+            >
+              Công Tắc Cửa Cuốn Thông Minh Athena
             </Link>
           </div>
         </div>

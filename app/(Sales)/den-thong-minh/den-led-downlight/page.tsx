@@ -6,12 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { Divide } from "lucide-react";
 
 export default function Page() {
   const [products, setProducts] = useState<ProductData[]>([]);
   const addToCart = useStore((state) => state.addToCart);
   const cart = useStore((state) => state.cart);
-
+  const pathname = usePathname();
   const fetchData = async () => {
     try {
       const res = await fetchProduct();
@@ -25,8 +27,8 @@ export default function Page() {
   }, []);
 
   const [selectedOptions, setSelectedOptions] = useState({
-    type: "fixed",
-    color: "white",
+    type: "Cố định",
+    color: "Trắng",
     power: "9w",
   });
 
@@ -36,18 +38,20 @@ export default function Page() {
       [event.target.name]: event.target.value,
     });
   };
-
+  const parts = pathname.split("/");
+  const category = parts[1];
   const option = products.find(
     (item) =>
       item.type === selectedOptions.type &&
       item.color === selectedOptions.color &&
-      item.power === selectedOptions.power
+      item.power === selectedOptions.power &&
+      item.category === category
   );
 
   const handleAddToCart = (product: ProductData) => {
     addToCart(product);
   };
-  console.log(cart);
+
   return (
     <div className="">
       <div className="text-center flex flex-col py-[100px] bg-slate-100">
@@ -60,12 +64,11 @@ export default function Page() {
           </h2>
           <div className="flex items-start justify-center gap-10 pt-[50px]">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
-              <Image
-                src={option?.image ?? ""}
-                width={1000}
-                height={500}
-                alt=""
-              />
+              {option ? (
+                <Image src={option?.image} width={1000} height={500} alt="" />
+              ) : (
+                <div className="bg-white w-[585px] h-[585px]"></div>
+              )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center py-[50px] ">
@@ -90,8 +93,8 @@ export default function Page() {
                       className="w-[35px] h-[35px]  mr-2 "
                       type="radio"
                       name="type"
-                      value="fixed"
-                      checked={selectedOptions.type === "fixed"}
+                      value="Cố định"
+                      checked={selectedOptions.type === "Cố định"}
                       onChange={handleChange}
                     />
                     <label className="text-[18px] font-medium mr-6">
@@ -103,8 +106,8 @@ export default function Page() {
                       className="w-[35px] h-[35px]  mr-2 "
                       type="radio"
                       name="type"
-                      value="rotated"
-                      checked={selectedOptions.type === "rotated"}
+                      value="Xoay"
+                      checked={selectedOptions.type === "Xoay"}
                       onChange={handleChange}
                     />
                     <label className="text-[18px] font-medium mr-6">Xoay</label>
@@ -116,15 +119,15 @@ export default function Page() {
                   </h4>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="w-[35px] h-[35px]  mr-1 "
                       type="radio"
                       name="color"
-                      value="white"
-                      checked={selectedOptions.color === "white"}
+                      value="Trắng"
+                      checked={selectedOptions.color === "Trắng"}
                       onChange={handleChange}
                     />
                     <label className="text-[18px] font-medium mr-6">
-                      Trắng
+                      Trắng Vàng
                     </label>
                   </div>
                   <div className="basis-1/3 flex items-center">
@@ -168,8 +171,10 @@ export default function Page() {
                 </div>
               </div>
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="text-[40px] font-bold ">
+                  {option ? `${option?.price} VNĐ` : "Hết Hàng"}
+                </p>
+                <p className="-mt-3 text-[12px]">(Chưa bao gồm VAT)</p>
               </div>
               <div className="py-4">
                 <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
@@ -206,8 +211,8 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2"
               src="/assets/images/product/thumnail/1668569222-downlight.png"
-              width={1000}
-              height={500}
+              width={500}
+              height={300}
               alt=""
             />
             <div className="basis-1/2 ">
@@ -253,7 +258,7 @@ export default function Page() {
                   TCVN 10885-2-1/IEC 62722-2-1; TCVN 7722-2-2/IEC 60598-2-2
                 </p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2">
                 <p>Chuẩn kết nối</p>
                 <p>Bluetooth Mesh</p>
               </div>

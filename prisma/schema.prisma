@@ -18,6 +18,26 @@ enum StateUser {
  Done
  Cancel
 }
+enum StateOrder {
+  Pending
+  Done
+  Cancel
+}
+enum StateContact {
+  Pending
+  Done
+  Cancel
+}
+enum StatePartner {
+  Pending
+  Done
+  Cancel
+}
+enum StateBrandShop {
+  Pending
+  Done
+  Cancel
+}
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -70,12 +90,55 @@ model PasswordResetToken {
 model Product { 
   id String @id @default(cuid())
   name String?
-   category String?
+  category String?
   price String?
   image String?
   type String?
   color String?
   button String?
   power String?
+  connect String?
+  type_key String?
   expires DateTime?
+}
+
+model Order {
+  id String @id @default(cuid())
+  name String
+  phone String
+  email String
+  address String
+  state StateOrder @default(Pending)
+  items_id String[]
+  items_name String[]
+  items_price String[]
+  items_quantity String[]
+}
+model Contact {
+  id String @id @default(cuid())
+  name String?
+  email String?
+  phone String?
+  title String?
+  address String?
+  description String?
+  state StateContact @default(Pending)
+}
+model Partner {
+  id String @id @default(cuid())
+  name String?
+  email String?
+  phone String?
+  address String?
+  note String?
+  state StatePartner @default(Pending)
+}
+model BrandShop {
+  id String @id @default(cuid())
+  name String?
+  email String?
+  phone String?
+  address String?
+  note String?
+  state StateBrandShop @default(Pending)
 }

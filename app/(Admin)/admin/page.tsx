@@ -48,7 +48,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { fetchUser } from "@/actions/fetchUser";
-import { updateStateUser } from "@/actions/updateUser";
+import { updateStateUser } from "@/actions/updateUserState";
 
 interface UserData {
   id: string;
@@ -100,7 +100,7 @@ const StateCell = ({ row }: { row: any }) => {
     </Select>
   );
 };
-export const columns: ColumnDef<UserData>[] = [
+const columns: ColumnDef<UserData>[] = [
   {
     id: "select",
     header: ({ table }) => (

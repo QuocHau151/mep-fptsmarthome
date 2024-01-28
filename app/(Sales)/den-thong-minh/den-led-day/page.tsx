@@ -1,7 +1,54 @@
+"use client";
+import { fetchProduct } from "@/actions/fetchProduct";
+import { Button } from "@/components/ui/button";
+import { useStore } from "@/store/useStore";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 export default function Page() {
+  const [products, setProducts] = useState<ProductData[]>([]);
+  const addToCart = useStore((state) => state.addToCart);
+  const cart = useStore((state) => state.cart);
+  const pathname = usePathname();
+
+  const fetchData = async () => {
+    try {
+      const res = await fetchProduct();
+      setProducts(res as unknown as ProductData[]);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const [selectedOptions, setSelectedOptions] = useState({
+    type: "5m",
+    color: "trắng-vàng-RGB",
+  });
+
+  const handleChange = (event: any) => {
+    setSelectedOptions({
+      ...selectedOptions,
+      [event.target.name]: event.target.value,
+    });
+  };
+  const parts = pathname.split("/");
+  const category = parts[1];
+  const option = products.find(
+    (item) =>
+      item.type === selectedOptions.type &&
+      item.color === selectedOptions.color &&
+      item.category === category
+  );
+
+  const handleAddToCart = (product: ProductData) => {
+    addToCart(product);
+  };
   return (
     <div className="">
       <div className="text-center flex flex-col py-[100px] bg-slate-100">
@@ -12,7 +59,115 @@ export default function Page() {
           <h2 className=" text-[48px] text-slate-800 font-semibold">
             Đèn thông minh tại FPT Smart Home
           </h2>
-          <div></div>
+          <div className="flex items-start justify-center gap-10 pt-[50px]">
+            <div className="basis-1/2 bg-white w-full h-min rounded-2xl py-4">
+              {option ? (
+                <Image src={option?.image} width={1000} height={500} alt="" />
+              ) : (
+                <div className="bg-white w-[585px] h-[585px]"></div>
+              )}
+            </div>
+            <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
+              <div className="flex flex-col items-center py-[50px] ">
+                <h1 className="text-[27px] font-semibold">
+                  {option?.name ?? ""}
+                </h1>
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                  <h4 className=" flex items-center">
+                    Thương hiệu:
+                    <p className="font-semibold">FPT Smart Home</p>
+                  </h4>
+                  <h4>Mã Sản phẩm: {option?.id} </h4>
+                </div>
+              </div>
+              <div className="flex  flex-col items-start justify-start w-full gap-6 border-b-[1px] border-black pb-[50px]">
+                <div className="flex items-center justify-center gap-4 w-full">
+                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 ">
+                    Hệ màu sắc
+                  </h4>
+                  <div className="basis-1/3 flex items-center">
+                    <input
+                      className="min-w-[35px] h-[35px]  mr-2 "
+                      type="radio"
+                      name="color"
+                      value="trắng-vàng-RGB"
+                      checked={selectedOptions.color === "trắng-vàng-RGB"}
+                      onChange={handleChange}
+                    />
+                    <label className="text-[18px] font-medium mr-6">
+                      Trắng vàng + RGB
+                    </label>
+                  </div>
+                  <div className="basis-1/3 flex items-center">
+                    <input
+                      className="w-[35px] h-[35px]  mr-2 "
+                      type="radio"
+                      name="color"
+                      value="RGB"
+                      checked={selectedOptions.color === "RGB"}
+                      onChange={handleChange}
+                    />
+                    <label className="text-[18px] font-medium mr-6">RGB</label>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-4 w-full">
+                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 ">
+                    Loại đèn
+                  </h4>
+                  <div className="basis-1/3 flex items-center">
+                    <input
+                      className="w-[35px] h-[35px]  mr-2 "
+                      type="radio"
+                      name="type"
+                      value="5m"
+                      checked={selectedOptions.type === "5m"}
+                      onChange={handleChange}
+                    />
+                    <label className="text-[18px] font-medium mr-6">5m</label>
+                  </div>
+                  <div className="basis-1/3 flex items-center">
+                    <input
+                      className="min-w-[35px] h-[35px]  mr-2 "
+                      type="radio"
+                      name="type"
+                      value="100m"
+                      checked={selectedOptions.type === "100m"}
+                      onChange={handleChange}
+                    />
+                    <label className="text-[18px] font-medium mr-6">
+                      100m/ theo giá mét
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-2 border-b-[1px] border-black pb-[20px]">
+                <p className="text-[50px] font-bold ">
+                  {" "}
+                  {option ? `${option?.price} VNĐ` : "Hết Hàng"}
+                </p>
+                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+              </div>
+              <div className="py-4">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                  Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
+                </p>
+                <div className="flex items-center justify-center gap-2 w-full">
+                  <Button
+                    onClick={() => option && handleAddToCart(option)}
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                  >
+                    <Link href="/checkout"> Mua ngay</Link>
+                  </Button>
+                  <Button
+                    onClick={() => option && handleAddToCart(option)}
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                  >
+                    Thêm vào giỏ hàng
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="text-center flex flex-col py-[100px] ">
