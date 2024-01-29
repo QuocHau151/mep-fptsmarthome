@@ -21,7 +21,7 @@ export default function Product() {
           </p>
         </div>
         <Image
-          src="/assets/images/product/Bộ Điều Khiển Trung Tâm1.png"
+          src="/assets/images/product/bo-dieu-khien-trung-tam.png"
           width={600}
           height={600}
           alt=""
@@ -130,7 +130,6 @@ export default function Product() {
             nối mở rộng Zigbee
           </p>
         </div>
-        
       </div>
     </div>
   );

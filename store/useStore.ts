@@ -9,9 +9,17 @@ type Store = {
   addToCart: (product: ProductData) => void;
   removeFromCart: (productId: string) => void;
 };
-
+function getInitialCart() {
+  try {
+    const cart = localStorage.getItem("cart");
+    return cart ? JSON.parse(cart) : [];
+  } catch (error) {
+    console.error("Error parsing cart data from localStorage:", error);
+    return [];
+  }
+}
 export const useStore = create<Store>((set) => {
-  const initialCart = JSON.parse(localStorage.getItem("cart") || "[]");
+  const initialCart = getInitialCart();
 
   return {
     cart: initialCart,

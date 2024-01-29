@@ -76,7 +76,7 @@ export default function Bottom_Nav() {
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
                 <Link href="/bo-dieu-khien/fpt-play-box">
                   <Image
-                    src="/assets/images/product/Bộ Điều Khiển Trung Tâm1.png"
+                    src="/assets/images/product/bo-dieu-khien-trung-tam.png"
                     width={150}
                     height={150}
                     alt="Bộ điều khiển trung tâm"

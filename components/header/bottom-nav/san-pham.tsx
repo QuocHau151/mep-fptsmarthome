@@ -8,7 +8,7 @@ export default function Product() {
       <div className=" grid grid-cols-4 grid-rows-2 py-[30px] px-[30px] items-center justify-center h-full gap-y-6 ">
         <div className="flex items-start justify-center gap-2 ">
           <Image
-            src="/assets/images/product/Bộ Điều Khiển Trung Tâm1.png"
+            src="/assets/images/product/bo-dieu-khien-trung-tam.png"
             width={150}
             height={150}
             alt="Bộ điều khiển trung tâm"
