@@ -3,15 +3,7 @@
  * These routes do not require authentication
  * @type {string[]}
  */
-export const publicRoutes = [
-  "/",
-  "/san-pham",
-  "/giai-phap",
-  "/can-ho-mau",
-  "/ho-tro",
-  "/new-verification",
-  "/admin",
-];
+export const salesRoutes = ["/checkout"];
 
 /**
  * An array of routes that are used for authentication

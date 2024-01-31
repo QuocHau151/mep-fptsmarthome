@@ -4,7 +4,7 @@ import { LoginButton } from "@/components/auth/login-button";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useCurrentUser } from "@/hook/use-current-user";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -39,6 +39,8 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { getUserByEmail } from "@/data/user";
+import { currentRole } from "@/lib/auth";
 const navs = [
   { id: 1, link: "/", name: "Giới thiệu" },
   { id: 2, link: "/san-pham", name: "Sản phẩm", active: <Product /> },
@@ -412,9 +414,6 @@ export default function Bottom_Nav() {
                 <DialogContent className="sm:max-w-[425px]">
                   <DialogHeader>
                     <DialogTitle>Edit profile</DialogTitle>
-                    <DialogDescription>
-                      Make changes to your profile here. Click save when done.
-                    </DialogDescription>
                   </DialogHeader>
                   <div className="grid gap-4 py-4">
                     <div className="grid grid-cols-4 items-center gap-4">
@@ -423,19 +422,31 @@ export default function Bottom_Nav() {
                       </Label>
                       <Input
                         id="name"
-                        value="Pedro Duarte"
+                        value={user.name || ""}
                         className="col-span-3"
                       />
                     </div>
                     <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="username" className="text-right">
-                        Username
+                      <Label htmlFor="email" className="text-right">
+                        Email
                       </Label>
                       <Input
                         id="username"
-                        value="@peduarte"
+                        value={user.email || ""}
                         className="col-span-3"
                       />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="phone" className="text-right">
+                        Phone
+                      </Label>
+                      <Input id="name" value="" className="col-span-3" />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="address" className="text-right">
+                        Address
+                      </Label>
+                      <Input id="name" value="" className="col-span-3" />
                     </div>
                   </div>
                   <DialogFooter>

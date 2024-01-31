@@ -996,7 +996,7 @@ export default function Home() {
           </h2>
           <div className="max-w-[500px] ">
             <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
+              <AccordionItem className="py-4" value="item-1">
                 <AccordionTrigger>
                   Nhà thông minh (Smart Home) là gì?
                 </AccordionTrigger>
@@ -1009,7 +1009,7 @@ export default function Home() {
                   của ngôi nhà một cách an toàn.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2">
+              <AccordionItem className="py-4" value="item-2">
                 <AccordionTrigger>
                   Lắp đặt thiết bị nhà thông minh FPT Smart Home có phức tạp
                   không?
@@ -1021,7 +1021,7 @@ export default function Home() {
                   vấn cũng như cài đặt sản phẩm.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-3">
+              <AccordionItem className="py-4" value="item-3">
                 <AccordionTrigger>
                   Với khoản kinh phí bao nhiêu thì có thể lắp đặt được nhà thông
                   minh FPT Smart Home?
@@ -1031,7 +1031,7 @@ export default function Home() {
                   của mình thành ngôi nhà thông minh.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-4">
+              <AccordionItem className="py-4" value="item-4">
                 <AccordionTrigger>
                   Nhà tôi đã hoàn thiện rồi và muốn thay thế thiết bị trong nhà
                   thành thiết bị thông minh có được không?
@@ -1043,7 +1043,7 @@ export default function Home() {
                   lại sự trải nghiệm tuyệt vời nhất.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-5">
+              <AccordionItem className="py-4" value="item-5">
                 <AccordionTrigger>
                   Tôi vẫn chưa yên tâm về chất lượng và nguồn gốc xuất xứ?
                 </AccordionTrigger>
@@ -1058,7 +1058,7 @@ export default function Home() {
                   vụ và nguồn gốc xuất xứ các sản phẩm của FPT Smart Home.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-6">
+              <AccordionItem className="py-4" value="item-6">
                 <AccordionTrigger>
                   Trong quá trình sử dụng, nếu gặp vấn đề thì FPT Smart Home hỗ
                   trợ ra sao?
@@ -1072,7 +1072,7 @@ export default function Home() {
                   tin, chăm sóc, hỗ trợ và bảo hành, sửa chữa tận nhà.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-7">
+              <AccordionItem className="py-4" value="item-7">
                 <AccordionTrigger>
                   Sử dụng nhà thông minh FPT Smart Home có bị mất kết nối không?
                 </AccordionTrigger>

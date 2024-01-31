@@ -45,7 +45,7 @@ export default function Page() {
               Đèn LED Buld Thông Minh
             </h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
-              <Link href="/den-thong-minh/den-led-buld">Xem thêm</Link>
+              <Link href="/den-thong-minh/den-led-bulb">Xem thêm</Link>
             </Button>
           </div>
           <div className="flex flex-col items-center w-[230px] h-[355px] rounded-2xl bg-slate-100 pt-10 gap-4 px-4">

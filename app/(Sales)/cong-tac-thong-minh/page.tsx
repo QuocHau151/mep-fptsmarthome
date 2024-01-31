@@ -1,0 +1,134 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useRef, useState } from "react";
+
+export default function Page() {
+  return (
+    <div>
+      <div>
+        <div className="bg-[url('/assets/images/product/thumnail/1668574989-Group-211.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+      </div>
+      <div className="container">
+        <div className="text-center flex flex-col py-[100px]">
+          <h4 className="text-h5 text-gray-400 font-semibold">
+            Thiết bị FPT Smart Home
+          </h4>
+          <h2 className=" text-[48px] text-slate-800 font-semibold">
+            Các thiết bị Công tắc thông minh
+          </h2>
+        </div>
+        <div className="flex items-center justify-center mb-10 gap-6">
+          <div className="flex flex-col items-center w-[230px] h-[355px] rounded-2xl bg-slate-100 pt-10 gap-4 px-4">
+            <Image
+              src="/assets/images/product/1693886144-CTCU-Athena-Vuong9.png"
+              width={170}
+              height={100}
+              alt=""
+            />
+            <h3 className="text-center font-semibold">
+              Công Tắc Cảm Ứng Athena
+            </h3>
+            <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
+              <Link href="/cong-tac-thong-minh/cong-tac-cam-ung-athena">
+                Xem thêm
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-col items-center w-[230px] h-[355px] rounded-2xl bg-slate-100 pt-10 gap-4 px-4">
+            <Image
+              src="/assets/images/product/1692089592-Nut-Bam-ngu-canh-2.png"
+              width={170}
+              height={100}
+              alt=""
+            />
+            <h3 className="text-center font-semibold">
+              Nút Bấm Ngữ Cảnh Không Dây
+            </h3>
+            <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
+              <Link href="/cong-tac-thong-minh/nut-bam-ngu-canh-khong-day">
+                Xem thêm
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-col items-center w-[230px] h-[355px] rounded-2xl bg-slate-100 pt-10 gap-4 px-4">
+            <Image
+              src="/assets/images/product/1672037200-Black-Brown-4-Nut-vuong-ava.png"
+              width={170}
+              height={100}
+              alt=""
+            />
+            <h3 className="text-center font-semibold">
+              Công Tắc Cảm Ứng Thông Minh Hera
+            </h3>
+            <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
+              <Link href="/cong-tac-thong-minh/cong-tac-cam-ung-hera">
+                Xem thêm
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-col items-center w-[230px] h-[355px] rounded-2xl bg-slate-100 pt-10 gap-4 px-4">
+            <Image
+              src="/assets/images/product/1704445993-Vuong-Den-Rem.png"
+              width={170}
+              height={100}
+              alt=""
+            />
+            <h3 className="text-center font-semibold">
+              Công Tắc Cửa Cuốn Thông Minh Athena
+            </h3>
+            <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
+              <Link href="/cong-tac-thong-minh/cong-tac-cua-cuon-thong-minh-athena">
+                Xem thêm
+              </Link>
+            </Button>
+          </div>
+        </div>
+        <div className="text-center flex flex-col items-center p-10 gap-6">
+          <p className="text-[20px]">
+            Công tắc thông minh FPT Smart Home với tính năng cảm ứng hoặc nút
+            bấm với độ bền cao, thiết kế sang trọng mang lại cảm giác mới mẻ
+            trong mỗi lần chạm
+          </p>
+          <p className="text-[20px] px-12">Điều khiển bật tắt bằng giọng nói</p>
+          <p className="text-[20px] px-12">
+            Kết nối được thông qua Bluetooth hoặc ZigBee
+          </p>
+          <p className="text-[20px] px-12">
+            Số lượng nút từ 1 đến 6 nút tuỳ theo nhu cầu sử dụng
+          </p>
+          <div className="p-10 flex items-center justify-center gap-6 border-b-[1px] w-full border-black">
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/assets/images/product/icon/1676456837-Group-1073.png"
+                width={70}
+                height={70}
+                alt=""
+              />
+              <p className="text-[18px]">Điều khiển giọng nói</p>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/assets/images/product/icon/1676456645-Group-1072.png"
+                width={70}
+                height={70}
+                alt=""
+              />
+              <p className="text-[18px]">Điều khiển giọng nói</p>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/assets/images/product/icon/1676456652-Group-1071.png"
+                width={70}
+                height={70}
+                alt=""
+              />
+              <p className="text-[18px]">Kết nối Zigbee</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
