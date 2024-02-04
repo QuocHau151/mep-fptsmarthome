@@ -55,7 +55,7 @@ export default function Bottom_Nav() {
     logout();
   };
   return (
-    <div className="bg-white relative">
+    <div className=" block max-lg:hidden bg-white relative">
       <div className=" container flex items-center justify-between  w-full h-[56px] font-medium ">
         <div className="relative  flex gap-2 group  ">
           <Image

@@ -59,24 +59,24 @@ export default function Page() {
   return (
     <div>
       <div>
-        <div className="bg-[url('/assets/images/support/partner-banner.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/support/partner-banner.jpg')] w-full h-[300px] bg-cover bg-no-repeat bg-center max-md:h-[150px]"></div>
       </div>
-      <div className="container">
+      <div className="container max-lg:px-20 max-md:px-10">
         <div className=" text-center py-10">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             CHÍNH SÁCH ƯU ĐÃI
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Nhận ngay các quyền lợi ”Khủng“ khi đồng hành kinh doanh cùng chúng
             tôi
           </h2>
         </div>
-        <div className="flex items-center justify-center gap-14 py-10">
+        <div className="flex items-center justify-center gap-14 py-10 max-lg:flex-col max-md:py-[0px] ">
           <div className="basis-1/2 bg-slate-100 rounded-3xl w-full h-[500px] px-8 pt-6">
-            <h2 className="text-[35px] font-semibold text-center border-b-[1px] border-black pb-6">
+            <h2 className="text-[35px] font-semibold text-center border-b-[1px] border-black pb-6 max-md:text-[25px]">
               Chính sách Đại lý
             </h2>
-            <div className="text-[23px] py-10 flex flex-col gap-4">
+            <div className="text-[23px] py-10 flex flex-col gap-4 max-lg:text-center max-lg:px-10 max-md:px-0 max-md:text-[15px]">
               <p>
                 Hưởng ngay mức chiết khấu cao, kèm chế độ thưởng theo tháng, quý
                 hấp dẫn.
@@ -93,11 +93,11 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <div className="basis-1/2 bg-slate-100 rounded-3xl w-full h-[500px] px-8 pt-6">
-            <h2 className="text-[35px] font-semibold text-center border-b-[1px] border-black pb-6">
+          <div className="basis-1/2 bg-slate-100 rounded-3xl w-full h-[500px] px-8 pt-6 max-md:mb-10">
+            <h2 className="text-[35px] font-semibold text-center border-b-[1px] border-black pb-6 max-md:text-[25px]">
               Chính sách Cộng Tác Viên
             </h2>
-            <div className="text-[23px] py-10 flex flex-col gap-4">
+            <div className="text-[23px] py-10 flex flex-col gap-4 max-lg:text-center max-lg:px-10 max-md:px-0 max-md:text-[15px]">
               <p>Kinh doanh không cần vốn.</p>
               <p>Hưởng hoa hồng hấp dẫn dành cho CTV.</p>
               <p>Chính sách thưởng thêm linh hoạt theo tháng/quý.</p>
@@ -109,19 +109,19 @@ export default function Page() {
           <div>
             <div className="bg-[url('/assets/images/support/background-image.jpg')] w-full h-min bg-cover bg-no-repeat bg-center rounded-[30px] mb-10">
               <div className="flex flex-col items-center justify-center py-14">
-                <h1 className="text-[40px] font-semibold mb-2">
+                <h1 className="text-[40px] font-semibold mb-2 max-md:text-[25px]">
                   Cơ Hội Tới - Lên Đời Ngay
                 </h1>
-                <h5 className="text-[23px] font-regular">
+                <h5 className="text-[23px] font-regular max-md:text-[15px]">
                   Nhà Thông Minh đến từ Tập đoàn FPT
                 </h5>
-                <div className=" px-[200px] py-10">
+                <div className=" px-[200px] py-10 max-md:py-6 max-md:px-4 ">
                   <Form {...form}>
                     <form
                       onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-6 w-[600px] flex flex-col"
+                      className="space-y-6 w-[600px] flex flex-col max-md:w-full"
                     >
-                      <div className="grid grid-cols-2 gap-8">
+                      <div className="grid grid-cols-2 gap-8 max-md:grid-cols-2 max-md:gap-2">
                         <FormField
                           control={form.control}
                           name="name"
@@ -129,7 +129,7 @@ export default function Page() {
                             <FormItem>
                               <FormControl>
                                 <Input
-                                  className="rounded-xl"
+                                  className="rounded-xl max-md:text-[13px] max-md:h-[50px]  "
                                   placeholder="Tên đại lý"
                                   {...field}
                                 />
@@ -145,7 +145,7 @@ export default function Page() {
                             <FormItem>
                               <FormControl>
                                 <Input
-                                  className="rounded-xl"
+                                  className="rounded-xl max-md:text-[13px] max-md:h-[50px]"
                                   placeholder="Số điện thoại"
                                   {...field}
                                 />
@@ -163,7 +163,7 @@ export default function Page() {
                             <FormItem>
                               <FormControl>
                                 <Input
-                                  className="rounded-xl"
+                                  className="rounded-xl max-md:text-[13px] max-md:h-[50px]"
                                   placeholder="Địa chỉ"
                                   {...field}
                                 />
@@ -181,7 +181,7 @@ export default function Page() {
                             <FormItem>
                               <FormControl>
                                 <Input
-                                  className="rounded-xl"
+                                  className="rounded-xl max-md:text-[13px] max-md:h-[50px]"
                                   placeholder="Email"
                                   {...field}
                                 />
@@ -199,7 +199,7 @@ export default function Page() {
                             <FormItem>
                               <FormControl>
                                 <Textarea
-                                  className="h-[200px] rounded-xl "
+                                  className="h-[200px] rounded-xl max-md:text-[13px]  "
                                   placeholder="Ghi chú"
                                   {...field}
                                 />

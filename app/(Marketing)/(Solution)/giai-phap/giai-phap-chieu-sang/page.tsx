@@ -9,31 +9,32 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function LightSolution() {
   return (
     <div>
       <div>
-        <div className="bg-[url('/assets/images/solution/chieu-sang/1668581675-Group-218.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/solution/chieu-sang/1668581675-Group-218.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
-      <div className="text-center flex flex-col py-[100px]">
-        <h4 className="text-h5 text-gray-400 font-semibold">
-          Giải Pháp Điều Khiển
+      <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
+        <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
+          Giải Pháp Chiếu Sáng
         </h4>
-        <h2 className=" text-[48px] text-slate-800 font-semibold">
+        <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
           Những tính năng nổi bật
         </h2>
       </div>
-      <div className="container flex items-start justify-center gap-10 ">
+      <div className="container flex items-start justify-center gap-10  max-md:flex-col">
         <div className="flex flex-col text-center items-center  basis-1/2">
           <Image
-            className="h-[457px] "
+            className=" "
             src="/assets/images/solution/chieu-sang/1668581725-Group-657.png"
             width={860}
             height={600}
             alt=""
           />
-          <div className="max-w-[490px] px-[10px] py-[25px] bg-gray-100 mb-10">
+          <div className="w-3/4 px-[10px] py-[25px] bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10">
               Tự động bật đèn khi mở cửa
             </h5>
@@ -51,7 +52,7 @@ export default function LightSolution() {
             height={600}
             alt=""
           />
-          <div className="max-w-[490px] px-[10px] py-[25px]  bg-gray-100 mb-10">
+          <div className="w-3/4 px-[10px] py-[25px]  bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10">
               Bật/ tắt đèn bằng giọng nói Tiếng Việt
             </h5>
@@ -62,18 +63,18 @@ export default function LightSolution() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px]">
-        <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] max-lg:px-20 max-md:py-[50px] max-md:px-10">
+        <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
           Sản phẩm Smart Home
         </h4>
-        <h2 className=" text-[48px] text-slate-800 font-semibold">
+        <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
           Những thiết bị nổi bật dành riêng cho bạn
         </h2>
       </div>
       <Swiper
         style={{}}
         spaceBetween={30}
-        slidesPerView={6}
+        slidesPerView={window.innerWidth > 768 ? 4 : 2}
         centeredSlides={true}
         autoplay={{
           delay: 1500,
@@ -226,63 +227,76 @@ export default function LightSolution() {
         </SwiperSlide>
       </Swiper>
       <div>
-        <div className="bg-[url('/assets/images/solution/chieu-sang/1668581702-Group-660.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/solution/chieu-sang/1668581702-Group-660.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="container">
-        <div className="text-center flex flex-col py-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+        <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Sản phẩm Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px] ">
             Những tính năng dành riêng cho bạn
           </h2>
         </div>
-        <div className="flex flex-col gap-10">
-          <div className="flex items-center ">
-            <Image
-              src="/assets/images/solution/chieu-sang/1668581843-Group-666.png"
-              width={589}
-              height={589}
-              alt=""
-            />
-            <div className="flex items-left flex-col  bg-gray-100  px-20 py-[200px] rounded-r-[30px] gap-4">
-              <h5 className="text-h6 font-semibold">Hẹn giờ linh hoạt</h5>
-              <p className="text-gray-400">
+        <div className="flex flex-col gap-10 max-lg:px-0">
+          <div className="flex items-center max-md:flex-col">
+            <div className="w-[589px] h-[589px] basis-1/2 overflow-hidden   rounded-[40px] max-md:w-full">
+              <Image
+                className=" object-cover w-full h-full"
+                src="/assets/images/solution/chieu-sang/1668581843-Group-666.png"
+                width={589}
+                height={589}
+                alt=""
+              />
+            </div>
+
+            <div className="flex items-left flex-col h-3/4 basis-1/2   bg-gray-100  px-20 py-[150px] rounded-r-[30px] gap-4 max-md:basis-full max-md:h-min max-md:py-6  max-md:text-center max-md:rounded-[0px] max-md:px-2 max-md:mx-10">
+              <h5 className="text-h6 font-semibold max-md:text-[20px]">
+                Hẹn giờ linh hoạt
+              </h5>
+              <p className="text-gray-400 max-md:text-[15px]">
                 Tính năng lập lịch giúp tắt bật các thiết bị theo thời gian đặt
                 sẵn
               </p>
             </div>
           </div>
-          <div className="flex items-center  justify-center">
-            <div className="flex items-left flex-col bg-gray-100  px-20 py-[200px] rounded-l-[30px] gap-4  text-left ">
-              <h5 className="text-h6 font-semibold">
+          <div className="flex items-center  justify-center max-md:flex-col-reverse">
+            <div className="flex items-left flex-col bg-gray-100 h-3/4 basis-1/2  px-20 py-[100px] rounded-l-[30px] gap-4  max-md:basis-full max-md:h-min max-md:py-6  max-md:text-center max-md:rounded-[0px] max-md:px-2 max-md:mx-10">
+              <h5 className="text-h6 font-semibold max-md:text-[20px]">
                 Tắt/ bật đèn linh hoạt theo nhóm hoặc riêng lẻ
               </h5>
-              <p className="text-gray-400 max-w-[400px]">
+              <p className="text-gray-400 max-w-[400px] max-md:text-[15px]">
                 Người dùng có thể dễ dàng điều khiển tắt bật đồng thời nhiều đèn
                 ở phòng khách thông qua giọng nói. Giúp tiết kiệm điện năng và
                 tiện lợi hơn khi điều khiển không cần phụ thuộc hạ tầng điện.
               </p>
             </div>
-            <Image
-              src="/assets/images/solution/chieu-sang/1668581854-Group-673.png"
-              width={589}
-              height={589}
-              alt=""
-            />
+            <div className="w-[589px] h-[589px] basis-1/2 overflow-hidden rounded-[40px] max-md:w-full">
+              <Image
+                className=" object-cover w-full h-full"
+                src="/assets/images/solution/chieu-sang/1668581854-Group-673.png"
+                width={589}
+                height={589}
+                alt=""
+              />
+            </div>
           </div>
-          <div className="flex items-center  mb-10">
-            <Image
-              src="/assets/images/solution/chieu-sang/1668581871-Group-674.png"
-              width={589}
-              height={589}
-              alt=""
-            />
-            <div className="flex items-left flex-col  bg-gray-100  px-20 py-[200px] rounded-r-[30px] gap-4 max-w-[600px]">
-              <h5 className="text-h6 font-semibold">
+          <div className="flex items-center  mb-10 max-md:flex-col">
+            <div className="w-[589px] h-[589px] basis-1/2 overflow-hidden   rounded-[40px] max-md:w-full">
+              <Image
+                className=" object-cover w-full h-full"
+                src="/assets/images/solution/chieu-sang/1668581871-Group-674.png"
+                width={589}
+                height={589}
+                alt=""
+              />
+            </div>
+
+            <div className="flex items-left flex-col  h-3/4 basis-1/2 bg-gray-100  px-20 py-[150px] rounded-r-[30px] gap-4 max-w-[600px] max-md:basis-full max-md:h-min max-md:py-6  max-md:text-center max-md:rounded-[0px] max-md:px-2 max-md:mx-10">
+              <h5 className="text-h6 font-semibold max-md:text-[18px]">
                 Điều chỉnh cường độ ánh sáng và màu sắc theo thời
               </h5>
-              <p className="text-gray-400">
+              <p className="text-gray-400 max-md:text-[13px]">
                 Hệ thống sẽ nhận diện trạng thái điều hoà thích hợp và tự động
                 cân bằng giúp bạn
               </p>
@@ -290,17 +304,17 @@ export default function LightSolution() {
           </div>
         </div>
       </div>
-      <div className=" bg-gray-100 pb-[100px]">
+      <div className=" bg-gray-100 pb-[100px] max-lg:px-10">
         <div className="container">
-          <div className="text-center flex flex-col items-center py-[100px] justify-center">
-            <h4 className="text-h5 text-gray-400 font-semibold">
+          <div className="text-center flex flex-col items-center py-[100px] justify-center max-md:py-[50px]">
+            <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
               Giải Pháp Nhà Thông Minh
             </h4>
-            <h2 className=" text-[48px] text-slate-800 font-semibold max-w-[700px] text-center">
+            <h2 className=" text-[48px] text-slate-800 font-semibold max-w-[700px] text-center max-md:text-[25px]">
               Những Giải Pháp Thông Minh Cho Căn Hộ Của Bạn
             </h2>
           </div>
-          <div className="flex items-center justify-center gap-8 ">
+          <div className="flex items-center justify-center gap-8 max-md:flex-wrap">
             <div className=" flex flex-col items-center gap-8">
               <Image
                 src="/assets/images/solution/chieu-sang/1693974974-Asset-3.png"
@@ -312,7 +326,7 @@ export default function LightSolution() {
                 Giải Pháp Điều Khiển
               </h2>
               <Button className="bg-gray-100 border-[2px] border-orange-500 text-orange-500">
-                Xem Thêm
+                <Link href="/giai-phap/giai-phap-dieu-khien">Xem thêm</Link>
               </Button>
             </div>
             <div className=" flex flex-col items-center gap-8">
@@ -326,7 +340,7 @@ export default function LightSolution() {
                 Giải Pháp An Ninh
               </h2>
               <Button className="bg-gray-100 border-[2px] border-orange-500 text-orange-500">
-                Xem Thêm
+                <Link href="/giai-phap/giai-phap-an-ninh">Xem thêm</Link>
               </Button>
             </div>
             <div className=" flex flex-col items-center gap-8">
@@ -340,7 +354,7 @@ export default function LightSolution() {
                 Giải Pháp Truyền Hình
               </h2>
               <Button className="bg-gray-100 border-[2px] border-orange-500 text-orange-500">
-                Xem Thêm
+                <Link href="/giai-phap/giai-phap-truyen-hinh">Xem thêm</Link>
               </Button>
             </div>
           </div>

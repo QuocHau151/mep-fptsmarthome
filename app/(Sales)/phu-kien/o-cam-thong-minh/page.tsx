@@ -49,35 +49,35 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Phụ Kiện Thông Minh FPT Smart Home
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl py-4">
               {option ? (
                 <Image
-                  className="mx-auto"
+                  className="mx-auto max-md:w-[200px]"
                   src={option?.image}
                   width={300}
                   height={300}
                   alt=""
                 />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center py-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
                   {option?.name ?? ""}
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
-                  <h4 className=" flex items-center">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
+                  <h4 className=" flex items-center ">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
                   </h4>
@@ -86,53 +86,59 @@ export default function Page() {
               </div>
               <div className="flex  flex-col items-start justify-start w-full gap-6 border-b-[1px] border-black pb-[50px]">
                 <div className="flex items-center justify-center gap-4 w-full">
-                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 ">
+                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 max-md:text-[15px]">
                     Loại kết nối
                   </h4>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="connect"
                       value="Zigbee"
                       checked={selectedOptions.connect === "Zigbee"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                       Zigbee
                     </label>
                   </div>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="connect"
                       value="BLE"
                       checked={selectedOptions.connect === "BLE"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">BLE</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      BLE
+                    </label>
                   </div>
                 </div>
               </div>
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="text-[50px] font-bold max-md:text-[30px]">
+                  {option?.price} VNĐ
+                </p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -142,52 +148,52 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:py-[50px] max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Ổ Cắm Thông Minh
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569358-o-cam-thong-minh.png"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Điện áp hoạt động</p>
                 <p>220V - 50Hz</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Dòng điện tối đa</p>
                 <p>16A</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Công suất</p>
                 <p>3500W</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Số lần bật tắt</p>
                 <p>100.000 lần</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chịu xung sét</p>
                 <p>0.5 kV</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước (Đường kính x Cao)</p>
                 <p>63x44x49mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Tiêu chuẩn áp dụng</p>
                 <p>TCVN 6480-1:2008</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Bluetooth Mesh</p>
               </div>
@@ -195,15 +201,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Các thiết bị thông minh, hỗ trợ điều khiển qua giọng nói dần được
               ứng dụng rộng rãi hơn. Điều này khá dễ hiểu khi không chỉ đáp ứng
@@ -214,7 +220,7 @@ export default function Page() {
               cùng tính ứng dụng từ mẫu thiết bị này?
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ổ cắm thông minh là gì?
             </h5>
             <p>
@@ -238,7 +244,7 @@ export default function Page() {
               Mesh mang tính ổn định cao.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ổ cắm thông minh thiết kế nhỏ gọn, tinh tế
             </h5>
             <p>
@@ -254,7 +260,7 @@ export default function Page() {
               Có thể thấy, chính thiết kế sang trọng từ sản phẩm đảm bảo độ
               tương thích cao cho mọi không gian – nơi mà ổ cắm được sử dụng.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cho tính tương thích cao với hầu hết các loại phích cắm
             </h5>
             <p>
@@ -266,7 +272,7 @@ export default function Page() {
               cho việc sử dụng được thuận tiện, tối ưu nhất.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ổ cắm điện thông minh luôn đảm bảo tính an toàn cao
             </h5>
             <p>
@@ -277,7 +283,7 @@ export default function Page() {
               hiểm chọc vào ổ điện, ở mẫu sản phẩm này, hãng sản xuất còn tích
               hợp nắp bảo vệ an toàn.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ổ cắm thông minh điều khiển từ xa qua điện thoại linh hoạt
             </h5>
             <p>
@@ -314,7 +320,7 @@ export default function Page() {
               mọi đối tượng người dùng.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng ổ cắm điện thông minh FPT Smart Home trong đời sống
             </h5>
             <p>
@@ -345,12 +351,11 @@ export default function Page() {
               nay qua Hotline 19006600 để được giải đáp cũng như hỗ trợ tận
               tình, chuyên nghiệp nhất!
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Hướng dẫn kết nối ổ cắm thông minh FPT Smart Home trên app:
             </h5>
             <iframe
-              width="1252"
-              height="705"
+              className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/zCQWecithow?si=rwbsb_B1MbrPx-QH"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -51,34 +51,34 @@ export default function Page() {
   };
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Khoá Cửa Thông Minh tại FPT Smart Home
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl py-4">
               {option ? (
                 <Image
-                  className="mx-auto"
+                  className="mx-auto max-md:w-[200px]"
                   src={option?.image}
-                  width={1000}
+                  width={585}
                   height={300}
                   alt=""
                 />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center py-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
                   Khoá Cửa Thẻ Từ Yale
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -87,86 +87,91 @@ export default function Page() {
                 </div>
               </div>
               <div className="flex  flex-col items-start justify-start w-full gap-6 border-b-[1px] border-black pb-[50px]">
-                <div className="flex items-start justify-start  w-full">
-                  <h4 className=" text-[18px] text-left font-semibold text-gray-800 basis-1/3 ">
+                <div className="flex items-center justify-start  w-full">
+                  <h4 className=" text-[18px] text-left font-semibold text-gray-800 basis-1/3 max-md:text-[12px]">
                     Chọn màu sắc
                   </h4>
                   <div className="flex items-center basis-1/3">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="color"
                       value="Bạc"
                       checked={selectedOptions.color === "Bạc"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">Bạc</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      Bạc
+                    </label>
                   </div>
                   <div className="flex items-center basis-1/3">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="color"
                       value="Vàng"
                       checked={selectedOptions.color === "Vàng"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">Vàng</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      Vàng
+                    </label>
                   </div>
                 </div>
                 <div className="flex items-start justify-start w-full">
-                  <h4 className=" text-[18px] text-left font-semibold text-gray-800 basis-1/3 ">
+                  <h4 className=" text-[18px] text-left font-semibold text-gray-800 basis-1/3 max-md:text-[12px]">
                     Phân loại
                   </h4>
                   <div className="flex items-center basis-1/3">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="type"
                       value="YDM3109A"
                       checked={selectedOptions.type === "YDM3109A"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                       YDM3109A
                     </label>
                   </div>
                   <div className="flex items-center  basis-1/3">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="type"
                       value="YDM3115V"
                       checked={selectedOptions.type === "YDM3115V"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                       YDM3115V
                     </label>
                   </div>
                 </div>
               </div>
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">
-                  {" "}
+                <p className="text-[50px] font-bold max-md:text-[30px]">
                   {option ? `${option?.price} VNĐ` : "Hết Hàng"}
                 </p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -176,56 +181,56 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:px-6 max-md:py-[50px]">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Khoá Cửa Thẻ Từ Yale
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569100-page-chi-tiet-khoa2.jpg"
               width={300}
               height={300}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full ">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nguồn điện hoạt động</p>
                 <p>4 viên pin AA 1.5V</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Thẻ từ</p>
                 <p>Lên tới 100</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chìa cơ</p>
                 <p>2 chìa khoá kèm theo</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Mật khẩu</p>
                 <p>4 - 10 ký tự/ số lượng mật khẩu lên đến 100</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kết nối</p>
                 <p>Zigbee</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Độ dày cửa</p>
                 <p>40 - 80 mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Độ rộng đố cửa</p>
                 <p>{">"}= 60mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước mặt ngoài</p>
                 <p>68.6 x 306.7 x 27mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước mặt trong</p>
                 <p>72.8 x 306.6 x 37mm</p>
               </div>
@@ -233,15 +238,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col   max-lg:px-20 max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Khóa cửa thẻ từ là loại khóa có ổ khóa với lõi bằng kim loại. Khóa
               sẽ được mở bằng cách dùng thẻ từ đã được trang bị chip nhiễm từ.
@@ -251,7 +256,7 @@ export default function Page() {
               khả năng tích hợp với các thiết bị smart home khác để tạo nên ngôi
               nhà thông minh đa năng cho khách hàng.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               1. Khóa cửa thẻ từ Yale là gì?
             </h5>
             <p>
@@ -268,7 +273,7 @@ export default function Page() {
               tuyệt đối cho ngôi nhà của bạn.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               2. Các tính năng mở khóa khác
             </h5>
             <p>
@@ -293,7 +298,7 @@ export default function Page() {
               thiết bị thông minh khác và hoạt động theo ngữ cảnh đã được thiết
               lập.{" "}
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               3. Chức năng và đặc tính nổi bật của khóa cửa thẻ từ Yale
             </h5>
             <p>
@@ -356,7 +361,7 @@ export default function Page() {
               </li>
             </ul>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               4. Thông số kỹ thuật của khóa cửa thẻ từ Yale
             </h5>
             <table className="border-[1px] border-black mx-auto">

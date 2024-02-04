@@ -43,28 +43,34 @@ export default function Page() {
   console.log(cart);
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Các thiết bị Cảm biến
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
               {option ? (
-                <Image src={option?.image} width={1000} height={500} alt="" />
+                <Image
+                  className="mx-auto"
+                  src={option?.image}
+                  width={585}
+                  height={585}
+                  alt=""
+                />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center pt-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[25px]">
                   {option?.name ?? ""}
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -73,22 +79,26 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+              <div className="pt-2 border-b-[1px] border-black pb-[20px] ">
+                <p className="text-[50px] font-bold max-md:text-[30px]">
+                  {option?.price} VNĐ
+                </p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
                 <p className="text-[18px] text-slate-600 font-medium mb-4 px-6"></p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -98,56 +108,56 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:px-6 max-md:py-[50px]">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
-            Cảm Biến Chuyển Động Âm Trần
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
+            Cảm Biến Khói
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1697685911-945x764.jpg"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nguồn cấp</p>
                 <p>Pin CR123A</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Dải nhiệt độ hoạt động</p>
                 <p>-10÷50˚C</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Dải độ ẩm hoạt động</p>
                 <p>0 ÷ 95%</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước</p>
                 <p>Ø90x37 mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Khối lượng</p>
                 <p>150g</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Mức âm thanh cảnh báo</p>
                 <p>85dB</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Độ nhạy của đầu dò khói</p>
                 <p>0.12-0.2 dB/m</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Tiêu chuẩn áp dụng</p>
                 <p>TCVN7568-15:2015</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Bluetooth Mesh</p>
               </div>
@@ -155,15 +165,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6 ">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Cảm biến khói thông minh là một thiết bị không thể thiếu trong hệ
               thống ngôi nhà thông minh, giúp đảm bảo an toàn cho gia chủ và kịp
@@ -177,7 +187,9 @@ export default function Page() {
               height={600}
               alt=""
             />
-            <h5 className="font-semibold text-[22px]">Cảm biến khói là gì?</h5>
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
+              Cảm biến khói là gì?
+            </h5>
             <p>
               Cảm biến khói là thiết bị có khả năng nhận biết, phát hiện nhanh
               chóng khói hay các đám cháy trong ngôi nhà. Sau đó nó sẽ truyền
@@ -186,7 +198,7 @@ export default function Page() {
               sớm ngăn chặn hỏa hoạn xảy ra và giảm thiểu các rủi ro thiệt hại
               về người và tài sản.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Tác dụng khi dùng cảm biến khói báo cháy
             </h5>
             <p>Cảm biến khói báo cháy có tác dụng sau:</p>
@@ -211,7 +223,7 @@ export default function Page() {
                 không ảnh hưởng đến không gian hay cấu trúc của ngôi nhà.
               </li>
             </ul>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Các tính năng ấn tượng của cảm biến khói FPT Smart Home
             </h5>
             <p>
@@ -256,7 +268,7 @@ export default function Page() {
                 trần nhà.{" "}
               </li>
             </ul>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng cảm biến khói thông minh trong đời sống
             </h5>
             <p>

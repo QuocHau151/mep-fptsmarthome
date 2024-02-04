@@ -43,26 +43,34 @@ export default function Page() {
   console.log(cart);
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Các thiết bị Cảm biến
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
               {option ? (
-                <Image src={option?.image} width={1000} height={500} alt="" />
+                <Image
+                  className="mx-auto"
+                  src={option?.image}
+                  width={585}
+                  height={585}
+                  alt=""
+                />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center pt-[50px] ">
-                <h1 className="text-[27px] font-semibold">{option?.name}</h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
+                  {option?.name}
+                </h1>
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4  max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -72,23 +80,27 @@ export default function Page() {
               </div>
 
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="text-[50px] font-bold max-md:text-[30px] ">
+                  {option?.price} VNĐ
+                </p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 12 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -98,66 +110,66 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:px-6 max-md:py-[50px]">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Cảm Biến Chuyển Động Âm Trần
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569371-blub.png"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full ">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Công suất</p>
                 <p>9W</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Điện áp hoạt động</p>
                 <p>220V/50Hz</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chỉ số hoàn màu</p>
                 <p>80</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Quang thông</p>
                 <p>810 Im</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Tuổi thọ</p>
                 <p>20.000 h</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Thay đổi nhiệt độ màu</p>
                 <p>(3000K- 6500K)+ RGB</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Thay đổi cường độ</p>
                 <p>10 ÷ 100%</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước (ØxH)</p>
                 <p>60x109mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Khối lượng</p>
                 <p>44.5±0.5 g</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p className="text-left">Tiêu chuẩn áp dụng</p>
                 <p className="text-right">
                   TCVN 10885-2-1/IEC 62722-2-1; TCVN 7722-2-2/IEC 60598-2-2
                 </p>
               </div>
-              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Bluetooth Mesh</p>
               </div>
@@ -165,15 +177,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6 ">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Thiết bị chiếu sáng có thể nói là 1 phần quan trọng của mọi không
               gian sống. Không chỉ cần đảm bảo cho hiệu năng hoạt động ổn định,
@@ -186,14 +198,14 @@ export default function Page() {
               minh, linh hoạt, đèn LED Bulb thông minh của FPT Smart Home là 1
               trong những sản phẩm xu hướng, được đánh giá cực cao hiện nay.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Đèn LED Bulb có gì đáng để lựa chọn?
             </h5>
             <p>
               Nhắc đến đèn LED Bulb thông minh, có thể nói, sản phẩm sở hữu hàng
               loạt ưu điểm nổi bật. Bao gồm:
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Thiết kế đèn LED Bulb sang trọng, đảm bảo đồng điệu cho mọi khu
               vực
             </h5>
@@ -205,7 +217,7 @@ export default function Page() {
               rằng, không gian sẽ tạo nên được điểm nhấn riêng, nâng tầm đẳng
               cấp đáng kể cho tổng thể.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Chất liệu cao cấp - độ bền dài lâu
             </h5>
             <p>
@@ -217,7 +229,7 @@ export default function Page() {
               phù hợp với nhiều không gian chiếu sáng và mục đích sử dụng khác
               nhau.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Điều khiển linh hoạt với đèn LED Bulb
             </h5>
             <p>
@@ -247,7 +259,7 @@ export default function Page() {
               height={800}
               alt=""
             />
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Hỗ trợ chiếu sáng ổn định, phù hợp cho nhiều không gian
             </h5>
             <p>
@@ -269,7 +281,7 @@ export default function Page() {
               cho đôi mắt của bạn.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Tuổi thọ bền lâu theo thời gian
             </h5>
             <p>
@@ -285,7 +297,9 @@ export default function Page() {
               không phải mua mới/ thay đèn mới khi sử dụng bóng đèn LED Bulb
               thông minh này.{" "}
             </p>
-            <h5 className="font-semibold text-[22px]">Ứng dụng đèn LED BulB</h5>
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
+              Ứng dụng đèn LED BulB
+            </h5>
             <p>
               Với khả năng cung cấp nguồn ánh sáng linh hoạt, lại tích hợp khả
               năng điều khiển thông minh, với mẫu đèn LED Bulb này, người dùng
@@ -308,12 +322,11 @@ export default function Page() {
               phẩm này, quý khách hàng có thể liên hệ với chúng tôi qua Hotline
               19006600 ngay hôm nay!
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Hướng dẫn kết nối đèn LED Bulb của FPT Smart Home trên app:
             </h5>
             <iframe
-              width="1210"
-              height="800"
+              className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/9gePJJUy2aw?si=aTfY635846AChdkB"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

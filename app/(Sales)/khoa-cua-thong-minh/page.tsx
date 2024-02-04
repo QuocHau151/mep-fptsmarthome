@@ -8,14 +8,14 @@ export default function Page() {
   return (
     <div>
       <div>
-        <div className="bg-[url('/assets/images/product/thumnail/1668566931-cover-page-khoa-cua.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/product/thumnail/1668566931-cover-page-khoa-cua.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
-      <div className="container">
-        <div className="text-center flex flex-col py-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="container  max-lg:px-20 max-md:px-10">
+        <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[20px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[30px]">
             Các thiết bị Cửa khoá thông minh
           </h2>
         </div>
@@ -49,14 +49,14 @@ export default function Page() {
             </Button>
           </div>
         </div>
-        <div className="text-center flex flex-col items-center p-10 gap-6">
-          <p className="text-[20px]">
+        <div className="text-center flex flex-col items-center p-10 gap-6 max-md:p-0 max-md:pb-10">
+          <p className="text-[20px] max-md:text-[15px]">
             Khóa thông minh là sản phẩm khóa cửa điện tử được áp dụng công nghệ
             thông minh giúp người dùng dễ dàng thực hiện các thao tác đóng/mở
             cửa mà không cần đến chìa cơ, thay vào đó sử dụng các phương thức mở
             khóa bằng vân tay, mã số, thẻ từ hay điện thoại.
           </p>
-          <p className="text-[20px]">
+          <p className="text-[20px]  max-md:text-[15px]">
             Khóa cửa thông minh được thiết kế với công nghệ bảo mật cao giúp cho
             người dùng an tâm hơn khi sử dụng, đặc biệt một số mẫu khóa thông
             minh có chức năng kiểm soát và quản lý hoạt động của ngôi nhà từ xa

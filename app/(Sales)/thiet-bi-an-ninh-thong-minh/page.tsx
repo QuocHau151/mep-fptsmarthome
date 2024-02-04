@@ -8,14 +8,14 @@ export default function Page() {
   return (
     <div>
       <div>
-        <div className="bg-[url('/assets/images/product/thumnail/1668575026-an-ninh.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/product/thumnail/1668575026-an-ninh.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
-      <div className="container">
-        <div className="text-center flex flex-col py-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="container  max-lg:px-20 max-md:px-10">
+        <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[20px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[30px]">
             Camera an ninh thông minh FPT
           </h2>
         </div>
@@ -35,15 +35,21 @@ export default function Page() {
             </Button>
           </div>
         </div>
-        <div className="text-center flex flex-col items-center p-10 gap-6">
-          <p className="text-[20px]">
+        <div className="text-center flex flex-col items-center p-10 gap-6 max-md:p-0 max-md:gap-2 max-md:pb-[50px]">
+          <p className="text-[20px] max-md:text-[15px]">
             Thiết bị an ninh thông minh FPT Smart Home với hệ thống camera giám
             sát - Bảo vệ an ninh mọi gia đình - Giúp bạn an theo dõi mọi nơi, an
             tâm mọi lúc
           </p>
-          <p className="text-[20px] px-20">An toàn và bảo mật dữ liệu</p>
-          <p className="text-[20px] px-20">Cảnh báo thông minh</p>
-          <p className="text-[20px] px-20">Hình ảnh sắc nét, trung thực</p>
+          <p className="text-[20px] px-20 max-md:px-12 max-md:text-[15px]">
+            An toàn và bảo mật dữ liệu
+          </p>
+          <p className="text-[20px] max-md:px-12 max-md:text-[15px]">
+            Cảnh báo thông minh
+          </p>
+          <p className="text-[20px] max-md:px-12 max-md:text-[15px]">
+            Hình ảnh sắc nét, trung thực
+          </p>
         </div>
       </div>
     </div>

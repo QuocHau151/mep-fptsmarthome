@@ -166,12 +166,12 @@ export default function Nav() {
   };
 
   return (
-    <div className=" bg-black w-full h-[100px] ">
+    <div className="block max-lg:hidden   bg-black w-full h-[100px] ">
       <div className="container flex items-center h-full justify-between ">
         <Link href="/" className="mr-[]">
           <Image src="/assets/logofptsh.png" width={205} height={100} alt="" />
         </Link>
-        <div className="flex  items-center space-x-2 mr-[40px]">
+        <div className="flex  items-center space-x-2 ">
           <form className="flex  items-center" onSubmit={handleSearchSubmit}>
             <div ref={wrapperRef} className="relative mr-2">
               <Input
@@ -227,12 +227,12 @@ export default function Nav() {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="text-[20px]  text-center w-full h-min mt-4  rounded-xl  p-2 border-b-[1px] border-black bg-slate-100">
+                <SheetTitle className="text-[20px]  text-center w-full h-min mt-12  p-2 border-t-[1px] border-b-[1px] border-black bg-orange-300">
                   Cart
                 </SheetTitle>
                 <SheetDescription></SheetDescription>
               </SheetHeader>
-              <div>
+              <div className="px-2">
                 <div>
                   {cart.map((item) => (
                     <div key={item.id} className="flex flex-col ">
@@ -250,7 +250,8 @@ export default function Nav() {
                             </h5>
                             <p className="text-[12px]">
                               {item.type} {item.button} {item.color}
-                              {item.connect}{item.power} {item.type_key}
+                              {item.connect}
+                              {item.power} {item.type_key}
                             </p>
                           </div>
                         </div>
@@ -260,14 +261,14 @@ export default function Nav() {
                           </p>
                           <div className="flex items-center gap-2 text-[12px]">
                             <button
-                              className="border-[1px] border-black px-[4px] hover:bg-orange-500"
+                              className="border-[1px] border-black px-[4px] hover:bg-orange-500 rounded-sm"
                               onClick={() => decreaseQuantity(item.id)}
                             >
                               -
                             </button>
                             <p>{item.quantity}</p>
                             <button
-                              className="border-[1px] border-black px-[4px]  hover:bg-orange-500"
+                              className="border-[1px] border-black px-[4px]  hover:bg-orange-500 rounded-sm"
                               onClick={() => increaseQuantity(item.id)}
                             >
                               +
@@ -306,7 +307,7 @@ export default function Nav() {
                   ))}
                 </div>
               </div>
-              <SheetFooter className="flex items-center mt-6">
+              <SheetFooter className="flex items-center mt-6 mr-2">
                 <SheetClose asChild>
                   {/* checkout */}
                   <Button type="submit">

@@ -43,15 +43,15 @@ export default function Page() {
   console.log(cart);
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Bộ Rèm Cửa FPT Smart Home
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
               {option ? (
                 <Image
@@ -62,13 +62,15 @@ export default function Page() {
                   alt=""
                 />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center pt-[50px] ">
-                <h1 className="text-[27px] font-semibold">{option?.name}</h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
+                  {option?.name}
+                </h1>
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -78,23 +80,27 @@ export default function Page() {
               </div>
 
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="text-[50px] font-bold max-md:text-[30px]">
+                  {option?.price} VNĐ
+                </p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -104,52 +110,52 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:px-6 max-md:py-[50px]">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Động Cơ Rèm Thông Minh
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569332-dong-co-rem.png"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Điện áp</p>
                 <p>240V/60Hz</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Lực kéo</p>
                 <p>2.0 N.m</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Tốc độ</p>
                 <p>80 vòng/ phút</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Công suất</p>
                 <p>80W</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Độ bảo vệ</p>
                 <p>IP20</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chiều dài động cơ</p>
                 <p>31.6 cm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Dây điện</p>
                 <p>5 dây</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Độ ồn</p>
                 <p>33 dB(A)</p>
               </div>
@@ -157,15 +163,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col   max-lg:px-20 max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Rèm cửa ngoài chức năng trang trí không gian còn thực hiện nhiệm
               vụ che chắn ánh sáng hoặc đảm bảo sự riêng tư bên trong không gian
@@ -174,7 +180,7 @@ export default function Page() {
               động, nhanh chóng, cho độ tiện ích cực cao ngôi nhà thông minh.
               Bạn đã biết gì về thiết bị thông minh, mang tính xu thế này?
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Giới thiệu chung về động cơ rèm đến từ thương hiệu FPT Smart Home
             </h5>
             <Image
@@ -206,7 +212,7 @@ export default function Page() {
               height={800}
               alt=""
             />
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cấu tạo động cơ rèm thông minh
             </h5>
             <p>
@@ -226,7 +232,7 @@ export default function Page() {
               ngoài gây gỉ sét, hao mòn. Nhờ đó, tuổi thọ thiết bị đảm bảo được
               dài lâu theo thời gian, cho tính kinh tế vượt bậc.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Tính năng nổi bật từ động cơ rèm
             </h5>
             <p>
@@ -254,7 +260,7 @@ export default function Page() {
               Người dùng có thể cài đặt tính năng mở rèm tự động dự trên cường
               độ ánh sáng tự nhiên.{" "}
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ưu điểm nổi bật của sản phẩm
             </h5>
             <p>
@@ -279,7 +285,7 @@ export default function Page() {
               khi hoạt động kéo, mở. Qua đó, tạo nên không gian yên tĩnh, đầy
               tiện nghi cho sinh hoạt hằng ngày của người dùng.{" "}
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng của động cơ rèm thông minh
             </h5>
             <p>

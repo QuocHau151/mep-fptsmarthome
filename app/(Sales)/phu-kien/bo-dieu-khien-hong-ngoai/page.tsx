@@ -43,34 +43,34 @@ export default function Page() {
   console.log(cart);
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Phụ Kiện Thông Minh FPT Smart Home
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
               {option ? (
                 <Image
-                  className="mx-auto"
+                  className="mx-auto max-md:w-[200px]"
                   src={option?.image}
                   width={300}
                   height={300}
                   alt=""
                 />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center pt-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
                   Bộ Điều Khiển Hồng Ngoại
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -80,23 +80,27 @@ export default function Page() {
               </div>
 
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">{option?.price} VNĐ</p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="text-[50px] font-bold max-md:text-[30px]">
+                  {option?.price} VNĐ
+                </p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 12 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -106,50 +110,50 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:px-6 max-md:py-[50px]">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Bộ Điều Khiển Hồng Ngoại
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1684406592-PR-FSH-5-2022_600X375-2.jpg"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nguồn cấp</p>
                 <p>DC 5V-1A (micro USB)</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Tần số hồng ngoại</p>
                 <p>38KHz</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Hướng hồng ngoại</p>
                 <p>Đa hướng</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Phạm vi hồng ngoại</p>
                 <p>Tối đa 8m</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p className="text-left">Chuẩn kết nối</p>
                 <p className="text-right">
                   Wi-Fi 802.11b/g/n (2.4GHz), Hỗ trợ Bluetooth Mesh*
                 </p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Sóng điều khiển</p>
                 <p>Sóng hồng ngoại</p>
               </div>
-              <div className="flex items-center justify-between w-full text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước</p>
                 <p>67*67*25mm</p>
               </div>
@@ -157,15 +161,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6 ">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Nhắc đến các giải pháp điều khiển tiện nghi cho ngôi nhà thông
               minh thì không thể thiếu bộ điều khiển hồng ngoại FPT Smart Home.
@@ -175,7 +179,7 @@ export default function Page() {
               nhỏ gọn, mang màu đen sang trọng, phù hợp với mọi không gian, góp
               phần tạo nên căn nhà thông minh tiện nghi và đẳng cấp.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               1. Bộ điều khiển hồng ngoại là gì?
             </h5>
             <p>
@@ -185,14 +189,13 @@ export default function Page() {
               remote truyền thống.
             </p>
             <iframe
-              width="1252"
-              height="705"
+              className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/VYd3aqcH71c?si=y0NRSfIkOcnBwvRZ"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               2. Cách thức hoạt động của Bộ điều khiển hồng ngoại
             </h5>
             <p>
@@ -220,7 +223,7 @@ export default function Page() {
               height={500}
               alt=""
             />
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               3. Tính năng của Bộ điều khiển hồng ngoại FPT Smart Home
             </h5>
             <p>
@@ -257,7 +260,7 @@ export default function Page() {
               </li>
             </ul>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Đặc biệt, Bộ điều khiển hồng ngoại của FPT Smart Home, sử dụng kết
               nối Wifi 2.4Ghz, hoạt động độc lập mà không cần bộ điều khiển
               trung tâm, người dùng có thể liên kết trực tiếp với ứng dụng FPT
@@ -271,7 +274,7 @@ export default function Page() {
               alt=""
             />
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               4. Tạo kịch bản cùng Bộ điều khiển hồng ngoại FPT Smart Home
             </h5>
             <p>
@@ -288,7 +291,7 @@ export default function Page() {
               alt=""
             />
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Tham khảo ngay các hướng dẫn tạo kịch bản bên dưới:
             </h5>
             <p>Lúc 2h sáng, điều hoà tăng lên 26 độ để giảm lạnh.</p>

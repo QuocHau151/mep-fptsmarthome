@@ -8,14 +8,14 @@ export default function Page() {
   return (
     <div>
       <div>
-        <div className="bg-[url('/assets/images/product/thumnail/1686639474-TrangChuWebsite-box1920x680-copy-1.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/product/thumnail/1686639474-TrangChuWebsite-box1920x680-copy-1.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
-      <div className="container">
-        <div className="text-center flex flex-col py-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="container  max-lg:px-20 max-md:px-10">
+        <div className="text-center flex flex-col py-[100px] max-md:py-12">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[20px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[30px]">
             Bộ điều khiển trung tâm FPT Play Box S
           </h2>
         </div>
@@ -33,34 +33,41 @@ export default function Page() {
             </Button>
           </div>
         </div>
-        <div className="text-center flex flex-col items-center p-10 gap-6">
-          <div className="p-10 flex items-center justify-center gap-6 border-b-[1px] w-full border-black">
-            <div className="flex flex-col items-center gap-4">
+        <div className="text-center flex flex-col items-center p-10 gap-6 max-md:p-0">
+          <div className="p-10 flex items-center justify-center gap-6  w-full ">
+            <div className="flex flex-col items-center gap-4 ">
               <Image
+                className="w-[70px] h-[70px] max-md:w-[40px] max-md:h-[40px]"
                 src="/assets/images/product/icon/1676456837-Group-1073.png"
                 width={70}
                 height={70}
                 alt=""
               />
-              <p className="text-[18px]">Điều khiển giọng nói</p>
+              <p className="text-[18px] max-md:text-[12px]">
+                Điều khiển giọng nói
+              </p>
             </div>
             <div className="flex flex-col items-center gap-4">
               <Image
+                className="w-[70px] h-[70px] max-md:w-[40px] max-md:h-[40px]"
                 src="/assets/images/product/icon/1676456645-Group-1072.png"
                 width={70}
                 height={70}
                 alt=""
               />
-              <p className="text-[18px]">Điều khiển giọng nói</p>
+              <p className="text-[18px] max-md:text-[12px]">
+                Điều khiển giọng nói
+              </p>
             </div>
             <div className="flex flex-col items-center gap-4">
               <Image
+                className="w-[70px] h-[70px] max-md:w-[40px] max-md:h-[40px]"
                 src="/assets/images/product/icon/1676456652-Group-1071.png"
                 width={70}
                 height={70}
                 alt=""
               />
-              <p className="text-[18px]">Kết nối Zigbee</p>
+              <p className="text-[18px] max-md:text-[12px]">Kết nối Zigbee</p>
             </div>
           </div>
         </div>

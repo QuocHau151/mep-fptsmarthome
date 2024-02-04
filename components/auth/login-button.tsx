@@ -14,9 +14,7 @@ export const LoginButton = ({
   const onClick = () => {
     router.push("/login");
   };
-  if (mode === "modal") {
-    return <span>implement modal</span>;
-  }
+
   return (
     <span onClick={onClick} className="cursor-pointer">
       {children}

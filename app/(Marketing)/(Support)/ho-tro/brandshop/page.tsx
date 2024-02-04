@@ -67,10 +67,12 @@ export default function Page() {
       <div className="">
         <div className="bg-[url('/assets/images/support/brandshop-banner2.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
       </div>
-      <div className="container">
+      <div className="container max-lg:px-20">
         <div className="flex items-center justify-center gap-10 py-[100px]">
-          <div className=" basis-1/2 flex flex-col gap-4 text-[18px]">
-            <h1 className="text-[30px] font-semibold">FPT BrandShop</h1>
+          <div className=" basis-1/2 flex flex-col gap-4 text-[18px] max-lg:text-[14px]">
+            <h1 className="text-[30px]  font-semibold max-lg:text-[25px]">
+              FPT BrandShop
+            </h1>
             <p>
               FPT Smart Home được FPT Telecom phát triển nhằm cung cấp giải pháp
               nhà thông minh hiện đại, tiện nghi cho các gia đình Việt.
@@ -91,6 +93,7 @@ export default function Page() {
             </p>
           </div>
           <Image
+            className="basis-1/2"
             src="/assets/images/support/brandshop-content1.jpg"
             width={700}
             height={900}
@@ -106,8 +109,8 @@ export default function Page() {
               Những ưu đãi độc quyền khi trở thành BrandShop của FPT Smart Home
             </h2>
           </div>
-          <div className="grid grid-cols-3 grid-rows-2 gap-10 mb-10">
-            <div className="flex flex-col items-center justify-center gap-6">
+          <div className="grid grid-cols-3 grid-rows-2  gap-10 mb-10 max-lg:grid-cols-2 max-lg:grid-rows-3">
+            <div className="flex flex-col items-center justify-start gap-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="129.345"
@@ -131,7 +134,7 @@ export default function Page() {
                 FPT Smart Home sẽ đồng hành cùng BrandShop xây dựng thị trường
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col items-center justify-start gap-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="121.25"
@@ -240,7 +243,7 @@ export default function Page() {
                 thức của FPT Smart Home
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col items-center justify-start gap-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="125.125"
@@ -301,7 +304,7 @@ export default function Page() {
                 thuật, sản phẩm chuyên sâu sớm nhất
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col items-center justify-start gap-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="121.359"
@@ -344,7 +347,7 @@ export default function Page() {
                 vực
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col items-center justify-start gap-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="116.132"
@@ -405,7 +408,7 @@ export default function Page() {
                 Home tại khu vực nơi BrandShop đặt cửa hàng
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex flex-col items-center justify-start gap-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="121.359"
@@ -511,22 +514,22 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className=" bg-gray-100 w-full h-min  py-[100px]">
-        <div className="container flex items-center justify-center gap-8">
+      <div className=" bg-gray-100 w-full h-min  py-[100px] max-lg:px-20 ">
+        <div className="container flex items-center justify-center gap-8 max-lg:flex-col ">
           <div className="basis-1/2 flex flex-col gap-6">
-            <h1 className="text-[35px] font-semibold ">
+            <h1 className="text-[35px] font-semibold max-lg:text-center">
               Trở thành đại lý uỷ quyền cao cấp của FPT
             </h1>
-            <h5 className="text-[20px] ">
+            <h5 className="text-[20px] max-lg:text-center max-lg:px-10 ">
               Đại diện thương hiệu FPT Smart Home tại khu vực và nhận các ưu đãi
               đặc quyền.
             </h5>
           </div>
-          <div className="basis-1/2 w-full h-min bg-white p-[30px] ">
+          <div className="basis-1/2 w-full h-min bg-white p-[30px]  ">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6 w-[600px] flex flex-col"
+                className="space-y-6 w-full flex flex-col "
               >
                 <FormField
                   control={form.control}

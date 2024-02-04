@@ -51,18 +51,18 @@ export default function Page() {
   };
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Phụ Kiện Thông Minh FPT Smart Home
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl py-4">
               <Image
-                className="mx-auto"
+                className="mx-auto max-md:w-[200px]"
                 src={option?.image ?? ""}
                 width={500}
                 height={500}
@@ -71,10 +71,10 @@ export default function Page() {
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center py-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
                   Ổ Cắm Mặt Kính Âm Tường
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -83,80 +83,80 @@ export default function Page() {
                 </div>
               </div>
               <div className="flex  flex-col items-start justify-start w-full gap-6 border-b-[1px] border-black pb-[50px]">
-                <div className="flex items-start justify-start w-full">
-                  <h4 className=" text-[18px] text-left font-semibold text-gray-800  min-w-[150px] ">
+                <div className="flex items-center justify-start w-full">
+                  <h4 className=" text-[18px] text-left font-semibold text-gray-800  min-w-[150px] max-md:text-[12px] max-md:min-w-[100px]">
                     Hình dáng
                   </h4>
-                  <div className="grid grid-cols-2">
+                  <div className="grid grid-cols-3">
                     <div className="flex items-center">
                       <input
-                        className="w-[35px] h-[35px]  mr-2 "
+                        className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                         type="radio"
                         name="type"
                         value="Vuông"
                         checked={selectedOptions.type === "Vuông"}
                         onChange={handleChange}
                       />
-                      <label className="text-[18px] font-medium mr-6">
+                      <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                         Vuông
                       </label>
                     </div>
                     <div className="flex items-center">
                       <input
-                        className="w-[35px] h-[35px]  mr-2 "
+                        className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                         type="radio"
                         name="type"
                         value="Chữ nhật"
                         checked={selectedOptions.type === "Chữ nhật"}
                         onChange={handleChange}
                       />
-                      <label className="text-[18px] font-medium mr-6">
+                      <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                         Chữ nhật
                       </label>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center justify-start w-full">
-                  <h4 className=" text-[18px] text-left font-semibold text-gray-800 min-w-[150px] ">
+                  <h4 className=" text-[18px] text-left font-semibold text-gray-800 min-w-[150px] max-md:text-[12px] max-md:min-w-[100px] ">
                     Chọn màu sắc
                   </h4>
                   <div className="grid grid-cols-3">
                     <div className="flex items-center">
                       <input
-                        className="min-w-[35px] h-[35px]  mr-2 "
+                        className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px] "
                         type="radio"
                         name="color"
                         value="Đen"
                         checked={selectedOptions.color === "Đen"}
                         onChange={handleChange}
                       />
-                      <label className="text-[18px] font-medium mr-6">
+                      <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                         Đen
                       </label>
                     </div>
                     <div className="flex items-center">
                       <input
-                        className="min-w-[35px] h-[35px]  mr-2 "
+                        className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                         type="radio"
                         name="color"
                         value="Trắng"
                         checked={selectedOptions.color === "Trắng"}
                         onChange={handleChange}
                       />
-                      <label className="text-[18px] font-medium mr-6">
+                      <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                         Trắng
                       </label>
                     </div>
                     <div className="flex items-center">
                       <input
-                        className="min-w-[35px] h-[35px]  mr-2 "
+                        className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                         type="radio"
                         name="color"
                         value="Stone Gray"
                         checked={selectedOptions.color === "Stone Gray"}
                         onChange={handleChange}
                       />
-                      <label className="text-[18px] font-medium mr-6">
+                      <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                         Stone Gray
                       </label>
                     </div>
@@ -164,25 +164,27 @@ export default function Page() {
                 </div>
               </div>
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">
+                <p className="text-[50px] font-bold max-md:text-[30px]">
                   {option ? `${option?.price} VNĐ` : "Hết Hàng"}
                 </p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -192,48 +194,48 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:py-[50px] max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Cảm Biến Chuyển Động
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569403-cam-bien-chuyen-dong.png"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Công suất</p>
                 <p>9W</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nhiệt độ làm việc</p>
                 <p>-10 ÷ 40 ˚C</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Khoảng cách phát hiện chuyển động</p>
                 <p>{"<"}7m</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Góc phát hiện chuyển động</p>
                 <p>90/360 độ</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Dải đo ánh sáng</p>
                 <p>0 - 1000 lux</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước</p>
                 <p>30x30x33mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Zigbee</p>
               </div>
@@ -241,22 +243,22 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Thiết kế nhà thông minh đang trở thành một trong những xu hướng
               hàng đầu hiện nay. Một trong những thiết bị quan trọng không thể
               thiếu trong hệ thống nhà thông minh đó là cảm biến chuyển động.
               Vậy điểm nổi bật của sản phẩm này là gì?
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cảm biến chuyển động là gì?
             </h5>
             <p>
@@ -276,7 +278,7 @@ export default function Page() {
               các chuyển động vật lý được thu về sẽ nhanh chóng chuyển thành các
               hành động, tín hiệu, thông tin khác tương ứng.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Chức năng của cảm biến chuyển động
             </h5>
             <p>
@@ -284,7 +286,7 @@ export default function Page() {
               thể liên kết với những thiết bị liên quan và thực hiện chức năng
               một cách chính xác, thống nhất.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cảm biến phát hiện những chuyển động vật lý trong môi trường
             </h5>
             <p>
@@ -299,7 +301,7 @@ export default function Page() {
               nâng cao tinh thần cảnh giác, vừa bảo vệ sự an toàn trong những
               tình huống nhất định.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Bật/ tắt các thiết bị trong hệ thống khi phát hiện chuyển động
             </h5>
             <p>
@@ -313,7 +315,7 @@ export default function Page() {
               nữa. Thay vào đó, hệ thống của cảm biến chuyển động sẽ hoạt động 1
               cách tự động, mang tới sự tiện lợi và tiết kiệm thời gian tối đa.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Bảo vệ gia đình bạn trong điều kiện tốt nhất khi sử dụng cảm biến
               chuyển động
             </h5>
@@ -335,7 +337,7 @@ export default function Page() {
               này đã và đang giúp bố mẹ chăm sóc trẻ nhỏ, hạn chế rủi ro tối ưu.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng của cảm biến chuyển động
             </h5>
             <p>
@@ -357,8 +359,7 @@ export default function Page() {
               chính xác.
             </p>
             <iframe
-              width="1210"
-              height="815"
+              className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/GHeIFy92OL0?si=S3BSPBlcnlgyZPpH"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -372,25 +373,23 @@ export default function Page() {
               ngay hôm nay để nhận tư vấn và hỗ trợ tốt nhất, chuyên nghiệp nhất
               nhé!
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Xem thêm sản phẩm liên quan: Cảm biến cửa thông minh tại FPT Smart
               Home
             </h5>
             <iframe
-              width="1210"
-              height="800"
+              className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/OSQaku9aXb0?si=YWeW4Kf6TgLSIVG2"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Hướng dẫn kết nối cảm biến chuyển động Bluetooth Mesh của FPT
               Smart Home
             </h5>
             <iframe
-              width="1210"
-              height="800"
+              className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/wnchZFYURfk?si=DX1E72gsX6lJ1gA0"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

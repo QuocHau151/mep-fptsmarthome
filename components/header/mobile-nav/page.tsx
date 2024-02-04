@@ -48,6 +48,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
 const products: Product[] = [
   {
     id: 1,
@@ -188,25 +189,35 @@ export default function MobileNav() {
     logout();
   };
   return (
-    <div className="bg-black w-full h-min flex items-center justify-between px-10 py-4">
+    <div className="lg:hidden bg-black w-full h-min flex items-center justify-between px-10 py-4">
       <Link href="/" className="mr-[]">
-        <Image src="/assets/logofptsh.png" width={205} height={100} alt="" />
+        <Image
+          className="max-md:w-[150px]"
+          src="/assets/logofptsh.png"
+          width={205}
+          height={100}
+          alt=""
+        />
       </Link>
-      <div className="flex items-center justify-center text-white gap-4">
-        <div className="">
+      <div className="flex items-center justify-center text-white gap-2 max-md:mr-[-25px] max-md:gap-0">
+        <div className="p-2 hidden md:block">
           <CiSearch size={24} />
+        </div>
+        <div className="p-2 hidden max-md:block">
+          <CiSearch size={17} />
         </div>
         <div>
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="relative bg-black outline-none p-0">
+              <Button className="relative bg-black outline-none p-2">
                 <Image
+                  className="w-[24px] h-[24px] max-md:w-[17px]  max-md:h-[17px] "
                   src="/assets/icon/cart.png"
                   width={24}
                   height={24}
                   alt=""
                 />
-                <div className="absolute top-0 -right-[10px] bg-orange-500 w-[15px] h-[15px] text-[10px] text-white rounded-full flex items-center justify-center">
+                <div className="absolute top-0 -right-[10px] bg-orange-500 w-[15px] h-[15px] text-[10px] text-white rounded-full flex items-center justify-center max-md:w-[13px] max-md:h-[13px] max-md:right-[-5px] ">
                   {cart.length}
                 </div>
               </Button>
@@ -286,17 +297,146 @@ export default function MobileNav() {
         <div>
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="bg-black">
-                <CiMenuFries size={24} />
+              <Button className="bg-black ">
+                <div className="hidden md:block">
+                  <CiMenuFries size={24} />
+                </div>
+                <div className="hidden max-md:block">
+                  <CiMenuFries size={17} />
+                </div>
               </Button>
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
                 <SheetTitle></SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-2 pt-[30px] ">
+              <Accordion type="single" collapsible>
+                <AccordionItem className="border-b-0 mb-4" value="item-1">
+                  <AccordionTrigger>
+                    {user ? (
+                      <div className="relative flex  items-center group px-6 pt-2">
+                        <div className="flex items-center outline-0 gap-4 ">
+                          <Avatar className="w-[35px] h-[35px] flex items-center">
+                            <AvatarImage
+                              className=""
+                              src={user.image || "/assets/icon/user.png"}
+                            />
+                          </Avatar>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex items-center px-6 pt-4 ">
+                        <Image
+                          className="object-contain"
+                          src="/assets/icon/user.png"
+                          width={24}
+                          height={24}
+                          alt=""
+                        />
+                      </div>
+                    )}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="bg-gray-200 w-full h-min mt-2  flex flex-col items-start">
+                      {user ? (
+                        <div className="bg-gray-200 w-full h-min flex flex-col items-start">
+                          <div className="w-full h-min- py-3 px-6 border-y-[1px] border-black text-left font-medium ">
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <button> Thông tin cá nhân</button>
+                              </DialogTrigger>
+                              <DialogContent className="sm:max-w-[425px]">
+                                <DialogHeader>
+                                  <DialogTitle> Thông tin cá nhân</DialogTitle>
+                                </DialogHeader>
+                                <div className="grid gap-4 py-4">
+                                  <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                      htmlFor="name"
+                                      className="text-right"
+                                    >
+                                      Name
+                                    </Label>
+                                    <Input
+                                      id="name"
+                                      value={user.name || ""}
+                                      className="col-span-3"
+                                    />
+                                  </div>
+                                  <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                      htmlFor="email"
+                                      className="text-right"
+                                    >
+                                      Email
+                                    </Label>
+                                    <Input
+                                      id="username"
+                                      value={user.email || ""}
+                                      className="col-span-3"
+                                    />
+                                  </div>
+                                  <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                      htmlFor="phone"
+                                      className="text-right"
+                                    >
+                                      Phone
+                                    </Label>
+                                    <Input
+                                      id="name"
+                                      value=""
+                                      className="col-span-3"
+                                    />
+                                  </div>
+                                  <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                      htmlFor="address"
+                                      className="text-right"
+                                    >
+                                      Address
+                                    </Label>
+                                    <Input
+                                      id="name"
+                                      value=""
+                                      className="col-span-3"
+                                    />
+                                  </div>
+                                </div>
+                                <DialogFooter>
+                                  <Button type="submit">Save changes</Button>
+                                </DialogFooter>
+                              </DialogContent>
+                            </Dialog>
+                          </div>
+                          <Link
+                            href="/checkout"
+                            className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                          >
+                            Đơn hàng của tôi
+                          </Link>
+                          <div
+                            onClick={handleLogout}
+                            className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                          >
+                            Đăng xuất
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          href="/login"
+                          className="w-full h-min- py-3 px-6 border-y-[1px] border-black text-left font-medium "
+                        >
+                          Đăng nhập
+                        </Link>
+                      )}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <div className="flex flex-col gap-4  ">
                 <Link
-                  className="text-left text-black font-medium text-[16px] "
+                  className="text-left text-black px-6 font-medium text-[16px] max-md:w-[200px]"
                   href="/"
                 >
                   Giới thiệu
@@ -304,26 +444,105 @@ export default function MobileNav() {
                 <Accordion type="single" collapsible>
                   <AccordionItem className="border-b-0" value="item-1">
                     <AccordionTrigger>
-                      <div className="text-left text-black font-medium text-[16px] py-0">
+                      <div className="text-left text-black px-6 font-medium text-[16px] py-0">
                         Sản phẩm
                       </div>
+                      <ChevronDown className="h-[18px] w-[50px] shrink-0 transition-transform duration-200 ml-2" />
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="bg-gray-200 w-full h-[200px]"></div>
+                      <div className="bg-gray-200 w-full h-min mt-2 pb-[-16px] flex flex-col items-start">
+                        <Link
+                          href="/bo-dieu-khien"
+                          className="w-full h-min- py-3 px-6 border-y-[1px] border-black text-left font-medium "
+                        >
+                          Bộ điều khiển trung tâm
+                        </Link>
+                        <Link
+                          href="/den-thong-minh"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Đèn thông minh
+                        </Link>
+                        <Link
+                          href="/cam-bien"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Cảm biến
+                        </Link>
+                        <Link
+                          href="/cong-tac-thong-minh"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Công tắc thông minh
+                        </Link>
+                        <Link
+                          href="/bo-rem-cua"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Bộ rèm cửa
+                        </Link>
+                        <Link
+                          href="/phu-kien"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Phụ kiện
+                        </Link>
+                        <Link
+                          href="/khoa-cua-thong-minh"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Khóa cửa thông minh
+                        </Link>
+                        <Link
+                          href="/thiet-bi-an-ninh-thong-minh"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Thiết bị an ninh thông minh
+                        </Link>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
                 <Accordion type="single" collapsible>
                   <AccordionItem className="border-b-0" value="item-1">
                     <AccordionTrigger>
-                      <div className="text-left text-black font-medium text-[16px] py-">
+                      <div className="text-left text-black px-6 font-medium text-[16px] ">
                         Giải pháp
                       </div>
+                      <ChevronDown className="h-[18px] w-[50px] shrink-0 transition-transform duration-200 ml-2" />
                     </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="bg-gray-200 w-full h-min mt-2 pb-[-16px] flex flex-col items-start">
+                        <Link
+                          href="/giai-phap/giai-phap-dieu-khien"
+                          className="w-full h-min- py-3 px-6 border-y-[1px] border-black text-left font-medium "
+                        >
+                          Giải pháp điều khiển
+                        </Link>
+                        <Link
+                          href="/giai-phap/giai-phap-chieu-sang"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Giải pháp chiếu sáng
+                        </Link>
+                        <Link
+                          href="/giai-phap/giai-phap-an-ninh"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Giải pháp an ninh
+                        </Link>
+                        <Link
+                          href="/giai-phap/giai-phap-truyen-hinh"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Giải pháp truyền hình
+                        </Link>
+                      </div>
+                    </AccordionContent>
                   </AccordionItem>
                 </Accordion>
                 <Link
-                  className="text-left text-black font-medium text-[16px]"
+                  className="text-left text-black px-6 font-medium text-[16px]"
                   href="/can-ho-mau"
                 >
                   Căn hộ mẫu
@@ -331,115 +550,35 @@ export default function MobileNav() {
                 <Accordion type="single" collapsible>
                   <AccordionItem className="border-b-0" value="item-1">
                     <AccordionTrigger>
-                      <div className="text-left text-black font-medium text-[16px]">
+                      <div className="text-left text-black px-6 font-medium text-[16px]">
                         Hỗ trợ
                       </div>
+                      <ChevronDown className="h-[18px] w-[50px] shrink-0 transition-transform duration-200 ml-2" />
                     </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="bg-gray-200 w-full h-min mt-2 pb-[-16px] flex flex-col items-start">
+                        <Link
+                          href="/ho-tro/doi-tac"
+                          className="w-full h-min- py-3 px-6 border-y-[1px] border-black text-left font-medium "
+                        >
+                          Đối tác
+                        </Link>
+                        <Link
+                          href="/ho-tro/lien-he-truc-tiep"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Liên hệ trực tiếp
+                        </Link>
+                        <Link
+                          href="/ho-tro/brandshop"
+                          className="w-full h-min- py-3 px-6 border-b-[1px] border-black text-left font-medium "
+                        >
+                          Brand Shop
+                        </Link>
+                      </div>
+                    </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-                {user ? (
-                  <div className="relative flex  items-center group">
-                    <div className="flex items-center outline-0 gap-4 ">
-                      <Avatar className="w-[35px] h-[35px] flex items-center">
-                        <AvatarImage
-                          className=""
-                          src={user.image || "/assets/icon/user.png"}
-                        />
-                      </Avatar>
-                      <LoginButton>
-                        <span className="text-[15px] font-medium text-black bg-white cursor-pointer hover:bg-gray-100">
-                          {user.name}
-                        </span>
-                      </LoginButton>
-                    </div>
-                    <div className="absolute w-min h-min bg-white rounded-lg top-[30px] right-0 z-50 px-4 py-4 flex items-start flex-col justify-center gap-3 invisible group-hover:visible">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button
-                            className="hover:bg-orange-500"
-                            variant="outline"
-                          >
-                            Edit Profile
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="sm:max-w-[425px]">
-                          <DialogHeader>
-                            <DialogTitle>Edit profile</DialogTitle>
-                          </DialogHeader>
-                          <div className="grid gap-4 py-4">
-                            <div className="grid grid-cols-4 items-center gap-4">
-                              <Label htmlFor="name" className="text-right">
-                                Name
-                              </Label>
-                              <Input
-                                id="name"
-                                value={user.name || ""}
-                                className="col-span-3"
-                              />
-                            </div>
-                            <div className="grid grid-cols-4 items-center gap-4">
-                              <Label htmlFor="email" className="text-right">
-                                Email
-                              </Label>
-                              <Input
-                                id="username"
-                                value={user.email || ""}
-                                className="col-span-3"
-                              />
-                            </div>
-                            <div className="grid grid-cols-4 items-center gap-4">
-                              <Label htmlFor="phone" className="text-right">
-                                Phone
-                              </Label>
-                              <Input
-                                id="name"
-                                value=""
-                                className="col-span-3"
-                              />
-                            </div>
-                            <div className="grid grid-cols-4 items-center gap-4">
-                              <Label htmlFor="address" className="text-right">
-                                Address
-                              </Label>
-                              <Input
-                                id="name"
-                                value=""
-                                className="col-span-3"
-                              />
-                            </div>
-                          </div>
-                          <DialogFooter>
-                            <Button type="submit">Save changes</Button>
-                          </DialogFooter>
-                        </DialogContent>
-                      </Dialog>
-                      <Button className="w-full bg-white text-black border-[1px] border-slate-200 hover:bg-orange-500">
-                        <Link href="/checkout">Checkout</Link>
-                      </Button>
-                      <Button
-                        onClick={handleLogout}
-                        className="w-full bg-white text-black border-[1px] border-slate-200 hover:bg-orange-500"
-                      >
-                        Log Out
-                      </Button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex items-center  ">
-                    <Image
-                      className="object-contain"
-                      src="/assets/icon/user.png"
-                      width={24}
-                      height={24}
-                      alt=""
-                    />
-                    <LoginButton>
-                      <Button className="text-p bg-white hover:bg-orange-500">
-                        Đăng Nhập
-                      </Button>
-                    </LoginButton>
-                  </div>
-                )}
               </div>
               {/* <SheetFooter>
                 <SheetClose asChild>

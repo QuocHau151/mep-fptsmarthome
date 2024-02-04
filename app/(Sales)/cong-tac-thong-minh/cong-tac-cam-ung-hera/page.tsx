@@ -57,34 +57,34 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container  max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Các thiết bị Công tắc thông minh
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
               {option ? (
                 <Image
-                  className="mx-auto"
+                  className="mx-auto max-md:w-[100px]"
                   src={option?.image}
                   width={300}
                   height={300}
                   alt=""
                 />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
-            <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
+            <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px] max-md:px-0">
               <div className="flex flex-col items-center py-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[23px]">
                   {option ? option?.name : "Công tắc cảm ứng Hera"}
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -95,184 +95,184 @@ export default function Page() {
               <div className="flex items-start justify-start w-full">
                 <div className="flex flex-col items-start justify-around gap-6">
                   <div className="flex  items-center justify-center">
-                    <h4 className="  text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] ">
+                    <h4 className="  text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] max-md:text-[15px]">
                       Hình dáng
                     </h4>
                     <div className="grid grid-cols-3">
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="type"
                           value="Chữ nhật"
                           checked={selectedOptions.type === "Chữ nhật"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Chữ <br /> nhật
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="type"
                           value="Vuông"
                           checked={selectedOptions.type === "Vuông"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Vuông
                         </label>
                       </div>
                     </div>
                   </div>
                   <div className="flex  items-start justify-center ">
-                    <h4 className=" text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] ">
+                    <h4 className=" text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] max-md:text-[15px]">
                       Màu sắc
                     </h4>
                     <div className=" grid grid-cols-3 grid-rows-2 gap-1">
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="color"
                           value="Black Brown"
                           checked={selectedOptions.color === "Black Brown"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Black <br /> Brown
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="color"
                           value="Trắng"
                           checked={selectedOptions.color === "Trắng"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Trắng
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="color"
                           value="Rose Gold"
                           checked={selectedOptions.color === "Rose Gold"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Rose <br /> Gold
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="color"
                           value="Gray"
                           checked={selectedOptions.color === "Gray"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Gray
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="min-w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="color"
                           value="Champagne"
                           checked={selectedOptions.color === "Champagne"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6 ">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px] ">
                           Champagne
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div className="flex  items-start justify-start flex-wrap ">
-                    <h4 className=" text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] ">
+                  <div className="flex  items-start justify-start  ">
+                    <h4 className=" text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] max-md:text-[15px]">
                       Số nút
                     </h4>
                     <div className="grid grid-cols-3">
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[130px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="button"
                           value="2 nút"
                           checked={selectedOptions.button === "2 nút"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           2 nút
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="button"
                           value="3 nút"
                           checked={selectedOptions.button === "3 nút"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           3 nút
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="button"
                           value="4 nút"
                           checked={selectedOptions.button === "4 nút"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           4 nút
                         </label>
                       </div>
                     </div>
                   </div>
                   <div className="flex  items-start justify-start">
-                    <h4 className=" text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px]">
+                    <h4 className=" text-[18px] font-semibold text-gray-800 mr-10 min-w-[100px] max-md:text-[15px]">
                       Công suất
                     </h4>
-                    <div className="grid grid-cols-2">
-                      <div className=" flex items-center">
+                    <div className="grid grid-cols-3">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="power"
                           value="Thường"
                           checked={selectedOptions.power === "Thường"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Thường
                         </label>
                       </div>
-                      <div className=" flex items-center">
+                      <div className=" flex items-center min-w-[170px]">
                         <input
-                          className="min-w-[35px] h-[35px]  mr-2 "
+                          className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                           type="radio"
                           name="power"
                           value="Công xuất cao"
                           checked={selectedOptions.power === "Công xuất cao"}
                           onChange={handleChange}
                         />
-                        <label className="text-[18px] font-medium mr-6">
+                        <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                           Công xuất cao
                         </label>
                       </div>
@@ -282,25 +282,27 @@ export default function Page() {
               </div>
 
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">
+                <p className="text-[50px] font-bold max-md:text-[30px]">
                   {option ? `${option?.price} VNĐ` : "Hết Hàng"}
                 </p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
                 </p>
-                <div className="flex items-center justify-center gap-2 w-full">
+                <div className="flex items-center justify-center gap-2 w-full max-md:px-6">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -310,57 +312,57 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px]  max-lg:px-20 max-md:py-[50px] max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Công Tắc Cảm Ứng Hera
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569293-cong-tac-hera.png"
               width={500}
               height={300}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nguồn cấp</p>
                 <p>220V/50Hz</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Công suất danh định</p>
                 <p>Tối đa 150W/ kênh</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Ngõ ra</p>
                 <p>{option?.button}</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Số nút điều khiển</p>
                 <p>{option?.button}</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Số nút ngữ cảnh</p>
                 <p>{option?.button}</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước (DxRxC)</p>
                 <p>72,8 x 126,1 x 28,3 mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nhiệt độ hoạt động</p>
                 <p>10 ÷ 40˚C</p>
               </div>
 
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p className="text-left">Tiêu chuẩn áp dụng</p>
                 <p className="text-right">TCVN 6480 -1:2008; ISO 9001:2015</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full  font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Zigbee</p>
               </div>
@@ -368,22 +370,22 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Công tắc cảm ứng Hera của FPT Smart Home dùng điều khiển hệ thống
               ánh sáng hoặc các thiết bị điện. Mặt kính cường lực phẳng, viền
               nhôm với nhiều màu sắc đa dạng phù hợp với mọi không gian trong
               căn hộ.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Giới thiệu về công tắc cảm ứng Hera
             </h5>
             <p>
@@ -399,7 +401,7 @@ export default function Page() {
               smartphone, hay thao tác 1 chạm mượt mà tại các nút cảm ứng.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Điểm nổi bật của Công tắc Cảm ứng Hera
             </h5>
             <p>
@@ -430,14 +432,14 @@ export default function Page() {
               tác một lần chạm đã dễ dàng điều khiển trực tiếp. Sử dụng kết nối
               Zigbee ổn định, có độ bảo mật cao.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Chức năng của công tắc cảm ứng thông minh
             </h5>
             <p>
               Có thể nói, tính năng của công tắc thông minh cho phép tối đa hóa
               tính tiện ích của người dùng. Trong đó:
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Điều khiển toàn bộ các thiết bị điện linh hoạt
             </h5>
             <p>
@@ -447,7 +449,7 @@ export default function Page() {
               FPT Play Box S.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Tính năng lập lịch, hẹn giờ tiện ích
             </h5>
             <p>
@@ -456,7 +458,7 @@ export default function Page() {
               dùng có thể đặt lịch trình sử dụng các thiết bị điện tương ứng với
               lịch trình sinh hoạt hằng ngày của mình.{" "}
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cho phép tạo ngữ cảnh tự động thông minh
             </h5>
             <p>
@@ -478,7 +480,7 @@ export default function Page() {
               height={300}
               alt=""
             />
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng của công tắc cảm ứng
             </h5>
             <p>

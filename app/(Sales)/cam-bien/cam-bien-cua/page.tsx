@@ -7,7 +7,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { set } from "zod";
 
 export default function Page() {
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -53,28 +52,34 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container max-lg:px-20 max-md:px-6">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Các thiết bị cảm biến
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl py-4">
               {option ? (
-                <Image src={option?.image} width={1000} height={500} alt="" />
+                <Image
+                  className="mx-auto"
+                  src={option?.image}
+                  width={585}
+                  height={500}
+                  alt=""
+                />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
               <div className="flex flex-col items-center py-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
                   {option?.name ?? ""}
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 max-md:text-[12px] ">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -84,55 +89,59 @@ export default function Page() {
               </div>
               <div className="flex  flex-col items-start justify-start w-full gap-6 border-b-[1px] border-black pb-[50px]">
                 <div className="flex items-center justify-center gap-4 w-full">
-                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 ">
+                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 max-md:text-[15px]">
                     Loại đèn
                   </h4>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px] "
                       type="radio"
                       name="connect"
                       value="Zigbee"
                       checked={selectedOptions.connect === "Zigbee"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                       Zigbee
                     </label>
                   </div>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] max-md:min-h-[20px]  "
                       type="radio"
                       name="connect"
                       value="BLE"
                       checked={selectedOptions.connect === "BLE"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">BLE</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      BLE
+                    </label>
                   </div>
                 </div>
               </div>
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[50px] font-bold ">
+                <p className="text-[50px] font-bold max-md:text-[30px]">
                   {option ? `${option?.price} VNĐ` : "Hết Hàng"}
                 </p>
-                <p className="-mt-4 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="-mt-4 text-[12px] max-md:text-[10px] max-md:mt-0">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 12 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -142,38 +151,40 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
+      <div className="text-center flex flex-col py-[100px] max-lg:px-20 max-md:px-6 max-md:py-[50px]">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">Cảm Biến Cửa</h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
+            Cảm Biến Cửa
+          </h4>
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569241-cam-bien-cua.png"
               width={1000}
               height={500}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Nguồn cấp</p>
                 <p>Pin CR1632</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Thời lượng nguồn pin</p>
                 <p>3 - 6 tháng</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Khoảng cách đặt tối đa</p>
                 <p>2cm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước</p>
                 <p>41x22x11mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Zigbee</p>
               </div>
@@ -181,15 +192,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
+      <div className="text-center flex flex-col max-lg:px-20 max-md:px-6">
         <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Tính an toàn cho không gian sống là ưu tiên hàng đầu, được nhiều
               gia chủ cân nhắc hiện nay. Chính vì thế, sản phẩm cảm biến cửa
@@ -200,7 +211,7 @@ export default function Page() {
               năng, ưu điểm nổi bật của sản phẩm với bài viết dưới đây nhé.
             </p>
 
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cảm biến cửa thông minh FPT Smart Home
             </h5>
             <p>
@@ -221,14 +232,13 @@ export default function Page() {
               cảnh báo tức thời.
             </p>
             <iframe
-              width="1210"
-              height="500"
+              className="w-full h-[500px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/IqfgCNQLyok?si=Gc9Ds4LXysEHGFH3"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Những ưu điểm nổi bật của cảm biến cửa thông minh FPT Smart Home
             </h5>
             <p>
@@ -237,7 +247,7 @@ export default function Page() {
               lắp đặt, mang đến nhiều ưu điểm nổi bật cho người dùng. Điển hình
               có thể kể đến như:
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Kích thước cảm biến cửa nhỏ gọn, cho độ thẩm mỹ cao
             </h5>
             <p>
@@ -260,7 +270,7 @@ export default function Page() {
               điểm nhấn ấn tượng, thể hiện cho lối sống hiện đại, thời thượng
               của chính gia chủ.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cảm biến cửa luôn đảm bảo tính nhanh nhạy, chuẩn xác
             </h5>
             <p>
@@ -269,7 +279,7 @@ export default function Page() {
               cảnh đã cài đặt sẽ được thực hiện hoặc đưa ra cảnh báo tương ứng
               chính xác tuyệt đối.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cảm biến cửa thông minh kết nối và thiết lập nhanh chóng
             </h5>
             <p>
@@ -295,7 +305,9 @@ export default function Page() {
               dựa theo 2 ngữ cảnh chính dưới đây. Tùy vào nhu cầu mà người dùng
               sẽ lựa chọn tương ứng, cụ thể gồm:
             </p>
-            <h5 className="font-semibold text-[22px]">Ngữ cảnh thông minh:</h5>
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
+              Ngữ cảnh thông minh:
+            </h5>
             <p>
               Cảm biến cửa thông minh FPT Smart Home sở hữu tính năng an ninh
               cho phép người dùng giám sát trạng thái đóng, mở cửa phạm vi toàn
@@ -310,7 +322,7 @@ export default function Page() {
               ngoài khung giờ cho phép, giúp người dùng chủ động hơn trong việc
               bảo vệ an toàn cho bản thân cũng như tài sản của mình.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng của thiết bị cảm biến cửa thông minh
             </h5>
             <p>

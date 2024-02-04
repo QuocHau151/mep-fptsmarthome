@@ -7,7 +7,6 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Divide } from "lucide-react";
 
 export default function Page() {
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -54,28 +53,34 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="text-center flex flex-col py-[100px] bg-slate-100">
-        <div className="container">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="container max-lg:px-20 max-md:px-10">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold">
+          <h2 className=" text-[48px] text-slate-800 font-semibold max-md:text-[25px]">
             Đèn thông minh tại FPT Smart Home
           </h2>
-          <div className="flex items-start justify-center gap-10 pt-[50px]">
+          <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col ">
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
               {option ? (
-                <Image src={option?.image} width={1000} height={500} alt="" />
+                <Image
+                  className="mx-auto "
+                  src={option?.image}
+                  width={585}
+                  height={585}
+                  alt=""
+                />
               ) : (
-                <div className="bg-white w-[585px] h-[585px]"></div>
+                <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
               )}
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
-              <div className="flex flex-col items-center py-[50px] ">
-                <h1 className="text-[27px] font-semibold">
+              <div className="flex flex-col items-center py-[50px] max-md:py-[20px]">
+                <h1 className="text-[27px] font-semibold max-md:text-[20px]">
                   Đèn LED Downlight Thông Minh
                 </h1>
-                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4 ">
+                <div className="flex items-center flex-col text-slate-500 border-b-[1px] w-full border-black py-4  max-md:text-[12px]">
                   <h4 className=" flex items-center">
                     Thương hiệu:
                     <p className="font-semibold">FPT Smart Home</p>
@@ -85,111 +90,121 @@ export default function Page() {
               </div>
               <div className="flex  flex-col items-start justify-start w-full gap-6 border-b-[1px] border-black pb-[50px]">
                 <div className="flex items-center justify-center gap-4 w-full">
-                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 ">
+                  <h4 className=" basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 max-md:text-[12px]">
                     Loại đèn
                   </h4>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px]"
                       type="radio"
                       name="type"
                       value="Cố định"
                       checked={selectedOptions.type === "Cố định"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                       Cố định
                     </label>
                   </div>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px]"
                       type="radio"
                       name="type"
                       value="Xoay"
                       checked={selectedOptions.type === "Xoay"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">Xoay</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      Xoay
+                    </label>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-4 w-full">
-                  <h4 className="basis-1/3 text-[18px] font-semibold text-gray-800 mr-10">
+                  <h4 className="basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 max-md:text-[12px]">
                     Màu sắc
                   </h4>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-1 "
+                      className="min-w-[35px] min-h-[35px]  mr-1 max-md:min-w-[20px] "
                       type="radio"
                       name="color"
                       value="Trắng"
                       checked={selectedOptions.color === "Trắng"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
                       Trắng Vàng
                     </label>
                   </div>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] "
                       type="radio"
                       name="color"
                       value="RGB"
                       checked={selectedOptions.color === "RGB"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">RGB</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      RGB
+                    </label>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-4 w-full">
-                  <h4 className="basis-1/3 text-[18px] font-semibold text-gray-800 mr-10">
+                  <h4 className="basis-1/3 text-[18px] font-semibold text-gray-800 mr-10 max-md:text-[12px]">
                     Công suất
                   </h4>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px]"
                       type="radio"
                       name="power"
                       value="9w"
                       checked={selectedOptions.power === "9w"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">9W</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      9W
+                    </label>
                   </div>
                   <div className="basis-1/3 flex items-center">
                     <input
-                      className="w-[35px] h-[35px]  mr-2 "
+                      className="min-w-[35px] min-h-[35px]  mr-2 max-md:min-w-[20px] "
                       type="radio"
                       name="power"
                       value="7w"
                       checked={selectedOptions.power === "7w"}
                       onChange={handleChange}
                     />
-                    <label className="text-[18px] font-medium mr-6">7W</label>
+                    <label className="text-[18px] font-medium mr-6 max-md:text-[12px]">
+                      7W
+                    </label>
                   </div>
                 </div>
               </div>
               <div className="pt-2 border-b-[1px] border-black pb-[20px]">
-                <p className="text-[40px] font-bold ">
+                <p className="text-[40px] font-bold max-md:text-[30px]">
                   {option ? `${option?.price} VNĐ` : "Hết Hàng"}
                 </p>
-                <p className="-mt-3 text-[12px]">(Chưa bao gồm VAT)</p>
+                <p className="-mt-3 text-[12px] max-md:text-[10px]">
+                  (Chưa bao gồm VAT)
+                </p>
               </div>
               <div className="py-4">
-                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6">
+                <p className="text-[18px] text-slate-600 font-medium mb-4 px-6 max-md:text-[12px]">
                   Thời gian bảo hành sản phẩm là 24 tháng tính từ ngày mua hàng.
                 </p>
                 <div className="flex items-center justify-center gap-2 w-full">
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     <Link href="/checkout"> Mua ngay</Link>
                   </Button>
                   <Button
                     onClick={() => option && handleAddToCart(option)}
-                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white"
+                    className="basis-1/2 bg-white font-medium border-[1px] border-black text-black hover:bg-orange-500 hover:text-white max-md:text-[12px]"
                   >
                     Thêm vào giỏ hàng
                   </Button>
@@ -199,66 +214,66 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col py-[100px] ">
-        <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col py-[100px] max-lg:px-20 max-md:px-6 max-md:py-[50px]">
+        <div className="container border-b-[1px] pb-[100px] max-md:pb-[50px]">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Đèn Led Downlight Thông Minh
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[30px]">
             Thông số kỹ thuật
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 max-lg:flex-col  ">
             <Image
-              className="rounded-2xl basis-1/2"
+              className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569222-downlight.png"
               width={500}
               height={300}
               alt=""
             />
-            <div className="basis-1/2 ">
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+            <div className="basis-1/2 w-full ">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Công suất</p>
                 <p>{option?.power}</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Điện áp hoạt động</p>
                 <p>220V/50Hz</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chỉ số hoàn màu</p>
                 <p>80</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Quang thông</p>
                 <p>700lm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Tuổi thọ</p>
                 <p>25.000h</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Thay đổi nhiệt độ màu</p>
                 <p>3000 ÷ 6500K</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Thay đổi cường độ</p>
                 <p>10 ÷ 100%</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước (ØxH)</p>
                 <p>103x45mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Kích thước khoét trần</p>
                 <p>90mm</p>
               </div>
-              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p className="text-left">Tiêu chuẩn áp dụng</p>
                 <p className="text-right">
                   TCVN 10885-2-1/IEC 62722-2-1; TCVN 7722-2-2/IEC 60598-2-2
                 </p>
               </div>
-              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2">
+              <div className="flex items-center justify-between w-full  text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
                 <p>Chuẩn kết nối</p>
                 <p>Bluetooth Mesh</p>
               </div>
@@ -266,15 +281,15 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="text-center flex flex-col  ">
-        <div className="container border-b-[1px] pb-[100px]">
-          <h4 className="text-h5 text-gray-400 font-semibold">
+      <div className="text-center flex flex-col  max-lg:px-20 max-md:px-6">
+        <div className="container border-b-[1px] pb-[100px] max-md:pb-[50px]">
+          <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home
           </h4>
-          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10">
+          <h2 className=" text-[48px] text-slate-800 font-semibold mb-10 max-md:text-[25px]">
             Kiến thức về sản phẩm
           </h2>
-          <div className="flex flex-col items-start gap-4 text-left text-[18px]">
+          <div className="flex flex-col items-start gap-4 text-left text-[18px] max-md:text-[12px]">
             <p>
               Trong xu hướng hiện đại ngày nay, các thiết bị thông minh dần được
               khách hàng ưa chuộng và lựa chọn sử dụng phổ biến hơn. Điều này
@@ -283,7 +298,7 @@ export default function Page() {
               sáng xu hướng, được đánh giá cực cao trong căn nhà thông minh của
               bạn. Vậy, có gì nổi bật ở mẫu sản phẩm đèn thông minh này?
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Giới thiệu chung về sản phẩm đèn LED Downlight thông minh
             </h5>
             <p>
@@ -307,7 +322,7 @@ export default function Page() {
               tối ưu cho mắt của bạn. Khi sử dụng, ánh sáng từ đèn sẽ không tạo
               cảm giác quá chói sáng hay gây phản ứng mỏi mắt, đau mắt.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Những ưu điểm nổi bật của đèn LED âm trần thông minh
             </h5>
             <p>
@@ -315,7 +330,7 @@ export default function Page() {
               bật, đáp ứng nhu cầu sử dụng 1 cách tối ưu nhất cho mọi đối tượng
               người dùng. Trong đó, điển hình có thể kể đến như:
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Khả năng điều khiển thông minh, linh hoạt
             </h5>
             <p>
@@ -335,7 +350,7 @@ export default function Page() {
               còn có cho phép sử dụng nhiều tính năng hơn nữa thông qua giọng
               nói.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Đèn Led âm trần thông minh cho cường độ chiếu sáng ổn định
             </h5>
             <p>
@@ -346,7 +361,7 @@ export default function Page() {
               vệ mắt cho người dùng, vừa đảm bảo tính tương thích cho mỗi khu
               vực ứng dụng.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Đảm bảo được tính thẩm mỹ cho mọi không gian
             </h5>
             <p>
@@ -364,7 +379,7 @@ export default function Page() {
               129x40mm. Vì thế, có thể thấy, việc lắp đặt đèn không tốn quá
               nhiều diện tích không gian.
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Điều khiển theo từng kịch bản chiếu sáng
             </h5>
             <p>
@@ -385,7 +400,9 @@ export default function Page() {
                 hiệu quả tiết kiệm điện năng đáng kể cho người dùng.{" "}
               </li>
             </ul>
-            <h5 className="font-semibold text-[22px]">Hẹn giờ tắt bật đèn</h5>
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
+              Hẹn giờ tắt bật đèn
+            </h5>
             <p>
               Đặc biệt, bạn còn có thể đặt lịch và hẹn giờ bật/ tắt đèn 1 cách
               tiện ích tùy theo lịch trình sinh hoạt của gia đình. Ví dụ bạn có
@@ -394,7 +411,7 @@ export default function Page() {
               bé giật mình vào mỗi sáng, ánh sáng vừa đủ được bật lên sẽ giúp bé
               cảm thấy thoải mái và dễ chịu hơn.{" "}
             </p>
-            <h5 className="font-semibold text-[22px]">
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng đèn LED Downlight âm trần thông minh cho những không gian
               nào?
             </h5>
