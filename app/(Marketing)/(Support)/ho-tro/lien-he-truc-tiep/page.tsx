@@ -63,15 +63,15 @@ export default function Page() {
   return (
     <div>
       <div>
-        <div className="bg-[url('/assets/images/support/contact-banner.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/support/contact-banner.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[200px]"></div>
       </div>
       <div>
-        <h1 className="text-[40px] font-semibold text-center py-[50px]">
+        <h1 className="text-[40px] font-semibold text-center py-[50px] max-md:text-[25px] max-md:py-[20px]">
           Liên Hệ Trực Tiếp
         </h1>
         <div>
-          <div className="bg-[url('/assets/images/support/background-image.jpg')] w-full h-[700px] bg-cover bg-no-repeat bg-center mb-10 p-[50px] flex items-center justify-center gap-6">
-            <div className=" basis-1/4 flex flex-col items-start justify-center">
+          <div className="bg-[url('/assets/images/support/background-image.jpg')] w-full h-min bg-cover bg-no-repeat bg-center mb-10 p-[50px] flex items-center justify-center gap-6 max-md:flex-col max-md:px-6">
+            <div className=" basis-1/4 flex flex-col items-start justify-center max-md:hidden">
               <h3 className="text-[25px] py-6 w-full font-medium border-b-[1px] border-black">
                 Gửi tin nhắn
               </h3>
@@ -87,13 +87,22 @@ export default function Page() {
               <h2 className="text-[30px] pt-6 font-medium ">1900 6600</h2>
               <h2 className="text-[30px] font-medium ">0932 133 357</h2>
             </div>
-            <div className="basis-3/4 bg-white w-full h-min rounded-2xl flex items-center justify-center p-[50px]">
+            <div className="    items-start justify-center hidden max-md:flex">
+              <h3 className="text-[15px] font-medium border-r-[1px] border-black pr-4 mr-4">
+                Gửi tin nhắn
+              </h3>
+              <h3 className="text-[15px] font-medium border-r-[1px] border-black pr-4 mr-4">
+                Gửi email
+              </h3>
+              <h3 className="text-[15px] font-medium  pr-4">0932 133 357</h3>
+            </div>
+            <div className="basis-3/4 bg-white w-full h-min rounded-2xl flex items-center justify-center p-[50px] max-md:py-10 max-md:px-4">
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="grid  gap-4 w-full"
                 >
-                  <div className="grid grid-cols-3 gap-4 ">
+                  <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1 ">
                     <FormField
                       control={form.control}
                       name="name"
@@ -131,7 +140,7 @@ export default function Page() {
                       )}
                     />
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
                     <FormField
                       control={form.control}
                       name="title"

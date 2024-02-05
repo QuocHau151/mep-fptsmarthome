@@ -53,20 +53,21 @@ export default function LoginForm() {
   return (
     <>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
-          <div className="w-[450px] flex flex-col items-stretch gap-4 mb-8">
+        <form className="w-full" onSubmit={form.handleSubmit(onSubmit)}>
+          <div className="w-full flex flex-col items-stretch gap-4 mb-8">
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className="max-md:text-[14px]">Email</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
                       placeholder="abc@gmail.com"
                       type="email"
+                      className="w-[500px] max-md:w-full max-md:text-[12px] max-md:h-12"
                     />
                   </FormControl>
                   <FormMessage />
@@ -78,13 +79,14 @@ export default function LoginForm() {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel className="max-md:text-[14px]">Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
                       placeholder="*******"
                       type="password"
+                      className="w-[500px] max-md:w-full max-md:text-[12px] max-md:h-12"
                     />
                   </FormControl>
                   <FormMessage />
@@ -92,26 +94,30 @@ export default function LoginForm() {
               )}
             ></FormField>
           </div>
-          <div className="flex items-center justify-between w-full px-4 mb-8">
-            <div className="flex items-center space-x-2">
-              <Checkbox id="terms" className="text-slate-500" />
+          <div className="flex items-center justify-between w-full px-4 mb-8 max-md:p-2">
+            <div className="flex items-center space-x-2 ">
+              <Checkbox id="terms" className="text-slate-500 border-black" />
               <label
                 htmlFor="terms"
-                className="text-sm font-medium text-slate-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm font-medium text-slate-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-left max-md:text-[12px]"
               >
                 Ghi nhớ mật khẩu
               </label>
             </div>
             <Link
               href="/reset"
-              className="text-sm font-medium text-slate-500 leading-none"
+              className="text-sm font-medium text-slate-500 leading-none text-right max-md:text-[12px]"
             >
               Quên mật khẩu
             </Link>
           </div>
           <FormError message={error || urlError} />
           <FormSuccess message={success || ""} />
-          <Button type="submit" disabled={isPending} className="w-full h-12  ">
+          <Button
+            type="submit"
+            disabled={isPending}
+            className="w-full   h-12 max-md:text-[14px] "
+          >
             Đăng nhập
           </Button>
         </form>

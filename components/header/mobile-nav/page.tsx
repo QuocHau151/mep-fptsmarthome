@@ -200,12 +200,47 @@ export default function MobileNav() {
         />
       </Link>
       <div className="flex items-center justify-center text-white gap-2 max-md:mr-[-25px] max-md:gap-0">
-        <div className="p-2 hidden md:block">
-          <CiSearch size={24} />
-        </div>
-        <div className="p-2 hidden max-md:block">
-          <CiSearch size={17} />
-        </div>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button className="relative bg-black outline-none p-2">
+              <div className="p-2 hidden md:block">
+                <CiSearch size={24} />
+              </div>
+              <div className="p-2 hidden max-md:block">
+                <CiSearch size={17} />
+              </div>
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <div className="px-5 mt-12">
+              <div ref={wrapperRef} className="relative mr-2">
+                <Input
+                  className="w-full h-[42px] z-0 text-slate-600 text-sm placeholder:italic placeholder:text-slate-400 placeholder:text-[10px]  max-md:text-[12px] outline-none "
+                  type="search"
+                  placeholder="Tìm kiếm sản phẩm Smart Home..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                  onFocus={() => setSuggestionsVisible(true)}
+                />
+                {isSuggestionsVisible &&
+                  searchTerm &&
+                  suggestions.length > 0 && (
+                    <div className="flex flex-col items-start absolute border-[1px] border-black top-12 z-50 left-0 rounded-lg  max-md:text-[12px] font-medium   text-black w-full h-min bg-white">
+                      {suggestions.map((product) => (
+                        <Link
+                          href={product.link}
+                          className="w-full p-4"
+                          key={product.id}
+                        >
+                          {product.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
         <div>
           <Sheet>
             <SheetTrigger asChild>
@@ -224,16 +259,15 @@ export default function MobileNav() {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="text-[20px]  text-center w-full h-min mt-4  rounded-xl  p-2 border-b-[1px] border-black bg-slate-100">
+                <SheetTitle className="text-[20px]  text-center w-full h-min mt-12  p-2  border-y-[1px] border-black bg-orange-300">
                   Cart
                 </SheetTitle>
-                <SheetDescription></SheetDescription>
               </SheetHeader>
-              <div>
+              <div className="px-2">
                 <div>
                   {cart.map((item) => (
                     <div key={item.id} className="flex flex-col ">
-                      <div className="flex items-center justify-between p-2 border-b-[1px] w-full">
+                      <div className="flex items-center justify-between p-2 border-b-[1px] w-full gap-2">
                         <div className="flex items-center gap-2">
                           <Image
                             src={item.image}
@@ -242,30 +276,29 @@ export default function MobileNav() {
                             alt=""
                           />
                           <div>
-                            <h5 className="text-[14px] font-semibold ">
+                            <h5 className="text-[14px] font-semibold max-md:text-[12px]">
                               {item.name}
                             </h5>
-                            <p className="text-[12px]">
-                              {item.type} {item.button} {item.color}
-                              {item.connect}
-                              {item.power} {item.type_key}
+                            <p className="text-[12px] max-md:text-[10px]">
+                              {item.type} {item.color} {item.button}{" "}
+                              {item.connect} {item.power} {item.type_key}
                             </p>
                           </div>
                         </div>
                         <div className="flex flex-col items-center gap-2">
-                          <p className="text-orange-500 font-semibold">
+                          <p className="text-orange-500 font-semibold max-md:text-[14px]">
                             {item.price}
                           </p>
                           <div className="flex items-center gap-2 text-[12px]">
                             <button
-                              className="border-[1px] border-black px-[4px] hover:bg-orange-500"
+                              className="border-[1px] border-black px-[4px] hover:bg-orange-500 rounded-sm"
                               onClick={() => decreaseQuantity(item.id)}
                             >
                               -
                             </button>
                             <p>{item.quantity}</p>
                             <button
-                              className="border-[1px] border-black px-[4px]  hover:bg-orange-500"
+                              className="border-[1px] border-black px-[4px]  hover:bg-orange-500 rounded-sm"
                               onClick={() => increaseQuantity(item.id)}
                             >
                               +
@@ -279,15 +312,38 @@ export default function MobileNav() {
                           </button>
                         </div>
                       </div>
+                      <div className=""></div>
+                      {/* <h5 className="text-[18px] font-semibold ">
+                        {item.name}
+                      </h5>
+                      <p>
+                        Option: {item.category} {item.type} {item.color}
+                        {item.power}
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <p>Số Lượng:</p>
+                        <button onClick={() => decreaseQuantity(item.id)}>
+                          -
+                        </button>
+                        <p>{item.quantity}</p>
+                        <button onClick={() => increaseQuantity(item.id)}>
+                          +
+                        </button>
+                      </div>
+                      <button onClick={() => removeFromCart(item.id)}>
+                        Remove from cart
+                      </button> */}
                     </div>
                   ))}
                 </div>
               </div>
-              <SheetFooter className="flex items-center mt-6">
+              <SheetFooter className="flex items-center mt-6 mr-2">
                 <SheetClose asChild>
                   {/* checkout */}
                   <Button type="submit">
-                    <Link href="/checkout">Checkout</Link>
+                    <Link className="max-md:text-[12px]" href="/checkout">
+                      Checkout
+                    </Link>
                   </Button>
                 </SheetClose>
               </SheetFooter>

@@ -46,12 +46,12 @@ export const NewVerificationForm = () => {
   return (
     <div>
       <div className="bg-[url('/assets/images/Untitled-1.jpg')] h-[100vh]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center">
-        <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center  p-[50px]">
+        <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center  p-[50px] max-md:p-[30px] max-md:w-4/5">
           <div className="text-center">
-            <h1 className="text-[45px] font-semibold text-slate-800">
+            <h1 className="text-[45px] font-semibold text-slate-800  max-md:text-[25px]">
               Xác thực tài khoản
             </h1>
-            <p className="text-[18px] text-slate-600">
+            <p className="text-[18px] text-slate-600  max-md:text-[12px]">
               Vui lòng chờ trong giây lát
             </p>
           </div>
@@ -62,7 +62,9 @@ export const NewVerificationForm = () => {
             {error && (
               <>
                 <FormSuccess message={"Xác thực thành công"} />
-                <button onClick={onLogin}>Về trang đăng nhập </button>
+                <button className=" max-md:text-[12px]" onClick={onLogin}>
+                  Về trang đăng nhập{" "}
+                </button>
               </>
             )}
           </div>

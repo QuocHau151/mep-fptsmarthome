@@ -53,12 +53,12 @@ export const NewPasswordForm = () => {
 
   return (
     <div className="bg-[url('/assets/images/Untitled-1.jpg')] h-[100vh]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center">
-      <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center  p-[50px]">
+      <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center  p-[50px] max-md:p-[30px] max-md:w-4/5">
         <div className="text-center">
-          <h1 className="text-[45px] font-semibold text-slate-800">
+          <h1 className="text-[45px] font-semibold text-slate-800 max-md:text-[25px]">
             Tạo lại mật khẩu
           </h1>
-          <p className="text-[18px] text-slate-600">
+          <p className="text-[18px] text-slate-600 max-md:text-[12px]">
             Vui lòng điền mật khẩu mới
           </p>
         </div>
@@ -73,13 +73,16 @@ export const NewPasswordForm = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel className="max-md:text-[14px]">
+                      Password
+                    </FormLabel>
                     <FormControl>
                       <Input
                         {...field}
                         disabled={isPending}
                         placeholder="******"
                         type="password"
+                        className="max-md:h-12"
                       />
                     </FormControl>
                     <FormMessage />
@@ -98,7 +101,9 @@ export const NewPasswordForm = () => {
             </Button>
           </form>
         </Form>
-        <Link href="/login">Về trang đăng nhập</Link>
+        <Link href="/login" className="max-md:text-[12px]">
+          Về trang đăng nhập
+        </Link>
       </div>
     </div>
   );

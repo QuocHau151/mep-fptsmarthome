@@ -65,10 +65,10 @@ export default function Page() {
   return (
     <div>
       <div className="">
-        <div className="bg-[url('/assets/images/support/brandshop-banner2.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center"></div>
+        <div className="bg-[url('/assets/images/support/brandshop-banner2.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[200px]"></div>
       </div>
-      <div className="container max-lg:px-20">
-        <div className="flex items-center justify-center gap-10 py-[100px]">
+      <div className="container max-lg:px-20 max-md:px-6">
+        <div className="flex items-center justify-center gap-10 py-[100px] max-md:flex-col max-md:py-[50px]">
           <div className=" basis-1/2 flex flex-col gap-4 text-[18px] max-lg:text-[14px]">
             <h1 className="text-[30px]  font-semibold max-lg:text-[25px]">
               FPT BrandShop
@@ -102,15 +102,15 @@ export default function Page() {
         </div>
         <div>
           <div className=" text-center py-10">
-            <h4 className="text-h5 text-gray-400 font-semibold">
+            <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
               Chính Sách BrandShop
             </h4>
-            <h2 className=" text-[40px] text-slate-800 font-semibold">
+            <h2 className=" text-[40px] text-slate-800 font-semibold max-md:text-[25px]">
               Những ưu đãi độc quyền khi trở thành BrandShop của FPT Smart Home
             </h2>
           </div>
-          <div className="grid grid-cols-3 grid-rows-2  gap-10 mb-10 max-lg:grid-cols-2 max-lg:grid-rows-3">
-            <div className="flex flex-col items-center justify-start gap-6">
+          <div className="grid grid-cols-3 grid-rows-2  gap-10 mb-10 max-lg:grid-cols-2 max-lg:grid-rows-3 max-md:grid-cols-1 max-md:grid-rows-6">
+            <div className="flex flex-col items-center justify-start gap-6 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="129.345"
@@ -454,7 +454,7 @@ export default function Page() {
             </div>
           </div>
           <div className="py-10">
-            <h2 className="text-[35px] font-semibold text-center">
+            <h2 className="text-[35px] font-semibold text-center max-md:text-[20px]">
               Hình ảnh chuỗi BrandShop FPT Smart Home hiện có
             </h2>
             <div className="py-10">
@@ -514,13 +514,13 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className=" bg-gray-100 w-full h-min  py-[100px] max-lg:px-20 ">
+      <div className=" bg-gray-100 w-full h-min  py-[100px] max-lg:px-20 max-md:px-4 max-md:py-[50px]">
         <div className="container flex items-center justify-center gap-8 max-lg:flex-col ">
           <div className="basis-1/2 flex flex-col gap-6">
-            <h1 className="text-[35px] font-semibold max-lg:text-center">
+            <h1 className="text-[35px] font-semibold max-lg:text-center max-md:text-[25px]">
               Trở thành đại lý uỷ quyền cao cấp của FPT
             </h1>
-            <h5 className="text-[20px] max-lg:text-center max-lg:px-10 ">
+            <h5 className="text-[20px] max-lg:text-center max-lg:px-10 max-md:text-[15px]">
               Đại diện thương hiệu FPT Smart Home tại khu vực và nhận các ưu đãi
               đặc quyền.
             </h5>
@@ -626,7 +626,7 @@ export default function Page() {
                 )}
               </form>
             </Form>
-            <div className="p-12 text-center text-[18px]">
+            <div className="p-12 text-center text-[18px] max-md:p-4">
               Hoặc bạn muốn trở thành đại lý và nhà phân phối cho FPT ?{" "}
               <Link className="font-semibold" href="/ho-tro/doi-tac">
                 Xem thêm

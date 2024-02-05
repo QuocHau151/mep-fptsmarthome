@@ -77,133 +77,306 @@ export default function Checkout() {
     createOrder(result);
   };
   return (
-    <div className="flex items-start justify-center gap-8 p-10 bg-slate-400">
-      <div className="basis-2/3 h-min bg-white rounded-2xl">
-        <div className="flex items-center justify-between px-8 text-[18px]  gap-6 py-6 border-b-[1px] border-black">
-          <input type="checkbox" />
-          <p className="flex-auto">Tất cả sản phẩm</p>
-          <p className="px-8">Đơn giá </p>
-          <p className="px-2">Số lượng</p>
-          <p className="px-8">Số tiền</p>
-          <CiTrash className="w-[25px] h-[25px]" />
-        </div>
-        {cart.map((product) => (
-          <>
-            <div className="flex items-center justify-between px-8 text-[18px]  gap-6 py-10">
-              <input type="checkbox" />
-              <div className="flex items-center justify-start flex-auto gap-6">
-                <Image
-                  src={product.image || ""}
-                  width={50}
-                  height={50}
-                  alt=""
-                ></Image>
-                <div>
-                  <p>{product.name}</p>
-                  <p>Mã sản phẩm: {product.id}</p>
+    <div className="bg-slate-400">
+      <div className=" container flex lg:items-start justify-center gap-8 p-10  md:flex-col lg:flex-row md:items-end max-md:flex-col max-md:hidden">
+        <div className="lg:basis-2/3 h-min bg-white rounded-2xl md:w-full">
+          <div
+            className="grid grid-rows-1 px-8 text-[18px]  gap-6 py-6 border-b-[1px] border-black content-center "
+            style={{
+              gridTemplateColumns: "minmax(0, 1fr) 8fr 4fr 3fr 5fr 1fr",
+            }}
+          >
+            <input className="w-4" type="checkbox" />
+            <p className="">Tất cả sản phẩm</p>
+            <p className="">Đơn giá </p>
+            <p className="">Số lượng</p>
+            <p className="">Số tiền</p>
+            <CiTrash class="w-[25px] h-[25px]" />
+          </div>
+          {cart.map((product) => (
+            <>
+              <div
+                className="grid grid-cols-6 grid-rows-1 px-8 text-[18px]  gap-6 py-10 content-center"
+                style={{
+                  gridTemplateColumns: "minmax(0, 1fr) 8fr 4fr 3fr 5fr 1fr",
+                }}
+              >
+                <input className="w-4 " type="checkbox" />
+                <div className="flex items-center justify-start flex-auto gap-6">
+                  <Image
+                    src={product.image || ""}
+                    width={50}
+                    height={50}
+                    alt=""
+                  ></Image>
+                  <div>
+                    <p className="text-[15px]">{product.name}</p>
+                    <p className="text-[15px]">Mã sản phẩm: {product.id}</p>
+                  </div>
                 </div>
-              </div>
-              <p className="px-8">{product.price} </p>
-              <div className="flex items-start justify-between gap-2">
-                <button
-                  onClick={() => decreaseQuantity(product.id)}
-                  className="w-6 h-6 border-black border-[1px] "
-                >
-                  -
-                </button>
-                {product.quantity}
-                <button
-                  onClick={() => increaseQuantity(product.id)}
-                  className="w-6 h-6 border-black border-[1px]"
-                >
-                  +
-                </button>
-              </div>
-              <p className="px-8">
-                {handlePrice(product.price, product.quantity)}
-              </p>
-              <CiTrash
-                onClick={() => removeFromCart(product.id)}
-                className="w-[25px] h-[25px]"
-              />
-            </div>
-          </>
-        ))}
-      </div>
-      <div className="basis-1/3 bg-white p-6 rounded-2xl">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Tên Khách hàng" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Số điện thoại" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Email" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="address"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Địa chỉ" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div>
-              <div className="flex items-center justify-between py-6 border-b-[1px]">
-                <p>Tạm tính </p>
-                <p className=" text-[18px] font-semibold">
-                  {" "}
-                  {handleTotalPrice(total)} VNĐ
+                <p className="text-[15px]">{product.price} </p>
+                <div className="flex items-start justify-between gap-2">
+                  <button
+                    onClick={() => decreaseQuantity(product.id)}
+                    className=" w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center"
+                  >
+                    -
+                  </button>
+                  <p className="text-[15px]">{product.quantity}</p>
+                  <button
+                    onClick={() => increaseQuantity(product.id)}
+                    className="w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center "
+                  >
+                    +
+                  </button>
+                </div>
+                <p className="text-[15px]">
+                  {handlePrice(product.price, product.quantity)}
                 </p>
+                <CiTrash
+                  onClick={() => removeFromCart(product.id)}
+                  className="w-[20px] h-[20px]"
+                />
               </div>
-              <div className="flex items-center justify-between py-4">
-                <p>Tổng</p>
-                <div className=" flex flex-col items-end">
-                  <p className="text-[25px] text-orange-600 font-semibold">
+            </>
+          ))}
+        </div>
+        <div className="lg:basis-1/3 bg-white p-6 rounded-2xl md:basis-full md:w-1/2 md:">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="text-[12px]"
+                        placeholder="Tên Khách hàng"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input placeholder="Số điện thoại" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input placeholder="Email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="address"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input placeholder="Địa chỉ" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div>
+                <div className="flex items-center justify-between py-6 border-b-[1px]">
+                  <p>Tạm tính </p>
+                  <p className=" text-[18px] font-semibold">
+                    {" "}
                     {handleTotalPrice(total)} VNĐ
                   </p>
-                  <span>(Chưa bao gồm VAT)</span>
+                </div>
+                <div className="flex items-center justify-between py-4">
+                  <p>Tổng</p>
+                  <div className=" flex flex-col items-end">
+                    <p className="text-[25px] text-orange-600 font-semibold">
+                      {handleTotalPrice(total)} VNĐ
+                    </p>
+                    <span>(Chưa bao gồm VAT)</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <Button className="w-full" type="submit">
-              Đặt hàng
-            </Button>
-          </form>
-        </Form>
+              <Button className="w-full" type="submit">
+                Đặt hàng
+              </Button>
+            </form>
+          </Form>
+        </div>
+      </div>
+      <div className=" container hidden lg:items-start justify-center gap-8 p-10  md:flex-col lg:flex-row md:items-end max-md:flex-col max-md:flex">
+        <div className="lg:basis-2/3 h-min bg-white rounded-2xl md:w-full">
+          <div
+            className="grid grid-rows-1 px-8 text-[18px]  gap-6 py-6 border-b-[1px] border-black content-center "
+            style={{
+              gridTemplateColumns: "minmax(0, 1fr)  8fr 1fr",
+            }}
+          >
+            <input className="w-4" type="checkbox" />
+            <p className="">Tất cả sản phẩm</p>
+            <p className="max-md:hidden">Đơn giá </p>
+            <p className="max-md:hidden">Số lượng</p>
+            <p className="max-md:hidden">Số tiền</p>
+            <CiTrash class="w-[25px] h-[25px]" />
+          </div>
+          {cart.map((product) => (
+            <>
+              <div className="flex flex-col items-center  text-[18px]  border-b-[1px] border-black gap-2 py-10 ">
+                <div
+                  className="grid grid-rows-1 px-8 text-[18px] gap-6  py-6  items-center  "
+                  style={{
+                    gridTemplateColumns: "minmax(0, 1fr)  8fr 1fr",
+                  }}
+                >
+                  <input className="w-4 " type="checkbox" />
+                  <div className="flex items-center justify-start flex-auto gap-2 ">
+                    <Image
+                      src={product.image || ""}
+                      width={50}
+                      height={50}
+                      alt=""
+                    ></Image>
+                    <div>
+                      <p className="text-[15px]">{product.name}</p>
+                      <p className="text-[15px]">Mã sản phẩm: {product.id}</p>
+                    </div>
+                  </div>
+                  <CiTrash
+                    onClick={() => removeFromCart(product.id)}
+                    className="w-[20px] h-[20px]"
+                  />
+                </div>
+
+                <p className="text-[25px] font-semibold text-orange-500">
+                  {product.price}{" "}
+                </p>
+                <div className="flex items-start justify-between gap-2">
+                  <button
+                    onClick={() => decreaseQuantity(product.id)}
+                    className=" w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center"
+                  >
+                    -
+                  </button>
+                  <p className="text-[15px]">{product.quantity}</p>
+                  <button
+                    onClick={() => increaseQuantity(product.id)}
+                    className="w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center "
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </>
+          ))}
+        </div>
+        <div className="lg:basis-1/3 bg-white p-6 rounded-2xl md:basis-full md:w-1/2 md:">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="text-[12px]"
+                        placeholder="Tên Khách hàng"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="text-[12px]"
+                        placeholder="Số điện thoại"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="text-[12px]"
+                        placeholder="Email"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="address"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="text-[12px]"
+                        placeholder="Địa chỉ"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div>
+                <div className="flex items-center justify-between py-6 border-b-[1px]">
+                  <p>Tạm tính </p>
+                  <p className=" text-[18px] font-semibold">
+                    {" "}
+                    {handleTotalPrice(total)} VNĐ
+                  </p>
+                </div>
+                <div className="flex items-center justify-between py-4">
+                  <p>Tổng</p>
+                  <div className=" flex flex-col items-end">
+                    <p className="text-[25px] text-orange-600 font-semibold">
+                      {handleTotalPrice(total)} VNĐ
+                    </p>
+                    <span>(Chưa bao gồm VAT)</span>
+                  </div>
+                </div>
+              </div>
+              <Button className="w-full" type="submit">
+                Đặt hàng
+              </Button>
+            </form>
+          </Form>
+        </div>
       </div>
     </div>
   );

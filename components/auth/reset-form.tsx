@@ -49,12 +49,12 @@ export const ResetForm = () => {
   return (
     <div>
       <div className="bg-[url('/assets/images/Untitled-1.jpg')] h-[100vh]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center">
-        <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center  p-[50px]">
+        <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center  p-[50px] max-md:w-4/5 max-md:p-[30px] max-md:gap-0">
           <div className="text-center">
-            <h1 className="text-[45px] font-semibold text-slate-800 mb-2">
+            <h1 className="text-[45px] font-semibold text-slate-800 mb-2 max-md:text-[25px]">
               Quên Mật Khẩu
             </h1>
-            <p className="text-[18px] text-slate-600 mb-4">
+            <p className="text-[18px] text-slate-600 mb-4 max-md:text-[12px]">
               Vui lòng điền email để lấy lại <br /> mật khẩu
             </p>
           </div>
@@ -69,13 +69,16 @@ export const ResetForm = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="max-md:text-[15px]">
+                        Email
+                      </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="john.doe@example.com"
+                          placeholder="fptsmarthome@example.com"
                           type="email"
+                          className="max-md:text-[13px]"
                         />
                       </FormControl>
                       <FormMessage />
@@ -88,7 +91,7 @@ export const ResetForm = () => {
               <Button
                 disabled={isPending}
                 type="submit"
-                className=" flex items-center justify-center w-full h-[50px] bg-orange-500 text-white rounded-[10px] text-[18px] font-semibold"
+                className=" flex items-center justify-center w-full h-[50px] bg-orange-500 text-white rounded-[10px] text-[18px] font-semibold max-md:text-[14px] max-md:h-12"
               >
                 Send reset email
               </Button>

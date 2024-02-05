@@ -210,7 +210,6 @@ export default function Nav() {
               alt=""
             />
           </div>
-
           <Sheet>
             <SheetTrigger asChild>
               <Button className="relative bg-black outline-none p-0">
@@ -227,16 +226,15 @@ export default function Nav() {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="text-[20px]  text-center w-full h-min mt-12  p-2 border-t-[1px] border-b-[1px] border-black bg-orange-300">
+                <SheetTitle className="text-[20px]  text-center w-full h-min mt-12  p-2  border-y-[1px] border-black bg-orange-300">
                   Cart
                 </SheetTitle>
-                <SheetDescription></SheetDescription>
               </SheetHeader>
               <div className="px-2">
                 <div>
                   {cart.map((item) => (
                     <div key={item.id} className="flex flex-col ">
-                      <div className="flex items-center justify-between p-2 border-b-[1px] w-full">
+                      <div className="flex items-center justify-between p-2 border-b-[1px] w-full gap-2">
                         <div className="flex items-center gap-2">
                           <Image
                             src={item.image}
@@ -245,18 +243,17 @@ export default function Nav() {
                             alt=""
                           />
                           <div>
-                            <h5 className="text-[14px] font-semibold ">
+                            <h5 className="text-[14px] font-semibold max-md:text-[12px]">
                               {item.name}
                             </h5>
-                            <p className="text-[12px]">
-                              {item.type} {item.button} {item.color}
-                              {item.connect}
-                              {item.power} {item.type_key}
+                            <p className="text-[12px] max-md:text-[10px]">
+                              {item.type} {item.color} {item.button}{" "}
+                              {item.connect} {item.power} {item.type_key}
                             </p>
                           </div>
                         </div>
                         <div className="flex flex-col items-center gap-2">
-                          <p className="text-orange-500 font-semibold">
+                          <p className="text-orange-500 font-semibold max-md:text-[14px]">
                             {item.price}
                           </p>
                           <div className="flex items-center gap-2 text-[12px]">
@@ -311,7 +308,9 @@ export default function Nav() {
                 <SheetClose asChild>
                   {/* checkout */}
                   <Button type="submit">
-                    <Link href="/checkout">Checkout</Link>
+                    <Link className="max-md:text-[12px]" href="/checkout">
+                      Checkout
+                    </Link>
                   </Button>
                 </SheetClose>
               </SheetFooter>
