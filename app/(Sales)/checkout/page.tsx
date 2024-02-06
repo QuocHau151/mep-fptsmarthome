@@ -150,11 +150,7 @@ export default function Checkout() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input
-                        className="text-[12px]"
-                        placeholder="Tên Khách hàng"
-                        {...field}
-                      />
+                      <Input placeholder="Tên Khách hàng" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

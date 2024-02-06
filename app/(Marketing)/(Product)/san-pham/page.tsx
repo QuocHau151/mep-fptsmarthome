@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Sản phầm",
+  description: "Sản phầm thông minh của FPT Smart Home",
+};
 export default function Product() {
   return (
     <div className="container py-[80px]">

@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import React from "react";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Căn hộ mẫu",
+  description: "Nhà mẫu, căn hộ hộ mẫu thực tế tại FPT Smart Home",
+};
 export default function Apartment() {
   return (
     <>
