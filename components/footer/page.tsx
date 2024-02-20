@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -6,13 +7,15 @@ export default function Footer() {
     <div className=" bg-black">
       <div className=" container w-full h-min text-gray-200 flex items-start justify-center py-[70px]  gap-20 max-lg:px-10 max-lg:flex-col max-lg:text-[13px] max-md:flex-col max-md:px-10 max-md:gap-10">
         <div className="flex flex-col justify-center  max-md:min-w-[10px] items-center my-auto mx-auto font-light gap-10  max-lg:gap-2">
-          <Image
-            className="w-[500px] max-lg:w-[500px] max-md:w-[350px]"
-            src="/assets/logofptsh.png"
-            width={700}
-            height={200}
-            alt=""
-          />
+          <Link href="/">
+            <Image
+              className="w-[500px] max-lg:w-[500px] max-md:w-[350px]"
+              src="/assets/logofptsh.png"
+              width={700}
+              height={200}
+              alt=""
+            />
+          </Link>
           <h4 className="text-h6 text-center">
             Công ty Cổ phần Viễn thông FPT
           </h4>
