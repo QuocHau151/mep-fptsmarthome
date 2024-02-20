@@ -176,15 +176,22 @@ const columns: ColumnDef<ProductData>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuLabel className="max-md:text-[13px]">
+              Actions
+            </DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(payment.id)}
+              className="max-md:text-[13px]"
             >
               View
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Update</DropdownMenuItem>
-            <DropdownMenuItem>Delete</DropdownMenuItem>
+            <DropdownMenuItem className="max-md:text-[13px]">
+              Update
+            </DropdownMenuItem>
+            <DropdownMenuItem className="max-md:text-[13px]">
+              Delete
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
@@ -234,11 +241,11 @@ export default function Page() {
     },
   });
   return (
-    <div className="bg-black w-full h-min p-10">
+    <div className="bg-black w-full h-min p-10 max-md:p-2">
       <div className="bg-gray-900 h-min w-full rounded-2xl p-6">
         <div className="text-white font-semibold mb-6 flex items-center justify-between">
           <div>All Products</div>
-          <Button>
+          <Button className="max-md:text-[12px]">
             <Link href="/admin/product/add-product">Add Product</Link>
           </Button>
         </div>
@@ -250,13 +257,13 @@ export default function Page() {
               onChange={(event) =>
                 table.getColumn("id")?.setFilterValue(event.target.value)
               }
-              className="max-w-sm h-[30px] text-[14px]"
+              className="max-w-sm h-[30px] text-[14px] max-md:text-[10px] max-md:mr-4"
             />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="outline"
-                  className="ml-auto h-[30px] text-[14px]"
+                  className="ml-auto h-[30px] text-[14px] max-md:text-[10px] "
                 >
                   Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
                 </Button>
@@ -269,7 +276,7 @@ export default function Page() {
                     return (
                       <DropdownMenuCheckboxItem
                         key={column.id}
-                        className="capitalize"
+                        className="capitalize max-md:text-[10px]"
                         checked={column.getIsVisible()}
                         onCheckedChange={(value) =>
                           column.toggleVisibility(!!value)
@@ -333,7 +340,7 @@ export default function Page() {
             </Table>
           </div>
           <div className="flex items-center justify-end space-x-2 py-4">
-            <div className="flex-1 text-sm text-muted-foreground">
+            <div className="flex-1 text-sm text-muted-foreground max-md:text-[10px]">
               {table.getFilteredSelectedRowModel().rows.length} of{" "}
               {table.getFilteredRowModel().rows.length} row(s) selected.
             </div>
@@ -343,6 +350,7 @@ export default function Page() {
                 size="sm"
                 onClick={() => table.previousPage()}
                 disabled={!table.getCanPreviousPage()}
+                className="max-md:text-[10px]"
               >
                 Previous
               </Button>
@@ -351,6 +359,7 @@ export default function Page() {
                 size="sm"
                 onClick={() => table.nextPage()}
                 disabled={!table.getCanNextPage()}
+                className="max-md:text-[10px]"
               >
                 Next
               </Button>

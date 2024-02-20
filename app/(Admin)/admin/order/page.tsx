@@ -69,13 +69,13 @@ const StateCell = ({ row }: { row: any }) => {
   useEffect(() => {
     switch (state) {
       case "Pending":
-        setColor("bg-yellow-600");
+        setColor("bg-yellow-600 max-md:text-[10px]");
         break;
       case "Done":
-        setColor("bg-green-600");
+        setColor("bg-green-600 max-md:text-[10px]");
         break;
       case "Cancel":
-        setColor("bg-red-600");
+        setColor("bg-red-600 max-md:text-[10px]");
         break;
     }
   }, [state]);
@@ -88,13 +88,16 @@ const StateCell = ({ row }: { row: any }) => {
         <SelectValue placeholder={state} />
       </SelectTrigger>
       <SelectContent className="">
-        <SelectItem className="bg-yellow-600 " value="Pending">
+        <SelectItem
+          className="bg-yellow-600 max-md:text-[13px] "
+          value="Pending"
+        >
           Pending
         </SelectItem>
-        <SelectItem className="bg-green-600 " value="Done">
+        <SelectItem className="bg-green-600 max-md:text-[13px]" value="Done">
           Done
         </SelectItem>
-        <SelectItem className="bg-red-600 " value="Cancel">
+        <SelectItem className="bg-red-600 max-md:text-[13px]" value="Cancel">
           Cancel
         </SelectItem>
       </SelectContent>
@@ -241,15 +244,22 @@ const columns: ColumnDef<OrderData>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuLabel className="max-md:text-[13px]">
+              Actions
+            </DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(payment.id)}
+              className="max-md:text-[13px]"
             >
               Profile
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <DropdownMenuItem className="max-md:text-[13px]">
+              View customer
+            </DropdownMenuItem>
+            <DropdownMenuItem className="max-md:text-[13px]">
+              View payment details
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
@@ -299,7 +309,7 @@ export default function OrderPage() {
     },
   });
   return (
-    <div className="bg-black w-full h-[calc(100vh-60px)] p-10">
+    <div className="bg-black w-full h-[calc(100vh-60px)] p-10 max-md:p-2">
       <div className="bg-gray-900 h-auto w-full rounded-2xl p-6">
         <div className="text-white font-semibold mb-6">All Users</div>
         <div className="w-full">
@@ -312,13 +322,13 @@ export default function OrderPage() {
               onChange={(event) =>
                 table.getColumn("name")?.setFilterValue(event.target.value)
               }
-              className="max-w-sm h-[30px] text-[14px]"
+              className="max-w-sm h-[30px] text-[14px] max-md:text-[10px] max-md:mr-4"
             />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="outline"
-                  className="ml-auto h-[30px] text-[14px]"
+                  className="ml-auto h-[30px] text-[14px] max-md:text-[10px] "
                 >
                   Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
                 </Button>
@@ -331,7 +341,7 @@ export default function OrderPage() {
                     return (
                       <DropdownMenuCheckboxItem
                         key={column.id}
-                        className="capitalize"
+                        className="capitalize max-md:text-[10px]"
                         checked={column.getIsVisible()}
                         onCheckedChange={(value) =>
                           column.toggleVisibility(!!value)
@@ -395,7 +405,7 @@ export default function OrderPage() {
             </Table>
           </div>
           <div className="flex items-center justify-end space-x-2 py-4">
-            <div className="flex-1 text-sm text-muted-foreground">
+            <div className="flex-1 text-sm text-muted-foreground max-md:text-[10px]">
               {table.getFilteredSelectedRowModel().rows.length} of{" "}
               {table.getFilteredRowModel().rows.length} row(s) selected.
             </div>
@@ -405,6 +415,7 @@ export default function OrderPage() {
                 size="sm"
                 onClick={() => table.previousPage()}
                 disabled={!table.getCanPreviousPage()}
+                className="max-md:text-[10px]"
               >
                 Previous
               </Button>
@@ -413,50 +424,13 @@ export default function OrderPage() {
                 size="sm"
                 onClick={() => table.nextPage()}
                 disabled={!table.getCanNextPage()}
+                className="max-md:text-[10px]"
               >
                 Next
               </Button>
             </div>
           </div>
         </div>
-        {/* <Table className="">
-          <TableCaption>A list of users.</TableCaption>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>Phone</TableHead>
-              <TableHead className="">Email</TableHead>
-              <TableHead className="">Verify</TableHead>
-              <TableHead className="">Status</TableHead>
-              <TableHead className="">Action</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {data.map((user) => (
-              <TableRow key={user.id}>
-                <TableCell>{user.name}</TableCell>
-                <TableCell>{user.phone}</TableCell>
-                <TableCell>{user.email}</TableCell>
-                <TableCell>{user.emailVerified ? "Yes" : "No"}</TableCell>
-                <TableCell>{user.status}</TableCell>
-                <TableCell className="text-right flex gap-2">
-                  <Button className="bg-lime-500 w-[50px] h-[23px]  rounded-md text-white text-[12px]">
-                    View
-                  </Button>
-                  <Button className="bg-rose-500 w-[50px] h-[23px]  rounded-md text-white text-[12px]">
-                    Update
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableFooter>
-            <TableRow>
-              <TableCell colSpan={5}>Total</TableCell>
-              <TableCell className="text-right">10</TableCell>
-            </TableRow>
-          </TableFooter>
-        </Table> */}
       </div>
     </div>
   );
