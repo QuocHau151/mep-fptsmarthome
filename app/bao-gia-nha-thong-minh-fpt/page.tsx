@@ -692,7 +692,7 @@ export default function BaoGia() {
                   </div>
                 </CarouselItem>
                 <CarouselItem className="basis-1/2 max-md:basis-full  max-md:max-w-[400px]">
-                  {" "}
+                 
                   <div className="  h-[600px] bg-white flex flex-col items-center justify-start p-10 rounded-xl shadow-xl">
                     <h5 className="text-[20px] font-semibold text-slate-700">
                       Nâng Cao

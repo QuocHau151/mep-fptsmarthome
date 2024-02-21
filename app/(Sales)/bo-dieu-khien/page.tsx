@@ -3,10 +3,18 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   return (
     <div>
+      <Helmet>
+        <title>Bộ điều khiển trung tâm</title>
+        <meta
+          name="description"
+          content="Bộ điều khiển trung tâm FPT Play Box S"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/product/thumnail/1686639474-TrangChuWebsite-box1920x680-copy-1.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
