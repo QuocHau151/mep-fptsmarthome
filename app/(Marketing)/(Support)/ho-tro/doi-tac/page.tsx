@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { formPartnerSchema } from "@/schemas";
 import { createPartner } from "@/actions/partner";
 import { useToast } from "@/components/ui/use-toast";
+import { Helmet } from "react-helmet";
 export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -57,7 +58,14 @@ export default function Page() {
     });
   };
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Đối tác</title>
+        <meta
+          name="description"
+          content="Hỗ trợ đăng ký đối tác FPT Smart Home"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/support/partner-banner.jpg')] w-full h-[300px] bg-cover bg-no-repeat bg-center max-md:h-[150px]"></div>
       </div>
@@ -233,6 +241,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

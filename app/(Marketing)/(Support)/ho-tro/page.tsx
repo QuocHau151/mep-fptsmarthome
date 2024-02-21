@@ -1,6 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Hỗ Trợ",
+  description: "Tư vấn hỗ trợ khách hàng, sản phẩm và dịch vụ của chúng tôi.",
+};
 export default function Support() {
   return (
     <div>

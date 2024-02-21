@@ -21,6 +21,7 @@ import { formContactSchema } from "@/schemas";
 import { createContact } from "@/actions/contact";
 import { useToast } from "@/components/ui/use-toast";
 import { on } from "events";
+import { Helmet } from "react-helmet";
 export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -61,7 +62,14 @@ export default function Page() {
     });
   };
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Liên hệ trực tiếp</title>
+        <meta
+          name="description"
+          content="Tư vấn liên hệ trực tiếp với FPT Smart Home"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/support/contact-banner.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[200px]"></div>
       </div>
@@ -203,6 +211,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

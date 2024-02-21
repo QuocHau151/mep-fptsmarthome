@@ -26,6 +26,7 @@ import { formBrandShopSchema } from "@/schemas";
 import Link from "next/link";
 import { createBrandShop } from "@/actions/brandshop";
 import { useToast } from "@/components/ui/use-toast";
+import { Helmet } from "react-helmet";
 export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -64,6 +65,10 @@ export default function Page() {
   };
   return (
     <div>
+      <Helmet>
+        <title>BrandShop</title>
+        <meta name="description" content="Hỗ trợ đăng ký BrandShop" />
+      </Helmet>
       <div className="">
         <div className="bg-[url('/assets/images/support/brandshop-banner2.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[200px]"></div>
       </div>
