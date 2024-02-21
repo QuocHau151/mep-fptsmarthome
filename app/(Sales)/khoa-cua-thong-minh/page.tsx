@@ -3,10 +3,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Cửa khoá thông minh</title>
+        <meta name="description" content="Các thiết bị Cửa khoá thông minh" />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/product/thumnail/1668566931-cover-page-khoa-cua.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
@@ -64,6 +69,6 @@ export default function Page() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -4,10 +4,15 @@ import Link from "next/link";
 import React from "react";
 import LoginForm from "@/components/auth/login-form";
 import Social from "@/components/auth/social";
+import { Helmet } from "react-helmet";
 
 export default function Login() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Đăng Nhập</title>
+        <meta name="description" content="" />
+      </Helmet>
       <div className="bg-[url('/assets/images/Untitled-1.jpg')] h-[100vh]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center py-10">
         <div className="bg-white bg-opacity-95 rounded-[30px]  flex flex-col gap-6 items-center  p-[40px] h-min max-md:w-4/5 max-md:p-[20px]">
           <div className="text-center w-full">
@@ -36,6 +41,6 @@ export default function Login() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

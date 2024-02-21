@@ -3,10 +3,18 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Thiết bị an ninh thông minh</title>
+        <meta
+          name="description"
+          content="Thiết bị giám sát an ninh Thông Minh FPT Smart Home"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/product/thumnail/1668575026-an-ninh.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
@@ -52,6 +60,6 @@ export default function Page() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

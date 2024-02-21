@@ -10,11 +10,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Metadata } from "next";
+import { Helmet } from "react-helmet";
 
 export default function SecuritySolution() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Giải pháp an ninh</title>
+        <meta
+          name="description"
+          content="Sản phẩm FPT Smart Home đảm bảo an ninh cho gia đình bạn "
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/solution/an-ninh/1668582892-Group-622.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
@@ -306,6 +313,6 @@ export default function SecuritySolution() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

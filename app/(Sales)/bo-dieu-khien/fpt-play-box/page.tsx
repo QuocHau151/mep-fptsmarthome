@@ -61,12 +61,16 @@ export default function Page() {
             </h2>
             <div className="flex items-start justify-center gap-10 pt-[50px] max-lg:flex-col max-lg:px-20 max-md:px-0 max-md:gap-4">
               <div className="basis-1/2 bg-white w-full h-min rounded-2xl">
-                <Image
-                  src={option?.image ?? ""}
-                  width={1000}
-                  height={500}
-                  alt=""
-                />
+                {option ? (
+                  <Image
+                    src={option?.image ?? ""}
+                    width={1000}
+                    height={500}
+                    alt=""
+                  />
+                ) : (
+                  <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
+                )}
               </div>
               <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px] ">
                 <div className="flex flex-col items-center pt-[50px] max-md:pt-[30px]">

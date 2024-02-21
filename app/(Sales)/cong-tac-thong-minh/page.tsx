@@ -3,10 +3,18 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   return (
     <div>
+      <Helmet>
+        <title>Công tắc thông minh FPT Smart Home</title>
+        <meta
+          name="description"
+          content="Công tắc điều khiển cảm ứng không dây"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/product/thumnail/1668574989-Group-211.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>

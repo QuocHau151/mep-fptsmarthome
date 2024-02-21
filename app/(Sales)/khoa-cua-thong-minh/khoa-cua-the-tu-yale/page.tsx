@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -50,7 +51,14 @@ export default function Page() {
     addToCart(product);
   };
   return (
-    <div className="">
+    <>
+      <Helmet>
+        <title>Khoá Cửa Thẻ Từ Yale</title>
+        <meta
+          name="description"
+          content="Khoá Cửa Thông Minh tại FPT Smart Home"
+        />
+      </Helmet>
       <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
         <div className="container  max-lg:px-20 max-md:px-6">
           <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
@@ -443,6 +451,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

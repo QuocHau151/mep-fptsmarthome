@@ -7,6 +7,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -52,7 +53,14 @@ export default function Page() {
   };
 
   return (
-    <div className="">
+    <>
+      <Helmet>
+        <title>Khoá Cửa Vân Tay Yale</title>
+        <meta
+          name="description"
+          content="Khoá Cửa Thông Minh tại FPT Smart Home"
+        />
+      </Helmet>
       <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
         <div className="container  max-lg:px-20 max-md:px-6">
           <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
@@ -475,7 +483,9 @@ export default function Page() {
               tay phải là thực thể sống chứ không đơn thuần là hình ảnh của vân
               tay được in lại.
             </p>
-            <h5 className="font-semibold text-[22px] max-md:text-[15px]">Công nghệ mã số ảo</h5>
+            <h5 className="font-semibold text-[22px] max-md:text-[15px]">
+              Công nghệ mã số ảo
+            </h5>
             <p>
               Công nghệ mã số ảo cho phép người dùng có thể nhập bất kỳ dãy số
               đằng sau hay đằng trước mã số đúng. Đây là ứng dụng thông minh
@@ -648,6 +658,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

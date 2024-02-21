@@ -3,10 +3,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Page() {
   return (
     <div>
+      <Helmet>
+        <title>Đèn thông minh</title>
+        <meta name="description" content="Đèn thông minh tại FPT Smart Home" />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/product/thumnail/1668574949-den.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>

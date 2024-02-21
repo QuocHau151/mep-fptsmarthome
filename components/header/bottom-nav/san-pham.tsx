@@ -213,7 +213,7 @@ export default function Product() {
               href="/phu-kien/o-cam-thong-minh-wifi"
               className="text-p font-regular hover:text-orange-600 "
             >
-              Ổ Cắm Thông Minh
+              Ổ Cắm Thông Minh Wifi
             </Link>
             <Link
               href="/phu-kien/bo-dieu-khien-hong-ngoai"

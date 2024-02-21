@@ -10,10 +10,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Helmet } from "react-helmet";
 
 export default function SolutionControl() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Giải Pháp Điều Khiển</title>
+        <meta
+          name="description"
+          content="Sản phẩm FPT Smart Home giúp ngôi nhà bạn thông minh hơn"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/solution/dieu-khien/1668581934-Group-611.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
@@ -377,6 +385,6 @@ export default function SolutionControl() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

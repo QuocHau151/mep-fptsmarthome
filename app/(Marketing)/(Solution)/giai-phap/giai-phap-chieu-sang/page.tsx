@@ -10,10 +10,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Helmet } from "react-helmet";
 
 export default function LightSolution() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Giải pháp chiếu sáng</title>
+        <meta
+          name="description"
+          content="Sản phẩm FPT Smart Home để thắp sáng ngôi nhà của bạn"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/solution/chieu-sang/1668581675-Group-218.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
@@ -360,6 +368,6 @@ export default function LightSolution() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

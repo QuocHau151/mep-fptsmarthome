@@ -11,9 +11,17 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Footer from "@/components/footer/page";
+import { Helmet } from "react-helmet";
 export default function BaoGia() {
   return (
-    <div className="">
+    <>
+      <Helmet>
+        <title>Báo giá nhà thông minh</title>
+        <meta
+          name="description"
+          content="Báo giá nhà thông minh cho các sản phẩm FPT Smart Home"
+        />
+      </Helmet>
       <div className="">
         <div className="bg-[url('/assets/images/thumnail/consultant-banner.webp')] w-full h-[700px] bg-cover bg-no-repeat bg-center relative max-lg:h-[500px] max-md:h-[200px]">
           <div className="absolute right-[200px] top-[150px] max-w-[550px] max-lg:right-[50px]  max-lg:top-[50px] max-lg:max-w-[450px] max-md:hidden">
@@ -692,7 +700,6 @@ export default function BaoGia() {
                   </div>
                 </CarouselItem>
                 <CarouselItem className="basis-1/2 max-md:basis-full  max-md:max-w-[400px]">
-                 
                   <div className="  h-[600px] bg-white flex flex-col items-center justify-start p-10 rounded-xl shadow-xl">
                     <h5 className="text-[20px] font-semibold text-slate-700">
                       Nâng Cao
@@ -960,6 +967,6 @@ export default function BaoGia() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

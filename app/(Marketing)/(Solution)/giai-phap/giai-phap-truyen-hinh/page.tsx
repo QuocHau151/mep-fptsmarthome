@@ -10,10 +10,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Helmet } from "react-helmet";
 
 export default function SecuritySolution() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Giải Pháp Truyền Hình</title>
+        <meta
+          name="description"
+          content="Cả thế giới trong tầm tay bạn với FPT Play Box S"
+        />
+      </Helmet>
       <div>
         <div className="bg-[url('/assets/images/solution/truyen-hinh/1668583056-Group-649.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
@@ -215,6 +223,6 @@ export default function SecuritySolution() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

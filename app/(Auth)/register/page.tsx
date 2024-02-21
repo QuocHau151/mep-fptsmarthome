@@ -4,10 +4,15 @@ import Link from "next/link";
 import React from "react";
 import RegisterForm from "@/components/auth/register-form";
 import Social from "@/components/auth/social";
+import { Helmet } from "react-helmet";
 
 export default function Register() {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Đăng Ký</title>
+        <meta name="description" content="" />
+      </Helmet>
       <div className="bg-[url('/assets/images/Untitled-1.jpg')] h-[100vh]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center">
         <div className="bg-white bg-opacity-95 rounded-[30px] flex flex-col gap-6 items-center w-min  px-[50px] py-[20px] max-md:w-4/5 max-md:px-[30px] max-md:gap-4">
           <div className="text-center">
@@ -33,6 +38,6 @@ export default function Register() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
