@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: "Giải pháp thông minh cho ngôi nhà của bạn",
 };
 
+
 export default async function RootLayout({
   children,
 }: {
@@ -24,9 +25,7 @@ export default async function RootLayout({
   return (
     <SessionProvider session={session}>
       <html lang="en">
-        <head>
-        <meta name="google-site-verification" content="SiBQC7Zgw2hF-Pa7esKwX-GpOoAm2lO1ghYwGAjGtyo" />
-        </head>
+        
         <body className={work_sans.className}>
           <Toaster />
           <main>{children}</main>
