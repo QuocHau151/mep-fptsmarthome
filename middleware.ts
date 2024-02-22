@@ -24,10 +24,10 @@ export default auth((req) => {
     }
     return null;
   }
-  if (!IsLoggedIn && IsSalesRoute) {
-    return Response.redirect(new URL("/register", nextUrl));
-  }
-  return null;
+  // if (!IsLoggedIn && IsSalesRoute) {
+  //   return Response.redirect(new URL("/register", nextUrl));
+  // }
+  // return null;
 });
 
 // Optionally, don't invoke Middleware on some paths

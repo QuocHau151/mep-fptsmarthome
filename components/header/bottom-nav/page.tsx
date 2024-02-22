@@ -102,7 +102,7 @@ export default function Bottom_Nav() {
               Đèn thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/fpt-play-box">
+                <Link href="/den-thong-minh">
                   <Image
                     src="/assets/images/product/1692088715-Light-Led-Bulb.png"
                     width={150}
@@ -150,7 +150,7 @@ export default function Bottom_Nav() {
               Cảm biến thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/cam-bien">
+                <Link href="/cam-bien">
                   <Image
                     src="/assets/images/product/1692090463-Cam-bien-chuyen-dong.png"
                     width={150}
@@ -191,7 +191,7 @@ export default function Bottom_Nav() {
               Công tắc thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/fpt-play-box">
+                <Link href="/cong-tac-thong-minh">
                   <Image
                     src="/assets/images/product/1692151116-cong-tac-thong-minh-page-thiet-bi.png"
                     width={150}
@@ -226,7 +226,7 @@ export default function Bottom_Nav() {
               Bộ rèm cửa thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/fpt-play-box">
+                <Link href="/bo-rem-cua">
                   <Image
                     src="/assets/images/product/1692088539-Bo-Dieu-Khien-Rem.png"
                     width={150}
@@ -269,7 +269,7 @@ export default function Bottom_Nav() {
               Phụ kiện thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/fpt-play-box">
+                <Link href="/phu-kien">
                   <Image
                     className=""
                     src="/assets/images/product/1692151096-o-cam-thong-minh-page-thiet-bi.png"
@@ -317,7 +317,7 @@ export default function Bottom_Nav() {
               Khoá cửa thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/fpt-play-box">
+                <Link href="/khoa-cua-thong-minh">
                   <Image
                     src="/assets/images/product/1692088791-Khoa-YAle.png"
                     width={150}
@@ -346,7 +346,7 @@ export default function Bottom_Nav() {
               Thiết bị an ninh thông minh
               <MdOutlineKeyboardArrowRight />
               <div className="absolute top-0 right-[-260px] w-full h-min bg-white px-6 invisible group-hover/item:visible flex flex-col items-center pb-6">
-                <Link href="/bo-dieu-khien/fpt-play-box">
+                <Link href="/thiet-bi-an-ninh-thong-minh">
                   <Image
                     src="/assets/images/product/1692088779-Camera-SE.png"
                     width={150}

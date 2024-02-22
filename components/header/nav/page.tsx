@@ -168,7 +168,7 @@ export default function Nav() {
   return (
     <div className="block max-lg:hidden   bg-black w-full h-[100px] ">
       <div className="container flex items-center h-full justify-between ">
-        <Link href="/" className="mr-[]">
+        <Link href="/" className="p-4">
           <Image src="/assets/logofptsh.png" width={205} height={100} alt="" />
         </Link>
         <div className="flex  items-center space-x-2 ">
@@ -280,26 +280,7 @@ export default function Nav() {
                         </div>
                       </div>
                       <div className=""></div>
-                      {/* <h5 className="text-[18px] font-semibold ">
-                        {item.name}
-                      </h5>
-                      <p>
-                        Option: {item.category} {item.type} {item.color}
-                        {item.power}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <p>Số Lượng:</p>
-                        <button onClick={() => decreaseQuantity(item.id)}>
-                          -
-                        </button>
-                        <p>{item.quantity}</p>
-                        <button onClick={() => increaseQuantity(item.id)}>
-                          +
-                        </button>
-                      </div>
-                      <button onClick={() => removeFromCart(item.id)}>
-                        Remove from cart
-                      </button> */}
+                      
                     </div>
                   ))}
                 </div>

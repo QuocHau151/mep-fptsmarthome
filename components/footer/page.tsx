@@ -42,7 +42,7 @@ export default function Footer() {
                   height={24}
                   alt=""
                 />
-                <p>0932133357 - Hỗ trợ trực tiếp</p>
+                <p>0906030030 - Hỗ trợ trực tiếp ( Nguyên )</p>
               </div>
               <div className="flex items-center gap-6 font-light">
                 <Image
@@ -51,7 +51,7 @@ export default function Footer() {
                   height={24}
                   alt=""
                 />
-                <p>19006600</p>
+                <p>19006600 - Hotline</p>
               </div>
               <div className="flex items-start gap-6 font-light">
                 <Image
@@ -104,7 +104,7 @@ export default function Footer() {
           <h2>
             Địa chỉ: Lô 37-39A Đường 19, KCX Tân Thuận, Quận 7 TP.Hồ Chí Minh
           </h2>
-          <h2> Số điện thoại: 0932133357 - Hỗ trợ trực tiếp </h2>
+          <h2> Số điện thoại: 0906030030 - Hỗ trợ trực tiếp </h2>
           <h2>Hotline: 19006600</h2>
           <h2> Email: fptsmarthome@fpt.com</h2>
           <Image

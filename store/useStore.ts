@@ -9,16 +9,17 @@ type Store = {
   addToCart: (product: ProductData) => void;
   removeFromCart: (productId: string) => void;
 };
-function getInitialCart() {
-  try {
-    const cart = localStorage.getItem("cart");
-    return cart ? JSON.parse(cart) : [];
-  } catch (error) {
-    console.error("Error parsing cart data from localStorage:", error);
-    return [];
-  }
-}
+
 export const useStore = create<Store>((set) => {
+  function getInitialCart() {
+    try {
+      const cart = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem("cart") : null;
+      return cart ? JSON.parse(cart) : [];
+    } catch (error) {
+      console.error("Error parsing cart data from sessionStorage:", error);
+      return [];
+    }
+  }
   const initialCart = getInitialCart();
 
   return {

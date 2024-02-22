@@ -21,14 +21,21 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import Header from "@/components/header/page";
 import Footer from "@/components/footer/page";
-import { auth } from "@/auth";
 import { ChevronDown } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
 
   return (
     <>
+    <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="FPT Smart Home - Thương hiệu nhà thông minh từ FPT"
+        />
+    </Helmet>
       <Header />
       <section className="max-md:py-[30px] max-md:h-[300px]">
         <Swiper

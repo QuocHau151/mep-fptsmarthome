@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Hỗ Trợ",
@@ -23,10 +24,10 @@ export default function Support() {
         </div>
         <div className=" flex flex-col items-center">
           <div className="flex items-center justify-center gap-[150px] pt-10">
-            <div className="max-w-[420px]">
+            <Link href="/ho-tro/lien-he-truc-tiep" className="max-w-[420px]">
               <h3 className="text-h5 font-bold mb-4">Liên Hệ</h3>
               <p>Gửi tin nhắn | Gửi Email | Tìm đại lý gần nhất</p>
-            </div>
+            </Link>
             <Image
               className="rounded-[30px] mb-4"
               src="/assets/images/support/support-image-1.jpg"
@@ -43,10 +44,10 @@ export default function Support() {
               height={345}
               alt=""
             />
-            <div className="max-w-[420px]">
+            <Link href="/ho-tro/doi-tac" className="max-w-[420px]">
               <h3 className="text-h5 font-bold mb-4">Đối tác</h3>
               <p>Đăng ký đại lý | Đăng ký cộng Tác Viên</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
