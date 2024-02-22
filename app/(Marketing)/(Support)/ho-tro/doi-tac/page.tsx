@@ -67,7 +67,7 @@ export default function Page() {
         />
       </Helmet>
       <div>
-        <div className="bg-[url('/assets/images/support/partner-banner.jpg')] w-full h-[300px] bg-cover bg-no-repeat bg-center max-md:h-[150px]"></div>
+        <div className="bg-[url('/assets/images/support/partner-banner.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[150px]"></div>
       </div>
       <div className="container max-lg:px-20 max-md:px-10">
         <div className=" text-center py-10">
