@@ -127,7 +127,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1684406592-PR-FSH-5-2022_600X375-2.jpg"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />
@@ -197,7 +197,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/VYd3aqcH71c?si=y0NRSfIkOcnBwvRZ"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">

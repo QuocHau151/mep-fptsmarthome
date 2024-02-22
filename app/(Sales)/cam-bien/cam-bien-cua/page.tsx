@@ -171,7 +171,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569241-cam-bien-cua.png"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />
@@ -243,7 +243,6 @@ export default function Page() {
               className="w-full h-[500px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/IqfgCNQLyok?si=Gc9Ds4LXysEHGFH3"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">

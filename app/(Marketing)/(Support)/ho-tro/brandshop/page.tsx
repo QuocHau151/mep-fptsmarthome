@@ -471,7 +471,7 @@ export default function Page() {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper"
+                className=""
               >
                 <SwiperSlide>
                   <Image

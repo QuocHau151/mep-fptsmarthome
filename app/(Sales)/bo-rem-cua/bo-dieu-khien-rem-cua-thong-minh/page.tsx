@@ -123,7 +123,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569332-dong-co-rem.png"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />
@@ -312,7 +312,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/u02LnbsFPsE?si=aqagDpm1hT40tvR9"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
           </div>

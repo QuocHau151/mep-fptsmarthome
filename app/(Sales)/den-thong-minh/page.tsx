@@ -175,7 +175,6 @@ export default function Page() {
               className="w-full h-[600px]  max-md:h-[200px]"
               src="https://www.youtube.com/embed/7fmC-i7oTIE?si=cad-IC6zK87avwhK"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <h2 className="text-[26px] font-semibold  max-md:text-[18px]">

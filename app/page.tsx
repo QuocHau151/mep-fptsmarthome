@@ -23,19 +23,20 @@ import Header from "@/components/header/page";
 import Footer from "@/components/footer/page";
 import { ChevronDown } from "lucide-react";
 import { Helmet } from "react-helmet";
-
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 export default function Home() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Home</title>
         <meta
           name="description"
           content="FPT Smart Home - Thương hiệu nhà thông minh từ FPT"
         />
-    </Helmet>
+      </Helmet>
       <Header />
       <section className="max-md:py-[30px] max-md:h-[300px]">
         <Swiper
@@ -47,7 +48,7 @@ export default function Home() {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper z-0 "
+          className=" z-0 "
         >
           <SwiperSlide>
             <Image
@@ -136,7 +137,9 @@ export default function Home() {
               dễ dàng điều khiển chúng từ xa, hẹn giờ tự động.
             </p>
             <h3 className="text-h4 font-bold text-gray-800">350.000 VNĐ</h3>
-            <span className="mt-[-29px] text-gray-400">(Chưa bao gồm VAT)</span>
+            <span className="mt-[-29px] text-gray-400 ml-6 max-md:ml-0">
+              (Chưa bao gồm VAT)
+            </span>
             <Button className="bg-gray-700">
               <p className="w-[150px] h-[50px] text-center my-auto ">
                 Tìm hiểu ngay
@@ -144,10 +147,10 @@ export default function Home() {
             </Button>
           </div>
           <Image
-            className="w-[2000px] max-lg:w-full"
+            className=" max-lg:w-full"
             src="/assets/images/session/1691480717-831x552px-Key-copy.jpg"
-            width={831}
-            height={552}
+            width={1920}
+            height={1080}
             alt=""
           />
         </div>
@@ -204,8 +207,8 @@ export default function Home() {
             <Image
               className="rounded-xl"
               src="/assets/images/session/1695890880-9cbfa122fc2e2870713f.jpg"
-              width={2560}
-              height={1920}
+              width={1920}
+              height={1080}
               alt=""
             />
             <div className="flex flex-col  py-6 px-2 border-b-[1px] border-slate-300 w-full text-center mb-4">
@@ -308,8 +311,8 @@ export default function Home() {
             <Image
               className="rounded-xl"
               src="/assets/images/session/1695632188-952e0fa37dbcafe2f6ad9.jpg"
-              width={2560}
-              height={1920}
+              width={1920}
+              height={1080}
               alt=""
             />
             <div className="flex flex-col  py-6 px-2 border-b-[1px] border-slate-300 w-full text-center mb-4">
@@ -412,8 +415,8 @@ export default function Home() {
             <Image
               className="rounded-xl"
               src="/assets/images/session/1695631236-e443edd8ce031c5d4512.jpg"
-              width={2560}
-              height={1920}
+              width={1920}
+              height={1080}
               alt=""
             />
             <div className="flex flex-col  py-6 px-2 border-b-[1px] border-slate-300 w-full text-center mb-4">
@@ -718,148 +721,52 @@ export default function Home() {
             className=" w-full  lg:h-[700px] max-lg:h-[500px] max-md:h-[200px] "
           >
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/qu8H7iaQutA?si=MehD8yNZN3huFxtI"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="qu8H7iaQutA" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/qu8H7iaQutA?si=MehD8yNZN3huFxtI"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="qu8H7iaQutA" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/l0dhROiJ7jg?si=9p1XosxjSOL2DRRb"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="l0dhROiJ7jg" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/Gb3d3DrRRGo?si=55QWPsOHa7i1fDSQ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="Gb3d3DrRRGo" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/jn-Ehy1rVzw?si=190sVNcVreQdFtKE"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="jn-Ehy1rVzw" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/xzAlNG-EyBo?si=MoZxF9mL8DzZVfHr"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="xzAlNG-EyBo" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/L2JDLjYXq0U?si=RDLpZ-yPsWMCOPlk"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="L2JDLjYXq0U" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/GhPNFNYrk_k?si=JdZaeZvvh5eocO46"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="GhPNFNYrk_k" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/PCeZyVmXfNg?si=erFqzEPe84Y25oPZ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="PCeZyVmXfNg" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/4wDEcSPbc9M?si=T_eSeL2Ff9xLVV-s"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="4wDEcSPbc9M" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/Mq6Y23URD98?si=arOpIZtcxihaoNZm"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="Mq6Y23URD98" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/Mq6Y23URD98?si=1GKqSwRGbY9-Mu5i"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="Mq6Y23URD98" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/u02LnbsFPsE?si=Y0tyBPyMJgx1_IGQ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="u02LnbsFPsE" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/304XGQm1IHI?si=m-d2rJGlN0ggah3y"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="304XGQm1IHI" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/7fmC-i7oTIE?si=LmxtIQvbeUA8PQpK"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="7fmC-i7oTIE" title="" />
             </SwiperSlide>
             <SwiperSlide>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/IqfgCNQLyok?si=2__3BaOLMX5-F-vs"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <LiteYouTubeEmbed id="IqfgCNQLyok" title="" />
             </SwiperSlide>
           </Swiper>
           <Swiper
@@ -870,7 +777,7 @@ export default function Home() {
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper  "
+            className="  "
           >
             <SwiperSlide>
               <Image

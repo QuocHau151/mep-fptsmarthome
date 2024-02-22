@@ -165,7 +165,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569358-o-cam-thong-minh.png"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />
@@ -363,7 +363,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/zCQWecithow?si=rwbsb_B1MbrPx-QH"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <p></p>

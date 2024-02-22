@@ -124,7 +124,6 @@ export default function BaoGia() {
           className="w-[800px] h-[450px] max-lg:w-full max-lg:h-[400px] max-md:h-[300px]"
           src="https://www.youtube.com/embed/Ou_KpybURbo?si=4ms4BtIn_aS4PFZK"
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
         <div className="flex items-center justify-around w-full max-lg:grid max-lg:grid-cols-2 max-lg:grid-rows-2 max-lg:gap-4">

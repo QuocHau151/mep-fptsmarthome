@@ -21,6 +21,7 @@ export default function Page() {
     }
   };
   useEffect(() => {
+    
     fetchData();
   }, []);
 
@@ -67,6 +68,7 @@ export default function Page() {
                     width={1000}
                     height={500}
                     alt=""
+                    priority
                   />
                 ) : (
                   <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>

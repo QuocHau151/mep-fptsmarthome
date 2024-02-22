@@ -84,6 +84,7 @@ export default function SecuritySolution() {
         style={{}}
         spaceBetween={30}
         slidesPerView={window.innerWidth > 768 ? 4 : 2}
+        loop={true}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
@@ -91,9 +92,9 @@ export default function SecuritySolution() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+    
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper flex items-center justify-center gap-10 mb-[100px] "
+        className=" flex items-center justify-center gap-10 mb-[100px] "
       >
         <SwiperSlide>
           <div className="flex flex-col items-center justify-center bg-gray-100 px-4  pt-4 pb-6  h-[320px] rounded-3xl ">

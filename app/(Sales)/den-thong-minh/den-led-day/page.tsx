@@ -199,7 +199,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2"
               src="/assets/images/product/thumnail/1668570002-led-day.png"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />

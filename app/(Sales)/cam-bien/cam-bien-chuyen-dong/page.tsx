@@ -202,7 +202,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1668569403-cam-bien-chuyen-dong.png"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />
@@ -358,7 +358,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/GHeIFy92OL0?si=S3BSPBlcnlgyZPpH"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <p>
@@ -377,7 +376,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/OSQaku9aXb0?si=YWeW4Kf6TgLSIVG2"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
@@ -388,7 +386,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px]"
               src="https://www.youtube.com/embed/wnchZFYURfk?si=DX1E72gsX6lJ1gA0"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
           </div>

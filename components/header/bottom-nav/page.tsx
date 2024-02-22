@@ -7,31 +7,17 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useCurrentUser } from "@/hook/use-current-user";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 import { logout } from "@/actions/logout";
 import Product from "./san-pham";
 import Solution from "./giai-phap";
 import Support from "./ho-tro";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import {
-  DropdownMenuGroup,
-  DropdownMenuPortal,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-} from "@radix-ui/react-dropdown-menu";
+
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
+  
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -50,12 +36,13 @@ const navs = [
 ];
 export default function Bottom_Nav() {
   const user = useCurrentUser();
-
+ 
   const handleLogout = () => {
     logout();
   };
+  
   return (
-    <div className=" block max-lg:hidden bg-white relative">
+    <div className="header block max-lg:hidden bg-white relative z-50">
       <div className=" container flex items-center justify-between  w-full h-[56px] font-medium ">
         <div className="relative  flex gap-2 group  ">
           <Image

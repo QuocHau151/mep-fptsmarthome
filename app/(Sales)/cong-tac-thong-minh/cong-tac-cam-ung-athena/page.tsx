@@ -554,7 +554,6 @@ export default function Page() {
               className="w-full h-[800px] max-lg:h-[400px] max-md:h-[200px] "
               src="https://www.youtube.com/embed/0UYAWKYjGis?si=KpTR-B0QKKVySe9a"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
           </div>

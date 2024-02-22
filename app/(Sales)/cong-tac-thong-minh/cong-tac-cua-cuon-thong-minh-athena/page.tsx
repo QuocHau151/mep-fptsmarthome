@@ -204,7 +204,7 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1704445896-Cong-tac-cua-copy.jpg"
-              width={1000}
+              width={500}
               height={500}
               alt=""
             />

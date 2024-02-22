@@ -130,8 +130,8 @@ export default function Page() {
             <Image
               className="rounded-2xl basis-1/2 w-full"
               src="/assets/images/product/thumnail/1684486559-camera-SE.jpg"
-              width={300}
-              height={300}
+              width={500}
+              height={500}
               alt=""
             />
             <div className="basis-1/2 w-full">

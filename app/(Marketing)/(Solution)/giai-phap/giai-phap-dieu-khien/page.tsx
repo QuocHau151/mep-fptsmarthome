@@ -82,7 +82,7 @@ export default function SolutionControl() {
         style={{}}
         spaceBetween={30}
         slidesPerView={window.innerWidth > 768 ? 4 : 2}
-        loop={false}
+        loop={true}
         centeredSlides={true}
         autoplay={{
           delay: 1500,
@@ -91,9 +91,9 @@ export default function SolutionControl() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper flex items-center justify-center  mb-[100px] flex-nowrap"
+        className=" flex items-center justify-center  mb-[100px] flex-nowrap"
       >
         <SwiperSlide>
           <div className="flex flex-col items-center justify-center bg-gray-100 px-4  pt-4 pb-6  h-[320px]   rounded-3xl">

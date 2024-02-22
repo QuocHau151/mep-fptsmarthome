@@ -75,13 +75,14 @@ export default function SecuritySolution() {
           Những thiết bị nổi bật dành riêng cho bạn
         </h2>
       </div>
-      <Swiper
+      <div className="container"><Swiper
         style={{}}
         spaceBetween={10}
-        slidesPerView={window.innerWidth > 768 ? 4 : 2}
-        centeredSlides={true}
+        slidesPerView={2}
+   
+       
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper flex items-center justify-center mb-[100px] "
+        className=" flex items-center justify-center mb-[100px] "
       >
         <SwiperSlide>
           <div className="flex flex-col items-center justify-center bg-gray-100 px-4  pt-4 pb-6  h-[320px] rounded-3xl ">
@@ -112,7 +113,8 @@ export default function SecuritySolution() {
             <h5 className="text-h6 font-semibold">USB ZigBee</h5>
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper></div>
+      
       <div>
         <div className="bg-[url('/assets/images/solution/truyen-hinh/1668583065-Group-661.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
