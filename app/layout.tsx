@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
@@ -25,11 +25,17 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en">
         <head>
-        <meta name="google-site-verification" content="SiBQC7Zgw2hF-Pa7esKwX-GpOoAm2lO1ghYwGAjGtyo" />
+          <meta
+            name="google-site-verification"
+            content="SiBQC7Zgw2hF-Pa7esKwX-GpOoAm2lO1ghYwGAjGtyo"
+          />
         </head>
         <body className={work_sans.className}>
           <Toaster />
-          <main>{children}</main>
+          <main>
+            {children}
+            <SpeedInsights />
+          </main>
         </body>
       </html>
     </SessionProvider>
