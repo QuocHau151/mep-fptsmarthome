@@ -5,7 +5,7 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/toaster";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 const work_sans = Work_Sans({
   subsets: ["latin"],
 });
@@ -25,9 +25,10 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en">
         <head>
+          <GoogleAnalytics gaId="G-JY11M3DKR0" />
           <meta
             name="google-site-verification"
-            content="eRaqSYmN7VU9r8a7ZnOVyWdduxBwIsI3kvn4QdDNHs4"
+            content="SiBQC7Zgw2hF-Pa7esKwX-GpOoAm2lO1ghYwGAjGtyo"
           />
         </head>
         <body className={work_sans.className}>
