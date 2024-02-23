@@ -27,7 +27,7 @@ export default async function RootLayout({
         <head>
           <meta
             name="google-site-verification"
-            content="SiBQC7Zgw2hF-Pa7esKwX-GpOoAm2lO1ghYwGAjGtyo"
+            content="eRaqSYmN7VU9r8a7ZnOVyWdduxBwIsI3kvn4QdDNHs4"
           />
         </head>
         <body className={work_sans.className}>
