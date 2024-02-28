@@ -189,7 +189,7 @@ export default function MobileNav() {
     logout();
   };
   return (
-    <div className="lg:hidden bg-black w-full h-min flex items-center justify-between px-10 py-4">
+    <div className="lg:hidden bg-black w-full h-min flex items-center justify-between px-10 py-4 z-50 max-md:h-[60px]">
       <Link href="/" className="mr-[]">
         <Image
           className="max-md:w-[150px]"

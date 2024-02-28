@@ -20,8 +20,8 @@ export default function Header() {
   // }, []);
 
   return (
-    <div className="relative ">
-      <Nav  />
+    <div className="fixed z-50 ">
+      <Nav />
       <Bottom_Nav />
       <MobileNav />
     </div>

@@ -21,7 +21,6 @@ export default function Page() {
     }
   };
   useEffect(() => {
-    
     fetchData();
   }, []);
 
@@ -52,7 +51,7 @@ export default function Page() {
         />
       </Helmet>
       <div className="">
-        <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+        <div className="text-center flex flex-col pt-[200px] bg-slate-100 max-md:py-[50px]">
           <div className="container">
             <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[20px]">
               Thiết bị FPT Smart Home

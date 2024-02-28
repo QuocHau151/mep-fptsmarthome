@@ -22,7 +22,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "@/components/header/page";
 import Footer from "@/components/footer/page";
 import { ChevronDown } from "lucide-react";
-import { Helmet } from "react-helmet";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 export default function Home() {
@@ -30,15 +29,8 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-        <meta
-          name="description"
-          content="FPT Smart Home - Thương hiệu nhà thông minh từ FPT"
-        />
-      </Helmet>
       <Header />
-      <section className="max-md:py-[30px] max-md:h-[300px]">
+      <section className="max-md:py-[30px] max-md:h-[300px] z-0 mt-[130px] max-lg:mt-[70px] max-md:mt-[30px]">
         <Swiper
           slidesPerView={1}
           spaceBetween={0}

@@ -6,6 +6,7 @@ import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Providers } from "@/providers";
 const work_sans = Work_Sans({
   subsets: ["latin"],
 });
@@ -34,7 +35,7 @@ export default async function RootLayout({
         <body className={work_sans.className}>
           <Toaster />
           <main>
-            {children}
+            <Providers>{children}</Providers>
             <SpeedInsights />
           </main>
         </body>

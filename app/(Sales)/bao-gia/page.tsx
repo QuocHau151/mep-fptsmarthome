@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +12,78 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Footer from "@/components/footer/page";
 import { Helmet } from "react-helmet";
+import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
+
+import data from "@/data/data-solution.json";
+import Link from "next/link";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableColumn,
+  TableRow,
+  TableCell,
+} from "@nextui-org/react";
+interface TabItem {
+  id: string;
+  name: string;
+  disc: Product[];
+}
+
+interface Product {
+  title: string;
+  items: Item[];
+}
+
+interface Item {
+  id: string;
+  name: string;
+  price: number;
+}
 export default function BaoGia() {
+  const [quantities, setQuantities] = useState<Record<string, number>>({});
+
+  const increase = (name: string, title: string, id: string) => {
+    const key = `${title}-${name}-${id}`;
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [key]: (prevQuantities[key] || 0) + 1,
+    }));
+  };
+
+  const decrease = (name: string, title: string, id: string) => {
+    const key = `${title}-${name}-${id}`;
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [key]: prevQuantities[key] > 0 ? prevQuantities[key] - 1 : 0,
+    }));
+  };
+  const resultMoney = (
+    price: number,
+    title: string,
+    name: string,
+    id: string
+  ) => {
+    const result = price * (quantities[`${title}-${name}-${id}`] || 1);
+
+    return result;
+  };
+  const calculateTotalForId = (id: string) => {
+    let total = 0;
+    data.forEach((item) => {
+      if (item.id === id) {
+        item.disc.forEach((product) => {
+          product.items.forEach((item) => {
+            const quantity =
+              quantities[`${product.title}-${item.name}-${id}`] || 1;
+            total +=
+              resultMoney(item.price, product.title, item.name, id) * quantity;
+          });
+        });
+      }
+    });
+    return total;
+  };
   return (
     <>
       <Helmet>
@@ -23,7 +94,7 @@ export default function BaoGia() {
         />
       </Helmet>
       <div className="">
-        <div className="bg-[url('/assets/images/thumnail/consultant-banner.webp')] w-full h-[700px] bg-cover bg-no-repeat bg-center relative max-lg:h-[500px] max-md:h-[200px]">
+        <div className="bg-[url('/assets/images/thumnail/consultant-banner.webp')] w-full h-[700px] bg-cover bg-no-repeat bg-center mt-[130px] max-lg:mt-[70px] max-md:mt-[60px] relative max-lg:h-[500px] max-md:h-[200px] 2xl:h-[900px]">
           <div className="absolute right-[200px] top-[150px] max-w-[550px] max-lg:right-[50px]  max-lg:top-[50px] max-lg:max-w-[450px] max-md:hidden">
             <h1 className="text-orange-500 text-center text-[24px] font-semibold mb-6 max-lg:text-[18px] max-md:text-[15px] max-md:mb-2">
               ĐIỀU KHIỂN NGÔI NHÀ CỦA BẠN TỪ XA CHỈ VỚI MỘT CHẠM
@@ -41,7 +112,7 @@ export default function BaoGia() {
                   <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                     Zalo
                   </h1>
-                  <h1 className="px-4 ">0906030030</h1>
+                  <h1 className="px-4 ">0906 030 030</h1>
                 </Button>
                 <Button className="flex items-center bg-slate-600 h-12">
                   <svg
@@ -64,7 +135,7 @@ export default function BaoGia() {
                       fill="white"
                     ></path>
                   </svg>
-                  <h1 className="px-4 ">0906030030</h1>
+                  <h1 className="px-4 ">0906 030 030</h1>
                 </Button>
               </div>
             </div>
@@ -87,7 +158,7 @@ export default function BaoGia() {
                 <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                   Zalo
                 </h1>
-                <h1 className="px-4 ">1234567890</h1>
+                <h1 className="px-4 ">0906 030 030</h1>
               </Button>
               <Button className=" w-[200px] flex items-center bg-slate-600 h-12">
                 <svg
@@ -110,12 +181,108 @@ export default function BaoGia() {
                     fill="white"
                   ></path>
                 </svg>
-                <h1 className="px-4 ">1234567890</h1>
+                <h1 className="px-4 ">0906 030 030</h1>
               </Button>
             </div>
           </div>
         </div>
       </div>
+      <div className="container flex flex-col items-center justify-center pt-[50px] pb-[100px] ">
+        <Tabs aria-label="Dynamic tabs" items={data}>
+          {data.map((items, index) => (
+            <Tab key={items.id} title={items.name}>
+              <Card>
+                <CardBody>
+                  <Table className="">
+                    <TableHeader>
+                      <TableColumn>Khu vực</TableColumn>
+                      <TableColumn>Tên sản phẩm</TableColumn>
+                      <TableColumn>Đơn giá</TableColumn>
+                      <TableColumn>Số lượng</TableColumn>
+                      <TableColumn>Thành tiền</TableColumn>
+                    </TableHeader>
+                    <TableBody>
+                      {items.disc.map((product, index) => (
+                        <TableRow key={index}>
+                          <TableCell className="max-w-[200px]">
+                            {product.title}
+                          </TableCell>
+                          <TableCell>
+                            {product.items.map((item, index) => (
+                              <div key={index} className="py-4">
+                                {item.name}
+                              </div>
+                            ))}
+                          </TableCell>
+                          <TableCell>
+                            {product.items.map((item, index) => (
+                              <div key={index} className="py-4">
+                                {item.price.toLocaleString()}
+                              </div>
+                            ))}
+                          </TableCell>
+                          <TableCell>
+                            {product.items.map((item, index) => (
+                              <div
+                                key={index}
+                                className=" flex items-center justify-center gap-2 py-4"
+                              >
+                                <button
+                                  onClick={() =>
+                                    decrease(item.name, product.title, items.id)
+                                  }
+                                >
+                                  -
+                                </button>
+                                {quantities[
+                                  `${product.title}-${item.name}-${items.id}`
+                                ] || 1}
+                                <button
+                                  onClick={() =>
+                                    increase(item.name, product.title, items.id)
+                                  }
+                                >
+                                  +
+                                </button>
+                              </div>
+                            ))}
+                          </TableCell>
+                          <TableCell>
+                            {product.items.map((item, index) => (
+                              <div key={index} className="py-4">
+                                {resultMoney(
+                                  item.price,
+                                  product.title,
+                                  item.name,
+                                  items.id
+                                ).toLocaleString()}
+                              </div>
+                            ))}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                  <div className="text-center py-5">
+                    <h1 className="text-[30px] font-semibold text-red-700">
+                      Tổng tiền:{" "}
+                      {calculateTotalForId(items.id).toLocaleString()} VNĐ
+                    </h1>
+                    <h3 className="text-[20px] font-semibold">Lưu ý:</h3>
+                    <h4>Bảng báo giá tham khảo.</h4>
+                    <h4>
+                      Số Lượng Thiết Bị sẽ tùy thuộc vào thực tế công trình.
+                    </h4>
+                    <h4>Chi phí có thể giảm hoặc tăng tùy theo thực tế</h4>
+                  </div>
+                </CardBody>
+              </Card>
+            </Tab>
+          ))}
+        </Tabs>
+      </div>
+
+      <div className="container flex w-full flex-col items-center"></div>
       <div className="container flex flex-col items-center gap-20 mb-[100px]  max-lg:px-10 max-md:gap-6 max-md:mb-14">
         <h1 className="text-orange-600 text-[40px] text-center font-semibold max-lg:text-[30px] max-lg:px-8 max-md:text-[18px]">
           KHÁM PHÁ CUỘC SỐNG TRONG NGÔI NHÀ THÔNG MINH
