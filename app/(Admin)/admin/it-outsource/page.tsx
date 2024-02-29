@@ -159,6 +159,20 @@ const columns: ColumnDef<ItOutsourceData>[] = [
     ),
   },
   {
+    accessorKey: "type",
+    header: ({ column }) => {
+      return <Button variant="ghost">Gói cước</Button>;
+    },
+    cell: ({ row }) => <div className="lowercase">{row.getValue("type")}</div>,
+  },
+  {
+    accessorKey: "time",
+    header: ({ column }) => {
+      return <Button variant="ghost">Hình thức</Button>;
+    },
+    cell: ({ row }) => <div className="lowercase">{row.getValue("time")}</div>,
+  },
+  {
     accessorKey: "state",
     header: () => <div className="">State</div>,
     cell: ({ row }) => <StateCell row={row} />,
