@@ -315,7 +315,7 @@ export default function OrderPage() {
         <title>Admin - Order</title>
         <meta name="description" content="Your Page Description" />
       </Helmet>
-      <div className="bg-black w-full h-[calc(100vh-60px)] p-10 max-md:p-2">
+      <div className="bg-black w-full h-[100vh] p-10 max-md:p-2 pt-[100px] pl-[300px]">
         <div className="bg-gray-900 h-auto w-full rounded-2xl p-6">
           <div className="text-white font-semibold mb-6">All Users</div>
           <div className="w-full">

@@ -45,7 +45,7 @@ export default function Header() {
   };
   return (
     <div>
-      <div className="w-full h-[60px] bg-gray-900 flex items-center justify-between px-10 max-md:hidden">
+      <div className="fixed w-full h-[60px] bg-gray-900 flex items-center justify-between px-10 max-md:hidden">
         <div className="flex items-center justify-start gap-10">
           <Link href="/">
             <Image
@@ -319,6 +319,18 @@ export default function Header() {
                               </span>
                             ) : (
                               "Brand Shop"
+                            )}
+                          </Link>
+                          <Link
+                            className="px-10 hover:bg-gray-700 block h-10 pt-2 "
+                            href="/admin/it-outsource"
+                          >
+                            {pathname === "/admin/it-outsource" ? (
+                              <span className="text-orange-900">
+                                It Outsource
+                              </span>
+                            ) : (
+                              "It Outsource"
                             )}
                           </Link>
                         </div>

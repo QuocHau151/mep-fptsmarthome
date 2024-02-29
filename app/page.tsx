@@ -34,7 +34,7 @@ export default function Home() {
       <Header />
       <Connect />
       <SocialConnect />
-      <section className="max-md:py-[30px] max-md:h-[300px] z-0 mt-[130px] max-lg:mt-[70px] max-md:mt-[30px]">
+      <section className="max-md:py-[30px] max-md:h-[300px] z-0 mt-[123px] max-lg:mt-[70px] max-md:mt-[30px]">
         <Swiper
           slidesPerView={1}
           spaceBetween={0}

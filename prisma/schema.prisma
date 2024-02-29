@@ -38,6 +38,11 @@ enum StateBrandShop {
   Done
   Cancel
 }
+enum StateItOutsource {
+  Pending
+  Done
+  Cancel
+}
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -141,4 +146,13 @@ model BrandShop {
   address String?
   note String?
   state StateBrandShop @default(Pending)
+}
+model ItOutsource {
+  id String  @id @default(cuid())
+  name String?
+  phone String?
+  address String?
+  type String?
+  time String?
+  state StateItOutsource @default(Pending)
 }

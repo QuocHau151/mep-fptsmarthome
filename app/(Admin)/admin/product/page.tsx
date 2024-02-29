@@ -247,7 +247,7 @@ export default function Page() {
         <title>Admin - Product</title>
         <meta name="description" content="" />
       </Helmet>
-      <div className="bg-black w-full h-min p-10 max-md:p-2">
+      <div className="bg-black w-full h-fit p-10 max-md:p-2 pt-[100px] pl-[300px]">
         <div className="bg-gray-900 h-min w-full rounded-2xl p-6">
           <div className="text-white font-semibold mb-6 flex items-center justify-between">
             <div>All Products</div>

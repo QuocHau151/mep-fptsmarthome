@@ -94,7 +94,7 @@ export default function BaoGia() {
         />
       </Helmet>
       <div className="">
-        <div className="bg-[url('/assets/images/thumnail/consultant-banner.webp')] w-full h-[700px] bg-cover bg-no-repeat bg-center mt-[130px] max-lg:mt-[70px] max-md:mt-[60px] relative max-lg:h-[500px] max-md:h-[200px] 2xl:h-[900px]">
+        <div className="bg-[url('/assets/images/thumnail/consultant-banner.webp')] w-full h-[700px] bg-cover bg-no-repeat bg-center mt-[123px] max-lg:mt-[70px] max-md:mt-[60px] relative max-lg:h-[500px] max-md:h-[200px] 2xl:h-[900px]">
           <div className="absolute right-[200px] top-[150px] max-w-[550px] max-lg:right-[50px]  max-lg:top-[50px] max-lg:max-w-[450px] max-md:hidden">
             <h1 className="text-orange-500 text-center text-[24px] font-semibold mb-6 max-lg:text-[18px] max-md:text-[15px] max-md:mb-2">
               ĐIỀU KHIỂN NGÔI NHÀ CỦA BẠN TỪ XA CHỈ VỚI MỘT CHẠM

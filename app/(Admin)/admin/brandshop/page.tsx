@@ -275,7 +275,7 @@ export default function OrderPage() {
         <title>Admin - BrandShop</title>
         <meta name="description" content="" />
       </Helmet>
-      <div className="bg-black w-full h-[calc(100vh-60px)] p-10 max-md:p-2">
+      <div className="bg-black w-full h-[100vh] pt-[100px] pl-[300px] p-10 max-md:p-2">
         <div className="bg-gray-900 h-auto w-full rounded-2xl p-6">
           <div className="text-white font-semibold mb-6">All Users</div>
           <div className="w-full">

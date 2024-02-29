@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   CaretSortIcon,
@@ -47,35 +47,35 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { fetchUser } from "@/actions/fetchUser";
-import { updateStateUser } from "@/actions/updateUserState";
-import { Helmet } from "react-helmet";
 
-interface UserData {
+import { Helmet } from "react-helmet";
+import { updateStateItOutsource } from "@/actions/updateItOutsourceState";
+import { fetchItOutsource } from "@/actions/fetchItOutsource";
+
+interface ItOutsourceData {
   id: string;
   name: string;
   phone: string;
-  verify: string;
-  email: string;
+  address: string;
   state: string;
 }
 const StateCell = ({ row }: { row: any }) => {
   const [state, setState] = useState(row.getValue("state") as string);
-  const updateState = async (newState: StateUser) => {
-    await updateStateUser(row.original.id, newState);
+  const updateState = async (newState: StateItOutsource) => {
+    await updateStateItOutsource(row.original.id, newState);
     setState(newState);
   };
   const [color, setColor] = useState(state);
   useEffect(() => {
     switch (state) {
       case "Pending":
-        setColor("bg-yellow-600 max-md:text-[10px]");
+        setColor("bg-yellow-600");
         break;
       case "Done":
-        setColor("bg-green-600 max-md:text-[10px]");
+        setColor("bg-green-600");
         break;
       case "Cancel":
-        setColor("bg-red-600 max-md:text-[10px]");
+        setColor("bg-red-600");
         break;
     }
   }, [state]);
@@ -104,7 +104,7 @@ const StateCell = ({ row }: { row: any }) => {
     </Select>
   );
 };
-const columns: ColumnDef<UserData>[] = [
+const columns: ColumnDef<ItOutsourceData>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -150,25 +150,12 @@ const columns: ColumnDef<UserData>[] = [
     ),
   },
   {
-    accessorKey: "email",
+    accessorKey: "address",
     header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
-          <CaretSortIcon className="ml-2 h-4 w-4" />
-        </Button>
-      );
+      return <Button variant="ghost">Address</Button>;
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
-  },
-  {
-    accessorKey: "verify",
-    header: "Verify",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("verify")}</div>
+      <div className="lowercase">{row.getValue("address")}</div>
     ),
   },
   {
@@ -191,14 +178,14 @@ const columns: ColumnDef<UserData>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel className="max-md:text-[15px]">
+            <DropdownMenuLabel className="max-md:text-[13px]">
               Actions
             </DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(payment.id)}
               className="max-md:text-[13px]"
             >
-              Copy payment ID
+              Profile
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="max-md:text-[13px]">
@@ -213,14 +200,13 @@ const columns: ColumnDef<UserData>[] = [
     },
   },
 ];
-export default function AdminPage() {
-  const [data, setData] = useState<UserData[]>([]);
-
+export default function ItOutsourcePage() {
+  const [data, setData] = useState<ItOutsourceData[]>([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetchUser();
-        setData(res as unknown as UserData[]);
+        const res = await fetchItOutsource();
+        setData(res as unknown as ItOutsourceData[]);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -258,10 +244,10 @@ export default function AdminPage() {
   return (
     <>
       <Helmet>
-        <title>Admin - Users</title>
-        <meta name="description" content="Your Page Description" />
+        <title>Admin - It Outsource</title>
+        <meta name="description" content="" />
       </Helmet>
-      <div className="bg-black w-full h-[100vh] p-10 max-md:p-2 pt-[100px] pl-[300px]">
+      <div className="bg-black w-full h-[100vh] pt-[100px] pl-[300px] p-10 max-md:p-2">
         <div className="bg-gray-900 h-auto w-full rounded-2xl p-6">
           <div className="text-white font-semibold mb-6">All Users</div>
           <div className="w-full">
@@ -308,7 +294,7 @@ export default function AdminPage() {
             </div>
             <div className="rounded-md border">
               <Table>
-                <TableHeader className="">
+                <TableHeader>
                   {table.getHeaderGroups().map((headerGroup) => (
                     <TableRow key={headerGroup.id}>
                       {headerGroup.headers.map((header) => {
@@ -357,7 +343,7 @@ export default function AdminPage() {
               </Table>
             </div>
             <div className="flex items-center justify-end space-x-2 py-4">
-              <div className="flex-1 text-sm text-muted-foreground max-md:text-[15px]">
+              <div className="flex-1 text-sm text-muted-foreground max-md:text-[10px]">
                 {table.getFilteredSelectedRowModel().rows.length} of{" "}
                 {table.getFilteredRowModel().rows.length} row(s) selected.
               </div>

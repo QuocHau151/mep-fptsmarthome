@@ -23,6 +23,11 @@ enum StateBrandShop {
   Done = "Done",
   Cancel = "Cancel",
 }
+enum StateItOutsource {
+  Pending = "Pending",
+  Done = "Done",
+  Cancel = "Cancel",
+}
 type SelectedOptions = {
   type: string;
   color: string;

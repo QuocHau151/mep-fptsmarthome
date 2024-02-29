@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { CiGift } from "react-icons/ci";
 import {
   Carousel,
@@ -45,8 +45,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { formOutsourceSchema } from "@/schemas";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useToast } from "@/components/ui/use-toast";
+import { createItOutsource } from "@/actions/it-outsource";
 export default function Page() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formOutsourceSchema>>({
     resolver: zodResolver(formOutsourceSchema),
     defaultValues: {
@@ -57,14 +61,35 @@ export default function Page() {
       time: "6 month",
     },
   });
-
-  function onSubmit(values: z.infer<typeof formOutsourceSchema>) {
+  const handleSubmit = () => {
+    toast({
+      title: "Bạn đã đăng kí thành công",
+      description: "Chúng tôi sẽ phản hồi bạn sớm nhất có thể",
+    });
+  };
+  const handleFail = () => {
+    toast({
+      title: "Bạn cần 60s để gửi lại ",
+      description: "Vui lòng thử lại sau",
+    });
+  };
+  const onSubmit = async (values: z.infer<typeof formOutsourceSchema>) => {
     console.log(values);
-  }
+    setIsSubmitting(true);
+    try {
+      await createItOutsource(values);
+      handleSubmit();
+      setTimeout(() => setIsSubmitting(false), 60000);
+    } catch (error) {
+      console.error(error);
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
-      <div className=" pt-[130px] pb-[10px] max-lg:pt-[72px] max-md:pt-[60px]">
-        <div className="bg-[url('/assets/images/outsource/Banner-Website.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-lg:h-[400px] max-md:h-[200px] "></div>
+      <div className=" pt-[123px] pb-[10px] max-lg:pt-[72px] max-md:pt-[60px]">
+        <div className="bg-[url('/assets/images/outsource/Banner-Website.png')] w-full h-[600px] bg-cover bg-no-repeat bg-center max-lg:h-[400px] max-md:h-[200px] "></div>
         <div className="container">
           <h1 className="text-[35px] text-center py-4 font-medium text-orange-500 max-lg:px-4 max-md:text-[20px]">
             IT OUTSOURCE FPT – IT HELPDESK FPT – DỊCH VỤ THUÊ IT FPT
@@ -606,9 +631,15 @@ export default function Page() {
                             Huỷ
                           </Button>
                           {/* onPress={close} nếu gửi values thành công */}
-                          <Button type="submit" color="primary">
-                            Đăng ký
-                          </Button>
+                          {isSubmitting ? (
+                            <Button type="reset" onClick={handleFail}>
+                              Đăng ki
+                            </Button>
+                          ) : (
+                            <Button type="submit" color="primary">
+                              Đăng kí
+                            </Button>
+                          )}
                         </ModalFooter>
                       </form>
                     </Form>

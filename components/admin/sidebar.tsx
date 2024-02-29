@@ -17,7 +17,7 @@ export default function SideBar() {
   };
   return (
     <div>
-      <div className="h-[calc(100vh-60px)] bg-gray-900 w-[250px] px-4 max-lg:hidden ">
+      <div className="fixed h-[calc(100vh)] top-[60px] bg-gray-900 w-[250px] px-4 max-lg:hidden ">
         <div>
           <ul>
             <li className="flex flex-col items-start gap-4 menu nav-item">
@@ -109,6 +109,16 @@ export default function SideBar() {
                       <span className="text-orange-900">Brand Shop</span>
                     ) : (
                       "Brand Shop"
+                    )}
+                  </Link>
+                  <Link
+                    className="px-10 hover:bg-gray-700 block h-10 pt-2 "
+                    href="/admin/it-outsource"
+                  >
+                    {pathname === "/admin/it-outsource" ? (
+                      <span className="text-orange-900">IT Outsource</span>
+                    ) : (
+                      "IT Outsource"
                     )}
                   </Link>
                 </div>
