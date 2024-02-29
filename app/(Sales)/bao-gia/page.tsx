@@ -187,7 +187,7 @@ export default function BaoGia() {
           </div>
         </div>
       </div>
-      <div className="container flex flex-col  pt-[50px] pb-[100px] ">
+      <div className="container flex flex-col  pt-[50px] pb-[100px] max-md:pb-[30px] ">
         <Tabs
           aria-label="Dynamic tabs"
           items={data}
@@ -208,12 +208,15 @@ export default function BaoGia() {
                     <TableBody>
                       {items.disc.map((product, index) => (
                         <TableRow key={index}>
-                          <TableCell className="max-w-[200px]">
+                          <TableCell className="max-w-[200px] max-md:min-w-[150px]">
                             {product.title}
                           </TableCell>
                           <TableCell>
                             {product.items.map((item, index) => (
-                              <div key={index} className="py-4">
+                              <div
+                                key={index}
+                                className="py-4 max-md:min-w-[300px]"
+                              >
                                 {item.name}
                               </div>
                             ))}
@@ -267,17 +270,23 @@ export default function BaoGia() {
                       ))}
                     </TableBody>
                   </Table>
-                  <div className="text-center py-5">
-                    <h1 className="text-[30px] font-semibold text-red-700">
+                  <div className="text-center py-5 px-4">
+                    <h1 className="text-[30px] font-semibold text-red-700 max-md:text-[25px]">
                       Tổng tiền:{" "}
                       {calculateTotalForId(items.id).toLocaleString()} VNĐ
                     </h1>
-                    <h3 className="text-[20px] font-semibold">Lưu ý:</h3>
-                    <h4>Bảng báo giá tham khảo.</h4>
-                    <h4>
+                    <h3 className="text-[20px] font-semibold max-md:text-[15px]">
+                      Lưu ý:
+                    </h3>
+                    <h4 className="max-md:text-[15px]">
+                      Bảng báo giá tham khảo.
+                    </h4>
+                    <h4 className="max-md:text-[15px]">
                       Số Lượng Thiết Bị sẽ tùy thuộc vào thực tế công trình.
                     </h4>
-                    <h4>Chi phí có thể giảm hoặc tăng tùy theo thực tế</h4>
+                    <h4 className="max-md:text-[15px]">
+                      Chi phí có thể giảm hoặc tăng tùy theo thực tế
+                    </h4>
                   </div>
                 </CardBody>
               </Card>

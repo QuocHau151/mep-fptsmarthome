@@ -63,21 +63,20 @@ export default function Page() {
   }
   return (
     <>
-      <div className=" pt-[130px] border-b-[1px] border-black pb-[10px] max-lg:pt-[72px] max-md:pt-[60px]">
+      <div className=" pt-[130px] pb-[10px] max-lg:pt-[72px] max-md:pt-[60px]">
         <div className="bg-[url('/assets/images/outsource/Banner-Website.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-lg:h-[400px] max-md:h-[200px] "></div>
         <div className="container">
           <h1 className="text-[35px] text-center py-4 font-medium text-orange-500 max-lg:px-4 max-md:text-[20px]">
             IT OUTSOURCE FPT – IT HELPDESK FPT – DỊCH VỤ THUÊ IT FPT
           </h1>
-          <h2 className="text-[22px] flex items-center gap-2 text-green-500 max-lg:px-4 max-md:text-[22px] max-md:px-0">
-            <CiGift color="green" fontSize="35px" />
-            LỢI ÍT KHI SỬ DỤNG DỊCH VỤ IT OUTSOURCE CỦA FPT
-          </h2>
         </div>
       </div>
       <div className="container">
-        {" "}
-        <div className="pt-[30px] pb-[10px] flex flex-col gap-6 border-b-[1px] border-black max-lg:px-4 max-md:px-0">
+        <div className=" pb-[10px] flex flex-col gap-6 border-b-[1px] border-black max-lg:px-4 max-md:px-0">
+          <h2 className="text-[22px] flex items-center gap-2 text-green-500 pb-[10px] border-b-[1px] border-black max-lg:px-4 max-md:text-[18px] max-md:px-0">
+            <CiGift color="green" fontSize="35px" />
+            LỢI ÍT KHI SỬ DỤNG DỊCH VỤ IT OUTSOURCE CỦA FPT
+          </h2>
           <div className="flex flex-col gap-4 ">
             <h3 className="text-[23px] font-medium  text-blue-800">
               1. Tiết kiệm chi phí thuê IT!
@@ -98,7 +97,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="flex flex-col gap-4 ">
             <h3 className="text-[23px] font-medium  text-blue-800">
               2. Đội ngũ chuyên gia IT hùng hậu!
             </h3>
@@ -116,7 +115,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="flex flex-col gap-4 ">
             <h3 className="text-[23px] font-medium  text-blue-800">
               3. FPT luôn hỗ trợ 24/7 kể cả lễ Tết!
             </h3>
@@ -131,7 +130,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="flex flex-col gap-4 ">
             <h3 className="text-[23px] font-medium  text-blue-800">
               4. Cam kết bảo mật tuyệt đối thông tin khách hàng!
             </h3>
@@ -144,7 +143,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="flex flex-col gap-4 ">
             <h3 className="text-[23px] font-medium  text-blue-800">
               5. Miễn phí đề xuất, tư vấn nâng cấp thiết bị!
             </h3>
@@ -156,7 +155,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="flex flex-col gap-4 ">
             <h3 className="text-[23px] font-medium  text-blue-800">
               6. Bảo trì định kỳ tất cả các thiết bị IT!
             </h3>
@@ -168,7 +167,7 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <h2 className="text-[22px] flex items-center gap-2 text-green-500">
+          <h2 className="text-[22px] flex items-center gap-2 text-green-500 max-md:text-[18px]">
             <CiGift color="green" fontSize="35px" />
             GÓI DỊCH VỤ IT OUTSOURCE FPT
           </h2>
@@ -620,7 +619,7 @@ export default function Page() {
           </Modal>
         </div>
         <div className="pb-[30px] max-lg:px-4 max-md:px-0">
-          <h2 className="text-[22px] flex items-center gap-2 text-green-500 mt-10 max-lg:px-4 max-md:px-0 border-b-[1px] border-black pb-3 mb-5">
+          <h2 className="text-[22px] flex items-center gap-2 text-green-500 mt-10 max-lg:px-4 max-md:px-0 border-b-[1px] border-black pb-3 mb-5 max-md:text-[18px]">
             <CiGift color="green" fontSize="35px" />
             PHẠM VI CÔNG VIỆC
           </h2>
@@ -675,7 +674,7 @@ export default function Page() {
           </ul>
         </div>
         <div className="pb-[50px] max-lg:px-4 max-md:px-0">
-          <h2 className="text-[22px] flex items-center gap-2 text-green-500 border-b-[1px] border-black pb-[10px] mb-[30px]">
+          <h2 className="text-[22px] flex items-center gap-2 text-green-500 border-b-[1px] border-black pb-[10px] mb-[30px] max-md:text-[18px]">
             <CiGift color="green" fontSize="35px" />
             QUYỀN LỢI KHI SỬ DỤNG DỊCH VỤ IT OUTSOURCE FPT
           </h2>

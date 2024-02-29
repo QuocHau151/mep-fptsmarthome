@@ -20,8 +20,8 @@ export default function Footer() {
             Công ty Cổ phần Viễn thông FPT
           </h4>
         </div>
-        <div className="flex items-start justify-around gap-10 max-lg:flex-wrap max-lg:mx-auto  max-md:flex-nowrap max-md:border-b-[1px] max-md:border-white max-md:pb-10  ">
-          <div className=" flex flex-col  gap-[35px] font-light mr-10  max-lg:mr-0  min-w-[150px] max-md:flex-col max-md:items-center max-md:hidden">
+        <div className="flex items-start justify-around gap-10 max-lg:flex-wrap max-lg:mx-auto  max-md:flex-nowrap max-md:border-b-[1px] max-md:border-white max-md:pb-10 max-md:gap-5 ">
+          <div className=" flex flex-col  gap-[35px] font-light mr-10  max-lg:mr-0  min-w-[150px] max-md:flex-col max-md:items-center max-md:hidden ">
             <h6 className="font-regular ">Contact</h6>
             <div className="flex flex-col  gap-[35px] font-light  ">
               <div className="flex items-center gap-6 ">
@@ -71,7 +71,7 @@ export default function Footer() {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-8 font-light   min-w-[150px]  max-md:w-full max-md:justify-center">
+          <div className="flex flex-col gap-8 font-light   min-w-[150px]  max-md:w-full max-md:justify-center max-md:min-w-[130px]">
             <h6 className="font-regular">Product</h6>
             <ul className=" flex flex-col gap-4 ">
               <li>Bộ điều khiển trung tâm</li>
@@ -84,7 +84,7 @@ export default function Footer() {
               <li>Thiết bị an ninh thông minh</li>{" "}
             </ul>
           </div>
-          <div className="flex flex-col gap-8 font-light  min-w-[150px]">
+          <div className="flex flex-col gap-8 font-light  min-w-[150px] max-md:min-w-[130px]">
             <h6 className="font-regular">Customer Support</h6>
             <ul className=" flex flex-col gap-4">
               <li>Hotline: </li>
