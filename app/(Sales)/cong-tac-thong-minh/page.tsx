@@ -15,7 +15,7 @@ export default function Page() {
           content="Công tắc điều khiển cảm ứng không dây"
         />
       </Helmet>
-      <div>
+      <div className="pt-[120px] max-lg:pt-[70px] max-md:pt-[60px]">
         <div className="bg-[url('/assets/images/product/thumnail/1668574989-Group-211.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="container  max-lg:px-20 max-md:px-10">

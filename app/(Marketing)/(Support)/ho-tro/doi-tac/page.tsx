@@ -66,7 +66,7 @@ export default function Page() {
           content="Hỗ trợ đăng ký đối tác FPT Smart Home"
         />
       </Helmet>
-      <div>
+      <div className="pt-[120px] max-lg:pt-[70px] max-md:pt-[60px]">
         <div className="bg-[url('/assets/images/support/partner-banner.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[150px]"></div>
       </div>
       <div className="container max-lg:px-20 max-md:px-10">

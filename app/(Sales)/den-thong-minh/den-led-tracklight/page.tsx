@@ -53,7 +53,7 @@ export default function Page() {
         <title>Đèn LED Tracklight Thông Minh</title>
         <meta name="description" content="Đèn thông minh tại FPT Smart Home" />
       </Helmet>
-      <div className="text-center flex flex-col py-[100px] bg-slate-100 max-md:py-[50px]">
+      <div className="text-center flex flex-col pb-[100px] pt-[200px] max-lg:pt-[120px] max-md:pt-[100px] bg-slate-100 max-md:py-[50px]">
         <div className="container max-lg:px-20 max-md:px-6">
           <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
             Thiết bị FPT Smart Home

@@ -22,7 +22,7 @@ export default function SecuritySolution() {
           content="Sản phẩm FPT Smart Home đảm bảo an ninh cho gia đình bạn "
         />
       </Helmet>
-      <div>
+      <div className="pt-[120px]">
         <div className="bg-[url('/assets/images/solution/an-ninh/1668582892-Group-622.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
@@ -92,7 +92,6 @@ export default function SecuritySolution() {
         pagination={{
           clickable: true,
         }}
-    
         modules={[Autoplay, Pagination, Navigation]}
         className=" flex items-center justify-center gap-10 mb-[100px] "
       >

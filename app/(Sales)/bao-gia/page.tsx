@@ -187,10 +187,14 @@ export default function BaoGia() {
           </div>
         </div>
       </div>
-      <div className="container flex flex-col items-center justify-center pt-[50px] pb-[100px] ">
-        <Tabs aria-label="Dynamic tabs" items={data}>
+      <div className="container flex flex-col  pt-[50px] pb-[100px] ">
+        <Tabs
+          aria-label="Dynamic tabs"
+          items={data}
+          className="flex justify-center"
+        >
           {data.map((items, index) => (
-            <Tab key={items.id} title={items.name}>
+            <Tab key={items.id} title={items.name} className="">
               <Card>
                 <CardBody>
                   <Table className="">

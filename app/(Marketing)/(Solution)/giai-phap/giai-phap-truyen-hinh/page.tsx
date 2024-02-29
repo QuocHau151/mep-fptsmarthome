@@ -22,7 +22,7 @@ export default function SecuritySolution() {
           content="Cả thế giới trong tầm tay bạn với FPT Play Box S"
         />
       </Helmet>
-      <div>
+      <div className="pt-[120px]">
         <div className="bg-[url('/assets/images/solution/truyen-hinh/1668583056-Group-649.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
@@ -75,46 +75,46 @@ export default function SecuritySolution() {
           Những thiết bị nổi bật dành riêng cho bạn
         </h2>
       </div>
-      <div className="container"><Swiper
-        style={{}}
-        spaceBetween={10}
-        slidesPerView={2}
-   
-       
-        modules={[Autoplay, Pagination, Navigation]}
-        className=" flex items-center justify-center mb-[100px] "
-      >
-        <SwiperSlide>
-          <div className="flex flex-col items-center justify-center bg-gray-100 px-4  pt-4 pb-6  h-[320px] rounded-3xl ">
-            <div className="  h-[200px] overflow-hidden mb-10">
-              <Image
-                className=" object-contain "
-                src="/assets/images/solution/truyen-hinh/1668670888-Boxx.png"
-                width={900}
-                height={900}
-                alt=""
-              />
+      <div className="container">
+        <Swiper
+          style={{}}
+          spaceBetween={10}
+          slidesPerView={2}
+          modules={[Autoplay, Pagination, Navigation]}
+          className=" flex items-center justify-center mb-[100px] "
+        >
+          <SwiperSlide>
+            <div className="flex flex-col items-center justify-center bg-gray-100 px-4  pt-4 pb-6  h-[320px] rounded-3xl ">
+              <div className="  h-[200px] overflow-hidden mb-10">
+                <Image
+                  className=" object-contain "
+                  src="/assets/images/solution/truyen-hinh/1668670888-Boxx.png"
+                  width={900}
+                  height={900}
+                  alt=""
+                />
+              </div>
+              <h5 className="text-h6 font-semibold">FPT Play Box S</h5>
             </div>
-            <h5 className="text-h6 font-semibold">FPT Play Box S</h5>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex flex-col items-center justify-center bg-gray-100 px-4 pt-4 pb-6  h-[320px] rounded-3xl">
-            <div className="  h-[200px] overflow-hidden mb-10">
-              <Image
-                className=" object-contain "
-                src="/assets/images/solution/truyen-hinh/1668509369-USB-ZigBee.png"
-                width={900}
-                height={900}
-                alt=""
-              />
-            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col items-center justify-center bg-gray-100 px-4 pt-4 pb-6  h-[320px] rounded-3xl">
+              <div className="  h-[200px] overflow-hidden mb-10">
+                <Image
+                  className=" object-contain "
+                  src="/assets/images/solution/truyen-hinh/1668509369-USB-ZigBee.png"
+                  width={900}
+                  height={900}
+                  alt=""
+                />
+              </div>
 
-            <h5 className="text-h6 font-semibold">USB ZigBee</h5>
-          </div>
-        </SwiperSlide>
-      </Swiper></div>
-      
+              <h5 className="text-h6 font-semibold">USB ZigBee</h5>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+
       <div>
         <div className="bg-[url('/assets/images/solution/truyen-hinh/1668583065-Group-661.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>

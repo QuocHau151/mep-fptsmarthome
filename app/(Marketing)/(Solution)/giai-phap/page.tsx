@@ -5,7 +5,7 @@ import React from "react";
 export default function Solution() {
   return (
     <>
-      <div className="container py-[100px]">
+      <div className="container pb-[100px] pt-[170px]">
         <div className="flex flex-col text-center mb-20">
           <h3 className="text-h5 font-semibold  text-gray-400">
             Giải Pháp Nhà Thông Minh

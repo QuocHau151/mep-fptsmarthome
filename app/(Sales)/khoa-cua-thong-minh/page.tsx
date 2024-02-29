@@ -12,7 +12,7 @@ export default function Page() {
         <title>Cửa khoá thông minh</title>
         <meta name="description" content="Các thiết bị Cửa khoá thông minh" />
       </Helmet>
-      <div>
+      <div className="pt-[120px] max-lg:pt-[70px] max-md:pt-[60px]">
         <div className="bg-[url('/assets/images/product/thumnail/1668566931-cover-page-khoa-cua.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="container  max-lg:px-20 max-md:px-10">

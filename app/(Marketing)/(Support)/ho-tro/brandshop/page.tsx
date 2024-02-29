@@ -69,7 +69,7 @@ export default function Page() {
         <title>BrandShop</title>
         <meta name="description" content="Hỗ trợ đăng ký BrandShop" />
       </Helmet>
-      <div className="">
+      <div className="pt-[120px] max-lg:pt-[70px] max-md:pt-[60px]">
         <div className="bg-[url('/assets/images/support/brandshop-banner2.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[200px]"></div>
       </div>
       <div className="container max-lg:px-20 max-md:px-6">

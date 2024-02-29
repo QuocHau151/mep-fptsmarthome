@@ -121,8 +121,3 @@
 .header {
   transition: all 0.3s ease;
 }
-.fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}

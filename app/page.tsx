@@ -24,12 +24,16 @@ import Footer from "@/components/footer/page";
 import { ChevronDown } from "lucide-react";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import Connect from "@/components/connect/page";
+import SocialConnect from "@/components/social/page";
 export default function Home() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
 
   return (
     <>
       <Header />
+      <Connect />
+      <SocialConnect />
       <section className="max-md:py-[30px] max-md:h-[300px] z-0 mt-[130px] max-lg:mt-[70px] max-md:mt-[30px]">
         <Swiper
           slidesPerView={1}

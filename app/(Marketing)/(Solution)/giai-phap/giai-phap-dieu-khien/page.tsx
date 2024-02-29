@@ -22,8 +22,8 @@ export default function SolutionControl() {
           content="Sản phẩm FPT Smart Home giúp ngôi nhà bạn thông minh hơn"
         />
       </Helmet>
-      <div>
-        <div className="bg-[url('/assets/images/solution/dieu-khien/1668581934-Group-611.png')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
+      <div className="pt-[125px]">
+        <div className="bg-[url('/assets/images/solution/dieu-khien/1668581934-Group-611.png')] w-full h-[500px]  bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">
         <h4 className="text-h5 text-gray-400 font-semibold max-md:text-[15px]">
@@ -91,7 +91,6 @@ export default function SolutionControl() {
         pagination={{
           clickable: true,
         }}
-        
         modules={[Autoplay, Pagination, Navigation]}
         className=" flex items-center justify-center  mb-[100px] flex-nowrap"
       >

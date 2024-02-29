@@ -24,8 +24,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { getUserByEmail } from "@/data/user";
-import { currentRole } from "@/lib/auth";
 const navs = [
   { id: 1, link: "/", name: "Giới thiệu" },
   { id: 2, link: "/san-pham", name: "Sản phẩm", active: <Product /> },
@@ -42,8 +40,8 @@ export default function Bottom_Nav() {
   };
 
   return (
-    <div className="header  max-lg:hidden bg-white relative z-50">
-      <div className=" container flex items-center justify-between  w-full h-[56px] font-medium ">
+    <div className=" max-lg:hidden bg-white relative z-50">
+      <div className=" container flex items-center justify-between  w-full h-[45px]  font-medium ">
         <div className="relative  flex gap-2 group  ">
           <Image
             src="/assets/icon/list-category.png"
@@ -364,7 +362,7 @@ export default function Bottom_Nav() {
                 key={item.id}
               >
                 <Link
-                  className="text-[15px]  py-[10px] px-[14px]  "
+                  className="text-[15px]  py-[7px] px-[14px]  "
                   href={item.link}
                 >
                   {item.name}
@@ -379,12 +377,19 @@ export default function Bottom_Nav() {
         {user ? (
           <div className="relative flex  items-center group">
             <div className="flex items-center outline-0 gap-4 ">
-              <Avatar className="w-[35px] h-[35px] flex items-center">
-                <AvatarImage
-                  className=""
-                  src={user.image || "/assets/icon/user.png"}
-                />
-              </Avatar>
+              {!user.image ? (
+                <Avatar className="w-[30px] h-[30px] flex items-center">
+                  <AvatarImage className="" src="/assets/icon/user.png" />
+                </Avatar>
+              ) : (
+                <Avatar className="w-[30px] h-[30px] flex items-center">
+                  <AvatarImage
+                    className=""
+                    src={user.image || "/assets/icon/user.png"}
+                  />
+                </Avatar>
+              )}
+
               <LoginButton>
                 <span className="text-[15px] font-medium text-black bg-white cursor-pointer hover:bg-gray-100">
                   {user.name}
@@ -398,7 +403,7 @@ export default function Bottom_Nav() {
                     Edit Profile
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px]">
+                <DialogContent className=" sm:max-w-[425px] ">
                   <DialogHeader>
                     <DialogTitle>Edit profile</DialogTitle>
                   </DialogHeader>
@@ -457,8 +462,8 @@ export default function Bottom_Nav() {
             <Image
               className="object-contain"
               src="/assets/icon/user.png"
-              width={24}
-              height={24}
+              width={27}
+              height={27}
               alt=""
             />
             <LoginButton>

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function Apartment() {
   return (
     <>
-      <div>
-        <div className="bg-[url('/assets/images/apartment/apartment-banner.jpg')] w-full h-[600px] bg-cover bg-no-repeat  bg-center max-md:h-[150px]"></div>
+      <div className="pt-[120px] max-lg:pt-[70px] max-md:pt-[60px]">
+        <div className="bg-[url('/assets/images/apartment/apartment-banner.jpg')] w-full h-[600px] bg-cover bg-no-repeat  bg-center max-lg:h-[400px] max-md:h-[150px]"></div>
       </div>
       <div className="container">
         <div className="text-center flex flex-col py-[100px] max-md:py-[50px]">

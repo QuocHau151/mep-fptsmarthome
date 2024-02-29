@@ -166,7 +166,7 @@ export default function Nav() {
   };
 
   return (
-    <div className=" max-lg:hidden   bg-black w-full h-[75px] ">
+    <div className=" max-lg:hidden   bg-black w-full h-[80px] ">
       <div className="container flex items-center h-full justify-between ">
         <Link href="/" className="p-4">
           <Image src="/assets/logofptsh.png" width={205} height={100} alt="" />

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Support() {
   return (
     <div>
-      <div>
+      <div className="pt-[120px]">
         <div className="bg-[url('/assets/images/support/support-banner.jpg')] w-full h-[648px] bg-cover bg-no-repeat bg-center"></div>
       </div>
       <div>

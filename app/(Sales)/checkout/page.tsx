@@ -83,7 +83,7 @@ export default function Checkout() {
         <title>Checkout</title>
         <meta name="description" content="Đơn hàng của bạn" />
       </Helmet>
-      <div className="bg-slate-400">
+      <div className="bg-slate-400 pt-[120px]">
         <div className=" container flex lg:items-start justify-center gap-8 p-10  md:flex-col lg:flex-row md:items-end max-md:flex-col max-md:hidden">
           <div className="lg:basis-2/3 h-min bg-white rounded-2xl md:w-full">
             <div

@@ -20,7 +20,7 @@ export default function Header() {
   // }, []);
 
   return (
-    <div className="fixed z-50 ">
+    <div className="fixed z-50 top-0 w-full ">
       <Nav />
       <Bottom_Nav />
       <MobileNav />

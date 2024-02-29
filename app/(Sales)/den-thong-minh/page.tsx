@@ -12,7 +12,7 @@ export default function Page() {
         <title>Đèn thông minh</title>
         <meta name="description" content="Đèn thông minh tại FPT Smart Home" />
       </Helmet>
-      <div>
+      <div className="pt-[120px] max-lg:pt-[70px] max-md:pt-[60px]">
         <div className="bg-[url('/assets/images/product/thumnail/1668574949-den.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center max-md:h-[250px]"></div>
       </div>
       <div className="container  max-lg:px-20 max-md:px-0">

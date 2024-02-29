@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 export default function Product() {
   return (
-    <div className="container py-[80px]">
+    <div className="container pb-[80px] pt-[170px] max-lg:pt-[150px] max-md:pt-[100px]">
       <div className="flex flex-col text-center">
         <h3 className="text-h5 font-medium text-gray-500 mb-2">
           Thiết bị thông minh
@@ -26,23 +26,22 @@ export default function Product() {
           </p>
         </Link>
         <Link href="/bo-dieu-khien">
-           <Image
-          src="/assets/images/product/bo-dieu-khien-trung-tam.png"
-          width={600}
-          height={600}
-          alt=""
-        />
+          <Image
+            src="/assets/images/product/bo-dieu-khien-trung-tam.png"
+            width={600}
+            height={600}
+            alt=""
+          />
         </Link>
-       
       </div>
       <div className="flex items-center justify-around gap-10 pt-10">
-        <Link href="/den-thong-minh"> 
-        <Image
-          src="/assets/images/product/1692088715-Light-Led-Bulb.png"
-          width={450}
-          height={450}
-          alt=""
-        />
+        <Link href="/den-thong-minh">
+          <Image
+            src="/assets/images/product/1692088715-Light-Led-Bulb.png"
+            width={450}
+            height={450}
+            alt=""
+          />
         </Link>
         <Link href="/den-thong-minh" className="max-w-[420px]">
           <h3 className="text-h5 font-bold mb-4">Đèn thông minh</h3>
@@ -60,23 +59,26 @@ export default function Product() {
             Mesh, ZigBee
           </p>
         </Link>
-        <Link href="/cam-bien"> <Image
-          src="/assets/images/product/1692090463-Cam-bien-chuyen-dong.png"
-          width={450}
-          height={450}
-          alt=""
-        /></Link>
-       
+        <Link href="/cam-bien">
+          {" "}
+          <Image
+            src="/assets/images/product/1692090463-Cam-bien-chuyen-dong.png"
+            width={450}
+            height={450}
+            alt=""
+          />
+        </Link>
       </div>
       <div className="flex items-center justify-around gap-10 pt-10">
-        <Link href="/cong-tac-thong-minh"> 
-         <Image
-          src="/assets/images/product/1692151116-cong-tac-thong-minh-page-thiet-bi.png"
-          width={450}
-          height={450}
-          alt=""
-        /></Link>
-      
+        <Link href="/cong-tac-thong-minh">
+          <Image
+            src="/assets/images/product/1692151116-cong-tac-thong-minh-page-thiet-bi.png"
+            width={450}
+            height={450}
+            alt=""
+          />
+        </Link>
+
         <Link href="/cong-tac-thong-minh" className="max-w-[420px]">
           <h3 className="text-h5 font-bold mb-4">Công tắc thông minh</h3>
           <p>
@@ -91,22 +93,27 @@ export default function Product() {
             Điều khiển bằng giọng nói, qua App | Cài đặt theo khung giờ tùy chọn
           </p>
         </Link>
-        <Link href="/bo-rem-cua">  <Image
-          src="/assets/images/product/1692088539-Bo-Dieu-Khien-Rem.png"
-          width={450}
-          height={450}
-          alt=""
-        /></Link>
-      
+        <Link href="/bo-rem-cua">
+          {" "}
+          <Image
+            src="/assets/images/product/1692088539-Bo-Dieu-Khien-Rem.png"
+            width={450}
+            height={450}
+            alt=""
+          />
+        </Link>
       </div>
       <div className="flex items-center justify-around gap-10 pt-10">
-        <Link href="/phu-kien">   <Image
-          src="/assets/images/product/1692151096-o-cam-thong-minh-page-thiet-bi.png"
-          width={450}
-          height={450}
-          alt=""
-        /></Link>
-     
+        <Link href="/phu-kien">
+          {" "}
+          <Image
+            src="/assets/images/product/1692151096-o-cam-thong-minh-page-thiet-bi.png"
+            width={450}
+            height={450}
+            alt=""
+          />
+        </Link>
+
         <Link href="/phu-kien" className="max-w-[420px]">
           <h3 className="text-h5 font-bold mb-4">Phụ kiện</h3>
           <p>
@@ -124,22 +131,27 @@ export default function Product() {
             trung thực
           </p>
         </Link>
-        <Link href="/thiet-bi-an-ninh-thong-minh">  <Image
-          src="/assets/images/product/1692088779-Camera-SE.png"
-          width={450}
-          height={450}
-          alt=""
-        /></Link>
-      
+        <Link href="/thiet-bi-an-ninh-thong-minh">
+          {" "}
+          <Image
+            src="/assets/images/product/1692088779-Camera-SE.png"
+            width={450}
+            height={450}
+            alt=""
+          />
+        </Link>
       </div>
       <div className="flex items-center justify-around gap-10 pt-10">
-        <Link href="/khoa-cua-thong-minh">  <Image
-          src="/assets/images/product/1692088791-Khoa-YAle.png"
-          width={450}
-          height={450}
-          alt=""
-        /></Link>
-      
+        <Link href="/khoa-cua-thong-minh">
+          {" "}
+          <Image
+            src="/assets/images/product/1692088791-Khoa-YAle.png"
+            width={450}
+            height={450}
+            alt=""
+          />
+        </Link>
+
         <Link href="/khoa-cua-thong-minh" className="max-w-[420px]">
           <h3 className="text-h5 font-bold mb-4">Khóa cửa thông minh</h3>
           <p>
