@@ -112,7 +112,7 @@ export default function BaoGia() {
                   <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                     Zalo
                   </h1>
-                  <h1 className="px-4 ">0906 030 030</h1>
+                  <h1 className="px-4 ">0901 237 451</h1>
                 </Button>
                 <Button className="flex items-center bg-slate-600 h-12">
                   <svg
@@ -135,7 +135,7 @@ export default function BaoGia() {
                       fill="white"
                     ></path>
                   </svg>
-                  <h1 className="px-4 ">0906 030 030</h1>
+                  <h1 className="px-4 ">0901 237 451</h1>
                 </Button>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function BaoGia() {
                 <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                   Zalo
                 </h1>
-                <h1 className="px-4 ">0906 030 030</h1>
+                <h1 className="px-4 ">0901 237 451</h1>
               </Button>
               <Button className=" w-[200px] flex items-center bg-slate-600 h-12">
                 <svg
@@ -181,7 +181,7 @@ export default function BaoGia() {
                     fill="white"
                   ></path>
                 </svg>
-                <h1 className="px-4 ">0906 030 030</h1>
+                <h1 className="px-4 ">0901 237 451</h1>
               </Button>
             </div>
           </div>
