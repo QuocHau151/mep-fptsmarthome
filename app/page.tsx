@@ -2,7 +2,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper";
 import { FreeMode, Navigation, Pagination, Thumbs } from "swiper/modules";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,7 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "@/components/header/page";
 import Footer from "@/components/footer/page";
 import { ChevronDown } from "lucide-react";
@@ -26,9 +27,20 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import Connect from "@/components/connect/page";
 import SocialConnect from "@/components/social/page";
+import Link from "next/link";
 export default function Home() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-
+  useEffect(() => {
+    AOS.init({
+      offset: 200, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
   return (
     <>
       <Header />
@@ -113,7 +125,10 @@ export default function Home() {
         </Swiper>
       </section>
       {/*  */}
-      <section className="max-md:py-[30px]  container flex flex-col items-center py-[100px] gap-20 max-lg:px-20  max-md:px-10 ">
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px]  container flex flex-col items-center py-[100px] gap-20 max-lg:px-20  max-md:px-10 "
+      >
         <div className="">
           <h6 className="text-h6 font-bold text-gray-500 text-center mb-2">
             FPT Smart Home - Thương hiệu nhà thông minh từ FPT
@@ -136,11 +151,13 @@ export default function Home() {
             <span className="mt-[-29px] text-gray-400 ml-6 max-md:ml-0">
               (Chưa bao gồm VAT)
             </span>
-            <Button className="bg-gray-700">
-              <p className="w-[150px] h-[50px] text-center my-auto ">
-                Tìm hiểu ngay
-              </p>
-            </Button>
+            <Link href="/phu-kien/o-cam-thong-minh-wifi">
+              <Button className="bg-gray-700">
+                <p className="w-[150px] h-[50px] text-center my-auto ">
+                  Tìm hiểu ngay
+                </p>
+              </Button>
+            </Link>
           </div>
           <Image
             className=" max-lg:w-full"
@@ -152,7 +169,10 @@ export default function Home() {
         </div>
       </section>
       {/*  */}
-      <section className="max-md:py-[30px] container flex flex-col items-center gap-20 py-[100px]  max-lg:px-20 max-md:px-10 max-md:gap-10 ">
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px] container flex flex-col items-center gap-20 py-[50px]  max-lg:px-20 max-md:px-10 max-md:gap-10 "
+      >
         <div className="text-center text-h4 font-bold text-slate-700 antialiased">
           <h2>Bộ sưu tập công tắc</h2>
         </div>
@@ -164,9 +184,11 @@ export default function Home() {
               height={707}
               alt="athena-collection"
             />
-            <Button className="absolute left-[50%] translate-x-[-50%] bottom-[30px] bg-white bg-opacity-0 border-2 w-[180px] hover:bg-opacity-1 hover:bg-white hover:text-black">
-              Xem thêm
-            </Button>
+            <Link href="/cong-tac-thong-minh/cong-tac-cam-ung-athena">
+              <Button className="absolute left-[50%] translate-x-[-50%] bottom-[30px] bg-white bg-opacity-0 border-2 w-[180px] hover:bg-opacity-1 hover:bg-white hover:text-black">
+                Xem thêm
+              </Button>
+            </Link>
           </div>
           <div className="basis-1/2 relative">
             <Image
@@ -175,14 +197,19 @@ export default function Home() {
               height={707}
               alt="hera-collection"
             />
-            <Button className="absolute left-[50%] translate-x-[-50%] bottom-[30px] bg-white bg-opacity-0 border-2 border-black text-black w-[180px] hover:bg-opacity-1 hover:text-white">
-              Xem thêm
-            </Button>
+            <Link href="/cong-tac-thong-minh/cong-tac-cam-ung-hera">
+              <Button className="absolute left-[50%] translate-x-[-50%] bottom-[30px] bg-white bg-opacity-0 border-2 border-black text-black w-[180px] hover:bg-opacity-1 hover:text-white">
+                Xem thêm
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
       {/*  */}
-      <section className="max-md:py-[30px] container py-[100px] ">
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px] container py-[50px] "
+      >
         <div className="flex flex-col gap-10 items-center justify-center max-md:gap-4">
           <h2 className="text-center text-h4 font-bold text-gray-800 max-md:text-[25px]">
             Những công trình tiêu biểu
@@ -194,9 +221,11 @@ export default function Home() {
             điều khiển & quản lý ngôi nhà từ xa bằng giọng nói tiếng Việt hoặc
             smartphone.
           </p>
-          <Button className="w-[180px] h-[50px] bg-white bg-opacity-0 border-2 border-black text-black hover:bg-opacity-1 hover:text-white">
-            Xem ngay
-          </Button>
+          <Link href="/can-ho-mau">
+            <Button className="w-[180px] h-[50px] bg-white bg-opacity-0 border-2 border-black text-black hover:bg-opacity-1 hover:text-white">
+              Xem ngay
+            </Button>
+          </Link>
         </div>
         <div className="py-[100px] flex items-center gap-6 max-lg:flex-wrap justify-center max-md:flex-col max-md:py-[30px]">
           <div className="bg-gray-100 basis-1/3 flex flex-col items-center justify-center p-4 rounded-xl">
@@ -506,7 +535,10 @@ export default function Home() {
         </div>
       </section>
       {/*  */}
-      <section className="max-md:py-[30px] py-[100px] bg-gray-200">
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px] py-[100px] bg-gray-200"
+      >
         <div className="container ">
           <div className="flex flex-col items-center justify-center  gap-10 mb-[80px] m">
             <h2 className="text-[40px] text-center font-bold text-gray-800 md:px-10 max-md:text-h5">
@@ -593,9 +625,11 @@ export default function Home() {
                     (Chưa có thuế VAT và phí thi công)
                   </span>
                 </div>
-                <Button className="bg-opacity-0 bg-white border-[3px] text-black">
-                  Chọn gói này
-                </Button>
+                <Link href="/bao-gia?param=C2PN">
+                  <Button className="bg-opacity-0 bg-white border-[3px] text-black">
+                    Chọn gói này
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -690,18 +724,26 @@ export default function Home() {
                     (Chưa có thuế VAT và phí thi công)
                   </span>
                 </div>
-                <Button className="bg-opacity-0 bg-white border-[3px] text-black">
-                  Chọn gói này
-                </Button>
+                <Link href="/bao-gia?param=C3PN">
+                  <Button className="bg-opacity-0 bg-white border-[3px] text-black">
+                    Chọn gói này
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
       {/*  */}
-      <section className="max-md:py-[30px]  bg-cover 2xl:h-[1000px] bg-center h-[680px] bg-no-repeat bg-[url('/assets/images/session/ads-banner.webp')] max-md:h-[300px]"></section>
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px]  bg-cover 2xl:h-[1000px] bg-center h-[680px] bg-no-repeat bg-[url('/assets/images/session/ads-banner.webp')] max-md:h-[300px]"
+      ></section>
       {/*  */}
-      <section className="max-md:py-[30px] py-[100px] container ">
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px] py-[100px] container "
+      >
         <div>
           <h2 className="text-center text-h3 mb-[100px] font-semibold text-gray-700 max-lg:text-[45px] max-md:text-[35px] max-md:mb-[30px]">
             Video sản phẩm nhà thông minh
@@ -905,7 +947,10 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-      <section className="max-md:py-[30px] container flex items-center justify-center gap-6 py-[100px]  max-lg:px-20 max-md:px-10">
+      <section
+        data-aos="fade-up"
+        className="max-md:py-[30px] container flex items-center justify-center gap-6 py-[100px]  max-lg:px-20 max-md:px-10"
+      >
         <div className="basis-1/2 w-full max-lg:basis-full">
           <h2 className="text-h3 font-semibold text-gray-800 mb-10 max-lg:text-center max-md:text-[30px]">
             Câu hỏi thường gặp

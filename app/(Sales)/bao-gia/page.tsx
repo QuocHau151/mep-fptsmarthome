@@ -13,7 +13,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Footer from "@/components/footer/page";
 import { Helmet } from "react-helmet";
 import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
-
+import { useSearchParams } from "next/navigation";
 import data from "@/data/data-solution.json";
 import Link from "next/link";
 import {
@@ -40,9 +40,12 @@ interface Item {
   name: string;
   price: number;
 }
+
 export default function BaoGia() {
   const [quantities, setQuantities] = useState<Record<string, number>>({});
-
+  const searchParams = useSearchParams();
+  const param = searchParams.get("param");
+  const [selected, setSelected] = useState<string>(param as string);
   const increase = (name: string, title: string, id: string) => {
     const key = `${title}-${name}-${id}`;
     setQuantities((prevQuantities) => ({
@@ -55,7 +58,7 @@ export default function BaoGia() {
     const key = `${title}-${name}-${id}`;
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [key]: prevQuantities[key] > 0 ? prevQuantities[key] - 1 : 0,
+      [key]: prevQuantities[key] >= 0 ? prevQuantities[key] - 1 : 1,
     }));
   };
   const resultMoney = (
@@ -74,10 +77,7 @@ export default function BaoGia() {
       if (item.id === id) {
         item.disc.forEach((product) => {
           product.items.forEach((item) => {
-            const quantity =
-              quantities[`${product.title}-${item.name}-${id}`] || 1;
-            total +=
-              resultMoney(item.price, product.title, item.name, id) * quantity;
+            total += resultMoney(item.price, product.title, item.name, id);
           });
         });
       }
@@ -192,6 +192,8 @@ export default function BaoGia() {
           aria-label="Dynamic tabs"
           items={data}
           className="flex justify-center"
+          selectedKey={selected}
+          onSelectionChange={(e) => setSelected(e as string)}
         >
           {data.map((items, index) => (
             <Tab key={items.id} title={items.name} className="">

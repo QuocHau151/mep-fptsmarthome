@@ -35,14 +35,14 @@ export default function Footer() {
                   Lô 37-39A Đường 19, KCX Tân Thuận, Quận 7 TP.Hồ Chí Minh
                 </p>
               </div>
-              <div className="flex items-center gap-6 ">
+              <div className="flex items-center gap-6 font-light">
                 <Image
                   src="/assets/icon/footer/support.png"
                   width={24}
                   height={24}
                   alt=""
                 />
-                <p>0906030030 - Hỗ trợ trực tiếp ( Nguyên )</p>
+                <p>0906.030.030 - Hỗ trợ trực tiếp ( Nguyên )</p>
               </div>
               <div className="flex items-center gap-6 font-light">
                 <Image
@@ -51,7 +51,9 @@ export default function Footer() {
                   height={24}
                   alt=""
                 />
-                <p>19006600 - Hotline</p>
+                <p>
+                  0901.237.451 - Hỗ trợ trực tiếp <br /> ( Tuyết )
+                </p>
               </div>
               <div className="flex items-start gap-6 font-light">
                 <Image
@@ -104,9 +106,10 @@ export default function Footer() {
           <h2>
             Địa chỉ: Lô 37-39A Đường 19, KCX Tân Thuận, Quận 7 TP.Hồ Chí Minh
           </h2>
-          <h2> Số điện thoại: 0906030030 - Hỗ trợ trực tiếp </h2>
-          <h2>Hotline: 19006600</h2>
-          <h2> Email: fptsmarthome@fpt.com</h2>
+          <h2> 0906030030 ( Nguyên ) - Hỗ trợ trực tiếp </h2>
+          <h2> 0901237451 ( Tuyết ) - Hỗ trợ trực tiếp</h2>
+          <h2> Email: TuyetVTB2@fpt.com </h2>
+          <h2> Email: NguyenDL2@fpt.com </h2>
           <Image
             className="max-md:w-[150px]"
             src="/assets/icon/footer/logoSaleNoti 1.png"
