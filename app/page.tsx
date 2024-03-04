@@ -28,6 +28,7 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import Connect from "@/components/connect/page";
 import SocialConnect from "@/components/social/page";
 import Link from "next/link";
+import Head from "next/head";
 export default function Home() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
   useEffect(() => {

@@ -26,6 +26,12 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en">
         <head>
+          <title>Home</title>
+          <link
+            rel="canonical"
+            href="https://fpt-smarthome.vn"
+            key="canonical"
+          />
           <GoogleAnalytics gaId="G-JY11M3DKR0" />
           <meta
             name="google-site-verification"
