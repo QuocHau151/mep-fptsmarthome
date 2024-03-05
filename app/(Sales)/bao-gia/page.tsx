@@ -42,15 +42,29 @@ interface Item {
 }
 
 export default function BaoGia() {
-  const [quantities, setQuantities] = useState<Record<string, number>>({});
   const searchParams = useSearchParams();
   const param = searchParams.get("param");
   const [selected, setSelected] = useState<string>(param as string);
+  const [quantities, setQuantities] = useState<Record<string, number>>(() => {
+    // Tạo một object rỗng để lưu trữ giá trị ban đầu
+    const initialQuantities: Record<string, number> = {};
+
+    data.forEach((item) => {
+      item.disc.forEach((product) => {
+        product.items.forEach((items) => {
+          initialQuantities[`${product.title}-${items.name}-${item.id}`] = 1;
+        });
+      });
+    });
+
+    return initialQuantities;
+  });
+
   const increase = (name: string, title: string, id: string) => {
     const key = `${title}-${name}-${id}`;
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [key]: (prevQuantities[key] || 0) + 1,
+      [key]: prevQuantities[key] + 1,
     }));
   };
 
@@ -58,17 +72,18 @@ export default function BaoGia() {
     const key = `${title}-${name}-${id}`;
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [key]: prevQuantities[key] >= 0 ? prevQuantities[key] - 1 : 1,
+      [key]: prevQuantities[key] > 0 ? prevQuantities[key] - 1 : 0,
     }));
   };
+
   const resultMoney = (
     price: number,
     title: string,
     name: string,
     id: string
   ) => {
-    const result = price * (quantities[`${title}-${name}-${id}`] || 1);
-
+    const result = price * quantities[`${title}-${name}-${id}`];
+    console.log(quantities[`${title}-${name}-${id}`]);
     return result;
   };
   const calculateTotalForId = (id: string) => {
@@ -210,14 +225,14 @@ export default function BaoGia() {
                     <TableBody>
                       {items.disc.map((product, index) => (
                         <TableRow key={index}>
-                          <TableCell className="max-w-[200px] max-md:min-w-[150px]">
+                          <TableCell className="max-w-[150px] max-md:min-w-[100px]">
                             {product.title}
                           </TableCell>
                           <TableCell>
                             {product.items.map((item, index) => (
                               <div
                                 key={index}
-                                className="py-4 max-md:min-w-[300px]"
+                                className="py-4  max-md:min-w-[300px]"
                               >
                                 {item.name}
                               </div>
@@ -243,9 +258,11 @@ export default function BaoGia() {
                                 >
                                   -
                                 </button>
-                                {quantities[
-                                  `${product.title}-${item.name}-${items.id}`
-                                ] || 1}
+                                {
+                                  quantities[
+                                    `${product.title}-${item.name}-${items.id}`
+                                  ]
+                                }
                                 <button
                                   onClick={() =>
                                     increase(item.name, product.title, items.id)

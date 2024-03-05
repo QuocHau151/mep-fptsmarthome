@@ -5,19 +5,13 @@ import { RiCustomerService2Line } from "react-icons/ri";
 
 export default function Connect() {
   return (
-    <div className="fixed z-50 bottom-10 left-10 ">
-      <Tooltip
-        placement="right-start"
-        content="Báo giá"
-        className="w-[120px] h-[45px] bg-red-500 text-white text-[16px]"
+    <div className="fixed z-50 bottom-16 left-[-35px] ">
+      <Link
+        href="/bao-gia"
+        className="bg-red-500 w-[100px] h-10 flex items-center justify-center rotate-[-90deg] text-white text-[18px]  cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out rounded-lg"
       >
-        <Link
-          href="/bao-gia"
-          className="bg-red-500 w-12 h-12 flex items-center justify-center rounded-full"
-        >
-          <RiCustomerService2Line color={"white"} size={"25px"} />
-        </Link>
-      </Tooltip>
+        Báo giá
+      </Link>
     </div>
   );
 }
