@@ -121,6 +121,16 @@ export default function SideBar() {
                       "IT Outsource"
                     )}
                   </Link>
+                  <Link
+                    className="px-10 hover:bg-gray-700 block h-10 pt-2 "
+                    href="/admin/zalo"
+                  >
+                    {pathname === "/admin/zalo" ? (
+                      <span className="text-orange-900">Zalo</span>
+                    ) : (
+                      "Zalo"
+                    )}
+                  </Link>
                 </div>
               </AnimateHeight>
             </li>

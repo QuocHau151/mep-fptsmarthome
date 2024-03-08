@@ -14,7 +14,7 @@ import { CiUser } from "react-icons/ci";
 import { CiBellOn } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
-import Dropdown from "./ui/dropdown";
+import Dropdown from "../ui/dropdown";
 import { IoIosMenu } from "react-icons/io";
 import { FaCaretDown, FaRegUser } from "react-icons/fa";
 import AnimateHeight from "react-animate-height";
@@ -331,6 +331,16 @@ export default function Header() {
                               </span>
                             ) : (
                               "It Outsource"
+                            )}
+                          </Link>
+                          <Link
+                            className="px-10 hover:bg-gray-700 block h-10 pt-2 "
+                            href="/admin/zalo"
+                          >
+                            {pathname === "/admin/zalo" ? (
+                              <span className="text-orange-900">Zalo</span>
+                            ) : (
+                              "Zalo"
                             )}
                           </Link>
                         </div>

@@ -141,3 +141,11 @@ export const formOutsourceSchema = z.object({
   type: z.enum(["IT BASIS", "IT PRO", "IT VIP"]),
   time: z.enum(["6 month", "12 month", "Khác"]),
 });
+export const formZaLoSchema = z.object({
+  name: z.string().min(2, {
+    message: "Xin hãy điền tên của bạn",
+  }),
+  phone: z.string().min(2, {
+    message: "Xin hãy điền số điện thoại của bạn",
+  }),
+});

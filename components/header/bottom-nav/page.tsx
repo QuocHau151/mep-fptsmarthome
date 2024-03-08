@@ -40,7 +40,7 @@ export default function Bottom_Nav() {
   };
 
   return (
-    <div className=" max-lg:hidden bg-white relative z-10">
+    <div className=" max-lg:hidden bg-white relative z-10 border-b-[1px] border-gray-300 drop-shadow-md">
       <div className=" container flex items-center justify-between  w-full h-[45px]  font-medium ">
         <div className="relative  flex gap-2 group  ">
           <Image

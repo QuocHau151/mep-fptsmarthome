@@ -48,6 +48,12 @@ export default function Checkout() {
     const format = formatToString(total.toString());
     return format;
   };
+  const handleTotalVATPrice = (total: number) => {
+    const totalVAT = total + total * 0.1;
+    const format = formatToString(totalVAT.toString());
+
+    return format;
+  };
   const form = useForm<z.infer<typeof formCheckoutSchema>>({
     resolver: zodResolver(formCheckoutSchema),
     defaultValues: {
@@ -213,9 +219,9 @@ export default function Checkout() {
                     <p>Tổng</p>
                     <div className=" flex flex-col items-end">
                       <p className="text-[25px] text-orange-600 font-semibold">
-                        {handleTotalPrice(total)} VNĐ
+                        {handleTotalVATPrice(total)} VNĐ
                       </p>
-                      <span>(Chưa bao gồm VAT)</span>
+                      <span>(Bao gồm 10% VAT)</span>
                     </div>
                   </div>
                 </div>
@@ -373,9 +379,9 @@ export default function Checkout() {
                     <p>Tổng</p>
                     <div className=" flex flex-col items-end">
                       <p className="text-[25px] text-orange-600 font-semibold">
-                        {handleTotalPrice(total)} VNĐ
+                        {handleTotalVATPrice(total)} VNĐ
                       </p>
-                      <span>(Chưa bao gồm VAT)</span>
+                      <span>(Bao gồm 10% VAT)</span>
                     </div>
                   </div>
                 </div>

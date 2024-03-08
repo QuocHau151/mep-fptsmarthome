@@ -156,3 +156,10 @@ model ItOutsource {
   time String?
   state StateItOutsource @default(Pending)
 }
+model connectZaLo {
+  id String  @id @default(cuid())
+  name String?
+  phone String?
+  state StateItOutsource @default(Pending)
+  created_at DateTime
+}

@@ -28,6 +28,11 @@ enum StateItOutsource {
   Done = "Done",
   Cancel = "Cancel",
 }
+enum StateConnectZaLo {
+  Pending = "Pending",
+  Done = "Done",
+  Cancel = "Cancel",
+}
 type SelectedOptions = {
   type: string;
   color: string;

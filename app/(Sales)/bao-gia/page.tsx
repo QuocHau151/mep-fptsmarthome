@@ -83,7 +83,7 @@ export default function BaoGia() {
     id: string
   ) => {
     const result = price * quantities[`${title}-${name}-${id}`];
-    console.log(quantities[`${title}-${name}-${id}`]);
+
     return result;
   };
   const calculateTotalForId = (id: string) => {
@@ -211,7 +211,7 @@ export default function BaoGia() {
           onSelectionChange={(e) => setSelected(e as string)}
         >
           {data.map((items, index) => (
-            <Tab key={items.id} title={items.name} className="">
+            <Tab key={items.id} title={items.name} className=" ">
               <Card>
                 <CardBody>
                   <Table className="">
@@ -224,7 +224,10 @@ export default function BaoGia() {
                     </TableHeader>
                     <TableBody>
                       {items.disc.map((product, index) => (
-                        <TableRow key={index}>
+                        <TableRow
+                          key={index}
+                          className="border-[1px] border-black"
+                        >
                           <TableCell className="max-w-[150px] max-md:min-w-[100px]">
                             {product.title}
                           </TableCell>
@@ -298,7 +301,8 @@ export default function BaoGia() {
                       Lưu ý:
                     </h3>
                     <h4 className="max-md:text-[15px]">
-                      Bảng báo giá tham khảo.
+                      Bảng báo giá chỉ tham khảo chưa bao gồm VAT và chi phí lắp
+                      đặt.
                     </h4>
                     <h4 className="max-md:text-[15px]">
                       Số Lượng Thiết Bị sẽ tùy thuộc vào thực tế công trình.
@@ -1164,7 +1168,6 @@ export default function BaoGia() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
