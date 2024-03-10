@@ -32,7 +32,7 @@ export default async function RootLayout({
             href="https://fpt-smarthome.vn"
             key="canonical"
           />
-          <GoogleAnalytics gaId="G-JY11M3DKR0" />
+          <GoogleAnalytics gaId="G-XT9N1Z0YRN" />
           <meta
             name="google-site-verification"
             content="SiBQC7Zgw2hF-Pa7esKwX-GpOoAm2lO1ghYwGAjGtyo"
