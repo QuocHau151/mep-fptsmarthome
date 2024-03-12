@@ -51,3 +51,19 @@ interface ProductData {
   connect: string;
   type_key: string;
 }
+interface TabItem {
+  id: string;
+  name: string;
+  disc: Product[];
+}
+
+interface Product {
+  title: string;
+  items: Item[];
+}
+
+interface Item {
+  id: string;
+  name: string;
+  price: number;
+}

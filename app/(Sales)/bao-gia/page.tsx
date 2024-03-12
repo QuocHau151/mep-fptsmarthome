@@ -10,12 +10,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Footer from "@/components/footer/page";
 import { Helmet } from "react-helmet";
 import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation";
 import data from "@/data/data-solution.json";
-import Link from "next/link";
 import {
   Table,
   TableHeader,
@@ -24,22 +22,6 @@ import {
   TableRow,
   TableCell,
 } from "@nextui-org/react";
-interface TabItem {
-  id: string;
-  name: string;
-  disc: Product[];
-}
-
-interface Product {
-  title: string;
-  items: Item[];
-}
-
-interface Item {
-  id: string;
-  name: string;
-  price: number;
-}
 
 export default function BaoGia() {
   const searchParams = useSearchParams();
@@ -59,7 +41,6 @@ export default function BaoGia() {
 
     return initialQuantities;
   });
-
   const increase = (name: string, title: string, id: string) => {
     const key = `${title}-${name}-${id}`;
     setQuantities((prevQuantities) => ({
@@ -127,7 +108,7 @@ export default function BaoGia() {
                   <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                     Zalo
                   </h1>
-                  <h1 className="px-4 ">0901 237 451</h1>
+                  <h1 className="px-4 ">0775 793 978</h1>
                 </Button>
                 <Button className="flex items-center bg-slate-600 h-12">
                   <svg
@@ -150,7 +131,7 @@ export default function BaoGia() {
                       fill="white"
                     ></path>
                   </svg>
-                  <h1 className="px-4 ">0901 237 451</h1>
+                  <h1 className="px-4 ">0775 793 978</h1>
                 </Button>
               </div>
             </div>
@@ -173,7 +154,7 @@ export default function BaoGia() {
                 <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                   Zalo
                 </h1>
-                <h1 className="px-4 ">0901 237 451</h1>
+                <h1 className="px-4 ">0775 793 978</h1>
               </Button>
               <Button className=" w-[200px] flex items-center bg-slate-600 h-12">
                 <svg
@@ -196,7 +177,7 @@ export default function BaoGia() {
                     fill="white"
                   ></path>
                 </svg>
-                <h1 className="px-4 ">0901 237 451</h1>
+                <h1 className="px-4 ">0775 793 978</h1>
               </Button>
             </div>
           </div>
@@ -214,13 +195,17 @@ export default function BaoGia() {
             <Tab key={items.id} title={items.name} className=" ">
               <Card>
                 <CardBody>
-                  <Table className="">
+                  <Table className="relative max-h-[500px]">
                     <TableHeader>
                       <TableColumn>Khu vực</TableColumn>
-                      <TableColumn>Tên sản phẩm</TableColumn>
-                      <TableColumn>Đơn giá</TableColumn>
-                      <TableColumn>Số lượng</TableColumn>
-                      <TableColumn>Thành tiền</TableColumn>
+                      <TableColumn className="w-[350px]">
+                        Tên sản phẩm
+                      </TableColumn>
+                      <TableColumn className="w-[140px] ">Đơn giá</TableColumn>
+                      <TableColumn className="w-[140px]">Số lượng</TableColumn>
+                      <TableColumn className="w-[140px]">
+                        Thành tiền
+                      </TableColumn>
                     </TableHeader>
                     <TableBody>
                       {items.disc.map((product, index) => (
@@ -228,14 +213,14 @@ export default function BaoGia() {
                           key={index}
                           className="border-[1px] border-black"
                         >
-                          <TableCell className="max-w-[150px] max-md:min-w-[100px]">
+                          <TableCell className="max-w-[100px] max-md:min-w-[100px]">
                             {product.title}
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="border-[1px] border-black">
                             {product.items.map((item, index) => (
                               <div
                                 key={index}
-                                className="py-4  max-md:min-w-[300px]"
+                                className="py-4 max-md:min-w-[300px]"
                               >
                                 {item.name}
                               </div>
@@ -243,12 +228,15 @@ export default function BaoGia() {
                           </TableCell>
                           <TableCell>
                             {product.items.map((item, index) => (
-                              <div key={index} className="py-4">
+                              <div
+                                key={index}
+                                className="py-4 flex items-center justify-center"
+                              >
                                 {item.price.toLocaleString()}
                               </div>
                             ))}
                           </TableCell>
-                          <TableCell>
+                          <TableCell className=" border-[1px] border-black ">
                             {product.items.map((item, index) => (
                               <div
                                 key={index}
@@ -278,7 +266,10 @@ export default function BaoGia() {
                           </TableCell>
                           <TableCell>
                             {product.items.map((item, index) => (
-                              <div key={index} className="py-4">
+                              <div
+                                key={index}
+                                className="py-4 flex items-center justify-center"
+                              >
                                 {resultMoney(
                                   item.price,
                                   product.title,
@@ -317,7 +308,6 @@ export default function BaoGia() {
           ))}
         </Tabs>
       </div>
-
       <div className="container flex w-full flex-col items-center"></div>
       <div className="container flex flex-col items-center gap-20 mb-[100px]  max-lg:px-10 max-md:gap-6 max-md:mb-14">
         <h1 className="text-orange-600 text-[40px] text-center font-semibold max-lg:text-[30px] max-lg:px-8 max-md:text-[18px]">

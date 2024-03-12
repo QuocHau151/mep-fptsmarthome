@@ -1,12 +1,81 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableColumn,
+  TableRow,
+  TableCell,
+} from "@nextui-org/react";
+import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
+import { useSearchParams } from "next/navigation";
+import data from "@/data/data-solution.json";
 export default function CanHo1PN() {
   const [isOpen, setIsOpen] = useState(1);
+  const searchParams = useSearchParams();
+  const param = searchParams.get("param");
+  const [selected, setSelected] = useState<string>(param as string);
+  const [quantities, setQuantities] = useState<Record<string, number>>(() => {
+    // Tạo một object rỗng để lưu trữ giá trị ban đầu
+    const initialQuantities: Record<string, number> = {};
+
+    data.forEach((item) => {
+      item.disc.forEach((product) => {
+        product.items.forEach((items) => {
+          initialQuantities[`${product.title}-${items.name}-${item.id}`] = 1;
+        });
+      });
+    });
+
+    return initialQuantities;
+  });
+  const increase = (name: string, title: string, id: string) => {
+    const key = `${title}-${name}-${id}`;
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [key]: prevQuantities[key] + 1,
+    }));
+  };
+
+  const decrease = (name: string, title: string, id: string) => {
+    const key = `${title}-${name}-${id}`;
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [key]: prevQuantities[key] > 0 ? prevQuantities[key] - 1 : 0,
+    }));
+  };
+
+  const resultMoney = (
+    price: number,
+    title: string,
+    name: string,
+    id: string
+  ) => {
+    const result = price * quantities[`${title}-${name}-${id}`];
+
+    return result;
+  };
+  const calculateTotalForId = (id: string) => {
+    let total = 0;
+    data.forEach((item) => {
+      if (item.id === id) {
+        item.disc.forEach((product) => {
+          product.items.forEach((item) => {
+            total += resultMoney(item.price, product.title, item.name, id);
+          });
+        });
+      }
+    });
+    return total;
+  };
   return (
     <>
       <div className=" container pt-[170px] max-lg:pt-[120px] max-md:pt-[100px] ">
+        <h5 className="text-center text-[16px] font-medium text-gray-500 mb-[-4px]">
+          Tham khảo FPT Smart Home
+        </h5>
         <h1 className="text-[35px] font-semibold text-center max-md:text-[30px] ">
           Căn hộ 1 Phòng ngủ
         </h1>
@@ -572,10 +641,141 @@ export default function CanHo1PN() {
           </div>
         </div>
       </div>
+      <div className="container flex flex-col  pt-[50px] pb-[100px] max-md:pb-[30px] ">
+        <Tabs
+          aria-label="Dynamic tabs"
+          items={data}
+          className="flex justify-center"
+          selectedKey={selected}
+          onSelectionChange={(e) => setSelected(e as string)}
+        >
+          {data.map((items, index) => (
+            <Tab key={items.id} title={items.name} className=" ">
+              <Card>
+                <CardBody>
+                  <Table className="relative max-h-[500px]">
+                    <TableHeader>
+                      <TableColumn>Khu vực</TableColumn>
+                      <TableColumn className="w-[350px]">
+                        Tên sản phẩm
+                      </TableColumn>
+                      <TableColumn className="w-[140px] ">Đơn giá</TableColumn>
+                      <TableColumn className="w-[140px]">Số lượng</TableColumn>
+                      <TableColumn className="w-[140px]">
+                        Thành tiền
+                      </TableColumn>
+                    </TableHeader>
+                    <TableBody>
+                      {items.disc.map((product, index) => (
+                        <TableRow
+                          key={index}
+                          className="border-[1px] border-black"
+                        >
+                          <TableCell className="max-w-[100px] max-md:min-w-[100px]">
+                            {product.title}
+                          </TableCell>
+                          <TableCell className="border-[1px] border-black">
+                            {product.items.map((item, index) => (
+                              <div
+                                key={index}
+                                className="py-4 max-md:min-w-[300px]"
+                              >
+                                {item.name}
+                              </div>
+                            ))}
+                          </TableCell>
+                          <TableCell>
+                            {product.items.map((item, index) => (
+                              <div
+                                key={index}
+                                className="py-4 flex items-center justify-center"
+                              >
+                                {item.price.toLocaleString()}
+                              </div>
+                            ))}
+                          </TableCell>
+                          <TableCell className=" border-[1px] border-black ">
+                            {product.items.map((item, index) => (
+                              <div
+                                key={index}
+                                className=" flex items-center justify-center gap-2 py-4"
+                              >
+                                <button
+                                  onClick={() =>
+                                    decrease(item.name, product.title, items.id)
+                                  }
+                                >
+                                  -
+                                </button>
+                                {
+                                  quantities[
+                                    `${product.title}-${item.name}-${items.id}`
+                                  ]
+                                }
+                                <button
+                                  onClick={() =>
+                                    increase(item.name, product.title, items.id)
+                                  }
+                                >
+                                  +
+                                </button>
+                              </div>
+                            ))}
+                          </TableCell>
+                          <TableCell>
+                            {product.items.map((item, index) => (
+                              <div
+                                key={index}
+                                className="py-4 flex items-center justify-center"
+                              >
+                                {resultMoney(
+                                  item.price,
+                                  product.title,
+                                  item.name,
+                                  items.id
+                                ).toLocaleString()}
+                              </div>
+                            ))}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                  <div className="text-center py-5 px-4">
+                    <h1 className="text-[30px] font-semibold text-red-700 max-md:text-[25px]">
+                      Tổng tiền:{" "}
+                      {calculateTotalForId(items.id).toLocaleString()} VNĐ
+                    </h1>
+                    <h3 className="text-[20px] font-semibold max-md:text-[15px]">
+                      Lưu ý:
+                    </h3>
+                    <h4 className="max-md:text-[15px]">
+                      Bảng báo giá chỉ tham khảo chưa bao gồm VAT và chi phí lắp
+                      đặt.
+                    </h4>
+                    <h4 className="max-md:text-[15px]">
+                      Số Lượng Thiết Bị sẽ tùy thuộc vào thực tế công trình.
+                    </h4>
+                    <h4 className="max-md:text-[15px]">
+                      Chi phí có thể giảm hoặc tăng tùy theo thực tế
+                    </h4>
+                  </div>
+                </CardBody>
+              </Card>
+            </Tab>
+          ))}
+        </Tabs>
+      </div>
       <div className="w-full pb-[100px] py-10 px-10 bg-gray-100 flex flex-col items-center justify-center gap-6 max-lg:mt-[50px] max-md:mt-[-10px] max-md:px-4">
-        <h1 className="text-center text-[35px] font-semibold mb-8 max-md:text-[30px] px-10">
-          Toàn cảnh Căn Hộ 1 Phòng Ngủ
-        </h1>
+        <div>
+          <h5 className="text-center text-[16px] font-medium text-gray-500 ">
+            Tham khảo FPT Smart Home
+          </h5>
+          <h1 className="text-center text-[35px] font-semibold mb-8 max-md:text-[30px] px-10">
+            Toàn cảnh Căn Hộ 1 Phòng Ngủ
+          </h1>
+        </div>
+
         <Image
           src="/assets/images/apartment/1pn/phong-ngu-2.jpg"
           width={1000}

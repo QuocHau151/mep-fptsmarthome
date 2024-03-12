@@ -39,12 +39,12 @@ export default function SocialConnect() {
       console.error(error);
       setIsSubmitting(false);
     }
-    window.open(`https://zalo.me/0901237451`, "_blank");
+    window.open(`https://zalo.me/0775793978`, "_blank");
   };
   return (
     <div className="fixed z-50 bottom-10 right-6 cursor-pointer flex flex-col gap-6 max-md:bottom-3 max-md:right-3 max-md:gap-3">
       <a
-        href="tel:0901237451"
+        href="tel:0775793978"
         className="w-12 h-12 bg-green-600 flex items-center justify-center rounded-full animate-bounce"
       >
         <FaPhoneAlt color={"white"} size={"22px"} />
