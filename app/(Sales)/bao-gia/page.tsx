@@ -183,130 +183,146 @@ export default function BaoGia() {
           </div>
         </div>
       </div>
-      <div className="container flex flex-col  pt-[50px] pb-[100px] max-md:pb-[30px] ">
-        <Tabs
-          aria-label="Dynamic tabs"
-          items={data}
-          className="flex justify-center"
-          selectedKey={selected}
-          onSelectionChange={(e) => setSelected(e as string)}
-        >
-          {data.map((items, index) => (
-            <Tab key={items.id} title={items.name} className=" ">
-              <Card>
-                <CardBody>
-                  <Table className="relative max-h-[500px]">
-                    <TableHeader>
-                      <TableColumn>Khu vực</TableColumn>
-                      <TableColumn className="w-[350px]">
-                        Tên sản phẩm
-                      </TableColumn>
-                      <TableColumn className="w-[140px] ">Đơn giá</TableColumn>
-                      <TableColumn className="w-[140px]">Số lượng</TableColumn>
-                      <TableColumn className="w-[140px]">
-                        Thành tiền
-                      </TableColumn>
-                    </TableHeader>
-                    <TableBody>
-                      {items.disc.map((product, index) => (
-                        <TableRow
-                          key={index}
-                          className="border-[1px] border-black"
-                        >
-                          <TableCell className="max-w-[100px] max-md:min-w-[100px]">
-                            {product.title}
-                          </TableCell>
-                          <TableCell className="border-[1px] border-black">
-                            {product.items.map((item, index) => (
-                              <div
-                                key={index}
-                                className="py-4 max-md:min-w-[300px]"
-                              >
-                                {item.name}
-                              </div>
-                            ))}
-                          </TableCell>
-                          <TableCell>
-                            {product.items.map((item, index) => (
-                              <div
-                                key={index}
-                                className="py-4 flex items-center justify-center"
-                              >
-                                {item.price.toLocaleString()}
-                              </div>
-                            ))}
-                          </TableCell>
-                          <TableCell className=" border-[1px] border-black ">
-                            {product.items.map((item, index) => (
-                              <div
-                                key={index}
-                                className=" flex items-center justify-center gap-2 py-4"
-                              >
-                                <button
-                                  onClick={() =>
-                                    decrease(item.name, product.title, items.id)
-                                  }
-                                >
-                                  -
-                                </button>
-                                {
-                                  quantities[
-                                    `${product.title}-${item.name}-${items.id}`
-                                  ]
-                                }
-                                <button
-                                  onClick={() =>
-                                    increase(item.name, product.title, items.id)
-                                  }
-                                >
-                                  +
-                                </button>
-                              </div>
-                            ))}
-                          </TableCell>
-                          <TableCell>
-                            {product.items.map((item, index) => (
-                              <div
-                                key={index}
-                                className="py-4 flex items-center justify-center"
-                              >
-                                {resultMoney(
-                                  item.price,
-                                  product.title,
-                                  item.name,
-                                  items.id
-                                ).toLocaleString()}
-                              </div>
-                            ))}
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                  <div className="text-center py-5 px-4">
-                    <h1 className="text-[30px] font-semibold text-red-700 max-md:text-[25px]">
-                      Tổng tiền:{" "}
-                      {calculateTotalForId(items.id).toLocaleString()} VNĐ
-                    </h1>
-                    <h3 className="text-[20px] font-semibold max-md:text-[15px]">
-                      Lưu ý:
-                    </h3>
-                    <h4 className="max-md:text-[15px]">
-                      Bảng báo giá chỉ tham khảo chưa bao gồm VAT và chi phí lắp
-                      đặt.
-                    </h4>
-                    <h4 className="max-md:text-[15px]">
-                      Số Lượng Thiết Bị sẽ tùy thuộc vào thực tế công trình.
-                    </h4>
-                    <h4 className="max-md:text-[15px]">
-                      Chi phí có thể giảm hoặc tăng tùy theo thực tế
-                    </h4>
-                  </div>
-                </CardBody>
-              </Card>
-            </Tab>
-          ))}
-        </Tabs>
+      <div className=" flex flex-col  pt-[50px] pb-[100px] max-md:pb-[30px] ">
+        <div className=" bg-[url('/assets/images/thumnail/banner-bao-gia.jpg')] w-full h-min bg-cover bg-no-repeat bg-center py-[60px]">
+          <div className="container shadow-lg">
+            <Tabs
+              aria-label="Dynamic tabs"
+              items={data}
+              className=" flex justify-center"
+              selectedKey={selected}
+              onSelectionChange={(e) => setSelected(e as string)}
+            >
+              {data.map((items, index) => (
+                <Tab key={items.id} title={items.name} className=" ">
+                  <Card>
+                    <CardBody>
+                      <Table className="relative max-h-[500px]">
+                        <TableHeader>
+                          <TableColumn>Khu vực</TableColumn>
+                          <TableColumn className="w-[350px]">
+                            Tên sản phẩm
+                          </TableColumn>
+                          <TableColumn className="w-[140px] ">
+                            Đơn giá
+                          </TableColumn>
+                          <TableColumn className="w-[140px]">
+                            Số lượng
+                          </TableColumn>
+                          <TableColumn className="w-[140px]">
+                            Thành tiền
+                          </TableColumn>
+                        </TableHeader>
+                        <TableBody>
+                          {items.disc.map((product, index) => (
+                            <TableRow
+                              key={index}
+                              className="border-[1px] border-black"
+                            >
+                              <TableCell className="max-w-[100px] max-md:min-w-[100px]">
+                                {product.title}
+                              </TableCell>
+                              <TableCell className="border-[1px] border-black">
+                                {product.items.map((item, index) => (
+                                  <div
+                                    key={index}
+                                    className="py-4 max-md:min-w-[300px]"
+                                  >
+                                    {item.name}
+                                  </div>
+                                ))}
+                              </TableCell>
+                              <TableCell>
+                                {product.items.map((item, index) => (
+                                  <div
+                                    key={index}
+                                    className="py-4 flex items-center justify-center"
+                                  >
+                                    {item.price.toLocaleString()}
+                                  </div>
+                                ))}
+                              </TableCell>
+                              <TableCell className=" border-[1px] border-black ">
+                                {product.items.map((item, index) => (
+                                  <div
+                                    key={index}
+                                    className=" flex items-center justify-center gap-2 py-4"
+                                  >
+                                    <button
+                                      onClick={() =>
+                                        decrease(
+                                          item.name,
+                                          product.title,
+                                          items.id
+                                        )
+                                      }
+                                    >
+                                      -
+                                    </button>
+                                    {
+                                      quantities[
+                                        `${product.title}-${item.name}-${items.id}`
+                                      ]
+                                    }
+                                    <button
+                                      onClick={() =>
+                                        increase(
+                                          item.name,
+                                          product.title,
+                                          items.id
+                                        )
+                                      }
+                                    >
+                                      +
+                                    </button>
+                                  </div>
+                                ))}
+                              </TableCell>
+                              <TableCell>
+                                {product.items.map((item, index) => (
+                                  <div
+                                    key={index}
+                                    className="py-4 flex items-center justify-center"
+                                  >
+                                    {resultMoney(
+                                      item.price,
+                                      product.title,
+                                      item.name,
+                                      items.id
+                                    ).toLocaleString()}
+                                  </div>
+                                ))}
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                      <div className="text-center py-5 px-4">
+                        <h1 className="text-[30px] font-semibold text-red-700 max-md:text-[25px]">
+                          Tổng tiền:{" "}
+                          {calculateTotalForId(items.id).toLocaleString()} VNĐ
+                        </h1>
+                        <h3 className="text-[20px] font-semibold max-md:text-[15px]">
+                          Lưu ý:
+                        </h3>
+                        <h4 className="max-md:text-[15px]">
+                          Bảng báo giá chỉ tham khảo chưa bao gồm VAT và chi phí
+                          lắp đặt.
+                        </h4>
+                        <h4 className="max-md:text-[15px]">
+                          Số Lượng Thiết Bị sẽ tùy thuộc vào thực tế công trình.
+                        </h4>
+                        <h4 className="max-md:text-[15px]">
+                          Chi phí có thể giảm hoặc tăng tùy theo thực tế
+                        </h4>
+                      </div>
+                    </CardBody>
+                  </Card>
+                </Tab>
+              ))}
+            </Tabs>
+          </div>
+        </div>
       </div>
       <div className="container flex w-full flex-col items-center"></div>
       <div className="container flex flex-col items-center gap-20 mb-[100px]  max-lg:px-10 max-md:gap-6 max-md:mb-14">
