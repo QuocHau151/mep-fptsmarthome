@@ -23,24 +23,24 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { createConnectZaLo } from "@/actions/connect-zalo";
 
 export default function SocialConnect() {
-  // const [isSubmitting, setIsSubmitting] = useState(false);
-  // const form = useForm<z.infer<typeof formZaLoSchema>>({
-  //   resolver: zodResolver(formZaLoSchema),
-  //   defaultValues: {
-  //     name: "",
-  //     phone: "",
-  //   },
-  // });
-  // const onSubmit = async (values: z.infer<typeof formZaLoSchema>) => {
-  //   setIsSubmitting(true);
-  //   try {
-  //     await createConnectZaLo(values);
-  //   } catch (error) {
-  //     console.error(error);
-  //     setIsSubmitting(false);
-  //   }
-  //   window.open(`https://zalo.me/0775793978`, "_blank");
-  // };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<z.infer<typeof formZaLoSchema>>({
+    resolver: zodResolver(formZaLoSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+    },
+  });
+  const onSubmit = async (values: z.infer<typeof formZaLoSchema>) => {
+    setIsSubmitting(true);
+    try {
+      await createConnectZaLo(values);
+    } catch (error) {
+      console.error(error);
+      setIsSubmitting(false);
+    }
+    window.open(`https://zalo.me/0775793978`, "_blank");
+  };
   return (
     <div className="fixed z-50 bottom-10 right-6 cursor-pointer flex flex-col gap-6 max-md:bottom-3 max-md:right-3 max-md:gap-3">
       <a
@@ -49,7 +49,14 @@ export default function SocialConnect() {
       >
         <FaPhoneAlt color={"white"} size={"22px"} />
       </a>
-      <Popover key="top-end" placement="top-end" color="primary">
+      <a
+        href="https://zalo.me/0906030030"
+        target="blank"
+        className="bg-blue-500 flex items-center justify-center w-12 h-12 rounded-full animate-bounce"
+      >
+        <SiZalo color={"white"} size={"25px"} />
+      </a>
+      {/* <Popover key="top-end" placement="top-end" color="primary">
         <PopoverTrigger>
           <div className="bg-blue-500 w-12 h-12 flex items-center justify-center rounded-full animate-bounce">
             <SiZalo color={"white"} size={"25px"} />
@@ -61,7 +68,7 @@ export default function SocialConnect() {
               <h2 className="text-[23px] font-semibold text-center text-white">
                 Chat với tư vấn viên
               </h2>
-              {/* <Form {...form}>
+              <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="space-y-2 px-4"
@@ -104,16 +111,11 @@ export default function SocialConnect() {
                     Chat ngay
                   </Button>
                 </form>
-              </Form> */}
-              <Button type="submit" className="bg-white mx-10">
-                <a href="https://zalo.me/0775793978" target="black">
-                  Chat ngay
-                </a>
-              </Button>
+              </Form>
             </div>
           </div>
         </PopoverContent>
-      </Popover>
+      </Popover> */}
     </div>
   );
 }
