@@ -96,7 +96,7 @@ export default function CanHo2PN() {
                   width={700}
                   height={700}
                   quality={100}
-                  alt=""
+                  alt="Nhà Phố 3 Tầng"
                   className=""
                 />
 
@@ -256,7 +256,7 @@ export default function CanHo2PN() {
                   width={750}
                   height={750}
                   quality={100}
-                  alt=""
+                  alt="phòng khách"
                 />
 
                 <div className="" onClick={() => setIsOpen(1)}>
@@ -409,7 +409,7 @@ export default function CanHo2PN() {
                   width={1000}
                   height={1000}
                   quality={100}
-                  alt=""
+                  alt="phòng khách"
                 />
                 <div onClick={() => setIsOpen(1)}>
                   <div className=" pointer-md top-[133px] left-[292px]"></div>
@@ -566,7 +566,7 @@ export default function CanHo2PN() {
                   width={700}
                   height={700}
                   quality={100}
-                  alt=""
+                  alt="phòng ngủ 1"
                   className=""
                 />
 
@@ -757,7 +757,7 @@ export default function CanHo2PN() {
                   width={750}
                   height={750}
                   quality={100}
-                  alt=""
+                  alt="phòng ngủ 1"
                 />
 
                 <div className="" onClick={() => setIsOpen(1)}>
@@ -940,7 +940,7 @@ export default function CanHo2PN() {
                   width={1000}
                   height={1000}
                   quality={100}
-                  alt=""
+                  alt="phòng ngủ 1"
                 />
 
                 <div className="" onClick={() => setIsOpen(1)}>
@@ -1130,7 +1130,7 @@ export default function CanHo2PN() {
                   width={700}
                   height={700}
                   quality={100}
-                  alt=""
+                  alt="phòng ngủ 3"
                   className=""
                 />
                 <div className=" line-straight max-w-[1px] top-0 left-[780px]"></div>
@@ -1261,7 +1261,7 @@ export default function CanHo2PN() {
                   width={750}
                   height={750}
                   quality={100}
-                  alt=""
+                  alt="phòng ngủ 3"
                 />
 
                 <div className="" onClick={() => setIsOpen(1)}>
@@ -1388,7 +1388,7 @@ export default function CanHo2PN() {
                   width={1000}
                   height={1000}
                   quality={100}
-                  alt=""
+                  alt="phòng ngủ 3"
                 />
 
                 <div className="" onClick={() => setIsOpen(1)}>
@@ -1534,7 +1534,9 @@ export default function CanHo2PN() {
                       <TableColumn className="w-[350px]">
                         Tên sản phẩm
                       </TableColumn>
-                      <TableColumn className="w-[140px] ">Đơn giá</TableColumn>
+                      <TableColumn className="w-[140px] max-md:hidden">
+                        Đơn giá
+                      </TableColumn>
                       <TableColumn className="w-[140px]">Số lượng</TableColumn>
                       <TableColumn className="w-[140px]">
                         Thành tiền
@@ -1559,7 +1561,7 @@ export default function CanHo2PN() {
                               </div>
                             ))}
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="max-md:hidden">
                             {product.items.map((item, index) => (
                               <div
                                 key={index}
@@ -1656,7 +1658,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng khách"
           className=""
         />
         <Image
@@ -1664,7 +1666,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng khách"
           className=""
         />
         <Image
@@ -1672,7 +1674,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng khách"
           className=""
         />
         <Image
@@ -1680,7 +1682,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng khách"
           className=""
         />
       </div>
@@ -1699,7 +1701,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 1"
           className=""
         />
         <Image
@@ -1707,7 +1709,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 1"
           className=""
         />
         <Image
@@ -1715,7 +1717,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 1"
           className=""
         />
         <Image
@@ -1723,7 +1725,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 1"
           className=""
         />
       </div>
@@ -1742,7 +1744,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 2"
           className=""
         />
         <Image
@@ -1750,7 +1752,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 2"
           className=""
         />
         <Image
@@ -1758,7 +1760,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 2"
           className=""
         />
         <Image
@@ -1766,7 +1768,7 @@ export default function CanHo2PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Phòng Ngủ 2"
           className=""
         />
       </div>
@@ -1793,7 +1795,7 @@ export default function CanHo2PN() {
                     src="/assets/images/apartment/1pn/phong-ngu-6.jpg"
                     width={468}
                     height={468}
-                    alt=""
+                    alt=" Căn hộ 1 Phòng Ngủ"
                     className="object-fill"
                   />
                 </div>
@@ -1811,7 +1813,7 @@ export default function CanHo2PN() {
                     src="/assets/images/apartment/2pn/phong-ngu-6.png"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Căn hộ 2 phòng ngủ"
                     className="object-cover"
                   />
                 </div>
@@ -1828,7 +1830,7 @@ export default function CanHo2PN() {
                     src="/assets/images/apartment/3pn/phong-ngu-2.jpg"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Căn hộ 3 phòng ngủ"
                     className="object-cover"
                   />
                 </div>
@@ -1845,7 +1847,7 @@ export default function CanHo2PN() {
                     src="/assets/images/apartment/np3t/phong-khach-4.jpg"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Nhà phố 3 tầng"
                     className="object-cover"
                   />
                 </div>

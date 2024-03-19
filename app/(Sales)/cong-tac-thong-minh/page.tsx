@@ -33,7 +33,7 @@ export default function Page() {
               src="/assets/images/product/1693886144-CTCU-Athena-Vuong9.png"
               width={170}
               height={100}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena"
             />
             <h3 className="text-center font-semibold">
               Công Tắc Cảm Ứng Athena
@@ -49,7 +49,7 @@ export default function Page() {
               src="/assets/images/product/1692089592-Nut-Bam-ngu-canh-2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena"
             />
             <h3 className="text-center font-semibold">
               Nút Bấm Ngữ Cảnh Không Dây
@@ -65,7 +65,7 @@ export default function Page() {
               src="/assets/images/product/1672037200-Black-Brown-4-Nut-vuong-ava.png"
               width={170}
               height={100}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena vuông 4 nút"
             />
             <h3 className="text-center font-semibold">
               Công Tắc Cảm Ứng Thông Minh Hera
@@ -81,7 +81,7 @@ export default function Page() {
               src="/assets/images/product/1704445993-Vuong-Den-Rem.png"
               width={170}
               height={100}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena đen"
             />
             <h3 className="text-center font-semibold">
               Công Tắc Cửa Cuốn Thông Minh Athena
@@ -115,7 +115,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456837-Group-1073.png"
                 width={70}
                 height={70}
-                alt=""
+                alt=" Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -127,7 +127,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456645-Group-1072.png"
                 width={70}
                 height={70}
-                alt=""
+                alt=" Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -139,7 +139,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456652-Group-1071.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Kết nối Zigbee"
               />
               <p className="text-[18px] max-md:text-[12px]">Kết nối Zigbee</p>
             </div>

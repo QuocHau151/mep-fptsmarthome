@@ -65,7 +65,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -74,7 +74,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner bộ điều khiển hồng ngoại"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -83,7 +83,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ cảm biến fpt smart home"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -92,7 +92,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -101,7 +101,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -110,7 +110,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -119,7 +119,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -128,7 +128,7 @@ export default function Home() {
               width={3000}
               height={1000}
               quality={100}
-              alt=""
+              alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
         </Swiper>
@@ -173,7 +173,7 @@ export default function Home() {
             src="/assets/images/session/1691480717-831x552px-Key-copy.jpg"
             width={1920}
             height={1080}
-            alt=""
+            alt="ổ cắm thông minh wifi"
           />
         </div>
       </section>
@@ -243,7 +243,7 @@ export default function Home() {
               src="/assets/images/session/1695890880-9cbfa122fc2e2870713f.jpg"
               width={1920}
               height={1080}
-              alt=""
+              alt="nhà mẫu phố 3 tầng"
             />
             <div className="flex flex-col  py-6 px-2 border-b-[1px] border-slate-300 w-full text-center mb-4">
               <h5 className="text-h5 font-semibold">Làng Yến Kiên Giang</h5>
@@ -255,7 +255,7 @@ export default function Home() {
                   src="/assets/icon/1668674205-phong-ngu.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon nhà mẫu phố 3 tầng"
                 />
                 <span className="text-[14px]">2</span>
               </div>
@@ -264,7 +264,7 @@ export default function Home() {
                   src="/assets/icon/1668674215-phong-tam.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon nhà mẫu phố 3 tầng"
                 />
                 <span className="text-[14px]">2</span>
               </div>
@@ -273,7 +273,7 @@ export default function Home() {
                   src="/assets/icon/1668674224-dien-tich.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon nhà mẫu phố 3 tầng"
                 />
                 <span className="text-[14px]">115m2</span>
               </div>
@@ -290,7 +290,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon check"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp chiếu sáng</span>
@@ -302,7 +302,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon check"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp an ninh</span>
@@ -316,7 +316,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon check"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp điều khiển</span>
@@ -328,7 +328,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon check"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp truyền hình</span>
@@ -347,7 +347,7 @@ export default function Home() {
               src="/assets/images/session/1695632188-952e0fa37dbcafe2f6ad9.jpg"
               width={1920}
               height={1080}
-              alt=""
+              alt="nhà mẫu nhà phố 3 tầng"
             />
             <div className="flex flex-col  py-6 px-2 border-b-[1px] border-slate-300 w-full text-center mb-4">
               <h5 className="text-h5 font-semibold">Nhà phố Ninh Thuận</h5>
@@ -359,7 +359,7 @@ export default function Home() {
                   src="/assets/icon/1668674205-phong-ngu.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon"
                 />
                 <span className="text-[14px]">2</span>
               </div>
@@ -368,7 +368,7 @@ export default function Home() {
                   src="/assets/icon/1668674215-phong-tam.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon"
                 />
                 <span className="text-[14px]">2</span>
               </div>
@@ -377,7 +377,7 @@ export default function Home() {
                   src="/assets/icon/1668674224-dien-tich.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon"
                 />
                 <span className="text-[14px]">110m2</span>
               </div>
@@ -394,7 +394,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp chiếu sáng</span>
@@ -406,7 +406,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp an ninh</span>
@@ -420,7 +420,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp điều khiển</span>
@@ -432,7 +432,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp truyền hình</span>
@@ -451,7 +451,7 @@ export default function Home() {
               src="/assets/images/session/1695631236-e443edd8ce031c5d4512.jpg"
               width={1920}
               height={1080}
-              alt=""
+              alt="icon"
             />
             <div className="flex flex-col  py-6 px-2 border-b-[1px] border-slate-300 w-full text-center mb-4">
               <h5 className="text-h5 font-semibold">Căn hộ Phú Mỹ Hưng</h5>
@@ -463,7 +463,7 @@ export default function Home() {
                   src="/assets/icon/1668674205-phong-ngu.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon"
                 />
                 <span className="text-[14px]">2</span>
               </div>
@@ -472,7 +472,7 @@ export default function Home() {
                   src="/assets/icon/1668674215-phong-tam.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon"
                 />
                 <span className="text-[14px]">2</span>
               </div>
@@ -481,7 +481,7 @@ export default function Home() {
                   src="/assets/icon/1668674224-dien-tich.png"
                   width={30}
                   height={30}
-                  alt=""
+                  alt="icon"
                 />
                 <span className="text-[14px]">95m2</span>
               </div>
@@ -498,7 +498,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp chiếu sáng</span>
@@ -516,7 +516,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp điều khiển</span>
@@ -528,7 +528,7 @@ export default function Home() {
                       src="/assets/icon/icon-check.png"
                       width={12}
                       height={12}
-                      alt=""
+                      alt="icon"
                     />
                   </div>
                   <span className="text-[12px]">Giải pháp truyền hình</span>
@@ -566,7 +566,7 @@ export default function Home() {
                 src="/assets/images/session/apartment-types-1.webp"
                 width={624}
                 height={502}
-                alt=""
+                alt="icon"
               />
             </div>
             <div className="basis-1/2 p-[30px] max-md:basis-full ">
@@ -585,7 +585,7 @@ export default function Home() {
                         src="/assets/icon/icon-check.png"
                         width={14}
                         height={14}
-                        alt=""
+                        alt="icon"
                       />
                     </div>
                     <p className="text-[18px] max-md:text-[10px]">
@@ -607,7 +607,7 @@ export default function Home() {
                         src="/assets/icon/icon-check.png"
                         width={14}
                         height={14}
-                        alt=""
+                        alt="icon"
                       />
                     </div>
                     <p className="text-[18px] max-md:text-[10px]">
@@ -649,7 +649,7 @@ export default function Home() {
                 src="/assets/images/session/apartment-types-2.webp"
                 width={624}
                 height={502}
-                alt=""
+                alt="banner apartment "
               />
             </div>
             <div className="basis-1/2 p-[30px] max-md:basis-full">
@@ -668,7 +668,7 @@ export default function Home() {
                         src="/assets/icon/icon-check.png"
                         width={14}
                         height={14}
-                        alt=""
+                        alt="icon"
                       />
                     </div>
                     <p className="text-[18px] max-md:text-[10px] ">
@@ -682,7 +682,7 @@ export default function Home() {
                         src="/assets/icon/icon-check.png"
                         width={14}
                         height={14}
-                        alt=""
+                        alt="icon"
                       />
                     </div>
                     <p className="text-[18px] max-md:text-[10px]">
@@ -698,7 +698,7 @@ export default function Home() {
                         src="/assets/icon/icon-check.png"
                         width={14}
                         height={14}
-                        alt=""
+                        alt="icon"
                       />
                     </div>
                     <p className="text-[18px] max-md:text-[10px]">
@@ -712,7 +712,7 @@ export default function Home() {
                         src="/assets/icon/icon-check.png"
                         width={14}
                         height={14}
-                        alt=""
+                        alt="icon"
                       />
                     </div>
                     <p className="text-[18px] max-md:text-[10px]">
@@ -832,7 +832,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668675146-thumb-tvc-hanh-phuc-gian-don.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -842,7 +842,7 @@ export default function Home() {
                   src="/assets/images/thumnail/1668675245-310720832_889022925815309_5539906073800026258_n.jpg"
                   width={831}
                   height={552}
-                  alt=""
+                  alt="thumnail video fpt smart home"
                 />
               </div>
             </SwiperSlide>
@@ -853,7 +853,7 @@ export default function Home() {
                   src="/assets/images/thumnail/1668675289-DSCF5069-compressed.jpg"
                   width={831}
                   height={552}
-                  alt=""
+                  alt="thumnail video fpt smart home"
                 />
               </div>
             </SwiperSlide>
@@ -862,7 +862,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668676434-song-thong-minh-hon-voi-fpt-smart-home.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -870,7 +870,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668676619-amazing-living-compressed.jpg"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -878,7 +878,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668676634-clip-duy-luan.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -886,7 +886,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668676654-dan-anh.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -894,7 +894,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668676675-vat-vo-studio.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -902,7 +902,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1668676700-can-ho-thong-minh-20t.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -910,7 +910,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1669797840-Tim-phim-bang-ten-dien-vien.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -918,7 +918,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1669798500-Ket-Hop-Giua-Cam-Bien-Cua-va-Cam-Bien-Chuyen-Dong.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -926,7 +926,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1669798520-Trai-Nghiem-Thuc-Te-He-Thong-Rem-Thong-Minh.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -934,7 +934,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1669798534-Huong-Dan-Cac-Cau-Lenh-Tim-Noi-Dung-Tren-FPT-Play-Box.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -942,7 +942,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1669798557-dieu-khien-he-thong-den-bang-giong-noi.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -950,7 +950,7 @@ export default function Home() {
                 src="/assets/images/thumnail/1669798601-Demo-hoat-dong-cam-bien-cua.png"
                 width={831}
                 height={552}
-                alt=""
+                alt="thumnail video fpt smart home"
               />
             </SwiperSlide>
           </Swiper>
@@ -1072,7 +1072,7 @@ export default function Home() {
             src="/assets/images/session/faq-image.webp"
             width={511}
             height={689}
-            alt=""
+            alt="faq fpt smart home"
           />
         </div>
       </section>

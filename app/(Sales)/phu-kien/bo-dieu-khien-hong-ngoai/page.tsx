@@ -64,7 +64,7 @@ export default function Page() {
                   src={option?.image}
                   width={300}
                   height={300}
-                  alt=""
+                  alt="Bộ Điều Khiển Hồng Ngoại"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -129,7 +129,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1684406592-PR-FSH-5-2022_600X375-2.jpg"
               width={500}
               height={500}
-              alt=""
+              alt="Bộ Điều Khiển Hồng Ngoại"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -225,7 +225,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1685088416-Tinh-nang-dieu-hoa-IR-web.jpg"
               width={1000}
               height={500}
-              alt=""
+              alt="Bộ Điều Khiển Hồng Ngoại"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               3. Tính năng của Bộ điều khiển hồng ngoại FPT Smart Home
@@ -275,7 +275,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1685615898-He-lo-bi-quyet-giup-ban-sung-suong-cung-dieu-hoa-suot-ca-ngay3-ban-web.jpg"
               width={1000}
               height={500}
-              alt=""
+              alt="Bộ Điều Khiển Hồng Ngoại"
             />
 
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
@@ -292,7 +292,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1685088416-Tinh-nang-dieu-hoa-IR-web2.jpg"
               width={1000}
               height={500}
-              alt=""
+              alt="Bộ Điều Khiển Hồng Ngoại"
             />
 
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">

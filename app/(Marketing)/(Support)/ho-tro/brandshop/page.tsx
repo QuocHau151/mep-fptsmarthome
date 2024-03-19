@@ -102,7 +102,7 @@ export default function Page() {
             src="/assets/images/support/brandshop-content1.jpg"
             width={700}
             height={900}
-            alt=""
+            alt=" FPT BrandShop"
           />
         </div>
         <div>
@@ -478,7 +478,7 @@ export default function Page() {
                     src="/assets/images/support/slider-brandshop-1.webp"
                     width={1920}
                     height={1080}
-                    alt=""
+                    alt=" FPT BrandShop"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -486,7 +486,7 @@ export default function Page() {
                     src="/assets/images/support/slider-brandshop-2.webp"
                     width={1920}
                     height={1080}
-                    alt=""
+                    alt=" FPT BrandShop"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -494,7 +494,7 @@ export default function Page() {
                     src="/assets/images/support/slider-brandshop-3.webp"
                     width={1920}
                     height={1080}
-                    alt=""
+                    alt=" FPT BrandShop"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -502,7 +502,7 @@ export default function Page() {
                     src="/assets/images/support/slider-brandshop-4.webp"
                     width={1920}
                     height={1080}
-                    alt=""
+                    alt=" FPT BrandShop"
                   />
                 </SwiperSlide>
 
@@ -511,7 +511,7 @@ export default function Page() {
                     src="/assets/images/support/slider-brandshop-5.webp"
                     width={1920}
                     height={1080}
-                    alt=""
+                    alt=" FPT BrandShop"
                   />
                 </SwiperSlide>
               </Swiper>

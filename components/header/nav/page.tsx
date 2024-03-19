@@ -118,7 +118,7 @@ export default function Nav() {
               src="/assets/icon/favorite.png"
               width={24}
               height={24}
-              alt=""
+              alt="favorite"
             />
           </div>
           <Sheet>
@@ -128,7 +128,7 @@ export default function Nav() {
                   src="/assets/icon/cart.png"
                   width={24}
                   height={24}
-                  alt=""
+                  alt="cart"
                 />
                 <div className="absolute top-0 -right-[10px] bg-orange-500 w-[15px] h-[15px] text-[10px] text-white rounded-full flex items-center justify-center">
                   {cart.length}

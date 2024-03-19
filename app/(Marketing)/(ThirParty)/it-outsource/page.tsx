@@ -205,7 +205,7 @@ export default function Page() {
                   <Image
                     className="w-[300px] mx-auto"
                     src="/assets/images/outsource/IT-BASIC-GIF.gif"
-                    alt=""
+                    alt=" GÓI DỊCH VỤ IT OUTSOURCE FPT"
                     width={500}
                     height={300}
                   />
@@ -291,7 +291,7 @@ export default function Page() {
                   <Image
                     className="w-[250px] mx-auto"
                     src="/assets/images/outsource/IT-PRO-GIF.gif"
-                    alt=""
+                    alt=" GÓI DỊCH VỤ IT OUTSOURCE FPT"
                     width={500}
                     height={300}
                   />
@@ -381,7 +381,7 @@ export default function Page() {
                   <Image
                     className="w-[250px] mx-auto"
                     src="/assets/images/outsource/IT-VIP-GIF.gif"
-                    alt=""
+                    alt=" GÓI DỊCH VỤ IT OUTSOURCE FPT"
                     width={500}
                     height={300}
                   />

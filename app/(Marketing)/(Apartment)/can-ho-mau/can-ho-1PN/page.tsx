@@ -95,7 +95,7 @@ export default function CanHo1PN() {
                 width={700}
                 height={700}
                 quality={100}
-                alt=""
+                alt="Căn hộ 1 Phòng ngủ"
                 className=""
               />
 
@@ -120,7 +120,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Bộ điều khiển hồng ngoại"
                         className="mt-[-30px]"
                       />
                       <h3 className="text-[22px] font-semibold mt-[-40px]">
@@ -150,7 +150,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Công tắc cảm ứng 1 nút Chữ Nhật"
                         className=""
                       />
                       <h3 className="text-[22px] font-semibold ">
@@ -179,7 +179,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Công tắc cảm ứng 2 nút Chữ Nhật"
                         className=""
                       />
                       <h3 className="text-[22px] font-semibold ">
@@ -209,7 +209,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Cảm Biến Chuyển Động"
                         className=""
                       />
                       <h3 className="text-[22px] font-semibold ">
@@ -238,7 +238,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt=" Cảm Biến Cửa"
                         className=""
                       />
                       <h3 className="text-[22px] font-semibold ">
@@ -267,7 +267,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="FPT Play Box S"
                         className=""
                       />
                       <h3 className="text-[22px] font-semibold ">
@@ -285,7 +285,7 @@ export default function CanHo1PN() {
                 width={750}
                 height={750}
                 quality={100}
-                alt=""
+                alt="căn hộ 1 phòng ngủ"
               />
 
               <div className="" onClick={() => setIsOpen(1)}>
@@ -308,7 +308,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Bộ điều khiển hồng ngoại"
                         className="mt-[-30px]"
                       />
                       <h3 className="text-[30px] font-semibold mt-[-40px]">
@@ -337,7 +337,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Công tắc cảm ứng 1 nút Chữ Nhật"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -365,7 +365,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Công tắc cảm ứng 2 nút Chữ Nhật"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -394,7 +394,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Cảm Biến Chuyển Động"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -422,7 +422,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Cảm Biến Cửa"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -450,7 +450,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="FPT Play Box S"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -467,7 +467,7 @@ export default function CanHo1PN() {
                 width={1000}
                 height={1000}
                 quality={100}
-                alt=""
+                alt="căn hộ 1 phòng ngủ"
               />
 
               <div className="" onClick={() => setIsOpen(1)}>
@@ -490,7 +490,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Bộ điều khiển hồng ngoại"
                         className="mt-[-30px]"
                       />
                       <h3 className="text-[30px] font-semibold mt-[-40px]">
@@ -520,7 +520,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt=" Công tắc cảm ứng 1 nút Chữ Nhật"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -549,7 +549,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Công tắc cảm ứng 2 nút Chữ Nhật"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -579,7 +579,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Cảm Biến Chuyển Động"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -608,7 +608,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="Cảm Biến Cửa"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -637,7 +637,7 @@ export default function CanHo1PN() {
                         width={250}
                         height={200}
                         quality={100}
-                        alt=""
+                        alt="FPT Play Box S"
                         className=""
                       />
                       <h3 className="text-[30px] font-semibold ">
@@ -670,7 +670,9 @@ export default function CanHo1PN() {
                       <TableColumn className="w-[350px]">
                         Tên sản phẩm
                       </TableColumn>
-                      <TableColumn className="w-[140px] ">Đơn giá</TableColumn>
+                      <TableColumn className="w-[140px] max-md:hidden">
+                        Đơn giá
+                      </TableColumn>
                       <TableColumn className="w-[140px]">Số lượng</TableColumn>
                       <TableColumn className="w-[140px]">
                         Thành tiền
@@ -695,7 +697,7 @@ export default function CanHo1PN() {
                               </div>
                             ))}
                           </TableCell>
-                          <TableCell>
+                          <TableCell className="max-md:hidden">
                             {product.items.map((item, index) => (
                               <div
                                 key={index}
@@ -792,7 +794,7 @@ export default function CanHo1PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
           className=""
         />
         <Image
@@ -800,7 +802,7 @@ export default function CanHo1PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
           className=""
         />
         <Image
@@ -808,7 +810,7 @@ export default function CanHo1PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
           className=""
         />
         <Image
@@ -816,7 +818,7 @@ export default function CanHo1PN() {
           width={1000}
           height={1000}
           quality={100}
-          alt=""
+          alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
           className=""
         />
       </div>
@@ -843,7 +845,7 @@ export default function CanHo1PN() {
                     src="/assets/images/apartment/2pn/phong-ngu-6.png"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
                     className="object-cover"
                   />
                 </div>
@@ -861,7 +863,7 @@ export default function CanHo1PN() {
                     src="/assets/images/apartment/2pn/phong-ngu-6.png"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
                     className="object-cover"
                   />
                 </div>
@@ -878,7 +880,7 @@ export default function CanHo1PN() {
                     src="/assets/images/apartment/2pn/phong-ngu-6.png"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
                     className="object-cover"
                   />
                 </div>
@@ -895,7 +897,7 @@ export default function CanHo1PN() {
                     src="/assets/images/apartment/2pn/phong-ngu-6.png"
                     width={468}
                     height={468}
-                    alt=""
+                    alt="Toàn cảnh Căn Hộ 1 Phòng Ngủ"
                     className="object-cover"
                   />
                 </div>

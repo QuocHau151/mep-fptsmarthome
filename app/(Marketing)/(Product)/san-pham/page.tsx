@@ -30,7 +30,7 @@ export default function Product() {
             src="/assets/images/product/bo-dieu-khien-trung-tam.png"
             width={600}
             height={600}
-            alt=""
+            alt="Bộ điều khiển trung tâm fpt smart home"
           />
         </Link>
       </div>
@@ -40,7 +40,7 @@ export default function Product() {
             src="/assets/images/product/1692088715-Light-Led-Bulb.png"
             width={450}
             height={450}
-            alt=""
+            alt="đèn led bulb fpt smart home"
           />
         </Link>
         <Link href="/den-thong-minh" className="max-w-[420px]">
@@ -65,7 +65,7 @@ export default function Product() {
             src="/assets/images/product/1692090463-Cam-bien-chuyen-dong.png"
             width={450}
             height={450}
-            alt=""
+            alt="cảm biến chuyển động fpt smart home"
           />
         </Link>
       </div>
@@ -75,7 +75,7 @@ export default function Product() {
             src="/assets/images/product/1692151116-cong-tac-thong-minh-page-thiet-bi.png"
             width={450}
             height={450}
-            alt=""
+            alt="công tắc thông minh fpt smart home"
           />
         </Link>
 
@@ -99,7 +99,7 @@ export default function Product() {
             src="/assets/images/product/1692088539-Bo-Dieu-Khien-Rem.png"
             width={450}
             height={450}
-            alt=""
+            alt="bộ điều khiển rèm cửa fpt smart home"
           />
         </Link>
       </div>
@@ -110,7 +110,7 @@ export default function Product() {
             src="/assets/images/product/1692151096-o-cam-thong-minh-page-thiet-bi.png"
             width={450}
             height={450}
-            alt=""
+            alt="ổ cắm thông minh fpt smart home"
           />
         </Link>
 
@@ -137,7 +137,7 @@ export default function Product() {
             src="/assets/images/product/1692088779-Camera-SE.png"
             width={450}
             height={450}
-            alt=""
+            alt="Camera an ninh fpt smart home"
           />
         </Link>
       </div>
@@ -148,7 +148,7 @@ export default function Product() {
             src="/assets/images/product/1692088791-Khoa-YAle.png"
             width={450}
             height={450}
-            alt=""
+            alt="khoá cửa thông minh fpt smart home"
           />
         </Link>
 

@@ -33,7 +33,7 @@ export default function Apartment() {
               src="/assets/images/apartment/1668590328-Group-423.png"
               width={481}
               height={418}
-              alt=""
+              alt=" Căn hộ 1 phòng ngủ"
             />
             <h5 className="text-[20px] font-semibold text-slate-800 text-center">
               Căn hộ 1 phòng ngủ
@@ -51,7 +51,7 @@ export default function Apartment() {
               src="/assets/images/apartment/1668590337-Group-425.png"
               width={481}
               height={418}
-              alt=""
+              alt="Căn hộ 2 phòng ngủ"
             />
             <h5 className="text-[20px] font-semibold text-slate-800 text-center">
               Căn hộ 2 phòng ngủ
@@ -69,7 +69,7 @@ export default function Apartment() {
               src="/assets/images/apartment/1668590344-Group-435.png"
               width={481}
               height={418}
-              alt=""
+              alt="Căn hộ 3 phòng ngủ"
             />
             <h5 className="text-[20px] font-semibold text-slate-800 text-center">
               Căn hộ 3 phòng ngủ
@@ -87,7 +87,7 @@ export default function Apartment() {
               src="/assets/images/apartment/1668595095-3tang.png"
               width={481}
               height={418}
-              alt=""
+              alt="Nhà phố 3 tầng"
             />
             <h5 className="text-[20px] font-semibold text-slate-800 text-center">
               Nhà phố 3 tầng
@@ -106,7 +106,7 @@ export default function Apartment() {
                 src="/assets/images/apartment/1676444283-penthouse.jpg"
                 width={481}
                 height={481}
-                alt=""
+                alt="Căn hộ Duplex 2 phòng ngủ"
               />
             </div>
 

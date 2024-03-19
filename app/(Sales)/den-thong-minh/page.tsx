@@ -30,7 +30,7 @@ export default function Page() {
               src="/assets/images/product/1669265012-Led-2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Đèn thông minh tại FPT Smart Home"
             />
             <h3 className="text-center font-semibold">
               Đèn LED Downlight Thông Minh
@@ -44,7 +44,7 @@ export default function Page() {
               src="/assets/images/product/1692088715-Light-Led-Bulb.png"
               width={170}
               height={100}
-              alt=""
+              alt="Đèn LED Buld Thông Minh"
             />
             <h3 className="text-center font-semibold">
               Đèn LED Buld Thông Minh
@@ -58,7 +58,7 @@ export default function Page() {
               src="/assets/images/product/1668509256-PTS-LED-Panel-vuong-2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Đèn LED Panel Thông Minh"
             />
             <h3 className="text-center font-semibold">
               Đèn LED Panel Thông Minh
@@ -72,7 +72,7 @@ export default function Page() {
               src="/assets/images/product/1669265318-PTS-LightStrip-2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Đèn LED Dây Thông Minh"
             />
             <h3 className="text-center font-semibold">
               Đèn LED Dây Thông Minh
@@ -86,7 +86,7 @@ export default function Page() {
               src="/assets/images/product/1669265162-PTS-LED-tracklight-trang-.png"
               width={170}
               height={100}
-              alt=""
+              alt="Đèn LED Tracklight Thông Minh"
             />
             <h3 className="text-center font-semibold">
               Đèn LED Tracklight Thông Minh
@@ -126,7 +126,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456837-Group-1073.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[13px]">
                 Điều khiển giọng nói
@@ -138,7 +138,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456645-Group-1072.png"
                 width={70}
                 height={70}
-                alt=""
+                alt=" Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[13px]">
                 Điều khiển giọng nói
@@ -256,7 +256,7 @@ export default function Page() {
               src="/assets/images/product/1669265012-Led-2.png"
               width={400}
               height={400}
-              alt=""
+              alt="Đèn LED Tracklight Thông Minh"
             ></Image>
             <p className="max-md:text-[14px]">Thông số kỹ thuật:</p>
             <ul className="ml-[40px] list-disc max-md:text-[14px]">
@@ -285,7 +285,7 @@ export default function Page() {
               src="/assets/images/product/1692088715-Light-Led-Bulb.png"
               width={400}
               height={400}
-              alt=""
+              alt="Đèn LED Bulb Thông Minh"
             ></Image>
             <p className="max-md:text-[14px]">Thông số kỹ thuật:</p>
             <ul className="ml-[40px] list-disc max-md:text-[14px]">
@@ -315,7 +315,7 @@ export default function Page() {
               src="/assets/images/product/1668509256-PTS-LED-Panel-vuong-2.png"
               width={400}
               height={400}
-              alt=""
+              alt="Đèn LED Panel Thông Minh"
             ></Image>
             <p className="max-md:text-[14px]">Thông số kỹ thuật:</p>
             <ul className="ml-[40px] list-disc max-md:text-[14px]">
@@ -341,7 +341,7 @@ export default function Page() {
               src="/assets/images/product/1669265318-PTS-LightStrip-2.png"
               width={400}
               height={400}
-              alt=""
+              alt=" Đèn LED Dây Thông Minh"
             ></Image>
             <p className="max-md:text-[14px]">Thông số kỹ thuật:</p>
             <ul className="ml-[40px] list-disc max-md:text-[14px]">
@@ -368,7 +368,7 @@ export default function Page() {
               src="/assets/images/product/1669265162-PTS-LED-tracklight-trang-.png"
               width={400}
               height={400}
-              alt=""
+              alt="Đèn LED Track Light Thông Minh"
             ></Image>
             <p className="max-md:text-[14px]">Thông số kỹ thuật:</p>
             <ul className="ml-[40px] list-disc max-md:text-[14px]">

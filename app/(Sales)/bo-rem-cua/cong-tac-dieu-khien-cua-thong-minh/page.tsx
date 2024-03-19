@@ -74,7 +74,7 @@ export default function Page() {
                   src={option?.image}
                   width={585}
                   height={500}
-                  alt=""
+                  alt="Bộ Điều Khiển Rèm Cửa Thông Minh"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -279,7 +279,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1668570142-cong-tac-rem.png"
               width={500}
               height={300}
-              alt=""
+              alt=" Công Tắc Điều Khiển Rèm Cửa Thông Minh"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">

@@ -81,7 +81,7 @@ export default function Page() {
                   src={option?.image}
                   width={300}
                   height={300}
-                  alt=""
+                  alt="Công Tắc Cảm Ứng Hera"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -334,7 +334,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1668569293-cong-tac-hera.png"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Hera"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -427,7 +427,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1698655315-z4831320376271_4f0395066fa3d7828250a9d5caee61b7.jpg"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Hera"
             />
             <p>
               Cũng như người anh em tiền nhiệm, bề mặt công tắc cảm ứng Hera
@@ -486,7 +486,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1698655315-z4831320401395_a90e4e7440fd0d5eb083510cfd1462bc.jpg"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Hera"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng của công tắc cảm ứng

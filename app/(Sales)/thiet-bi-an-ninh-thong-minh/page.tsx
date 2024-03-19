@@ -33,7 +33,7 @@ export default function Page() {
               src="/assets/images/product/1684224845-cam-SE-x-XM.1.png"
               width={170}
               height={100}
-              alt=""
+              alt="Thiết bị an ninh thông minh Camera SE FPT"
             />
             <h3 className="text-center font-semibold">Camera SE FPT</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">

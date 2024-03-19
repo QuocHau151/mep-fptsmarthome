@@ -63,7 +63,7 @@ export default function Page() {
                 src={option?.image ?? ""}
                 width={585}
                 height={500}
-                alt=""
+                alt="Bộ Rèm Cửa FPT Smart Home"
               />
             </div>
             <div className="basis-1/2 bg-white w-full h-min rounded-2xl px-6 pb-[30px]">
@@ -125,7 +125,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1668569332-dong-co-rem.png"
               width={500}
               height={500}
-              alt=""
+              alt="Bộ Điều Khiển Rèm Cửa Thông Minh"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -184,7 +184,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1692178015-Bo-Dieu-Khien-Rem-Cua-copy.jpg"
               width={1250}
               height={800}
-              alt=""
+              alt="Bộ Điều Khiển Rèm Cửa Thông Minh"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Rèm cửa thông minh là gì?

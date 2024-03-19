@@ -33,7 +33,7 @@ export default function Page() {
               src="/assets/images/product/bo-dieu-khien-trung-tam.png"
               width={170}
               height={100}
-              alt=""
+              alt="Bộ điều khiển trung tâm FPT Play Box S"
             />
             <h3 className="text-center font-semibold">FPT Play Box S</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -49,7 +49,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456837-Group-1073.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -61,7 +61,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456645-Group-1072.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -73,7 +73,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456652-Group-1071.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Kết nối Zigbee"
               />
               <p className="text-[18px] max-md:text-[12px]">Kết nối Zigbee</p>
             </div>

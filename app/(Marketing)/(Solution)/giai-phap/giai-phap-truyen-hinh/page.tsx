@@ -40,7 +40,7 @@ export default function SecuritySolution() {
             src="/assets/images/solution/truyen-hinh/1691489240-Asset-3-fix.jpg"
             width={860}
             height={600}
-            alt=""
+            alt="Chuyển kênh, mở phim bằng giọng nói Tiếng Việt"
           />
           <div className="max-w-[490px] px-[10px] py-[25px] w-3/4 bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10 max-md:text-[20px] max-lg:px-3">
@@ -55,7 +55,7 @@ export default function SecuritySolution() {
             src="/assets/images/solution/truyen-hinh/1691489224-Asset-6.jpg"
             width={860}
             height={600}
-            alt=""
+            alt=" Mua hàng qua TV với Shop Play"
           />
           <div className="max-w-[490px] px-[10px] py-[25px] w-3/4 bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10 max-md:text-[20px]">
@@ -91,7 +91,7 @@ export default function SecuritySolution() {
                   src="/assets/images/solution/truyen-hinh/1668670888-Boxx.png"
                   width={900}
                   height={900}
-                  alt=""
+                  alt="FPT Play Box S"
                 />
               </div>
               <h5 className="text-h6 font-semibold">FPT Play Box S</h5>
@@ -105,7 +105,7 @@ export default function SecuritySolution() {
                   src="/assets/images/solution/truyen-hinh/1668509369-USB-ZigBee.png"
                   width={900}
                   height={900}
-                  alt=""
+                  alt="USB ZigBee"
                 />
               </div>
 
@@ -135,7 +135,8 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/truyen-hinh/1668583126-Group-670.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="Xem bóng đá thể thao thả ga với các kênh độc quyền chỉ có trên
+                FPT Smart Home"
               />
             </div>
             <div className="flex items-left flex-col  bg-gray-100  px-20 py-[150px] rounded-r-[30px] gap-4 max-md:basis-full max-md:h-min max-md:py-6  max-md:text-center max-md:rounded-[0px] max-md:px-2 max-md:mx-10">
@@ -163,7 +164,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/truyen-hinh/1668583140-Group-662.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="Giải Pháp Nhà Thông Minh"
               />
             </div>
           </div>
@@ -185,7 +186,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/1693974974-Asset-3.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp Điều Khiển"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Điều Khiển
@@ -199,7 +200,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/1693974986-Asset-4.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp Chiếu Sáng"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Chiếu Sáng
@@ -213,7 +214,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/1668575279-Group-677.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp An Ninh"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp An Ninh

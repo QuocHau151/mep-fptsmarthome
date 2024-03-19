@@ -40,7 +40,7 @@ export default function LightSolution() {
             src="/assets/images/solution/chieu-sang/1668581725-Group-657.png"
             width={860}
             height={600}
-            alt=""
+            alt=" Tự động bật đèn khi mở cửa"
           />
           <div className="w-3/4 px-[10px] py-[25px] bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10">
@@ -58,7 +58,7 @@ export default function LightSolution() {
             src="/assets/images/solution/chieu-sang/1691489122-Asset-4.jpg"
             width={860}
             height={600}
-            alt=""
+            alt="Bật/ tắt đèn bằng giọng nói Tiếng Việt"
           />
           <div className="w-3/4 px-[10px] py-[25px]  bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10">
@@ -103,7 +103,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668508191-Led.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Đèn LED Downlight Thông Minh"
               />
             </div>
             <h5 className="text-h6 font-semibold">
@@ -119,7 +119,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668509155-PTS-LED-Bulb-1.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Đèn LED Bulb Thông Minh"
               />
             </div>
 
@@ -134,7 +134,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668509205-PTS-LED-Panel-tron.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Đèn LED Panel Thông Minh"
               />
             </div>
 
@@ -149,7 +149,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668509439-PTS-LightStrip-2.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Đèn LED Dây Thông Minh"
               />
             </div>
 
@@ -164,7 +164,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668509500-PTS-LED-tracklight-trang-.png"
                 width={900}
                 height={900}
-                alt=""
+                alt=" Đèn LED Tracklight Thông Minh"
               />
             </div>
 
@@ -181,7 +181,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668670888-Boxx.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="FPT Play Box S"
               />
             </div>
 
@@ -196,7 +196,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668508037-Cam-Bien-Cua-Thong-Minh1.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Cảm Biến Cửa"
               />
             </div>
 
@@ -211,7 +211,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668507239-Cam-Bien-Chuyen-Dong-Zig-Bee.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Cảm Biến Chuyển Động"
               />
             </div>
 
@@ -226,7 +226,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1693885854-CTCU-Athena-Vuong9.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Công Tắc Cảm Ứng Athera"
               />
             </div>
 
@@ -254,7 +254,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668581843-Group-666.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="Hẹn giờ linh hoạt"
               />
             </div>
 
@@ -285,7 +285,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668581854-Group-673.png"
                 width={589}
                 height={589}
-                alt=""
+                alt=" Tắt/ bật đèn linh hoạt theo nhóm hoặc riêng lẻ"
               />
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668581871-Group-674.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="  Điều chỉnh cường độ ánh sáng và màu sắc theo thời"
               />
             </div>
 
@@ -328,7 +328,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1693974974-Asset-3.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp Điều Khiển"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Điều Khiển
@@ -342,7 +342,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668575279-Group-677.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp An Ninh"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp An Ninh
@@ -356,7 +356,7 @@ export default function LightSolution() {
                 src="/assets/images/solution/chieu-sang/1668575336-Group-678.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp Truyền Hình"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Truyền Hình

@@ -33,7 +33,7 @@ export default function Support() {
               src="/assets/images/support/support-image-1.jpg"
               width={646}
               height={345}
-              alt=""
+              alt="CUSTOMER SERVICE"
             />
           </div>
           <div className="flex items-center justify-center gap-[200px] pt-10">
@@ -42,7 +42,7 @@ export default function Support() {
               src="/assets/images/support/support-image-2.jpg"
               width={646}
               height={345}
-              alt=""
+              alt="Đăng ký đại lý | Đăng ký cộng Tác Viên"
             />
             <Link href="/ho-tro/doi-tac" className="max-w-[420px]">
               <h3 className="text-h5 font-bold mb-4">Đối tác</h3>

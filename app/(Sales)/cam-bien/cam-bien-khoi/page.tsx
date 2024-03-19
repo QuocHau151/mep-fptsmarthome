@@ -67,7 +67,7 @@ export default function Page() {
                   src={option?.image}
                   width={585}
                   height={585}
-                  alt=""
+                  alt="Cảm Biến Khói Thông Minh"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -130,7 +130,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1697685911-945x764.jpg"
               width={500}
               height={500}
-              alt=""
+              alt="Cảm Biến Khói Thông Minh"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -193,7 +193,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1698721516-831x552-copy.jpg"
               width={850}
               height={600}
-              alt=""
+              alt="Cảm Biến Khói Thông Minh"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Cảm biến khói là gì?

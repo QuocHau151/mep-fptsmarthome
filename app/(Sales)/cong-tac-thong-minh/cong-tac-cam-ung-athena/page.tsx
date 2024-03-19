@@ -80,7 +80,7 @@ export default function Page() {
                   src={option?.image}
                   width={585}
                   height={585}
-                  alt=""
+                  alt="Công Tắc Cảm Ứng Athena"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -301,7 +301,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1668569275-cong-tac-athena.png"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -413,7 +413,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1693306782-a6dfa70535eee6b0bfff.jpg"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena vuông"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Công tắc cảm ứng hình vuông
@@ -423,7 +423,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1693306781-5c3d05ca6f9cbdc2e48d.jpg"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena"
             />
             <p>
               Dựa trên nguyên tắc hoạt động tiên tiến, công tắc cảm ứng không
@@ -474,7 +474,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1693306782-7e0a2b7666d6b588ecc718.jpg"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Chức năng của công tắc cảm ứng thông minh Athena
@@ -521,7 +521,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1693306782-5da2db7a49919acfc380.jpg"
               width={500}
               height={300}
-              alt=""
+              alt="Công Tắc Cảm Ứng Athena"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng của công tắc cảm ứng Athena

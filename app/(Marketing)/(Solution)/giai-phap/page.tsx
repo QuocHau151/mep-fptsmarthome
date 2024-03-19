@@ -23,7 +23,7 @@ export default function Solution() {
               src="/assets/images/solution/1693974974-Asset-3.png"
               width={550}
               height={550}
-              alt=""
+              alt="Giải Pháp Điều Khiển"
             />
             <div className="text-left flex flex-col">
               <h3 className="text-h4 font-semibold mb-4">
@@ -40,7 +40,7 @@ export default function Solution() {
               src="/assets/images/solution/1693974986-Asset-4.png"
               width={550}
               height={550}
-              alt=""
+              alt="Giải Pháp Chiếu Sáng"
             />
             <div className="text-right flex flex-col">
               <h3 className="text-h4 font-semibold mb-4">
@@ -59,7 +59,7 @@ export default function Solution() {
               src="/assets/images/solution/1668575279-Group-677.png"
               width={550}
               height={550}
-              alt=""
+              alt="Giải Pháp An Ninh"
             />
             <div className="text-left flex flex-col">
               <h3 className="text-h4 font-semibold mb-4">Giải Pháp An Ninh</h3>
@@ -74,7 +74,7 @@ export default function Solution() {
               src="/assets/images/solution/1668575336-Group-678.png"
               width={550}
               height={550}
-              alt=""
+              alt="Giải Pháp Truyền Hình"
             />
             <div className="text-right flex flex-col">
               <h3 className="text-h4 font-semibold mb-4">

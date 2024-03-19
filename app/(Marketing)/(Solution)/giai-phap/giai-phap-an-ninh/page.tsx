@@ -40,7 +40,7 @@ export default function SecuritySolution() {
             src="/assets/images/solution/an-ninh/1668582950-Group-653.png"
             width={860}
             height={600}
-            alt=""
+            alt="Camera SE phát hiện người và gửi cảnh báo"
           />
           <div className="w-4/5 h-min px-[10px] py-[25px] bg-gray-100 mb-10 flex flex-col items-center">
             <h5 className="text-h5 font-semibold mb-6 px-10 max-md:text-[20px]">
@@ -59,7 +59,7 @@ export default function SecuritySolution() {
             src="/assets/images/solution/an-ninh/1668582961-Group-652.png"
             width={860}
             height={600}
-            alt=""
+            alt="Camera SE phát hiện người và gửi cảnh báo"
           />
           <div className="w-4/5  h-min px-[10px] py-[25px]  bg-gray-100 mb-10">
             <h5 className="text-h5 font-semibold mb-6 px-10 max-md:text-[20px]">
@@ -103,7 +103,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668670888-Boxx.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="FPT Play Box S"
               />
             </div>
             <h5 className="text-h6 font-semibold">FPT Play Box S</h5>
@@ -117,7 +117,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668508037-Cam-Bien-Cua-Thong-Minh1.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Cảm Biến Cửa"
               />
             </div>
 
@@ -132,7 +132,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668507239-Cam-Bien-Chuyen-Dong-Zig-Bee.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Cảm Biến Chuyển Động"
               />
             </div>
 
@@ -147,7 +147,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1684225838-cam-SE-x-XM.1.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Camera SE FPT"
               />
             </div>
 
@@ -162,7 +162,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668569058-3.YDM7116A_Black_DHZY013.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Khoá Cửa Vân Tay Yale"
               />
             </div>
 
@@ -177,7 +177,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668569184-7.-YDM3109-SILVER-DHZY0110.png"
                 width={900}
                 height={900}
-                alt=""
+                alt="Khoá Cửa Thẻ Từ Yale"
               />
             </div>
 
@@ -205,7 +205,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1670833435-Group-654.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="Cảm biến cửa giúp kiểm soát an ninh tại cửa ra vào"
               />
             </div>
             <div className="flex items-left flex-col h-3/4 basis-1/2  bg-gray-100  px-20 py-20 rounded-r-[30px] gap-4 max-md:basis-full max-md:h-min max-md:py-6  max-md:text-center max-md:rounded-[0px] max-md:px-2 max-md:mx-10 ">
@@ -233,7 +233,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668582986-Group-668.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="Giải pháp an ninh fpt smart home"
               />
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/an-ninh/1668582997-Group-671.png"
                 width={589}
                 height={589}
-                alt=""
+                alt="Giải pháp an ninh fpt smart home"
               />
             </div>
 
@@ -273,7 +273,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/1693974974-Asset-3.png"
                 width={468}
                 height={468}
-                alt=""
+                alt=" Giải Pháp Điều Khiển"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Điều Khiển
@@ -287,7 +287,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/1693974986-Asset-4.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp Chiếu Sáng"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Chiếu Sáng
@@ -301,7 +301,7 @@ export default function SecuritySolution() {
                 src="/assets/images/solution/1668575336-Group-678.png"
                 width={468}
                 height={468}
-                alt=""
+                alt="Giải Pháp Truyền Hình"
               />
               <h2 className="text-center text-h5 font-semibold">
                 Giải Pháp Truyền Hình

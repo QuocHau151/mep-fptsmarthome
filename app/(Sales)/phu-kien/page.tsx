@@ -33,7 +33,7 @@ export default function Page() {
               src="/assets/images/product/1669265109-O-Cam-Thong-Minh2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Phụ kiện FPT Smart Home"
             />
             <h3 className="text-center font-semibold">Ổ Cắm Thông Minh</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -45,7 +45,7 @@ export default function Page() {
               src="/assets/images/product/1704861598-USB-3.0.1.jpg"
               width={170}
               height={100}
-              alt=""
+              alt="USB Zigbee"
             />
             <h3 className="text-center font-semibold">USB Zigbee</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -57,7 +57,7 @@ export default function Page() {
               src="/assets/images/product/1689753231-Bo-Dieu-Khien-Hong-Ngoai-final-3.png"
               width={170}
               height={100}
-              alt=""
+              alt="Bộ Điều Khiển Hồng Ngoại"
             />
             <h3 className="text-center font-semibold">
               Bộ Điều Khiển Hồng Ngoại
@@ -71,7 +71,7 @@ export default function Page() {
               src="/assets/images/product/1692089191-O-cam-AM-Tuong3.png"
               width={170}
               height={100}
-              alt=""
+              alt="Ổ Cắm Mặt Kính Âm Tường"
             />
             <h3 className="text-center font-semibold">
               Ổ Cắm Mặt Kính Âm Tường
@@ -85,7 +85,7 @@ export default function Page() {
               src="/assets/images/product/1691059200-O-Cam-Wifi2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Ổ Cắm Thông Minh Wifi"
             />
             <h3 className="text-center font-semibold">Ổ Cắm Thông Minh Wifi</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -106,7 +106,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456837-Group-1073.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -118,7 +118,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456645-Group-1072.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Điều khiển giọng nói"
               />
               <p className="text-[18px]  max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -130,7 +130,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456652-Group-1071.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Kết nối Zigbee"
               />
               <p className="text-[18px]  max-md:text-[12px]">Kết nối Zigbee</p>
             </div>

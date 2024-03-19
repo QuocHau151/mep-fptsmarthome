@@ -22,6 +22,7 @@ import {
   TableRow,
   TableCell,
 } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function BaoGia() {
   const searchParams = useSearchParams();
@@ -104,35 +105,39 @@ export default function BaoGia() {
                 NHẬN TƯ VẤN & BÁO GIÁ MIỄN PHÍ
               </h1>
               <div className="py-6 flex items-center justify-center gap-3 max-lg:text-[14px] max-md:flex-col">
-                <Button className="flex items-center bg-slate-600 h-12">
-                  <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
-                    Zalo
-                  </h1>
-                  <h1 className="px-4 ">0775 793 978</h1>
-                </Button>
-                <Button className="flex items-center bg-slate-600 h-12">
-                  <svg
-                    width="30"
-                    height="30"
-                    viewBox="0 0 43 44"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M32.5639 28.7852C32.285 28.4631 31.9401 28.2047 31.5526 28.0277C31.1651 27.8506 30.744 27.759 30.3179 27.759C29.8918 27.759 29.4708 27.8506 29.0833 28.0277C28.6957 28.2047 28.3508 28.4631 28.0719 28.7852C27.0219 29.8262 25.9719 30.8682 24.9389 31.9272C24.8927 31.9946 24.8337 32.0522 24.7651 32.0967C24.6966 32.1413 24.6199 32.1718 24.5395 32.1866C24.4591 32.2014 24.3766 32.2001 24.2967 32.1829C24.2168 32.1656 24.1411 32.1328 24.0739 32.0862C23.3939 31.7152 22.6739 31.4152 22.0179 31.0092C19.0259 29.0722 16.3722 26.6571 14.1629 23.8601C13.0133 22.4998 12.0653 20.9813 11.3479 19.3512C11.2703 19.2168 11.2437 19.059 11.2729 18.9066C11.3021 18.7542 11.3851 18.6173 11.5069 18.5212C12.5569 17.5062 13.5809 16.4651 14.6129 15.4211C14.9514 15.1407 15.2237 14.7889 15.4103 14.3909C15.597 13.9929 15.6933 13.5586 15.6924 13.119C15.6916 12.6795 15.5935 12.2455 15.4054 11.8483C15.2172 11.451 14.9435 11.1003 14.6039 10.8212C13.7839 9.99217 12.9629 9.18016 12.1419 8.35016C11.2949 7.50316 10.4559 6.65015 9.59992 5.80915C9.31874 5.49032 8.97279 5.23514 8.58518 5.06058C8.19757 4.88603 7.77721 4.79612 7.35211 4.79688C6.92701 4.79764 6.50695 4.88904 6.11997 5.06498C5.73298 5.24091 5.38796 5.49732 5.10791 5.81714C4.04891 6.85914 3.03392 7.92717 1.95792 8.95017C0.998194 9.8509 0.42263 11.0869 0.350924 12.4012C0.259046 14.5565 0.644899 16.7055 1.4809 18.6942C3.07214 22.8253 5.3686 26.6487 8.26792 29.9941C12.0805 34.5664 16.8217 38.2757 22.1769 40.8762C24.5672 42.1324 27.1859 42.8945 29.8769 43.1172C30.7731 43.2192 31.6806 43.105 32.5236 42.7842C33.3666 42.4634 34.1204 41.9452 34.7219 41.2732C35.6219 40.2672 36.6369 39.3492 37.5899 38.3871C37.9224 38.1068 38.19 37.7576 38.3741 37.3636C38.5582 36.9696 38.6545 36.5402 38.6562 36.1053C38.6579 35.6704 38.565 35.2404 38.384 34.8449C38.203 34.4495 37.9382 34.0981 37.6079 33.8152C35.9306 32.1305 34.2479 30.4508 32.5599 28.7762"
-                      fill="white"
-                    ></path>
-                    <path
-                      d="M30.878 21.7522L34.135 21.1962C33.6099 18.1449 32.1295 15.3391 29.9073 13.1833C27.6851 11.0274 24.8358 9.6327 21.77 9.2002L21.311 12.4752C23.6828 12.8078 25.8875 13.8854 27.6071 15.5525C29.3266 17.2196 30.472 19.3899 30.878 21.7502"
-                      fill="white"
-                    ></path>
-                    <path
-                      d="M35.9699 7.60046C32.2581 3.86154 27.4194 1.44747 22.1999 0.730469L21.7439 4.00046C26.1378 4.61856 30.222 6.61544 33.4083 9.70343C36.5946 12.7914 38.7185 16.8111 39.4739 21.1835L42.7299 20.6275C41.8817 15.687 39.5195 11.1321 35.9699 7.59247"
-                      fill="white"
-                    ></path>
-                  </svg>
-                  <h1 className="px-4 ">0775 793 978</h1>
-                </Button>
+                <Link href="https://zalo.me/0906030030" target="blank">
+                  <Button className="flex items-center bg-slate-600 h-12">
+                    <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
+                      Zalo
+                    </h1>
+                    <h1 className="px-4 ">0775 793 978</h1>
+                  </Button>
+                </Link>
+                <Link href="tel:0775793978">
+                  <Button className="flex items-center bg-slate-600 h-12">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 43 44"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M32.5639 28.7852C32.285 28.4631 31.9401 28.2047 31.5526 28.0277C31.1651 27.8506 30.744 27.759 30.3179 27.759C29.8918 27.759 29.4708 27.8506 29.0833 28.0277C28.6957 28.2047 28.3508 28.4631 28.0719 28.7852C27.0219 29.8262 25.9719 30.8682 24.9389 31.9272C24.8927 31.9946 24.8337 32.0522 24.7651 32.0967C24.6966 32.1413 24.6199 32.1718 24.5395 32.1866C24.4591 32.2014 24.3766 32.2001 24.2967 32.1829C24.2168 32.1656 24.1411 32.1328 24.0739 32.0862C23.3939 31.7152 22.6739 31.4152 22.0179 31.0092C19.0259 29.0722 16.3722 26.6571 14.1629 23.8601C13.0133 22.4998 12.0653 20.9813 11.3479 19.3512C11.2703 19.2168 11.2437 19.059 11.2729 18.9066C11.3021 18.7542 11.3851 18.6173 11.5069 18.5212C12.5569 17.5062 13.5809 16.4651 14.6129 15.4211C14.9514 15.1407 15.2237 14.7889 15.4103 14.3909C15.597 13.9929 15.6933 13.5586 15.6924 13.119C15.6916 12.6795 15.5935 12.2455 15.4054 11.8483C15.2172 11.451 14.9435 11.1003 14.6039 10.8212C13.7839 9.99217 12.9629 9.18016 12.1419 8.35016C11.2949 7.50316 10.4559 6.65015 9.59992 5.80915C9.31874 5.49032 8.97279 5.23514 8.58518 5.06058C8.19757 4.88603 7.77721 4.79612 7.35211 4.79688C6.92701 4.79764 6.50695 4.88904 6.11997 5.06498C5.73298 5.24091 5.38796 5.49732 5.10791 5.81714C4.04891 6.85914 3.03392 7.92717 1.95792 8.95017C0.998194 9.8509 0.42263 11.0869 0.350924 12.4012C0.259046 14.5565 0.644899 16.7055 1.4809 18.6942C3.07214 22.8253 5.3686 26.6487 8.26792 29.9941C12.0805 34.5664 16.8217 38.2757 22.1769 40.8762C24.5672 42.1324 27.1859 42.8945 29.8769 43.1172C30.7731 43.2192 31.6806 43.105 32.5236 42.7842C33.3666 42.4634 34.1204 41.9452 34.7219 41.2732C35.6219 40.2672 36.6369 39.3492 37.5899 38.3871C37.9224 38.1068 38.19 37.7576 38.3741 37.3636C38.5582 36.9696 38.6545 36.5402 38.6562 36.1053C38.6579 35.6704 38.565 35.2404 38.384 34.8449C38.203 34.4495 37.9382 34.0981 37.6079 33.8152C35.9306 32.1305 34.2479 30.4508 32.5599 28.7762"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M30.878 21.7522L34.135 21.1962C33.6099 18.1449 32.1295 15.3391 29.9073 13.1833C27.6851 11.0274 24.8358 9.6327 21.77 9.2002L21.311 12.4752C23.6828 12.8078 25.8875 13.8854 27.6071 15.5525C29.3266 17.2196 30.472 19.3899 30.878 21.7502"
+                        fill="white"
+                      ></path>
+                      <path
+                        d="M35.9699 7.60046C32.2581 3.86154 27.4194 1.44747 22.1999 0.730469L21.7439 4.00046C26.1378 4.61856 30.222 6.61544 33.4083 9.70343C36.5946 12.7914 38.7185 16.8111 39.4739 21.1835L42.7299 20.6275C41.8817 15.687 39.5195 11.1321 35.9699 7.59247"
+                        fill="white"
+                      ></path>
+                    </svg>
+                    <h1 className="px-4 ">0775 793 978</h1>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -151,7 +156,7 @@ export default function BaoGia() {
             </h1>
             <div className="py-6 flex items-center justify-center gap-3 max-lg:text-[14px] max-md:flex-col">
               <Button className="w-[200px] flex items-center bg-slate-600 h-12">
-                <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
+                <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[15x]">
                   Zalo
                 </h1>
                 <h1 className="px-4 ">0775 793 978</h1>
@@ -193,8 +198,8 @@ export default function BaoGia() {
               selectedKey={selected}
               onSelectionChange={(e) => setSelected(e as string)}
             >
-              {data.map((items, index) => (
-                <Tab key={items.id} title={items.name} className=" ">
+              {data.map((items) => (
+                <Tab key={items.id} title={items.name} className="">
                   <Card>
                     <CardBody>
                       <Table className="relative max-h-[500px]">
@@ -203,7 +208,7 @@ export default function BaoGia() {
                           <TableColumn className="w-[350px]">
                             Tên sản phẩm
                           </TableColumn>
-                          <TableColumn className="w-[140px] ">
+                          <TableColumn className="w-[140px] max-md:hidden">
                             Đơn giá
                           </TableColumn>
                           <TableColumn className="w-[140px]">
@@ -232,11 +237,11 @@ export default function BaoGia() {
                                   </div>
                                 ))}
                               </TableCell>
-                              <TableCell>
+                              <TableCell className="max-md:hidden">
                                 {product.items.map((item, index) => (
                                   <div
                                     key={index}
-                                    className="py-4 flex items-center justify-center"
+                                    className="py-4 flex items-center justify-center "
                                   >
                                     {item.price.toLocaleString()}
                                   </div>
@@ -575,7 +580,7 @@ export default function BaoGia() {
           <div className="flex flex-col items-center justify-center gap-4  basis-1/3 rounded-2xl h-min border-[1px] border-white shadow-xl">
             <Image
               src="/assets/images/thumnail/smart-control.webp"
-              alt=""
+              alt=" Điều Khiển Thông Minh"
               width={1000}
               height={1000}
             />
@@ -594,7 +599,7 @@ export default function BaoGia() {
           <div className="flex flex-col items-center justify-center gap-4  basis-1/3 rounded-2xl h-min border-[1px]  border-white shadow-xl">
             <Image
               src="/assets/images/thumnail/smart-lighting.webp"
-              alt=""
+              alt="Điều khiển từ xa bằng giộng nói tiếng việt hoặc smartphone"
               width={1000}
               height={1000}
             />
@@ -611,7 +616,7 @@ export default function BaoGia() {
           <div className="flex flex-col items-center justify-center gap-4  basis-1/3 rounded-2xl h-min border-[1px]  border-white shadow-xl">
             <Image
               src="/assets/images/thumnail/smart-security.webp"
-              alt=""
+              alt="An Ninh Thông Minh"
               width={1000}
               height={1000}
             />
@@ -648,7 +653,7 @@ export default function BaoGia() {
                 <div className="flex flex-col items-center justify-center gap-4  rounded-2xl h-min border-[1px]">
                   <Image
                     src="/assets/images/thumnail/smart-control.webp"
-                    alt=""
+                    alt="Điều Khiển Thông Minh"
                     width={1000}
                     height={1000}
                   />
@@ -669,7 +674,7 @@ export default function BaoGia() {
                 <div className="flex flex-col items-center justify-center gap-4  rounded-2xl h-min border-[1px] ">
                   <Image
                     src="/assets/images/thumnail/smart-lighting.webp"
-                    alt=""
+                    alt="Chiếu Sáng Thông Minh"
                     width={1000}
                     height={1000}
                   />
@@ -690,7 +695,7 @@ export default function BaoGia() {
                 <div className="flex flex-col items-center justify-center gap-4  rounded-2xl h-min border-[1px] ">
                   <Image
                     src="/assets/images/thumnail/smart-security.webp"
-                    alt=""
+                    alt="An Ninh Thông Minh"
                     width={1000}
                     height={1000}
                   />
@@ -976,7 +981,8 @@ export default function BaoGia() {
               src="/assets/images/thumnail/why-us-image-1.webp"
               width={640}
               height={425}
-              alt=""
+              alt="FPT Smart Home khẳng định lấy chất lượng sản phẩm và trải nghiệm
+              khách hàng là tiêu chí hàng đầu để phát triển"
             />
             <div className="max-w-[400px] text-center space-y-4">
               <h1 className="text-[25px] font-semibold text-orange-500 max-md:text-[20px]">
@@ -997,7 +1003,7 @@ export default function BaoGia() {
               src="/assets/images/thumnail/why-us-image-2.webp"
               width={640}
               height={425}
-              alt=""
+              alt="CHẤT LƯỢNG UY TÍN"
             />
             <div className="max-w-[400px] text-center space-y-4">
               <h1 className="text-[25px] font-semibold text-orange-500 max-md:text-[20px]">
@@ -1018,7 +1024,7 @@ export default function BaoGia() {
               src="/assets/images/thumnail/why-us-image-3.webp"
               width={640}
               height={425}
-              alt=""
+              alt=" THÂN THIỆN DỄ SỬ DỤNG"
             />
             <div className="max-w-[400px] text-center space-y-4">
               <h1 className="text-[25px] font-semibold text-orange-500 max-md:text-[20px]">
@@ -1062,7 +1068,7 @@ export default function BaoGia() {
                 src="/assets/images/thumnail/project-image-3.webp"
                 width={640}
                 height={425}
-                alt=""
+                alt="DỰ ÁN THỰC TẾ ĐÃ LẮP ĐẶT"
               />
             </CarouselItem>
             <CarouselItem className="basis-1/4 max-lg:basis-1/3 max-md:basis-1/2">
@@ -1070,7 +1076,7 @@ export default function BaoGia() {
                 src="/assets/images/thumnail/project-image-4.webp"
                 width={640}
                 height={425}
-                alt=""
+                alt="DỰ ÁN THỰC TẾ ĐÃ LẮP ĐẶT"
               />
             </CarouselItem>
             <CarouselItem className="basis-1/4 max-lg:basis-1/3 max-md:basis-1/2">
@@ -1078,7 +1084,7 @@ export default function BaoGia() {
                 src="/assets/images/thumnail/project-image-5.webp"
                 width={640}
                 height={425}
-                alt=""
+                alt="DỰ ÁN THỰC TẾ ĐÃ LẮP ĐẶT"
               />
             </CarouselItem>
             <CarouselItem className="basis-1/4 max-lg:basis-1/3 max-md:basis-1/2">
@@ -1086,7 +1092,7 @@ export default function BaoGia() {
                 src="/assets/images/thumnail/project-image-6.webp"
                 width={640}
                 height={425}
-                alt=""
+                alt="DỰ ÁN THỰC TẾ ĐÃ LẮP ĐẶT"
               />
             </CarouselItem>
             <CarouselItem className="basis-1/4 max-lg:basis-1/3 max-md:basis-1/2">
@@ -1094,7 +1100,7 @@ export default function BaoGia() {
                 src="/assets/images/thumnail/project-image-1.webp"
                 width={640}
                 height={425}
-                alt=""
+                alt="DỰ ÁN THỰC TẾ ĐÃ LẮP ĐẶT"
               />
             </CarouselItem>
             <CarouselItem className="basis-1/4 max-lg:basis-1/3 max-md:basis-1/2">
@@ -1102,7 +1108,7 @@ export default function BaoGia() {
                 src="/assets/images/thumnail/project-image-2.webp"
                 width={640}
                 height={425}
-                alt=""
+                alt="DỰ ÁN THỰC TẾ ĐÃ LẮP ĐẶT"
               />
             </CarouselItem>
           </CarouselContent>

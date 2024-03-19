@@ -67,7 +67,7 @@ export default function Page() {
                   src={option?.image}
                   width={585}
                   height={300}
-                  alt=""
+                  alt="Camera SE FPT"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -132,7 +132,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1684486559-camera-SE.jpg"
               width={500}
               height={500}
-              alt=""
+              alt="Camera SE FPT"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -218,7 +218,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1684225562-Poster-FPT-Camera-SE.png"
               width={1000}
               height={500}
-              alt=""
+              alt="Camera SE FPT"
             />
 
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
@@ -302,7 +302,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1684225244-camera-SE.jpg"
               width={1000}
               height={500}
-              alt=""
+              alt="Camera SE FPT"
             />
             <p>
               Sản phẩm được thiết kế với kết cấu chuyên biệt để lắp đặt tại môi

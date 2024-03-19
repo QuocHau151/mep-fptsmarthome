@@ -13,7 +13,7 @@ export default function Footer() {
               src="/assets/logofptsh.png"
               width={700}
               height={200}
-              alt=""
+              alt="FPT Smart Home"
             />
           </Link>
           <h4 className="text-h6 text-center">

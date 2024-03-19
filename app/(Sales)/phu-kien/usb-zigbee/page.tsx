@@ -64,7 +64,7 @@ export default function Page() {
                   src={option?.image}
                   width={300}
                   height={300}
-                  alt=""
+                  alt="USB ZigBee"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -129,7 +129,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1704872213-dieu-khien-rem.jpg"
               width={500}
               height={500}
-              alt=""
+              alt="USB ZigBee"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">

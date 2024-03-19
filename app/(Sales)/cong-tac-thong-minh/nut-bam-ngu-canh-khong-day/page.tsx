@@ -76,7 +76,7 @@ export default function Page() {
                   src={option?.image}
                   width={585}
                   height={500}
-                  alt=""
+                  alt="Nút Bấm Ngữ Cảnh Không Dây"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -173,7 +173,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1668569310-cong-tac-canh-6-nut_.png"
               width={1000}
               height={500}
-              alt=""
+              alt="Đèn Led Panel Thông Minh"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -246,7 +246,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1692179573-Cong-tac-ngu-canh-khong-day.jpg"
               width={1000}
               height={500}
-              alt=""
+              alt="Nút Bấm Ngữ Cảnh Không Dây"
             />
 
             <p>
@@ -327,7 +327,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1692179547-3af8058666cab594ecdb19.jpg"
               width={1000}
               height={500}
-              alt=""
+              alt="Nút Bấm Ngữ Cảnh Không Dây"
             />
             <p>
               Sản phẩm được sử dụng chủ yếu tại các hộ gia đình, giúp điều khiển

@@ -72,7 +72,7 @@ export default function Page() {
                   src={option?.image}
                   width={585}
                   height={585}
-                  alt=""
+                  alt="Đèn LED Dây Thông Minh"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px] max-md:w-full"></div>
@@ -201,7 +201,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1668570002-led-day.png"
               width={500}
               height={500}
-              alt=""
+              alt="Đèn LED Dây Thông Minh"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">
@@ -278,7 +278,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1692180786-Den-Led-Day-copy.jpg"
               width={1210}
               height={800}
-              alt=""
+              alt="Đèn LED Dây Thông Minh"
             />
             <p>
               Ánh sáng được xem là 1 phần quan trọng trong bất kì không gian
@@ -377,7 +377,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1692180786-Den-Led-Day1-copy.jpg"
               width={1210}
               height={800}
-              alt=""
+              alt="Đèn LED Dây Thông Minh"
             />
             <h5 className="font-semibold text-[22px] max-md:text-[15px]">
               Ứng dụng sản phẩm như thế nào?

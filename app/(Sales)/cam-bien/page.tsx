@@ -33,7 +33,7 @@ export default function Page() {
               src="/assets/images/product/1669193715-1669171553-Cam-Bien-Cua.png"
               width={170}
               height={100}
-              alt=""
+              alt="Cảm Biến Cửa"
             />
             <h3 className="text-center font-semibold">Cảm Biến Cửa</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -45,7 +45,7 @@ export default function Page() {
               src="/assets/images/product/1669265268-Cam-Bien-Chuyen-Dong1.png"
               width={170}
               height={100}
-              alt=""
+              alt="Cảm Biến Chuyển Động"
             />
             <h3 className="text-center font-semibold">Cảm Biến Chuyển Động</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -57,7 +57,7 @@ export default function Page() {
               src="/assets/images/product/1697613777-Cam-bien-Khoi2.png"
               width={170}
               height={100}
-              alt=""
+              alt="Cảm Biến Khói"
             />
             <h3 className="text-center font-semibold">Cảm Biến Khói</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -69,7 +69,7 @@ export default function Page() {
               src="/assets/images/product/1687942243-ava.png"
               width={170}
               height={100}
-              alt=""
+              alt="Cảm Biến Chuyển Động Âm Trần"
             />
             <h3 className="text-center font-semibold">
               Cảm Biến Chuyển Động Âm Trần
@@ -98,7 +98,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456837-Group-1073.png"
                 width={70}
                 height={70}
-                alt=""
+                alt=" Điều khiển giọng nói"
               />
               <p className="text-[18px] max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -110,7 +110,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456645-Group-1072.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Điều khiển giọng nói"
               />
               <p className="text-[18px]  max-md:text-[12px]">
                 Điều khiển giọng nói
@@ -122,7 +122,7 @@ export default function Page() {
                 src="/assets/images/product/icon/1676456652-Group-1071.png"
                 width={70}
                 height={70}
-                alt=""
+                alt="Kết nối Zigbee"
               />
               <p className="text-[18px]  max-md:text-[12px]">Kết nối Zigbee</p>
             </div>

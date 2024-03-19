@@ -30,7 +30,7 @@ export default function Page() {
               src="/assets/images/product/1668568426-3.YDM7116A_Black_Front.png"
               width={170}
               height={100}
-              alt=""
+              alt="Cửa khoá thông minh"
             />
             <h3 className="text-center font-semibold">Khoá Cửa Vân Tay Yale</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">
@@ -44,7 +44,7 @@ export default function Page() {
               src="/assets/images/product/1668569197-7.-YDM3109-SILVER-DHZY0110.png"
               width={170}
               height={100}
-              alt=""
+              alt="Cửa khoá thông minh"
             />
             <h3 className="text-center font-semibold">Khoá Cửa Thẻ Từ Yale</h3>
             <Button className="w-[129px] h-[28px] border-[1px] border-black rounded-lg bg-slate-100 text-black hover:text-white hover:bg-orange-500 text-[13px]">

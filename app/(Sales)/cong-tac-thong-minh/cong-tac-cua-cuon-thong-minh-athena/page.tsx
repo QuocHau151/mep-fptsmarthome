@@ -78,7 +78,7 @@ export default function Page() {
                   src={option?.image}
                   width={300}
                   height={300}
-                  alt=""
+                  alt="Công Tắc Cửa Cuốn Thông Minh Athena"
                 />
               ) : (
                 <div className="bg-white w-[585px] h-[585px]"></div>
@@ -206,7 +206,7 @@ export default function Page() {
               src="/assets/images/product/thumnail/1704445896-Cong-tac-cua-copy.jpg"
               width={500}
               height={500}
-              alt=""
+              alt="Công Tắc Cửa Cuốn Thông Minh Athena"
             />
             <div className="basis-1/2 w-full">
               <div className="flex items-center justify-between w-full border-b-[1px] border-black text-[18px] font-regular px-4 py-2 max-md:text-[12px]">

@@ -119,7 +119,7 @@ export default function Checkout() {
                       src={product.image || ""}
                       width={50}
                       height={50}
-                      alt=""
+                      alt="checkout-product"
                     ></Image>
                     <div>
                       <p className="text-[15px]">{product.name}</p>
@@ -262,7 +262,7 @@ export default function Checkout() {
                         src={product.image || ""}
                         width={50}
                         height={50}
-                        alt=""
+                        alt="checkout-product"
                       ></Image>
                       <div>
                         <p className="text-[15px]">{product.name}</p>
