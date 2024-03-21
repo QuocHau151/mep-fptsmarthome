@@ -336,9 +336,11 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <Button className="bg-white bg-opacity-0 border-[1px] mt-6 border-black text-black hover:bg-opacity-1 hover:text-white">
-                Xem ngay
-              </Button>
+              <Link href="/can-ho-mau/nha-pho-3-tang">
+                <Button className="bg-white bg-opacity-0 border-[1px] mt-6 border-black text-black hover:bg-opacity-1 hover:text-white">
+                  Xem ngay
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="bg-gray-100 basis-1/3 flex flex-col items-center justify-center p-4 rounded-xl">
@@ -440,9 +442,11 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <Button className="bg-white bg-opacity-0 border-[1px] mt-6 border-black text-black hover:bg-opacity-1 hover:text-white">
-                Xem ngay
-              </Button>
+              <Link href="/can-ho-mau/can-ho-3pn">
+                <Button className="bg-white bg-opacity-0 border-[1px] mt-6 border-black text-black hover:bg-opacity-1 hover:text-white">
+                  Xem ngay
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="bg-gray-100 basis-1/3 flex flex-col items-center justify-center p-4 rounded-xl">
@@ -536,9 +540,11 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <Button className="bg-white bg-opacity-0 border-[1px] mt-6 border-black text-black hover:bg-opacity-1 hover:text-white">
-                Xem ngay
-              </Button>
+              <Link href="/can-ho-mau/can-ho-2pn">
+                <Button className="bg-white bg-opacity-0 border-[1px] mt-6 border-black text-black hover:bg-opacity-1 hover:text-white">
+                  Xem ngay
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -8,22 +8,22 @@
         "items": [
           {
             "name": "Bộ điều khiển trung tâm FPT Play Box S",
-            "price": 2400000,
+            "price": 2190000,
             "link": "https://fpt-smarthome.vn/fpt-play-box-s"
           },
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
-            "link": ""
-          },
-          {
             "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
-            "price": 2290000,
+            "price": 1790000,
+            "link": ""
+          },
+          {
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -37,8 +37,8 @@
         "title": "Phòng ngủ",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -52,8 +52,8 @@
         "title": "WC",
         "items": [
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -74,17 +74,17 @@
         "items": [
           {
             "name": "Bộ điều khiển trung tâm FPT Play Box S",
-            "price": 2400000,
+            "price": 2190000,
             "link": "https://fpt-smarthome.vn/fpt-play-box-s"
           },
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -98,8 +98,8 @@
         "title": "Phòng ngủ 1",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -113,8 +113,8 @@
         "title": "WC 1",
         "items": [
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -128,8 +128,8 @@
         "title": "Phòng ngủ 2",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -143,8 +143,8 @@
         "title": "WC 2",
         "items": [
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -165,17 +165,17 @@
         "items": [
           {
             "name": "Bộ điều khiển trung tâm FPT Play Box S",
-            "price": 2400000,
+            "price": 2190000,
             "link": "https://fpt-smarthome.vn/fpt-play-box-s"
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -194,13 +194,8 @@
         "title": "Khu vực sinh hoạt chung: Hành Lang + Phòng làm việc (sảnh đệm)",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
-            "link": ""
-          },
-          {
-            "name": "Cảm biến cửa",
-            "price": 890000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           }
         ]
@@ -210,12 +205,17 @@
         "items": [
           {
             "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
-            "price": 2229000,
+            "price": 1790000,
+            "link": ""
+          },
+          {
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -229,18 +229,18 @@
         "title": "Phòng ngủ 2 và WC",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -254,18 +254,13 @@
         "title": "Phòng ngủ 3 ",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
-            "link": ""
-          },
-          {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 240000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           }
         ]
@@ -281,17 +276,17 @@
         "items": [
           {
             "name": "Bộ điều khiển trung tâm FPT Play Box S",
-            "price": 2400000,
+            "price": 2190000,
             "link": "https://fpt-smarthome.vn/fpt-play-box-s"
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -310,18 +305,18 @@
         "title": " Phòng ngủ 1 và WC",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -335,13 +330,13 @@
         "title": " Phòng ngủ 2",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           }
         ]
@@ -351,12 +346,17 @@
         "items": [
           {
             "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
-            "price": 2229000,
+            "price": 1790000,
+            "link": ""
+          },
+          {
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -370,13 +370,18 @@
         "title": "Phòng ngủ 4 và WC",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
+            "link": ""
+          },
+          {
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -391,17 +396,17 @@
         "items": [
           {
             "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
-            "price": 2229000,
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển trung tâm FPT Play Box S",
-            "price": 100000,
+            "price": 2190000,
             "link": ""
           },
           {
@@ -422,17 +427,17 @@
         "items": [
           {
             "name": "Bộ điều khiển trung tâm FPT Play Box S",
-            "price": 2400000,
+            "price": 2190000,
             "link": "https://fpt-smarthome.vn/fpt-play-box-s"
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
@@ -451,18 +456,18 @@
         "title": "Phòng ngủ 1 và WC",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
-            "price": 2229000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -476,18 +481,18 @@
         "title": "Phòng ngủ 2 và WC",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 3 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
-            "name": "Công tắc cảm ứng 2 nút Chữ Nhật",
-            "price": 2290000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
             "name": "Bộ điều khiển hồng ngoại - điều hoà",
-            "price": 2690000,
+            "price": 690000,
             "link": ""
           },
           {
@@ -501,8 +506,8 @@
         "title": "Phòng sinh hoạt chung ",
         "items": [
           {
-            "name": "Công tắc cảm ứng 1 nút Chữ Nhật",
-            "price": 1990000,
+            "name": "Công tắc cảm ứng 4 nút Chữ Nhật",
+            "price": 1790000,
             "link": ""
           },
           {
