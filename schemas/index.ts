@@ -128,3 +128,24 @@ export const formBrandShopSchema = z.object({
     message: "Nội dung là bắt buộc.",
   }),
 });
+export const formOutsourceSchema = z.object({
+  name: z.string().min(2, {
+    message: "Họ tên là bắt buộc.",
+  }),
+  phone: z.string().min(2, {
+    message: "Số điện thoại là bắt buộc.",
+  }),
+  address: z.string().min(2, {
+    message: "Địa chỉ là bắt buộc.",
+  }),
+  type: z.enum(["IT BASIS", "IT PRO", "IT VIP"]),
+  time: z.enum(["6 month", "12 month", "Khác"]),
+});
+export const formZaLoSchema = z.object({
+  name: z.string().min(2, {
+    message: "Xin hãy điền tên của bạn",
+  }),
+  phone: z.string().min(2, {
+    message: "Xin hãy điền số điện thoại của bạn",
+  }),
+});
