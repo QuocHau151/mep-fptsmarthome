@@ -110,10 +110,10 @@ export default function BaoGia() {
                     <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                       Zalo
                     </h1>
-                    <h1 className="px-4 ">0775 793 978</h1>
+                    <h1 className="px-4 ">0886 82 83 86</h1>
                   </Button>
                 </Link>
-                <Link href="tel:0775793978">
+                <Link href="tel:0886828386">
                   <Button className="flex items-center bg-slate-600 h-12">
                     <svg
                       width="30"
@@ -135,7 +135,7 @@ export default function BaoGia() {
                         fill="white"
                       ></path>
                     </svg>
-                    <h1 className="px-4 ">0775 793 978</h1>
+                    <h1 className="px-4 ">0886 82 83 86</h1>
                   </Button>
                 </Link>
               </div>
@@ -159,7 +159,7 @@ export default function BaoGia() {
                 <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[15x]">
                   Zalo
                 </h1>
-                <h1 className="px-4 ">0775 793 978</h1>
+                <h1 className="px-4 ">0886 82 83 86</h1>
               </Button>
               <Button className=" w-[200px] flex items-center bg-slate-600 h-12">
                 <svg
@@ -182,7 +182,7 @@ export default function BaoGia() {
                     fill="white"
                   ></path>
                 </svg>
-                <h1 className="px-4 ">0775 793 978</h1>
+                <h1 className="px-4 ">0886 82 83 86</h1>
               </Button>
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function BaoGia() {
                 <Tab key={items.id} title={items.name} className="">
                   <Card>
                     <CardBody>
-                      <Table className="relative max-h-[500px]">
+                      <Table className="relative ">
                         <TableHeader>
                           <TableColumn>Khu vực</TableColumn>
                           <TableColumn className="w-[350px]">

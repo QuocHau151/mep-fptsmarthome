@@ -178,7 +178,7 @@ export default function MobileNav() {
               <div className="px-2">
                 <div>
                   {cart.map((item) => (
-                    <div key={item.id} className="flex flex-col ">
+                    <div key={item.id_product} className="flex flex-col ">
                       <div className="flex items-center justify-between p-2 border-b-[1px] w-full gap-2">
                         <div className="flex items-center gap-2">
                           <Image
@@ -204,47 +204,27 @@ export default function MobileNav() {
                           <div className="flex items-center gap-2 text-[12px]">
                             <button
                               className="border-[1px] border-black px-[4px] hover:bg-orange-500 rounded-sm"
-                              onClick={() => decreaseQuantity(item.id)}
+                              onClick={() => decreaseQuantity(item.id_product)}
                             >
                               -
                             </button>
                             <p>{item.quantity}</p>
                             <button
                               className="border-[1px] border-black px-[4px]  hover:bg-orange-500 rounded-sm"
-                              onClick={() => increaseQuantity(item.id)}
+                              onClick={() => increaseQuantity(item.id_product)}
                             >
                               +
                             </button>
                           </div>
                           <button
                             className="text-[12px] hover:text-orange-500"
-                            onClick={() => removeFromCart(item.id)}
+                            onClick={() => removeFromCart(item.id_product)}
                           >
                             Remove
                           </button>
                         </div>
                       </div>
                       <div className=""></div>
-                      {/* <h5 className="text-[18px] font-semibold ">
-                        {item.name}
-                      </h5>
-                      <p>
-                        Option: {item.category} {item.type} {item.color}
-                        {item.power}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <p>Số Lượng:</p>
-                        <button onClick={() => decreaseQuantity(item.id)}>
-                          -
-                        </button>
-                        <p>{item.quantity}</p>
-                        <button onClick={() => increaseQuantity(item.id)}>
-                          +
-                        </button>
-                      </div>
-                      <button onClick={() => removeFromCart(item.id)}>
-                        Remove from cart
-                      </button> */}
                     </div>
                   ))}
                 </div>
@@ -553,12 +533,6 @@ export default function MobileNav() {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-                <Link
-                  className="text-left text-black px-6 font-medium text-[16px]"
-                  href="/it-outsource"
-                >
-                  IT Outsource
-                </Link>
                 <Accordion type="single" collapsible>
                   <AccordionItem className="border-b-0" value="item-1">
                     <AccordionTrigger>
@@ -592,11 +566,6 @@ export default function MobileNav() {
                   </AccordionItem>
                 </Accordion>
               </div>
-              {/* <SheetFooter>
-                <SheetClose asChild>
-                  <Button type="submit">Save changes</Button>
-                </SheetClose>
-              </SheetFooter> */}
             </SheetContent>
           </Sheet>
         </div>

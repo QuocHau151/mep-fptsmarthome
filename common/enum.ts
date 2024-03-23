@@ -40,6 +40,7 @@ type SelectedOptions = {
 };
 interface ProductData {
   id: string;
+  id_product: string;
   name: string;
   category: string;
   price: number;
@@ -66,4 +67,8 @@ interface Item {
   id: string;
   name: string;
   price: number;
+}
+enum UserRole {
+  Admin = "Admin",
+  User = "User",
 }

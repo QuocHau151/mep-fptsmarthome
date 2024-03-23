@@ -30,8 +30,7 @@ const navs = [
   { id: 2, link: "/san-pham", name: "Sản phẩm", active: <Product /> },
   { id: 3, link: "/giai-phap", name: "Giải pháp", active: <Solution /> },
   { id: 4, link: "/can-ho-mau", name: "Căn hộ mẫu", active: <Apartment /> },
-  { id: 5, link: "/it-outsource", name: "IT Outsource" },
-  { id: 6, link: "/ho-tro", name: "Hỗ trợ", active: <Support /> },
+  { id: 5, link: "/ho-tro", name: "Hỗ trợ", active: <Support /> },
 ];
 export default function Bottom_Nav() {
   const user = useCurrentUser();
@@ -360,7 +359,7 @@ export default function Bottom_Nav() {
             <>
               <div
                 className="group flex flex-col hover:bg-orange-500  rounded-md"
-                key={item.id}
+                key={item.id_product}
               >
                 <Link
                   className="text-[15px]  py-[7px] px-[14px]  "

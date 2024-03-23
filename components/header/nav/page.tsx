@@ -144,7 +144,7 @@ export default function Nav() {
               <div className="px-2">
                 <div>
                   {cart.map((item) => (
-                    <div key={item.id} className="flex flex-col ">
+                    <div key={item.id_product} className="flex flex-col ">
                       <div className="flex items-center justify-between p-2 border-b-[1px] w-full gap-2">
                         <div className="flex items-center gap-2">
                           <Image
@@ -170,21 +170,21 @@ export default function Nav() {
                           <div className="flex items-center gap-2 text-[12px]">
                             <button
                               className="border-[1px] border-black px-[4px] hover:bg-orange-500 rounded-sm"
-                              onClick={() => decreaseQuantity(item.id)}
+                              onClick={() => decreaseQuantity(item.id_product)}
                             >
                               -
                             </button>
                             <p>{item.quantity}</p>
                             <button
                               className="border-[1px] border-black px-[4px]  hover:bg-orange-500 rounded-sm"
-                              onClick={() => increaseQuantity(item.id)}
+                              onClick={() => increaseQuantity(item.id_product)}
                             >
                               +
                             </button>
                           </div>
                           <button
                             className="text-[12px] hover:text-orange-500"
-                            onClick={() => removeFromCart(item.id)}
+                            onClick={() => removeFromCart(item.id_product)}
                           >
                             Remove
                           </button>

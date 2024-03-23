@@ -13,7 +13,7 @@ export const getProductById = async (id: string) => {
 export const getProductByName = async (name: string) => {
   try {
     const product = await db.product.findUnique({
-      where: { name, id: "" }, // Add the 'id' property with a default value
+      where: { name, id_product: "" }, // Add the 'id' property with a default value
     });
     return product;
   } catch {

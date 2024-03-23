@@ -92,7 +92,7 @@ export default function Page() {
               <h3 className="text-[25px] py-6 w-full font-medium border-b-[1px] border-black">
                 Gọi điện thoại cho chúng tôi
               </h3>
-              <h2 className="text-[30px] font-medium ">0775 793 978</h2>
+              <h2 className="text-[30px] font-medium ">0886 82 83 86</h2>
             </div>
             <div className="    items-start justify-center hidden max-md:flex">
               <h3 className="text-[15px] font-medium border-r-[1px] border-black pr-4 mr-4">
@@ -101,7 +101,7 @@ export default function Page() {
               <h3 className="text-[15px] font-medium border-r-[1px] border-black pr-4 mr-4">
                 Gửi email
               </h3>
-              <h3 className="text-[15px] font-medium  pr-4">0775 793 978</h3>
+              <h3 className="text-[15px] font-medium  pr-4">0886 82 83 86</h3>
             </div>
             <div className="basis-3/4 bg-white w-full h-min rounded-2xl flex items-center justify-center p-[50px] max-md:py-10 max-md:px-4">
               <Form {...form}>

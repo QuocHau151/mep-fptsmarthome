@@ -13,7 +13,10 @@ type Store = {
 export const useStore = create<Store>((set) => {
   function getInitialCart() {
     try {
-      const cart = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem("cart") : null;
+      const cart =
+        typeof sessionStorage !== "undefined"
+          ? sessionStorage.getItem("cart")
+          : null;
       return cart ? JSON.parse(cart) : [];
     } catch (error) {
       console.error("Error parsing cart data from sessionStorage:", error);

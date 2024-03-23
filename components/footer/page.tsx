@@ -8,17 +8,8 @@ export default function Footer() {
       <div className=" container w-full h-min text-gray-200 flex items-start justify-center py-[70px]  gap-20 max-lg:px-10 max-lg:flex-col max-lg:text-[13px] max-md:flex-col max-md:px-10 max-md:gap-10">
         <div className="flex flex-col justify-center  max-md:min-w-[10px] items-center my-auto mx-auto font-light gap-10  max-lg:gap-2">
           <Link href="/">
-            <Image
-              className="w-[500px] max-lg:w-[500px] max-md:w-[350px]"
-              src="/assets/logofptsh.png"
-              width={700}
-              height={200}
-              alt="FPT Smart Home"
-            />
+            <h4 className="text-[50px] font-bold text-center">MEPSHARING</h4>
           </Link>
-          <h4 className="text-h6 text-center">
-            Công ty Cổ phần Viễn thông FPT
-          </h4>
         </div>
         <div className="flex items-start justify-around gap-10 max-lg:flex-wrap max-lg:mx-auto  max-md:flex-nowrap max-md:border-b-[1px] max-md:border-white max-md:pb-10 max-md:gap-5 ">
           <div className=" flex flex-col  gap-[35px] font-light mr-10  max-lg:mr-0  min-w-[150px] max-md:flex-col max-md:items-center max-md:hidden ">
@@ -32,7 +23,8 @@ export default function Footer() {
                   alt=""
                 />
                 <p className="max-w-[200px]">
-                  Lô 37-39A Đường 19, KCX Tân Thuận, Quận 7 TP.Hồ Chí Minh
+                  4th floor, LA3 Astoria building - 383 Nguyen Duy Trinh, Binh
+                  Trung Tay Ward, City. Thu Duc, City. Ho Chi Minh, Vietnam
                 </p>
               </div>
               <div className="flex items-center gap-6 font-light">
@@ -42,19 +34,9 @@ export default function Footer() {
                   height={24}
                   alt=""
                 />
-                <p>0775.793.978 - Hỗ trợ trực tiếp ( Nguyên )</p>
+                <p>0886 82 83 86 - Hỗ trợ trực tiếp ( Anh Tuấn )</p>
               </div>
-              <div className="flex items-center gap-6 font-light">
-                <Image
-                  src="/assets/icon/footer/_phone.png"
-                  width={24}
-                  height={24}
-                  alt=""
-                />
-                <p>
-                  0901.237.451 - Hỗ trợ trực tiếp <br /> ( Tuyết )
-                </p>
-              </div>
+
               <div className="flex items-start gap-6 font-light">
                 <Image
                   src="/assets/icon/footer/mail.png"
@@ -62,7 +44,7 @@ export default function Footer() {
                   height={24}
                   alt=""
                 />
-                <p className="">fptsmarthome@fpt.com</p>
+                <p className="">contact@mepsharing.com</p>
               </div>
               <Image
                 className="max-md:w-[150px]"
@@ -102,14 +84,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center w-full  flex-col items-center gap-3 hidden max-md:flex">
-          <h1>CÔNG TY CỔ PHẦN VIỄN THÔNG FPT</h1>
+          <h1>MEPSHARING</h1>
           <h2>
-            Địa chỉ: Lô 37-39A Đường 19, KCX Tân Thuận, Quận 7 TP.Hồ Chí Minh
+            Địa chỉ: 4th floor, LA3 Astoria building - 383 Nguyen Duy Trinh,
+            Binh Trung Tay Ward, City. Thu Duc, City. Ho Chi Minh, Vietnam
           </h2>
-          <h2> 0775793978 ( Nguyên ) - Hỗ trợ trực tiếp </h2>
-          <h2> 0901237451 ( Tuyết ) - Hỗ trợ trực tiếp</h2>
-          <h2> Email: TuyetVTB2@fpt.com </h2>
-          <h2> Email: NguyenDL2@fpt.com </h2>
+          <h2> 0886 82 83 86 ( Anh Tuấn ) - Hỗ trợ trực tiếp </h2>
+          <h2> Email: contact@mepsharing.com </h2>
           <Image
             className="max-md:w-[150px]"
             src="/assets/icon/footer/logoSaleNoti 1.png"
