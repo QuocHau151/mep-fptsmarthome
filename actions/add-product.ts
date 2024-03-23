@@ -15,6 +15,7 @@ export const addProduct = async (values: z.infer<typeof ProductSchema>) => {
       name,
       category,
       price,
+      expires: new Date(), // Add the 'expires' property with a value
     },
   });
   return { success: "Product added!" };

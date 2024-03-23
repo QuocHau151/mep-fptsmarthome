@@ -355,11 +355,11 @@ export default function Bottom_Nav() {
           </div>
         </div>
         <div className="flex  ">
-          {navs.map((item) => (
+          {navs.map((item, index) => (
             <>
               <div
                 className="group flex flex-col hover:bg-orange-500  rounded-md"
-                key={item.id_product}
+                key={index}
               >
                 <Link
                   className="text-[15px]  py-[7px] px-[14px]  "
