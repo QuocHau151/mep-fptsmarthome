@@ -293,7 +293,7 @@ export default function MobileNav() {
                               <DialogTrigger asChild>
                                 <button> Thông tin cá nhân</button>
                               </DialogTrigger>
-                              <DialogContent className="sm:max-w-[425px]">
+                              <DialogContent className="max-w-[350px] ">
                                 <DialogHeader>
                                   <DialogTitle> Thông tin cá nhân</DialogTitle>
                                 </DialogHeader>

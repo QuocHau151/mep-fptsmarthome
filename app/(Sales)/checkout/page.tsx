@@ -89,7 +89,7 @@ export default function Checkout() {
         <title>Checkout</title>
         <meta name="description" content="Đơn hàng của bạn" />
       </Helmet>
-      <div className="bg-slate-400 pt-[120px]">
+      <div className="bg-slate-400 pt-[120px] max-md:pt-[50px]">
         <div className=" container flex lg:items-start justify-center gap-8 p-10  md:flex-col lg:flex-row md:items-end max-md:flex-col max-md:hidden">
           <div className="lg:basis-2/3 h-min bg-white rounded-2xl md:w-full">
             <div
@@ -122,14 +122,16 @@ export default function Checkout() {
                       alt="checkout-product"
                     ></Image>
                     <div>
-                      <p className="text-[15px]">{product.name}</p>
+                      <p className="text-[15px] font-semibold">
+                        {product.name}
+                      </p>
                       <p className="text-[15px]">
                         Mã sản phẩm: {product.id_product}
                       </p>
                     </div>
                   </div>
-                  <p className="text-[15px]">{product.price} </p>
-                  <div className="flex items-start justify-between gap-2">
+                  <p className="text-[17px] font-semibold">{product.price} </p>
+                  <div className="flex items-start justify-center gap-2 ">
                     <button
                       onClick={() => decreaseQuantity(product.id_product)}
                       className=" w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center"
@@ -138,17 +140,17 @@ export default function Checkout() {
                     </button>
                     <p className="text-[15px]">{product.quantity}</p>
                     <button
-                      onClick={() => increaseQuantity(product.id_product)}
+                      onClick={() => increaseQuantity(product.id)}
                       className="w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center "
                     >
                       +
                     </button>
                   </div>
-                  <p className="text-[15px]">
+                  <p className="text-[17px] font-semibold">
                     {handlePrice(product.price, product.quantity)}
                   </p>
                   <CiTrash
-                    onClick={() => removeFromCart(product.id_product)}
+                    onClick={() => removeFromCart(product.id)}
                     className="w-[20px] h-[20px]"
                   />
                 </div>
@@ -237,23 +239,21 @@ export default function Checkout() {
         <div className=" container hidden lg:items-start justify-center gap-8 p-10  md:flex-col lg:flex-row md:items-end max-md:flex-col max-md:flex">
           <div className="lg:basis-2/3 h-min bg-white rounded-2xl md:w-full">
             <div
-              className="grid grid-rows-1 px-8 text-[18px]  gap-6 py-6 border-b-[1px] border-black content-center "
+              className="flex items-center justify-between  px-8 text-[18px]  gap-6 py-6 border-b-[1px] border-black  "
               style={{
                 gridTemplateColumns: "minmax(0, 1fr)  8fr 1fr",
               }}
             >
               <input className="w-4" type="checkbox" />
-              <p className="">Tất cả sản phẩm</p>
-              <p className="max-md:hidden">Đơn giá </p>
-              <p className="max-md:hidden">Số lượng</p>
-              <p className="max-md:hidden">Số tiền</p>
+              <p className="font-semibold text-[22px]">Tất cả sản phẩm</p>
+
               <CiTrash class="w-[25px] h-[25px]" />
             </div>
             {cart.map((product) => (
               <>
-                <div className="flex flex-col items-center  text-[18px]  border-b-[1px] border-black gap-2 py-10 ">
+                <div className="flex flex-col items-center  text-[18px]  border-b-[1px] border-black gap-2 py-5 mx-2">
                   <div
-                    className="grid grid-rows-1 px-8 text-[18px] gap-6  py-6  items-center  "
+                    className="grid grid-rows-1 px-4 text-[18px] gap-5 items-center  "
                     style={{
                       gridTemplateColumns: "minmax(0, 1fr)  8fr 1fr",
                     }}
@@ -267,31 +267,33 @@ export default function Checkout() {
                         alt="checkout-product"
                       ></Image>
                       <div>
-                        <p className="text-[15px]">{product.name}</p>
+                        <p className="text-[17px] font-semibold">
+                          {product.name}
+                        </p>
                         <p className="text-[15px]">
                           Mã sản phẩm: {product.id_product}
                         </p>
                       </div>
                     </div>
                     <CiTrash
-                      onClick={() => removeFromCart(product.id_product)}
+                      onClick={() => removeFromCart(product.id)}
                       className="w-[20px] h-[20px]"
                     />
                   </div>
 
-                  <p className="text-[25px] font-semibold text-orange-500">
+                  <p className="text-[20px] font-semibold text-orange-500">
                     {product.price}{" "}
                   </p>
                   <div className="flex items-start justify-between gap-2">
                     <button
-                      onClick={() => decreaseQuantity(product.id_product)}
+                      onClick={() => decreaseQuantity(product.id)}
                       className=" w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center"
                     >
                       -
                     </button>
                     <p className="text-[15px]">{product.quantity}</p>
                     <button
-                      onClick={() => increaseQuantity(product.id_product)}
+                      onClick={() => increaseQuantity(product.id)}
                       className="w-5 h-5 hover:bg-orange-500 border-black border-[1px] flex items-center justify-center "
                     >
                       +

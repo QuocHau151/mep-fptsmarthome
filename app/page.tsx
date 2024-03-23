@@ -113,24 +113,6 @@ export default function Home() {
               alt="banner trang chủ fpt smart home"
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/assets/images/banner/1702626067-1920x680-copy-1.jpg"
-              width={3000}
-              height={1000}
-              quality={100}
-              alt="banner trang chủ fpt smart home"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/assets/images/banner/1701162787-1920x680-copy.jpg"
-              width={3000}
-              height={1000}
-              quality={100}
-              alt="banner trang chủ fpt smart home"
-            />
-          </SwiperSlide>
         </Swiper>
       </section>
       {/*  */}

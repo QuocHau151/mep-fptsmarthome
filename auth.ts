@@ -30,8 +30,8 @@ export const {
 
       const existingUser = await getUserById(user.id as string);
 
-      // Prevent sign in without email verification
-      if (!existingUser?.emailVerified) return false;
+      // Ngăn chặn: đăng nhập mà cần xác minh email
+      // if (!existingUser?.emailVerified) return false;
 
       // TODO: Add 2FA check
 

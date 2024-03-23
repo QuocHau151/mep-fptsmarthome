@@ -22,21 +22,21 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
   const existingUser = await getUserByEmail(email);
 
   if (!existingUser || !existingUser.email || !existingUser.password) {
-    return { error: "Email does not exist!" };
+    return { error: "Email hoặc Mật khẩu không đúng!" };
   }
 
-  if (!existingUser.emailVerified) {
-    const verificationToken = await generateVerificationToken(
-      existingUser.email
-    );
+  // if (!existingUser.emailVerified) {
+  //   const verificationToken = await generateVerificationToken(
+  //     existingUser.email
+  //   );
 
-    await sendVerificationEmail(
-      verificationToken.email,
-      verificationToken.token
-    );
+  //   await sendVerificationEmail(
+  //     verificationToken.email,
+  //     verificationToken.token
+  //   );
 
-    return { success: "Confirmation email sent!" };
-  }
+  //   return { success: "Xác thực trong Email của bạn!" };
+  // }
 
   try {
     await signIn("credentials", {
@@ -48,12 +48,13 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
     if (error instanceof AuthError) {
       switch (error.type) {
         case "CredentialsSignin":
-          return { error: "Invalid credentials!" };
+          return { error: "Không tìm thấy thông tin!" };
         default:
-          return { error: "Something went wrong!" };
+          return { error: "Đã có lỗi xảy ra! Hãy F5 lại" };
       }
     }
 
     throw error;
   }
+  return { success: "Đăng nhập thành công!" };
 };
