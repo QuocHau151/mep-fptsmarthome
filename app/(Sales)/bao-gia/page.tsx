@@ -105,7 +105,7 @@ export default function BaoGia() {
                 NHẬN TƯ VẤN & BÁO GIÁ MIỄN PHÍ
               </h1>
               <div className="py-6 flex items-center justify-center gap-3 max-lg:text-[14px] max-md:flex-col">
-                <Link href="https://zalo.me/0906030030" target="blank">
+                <Link href="https://zalo.me/0886828386" target="blank">
                   <Button className="flex items-center bg-slate-600 h-12">
                     <h1 className="px-4 border-r-[1px] border-white text-[20px] max-md:text-[12px]">
                       Zalo

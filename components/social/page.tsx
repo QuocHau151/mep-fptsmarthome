@@ -49,7 +49,7 @@ export default function SocialConnect() {
         <FaPhoneAlt color={"white"} size={"22px"} />
       </a>
       <a
-        href="https://zalo.me/0906030030"
+        href="https://zalo.me/0886828386"
         target="blank"
         className="bg-blue-500 flex items-center justify-center w-12 h-12 rounded-full animate-bounce"
       >
