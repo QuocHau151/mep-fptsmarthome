@@ -79,8 +79,20 @@ export default function Nav() {
   return (
     <div className=" max-lg:hidden   bg-black w-full h-[80px] ">
       <div className="container flex items-center h-full justify-between ">
-        <Link href="/" className="p-4">
-          <Image src="/assets/logofptsh.png" width={205} height={100} alt="" />
+        <Link href="/" className="p-2 flex gap-2 items-center justify-center ">
+          <Image
+            src="/assets/logomep-white.png"
+            width={45}
+            height={45}
+            alt=""
+            className="mt-1"
+          />
+          <div>
+            <h1 className="text-white font-semibold text-[30px]">MEPSHARING</h1>
+            <h1 className="text-white font-medium text-[12.5px] mt-[-8px]">
+              Nhà Phân Phối FPT Smart Home
+            </h1>
+          </div>
         </Link>
         <div className="flex  items-center space-x-2 ">
           <form className="flex  items-center" onSubmit={handleSearchSubmit}>

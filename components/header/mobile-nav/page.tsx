@@ -102,14 +102,14 @@ export default function MobileNav() {
   };
   return (
     <div className="lg:hidden bg-black w-full h-min flex items-center justify-between px-10 py-4 z-50 max-md:h-[60px]">
-      <Link href="/" className="mr-[]">
-        <Image
-          className="max-md:w-[150px]"
-          src="/assets/logofptsh.png"
-          width={205}
-          height={100}
-          alt="logo fpt smart home"
-        />
+      <Link href="/" className="flex items-center justify-center gap-2">
+        <Image src="/assets/logomep-white.png" width={35} height={35} alt="" />
+        <div>
+          <h1 className="text-white font-semibold text-[20px]">MEPSHARING</h1>
+          <h1 className="text-white font-medium text-[8.5px] mt-[-8px]">
+            Nhà Phân Phối FPT Smart Home
+          </h1>
+        </div>
       </Link>
       <div className="flex items-center justify-center text-white gap-2 max-md:mr-[-25px] max-md:gap-0">
         <Sheet>

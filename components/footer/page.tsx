@@ -23,8 +23,8 @@ export default function Footer() {
                   alt=""
                 />
                 <p className="max-w-[200px]">
-                  4th floor, LA3 Astoria building - 383 Nguyen Duy Trinh, Binh
-                  Trung Tay Ward, City. Thu Duc, City. Ho Chi Minh, Vietnam
+                  Lầu 4, tòa nhà LA3 Astoria – 383 Nguyễn Duy Trinh, P. Bình
+                  Trưng Tây, TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam
                 </p>
               </div>
               <div className="flex items-center gap-6 font-light">
@@ -86,8 +86,8 @@ export default function Footer() {
         <div className="text-center w-full  flex-col items-center gap-3 hidden max-md:flex">
           <h1>MEPSHARING</h1>
           <h2>
-            Địa chỉ: 4th floor, LA3 Astoria building - 383 Nguyen Duy Trinh,
-            Binh Trung Tay Ward, City. Thu Duc, City. Ho Chi Minh, Vietnam
+            Lầu 4, tòa nhà LA3 Astoria – 383 Nguyễn Duy Trinh, P. Bình Trưng
+            Tây, TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam
           </h2>
           <h2> 0886 82 83 86 ( Anh Tuấn ) - Hỗ trợ trực tiếp </h2>
           <h2> Email: contact@mepsharing.com </h2>
