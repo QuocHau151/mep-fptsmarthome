@@ -8,11 +8,13 @@ export default function Footer() {
       <div className=" container w-full h-min text-gray-200 flex items-start justify-center py-[70px]  gap-20 max-lg:px-10 max-lg:flex-col max-lg:text-[13px] max-md:flex-col max-md:px-10 max-md:gap-10">
         <div className="flex flex-col justify-center  max-md:min-w-[10px] items-center my-auto mx-auto font-light gap-10  max-lg:gap-2">
           <Link href="/">
-            <h4 className="text-[50px] font-bold text-center">MEPSHARING</h4>
+            <h4 className="text-[50px] font-bold text-center max-md:text-[35px]">
+              MEPSHARING
+            </h4>
           </Link>
         </div>
         <div className="flex items-start justify-around gap-10 max-lg:flex-wrap max-lg:mx-auto  max-md:flex-nowrap max-md:border-b-[1px] max-md:border-white max-md:pb-10 max-md:gap-5 ">
-          <div className=" flex flex-col  gap-[35px] font-light mr-10  max-lg:mr-0  min-w-[150px] max-md:flex-col max-md:items-center max-md:hidden ">
+          <div className=" flex flex-col  gap-[35px] font-light   max-lg:mr-0  min-w-[150px] max-md:flex-col max-md:items-center max-md:hidden ">
             <h6 className="font-regular ">Contact</h6>
             <div className="flex flex-col  gap-[35px] font-light  ">
               <div className="flex items-center gap-6 ">
@@ -22,7 +24,7 @@ export default function Footer() {
                   height={24}
                   alt=""
                 />
-                <p className="max-w-[200px]">
+                <p className="">
                   Lầu 4, tòa nhà LA3 Astoria – 383 Nguyễn Duy Trinh, P. Bình
                   Trưng Tây, TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam
                 </p>
@@ -68,10 +70,10 @@ export default function Footer() {
               <li>Thiết bị an ninh thông minh</li>{" "}
             </ul>
           </div>
-          <div className="flex flex-col gap-8 font-light  min-w-[150px] max-md:min-w-[130px]">
+          <div className="flex flex-col gap-8 font-light  min-w-[170px] max-md:min-w-[130px]">
             <h6 className="font-regular">Customer Support</h6>
             <ul className=" flex flex-col gap-4">
-              <li>Hotline: </li>
+              <li>Hotline: 0886828386</li>
               <li>FAQ</li>
               <li>Đăng kí đại lý</li>
               <li>Chính sách bảo hành</li>

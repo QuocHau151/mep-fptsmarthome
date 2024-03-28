@@ -79,7 +79,7 @@ export default function Nav() {
   return (
     <div className=" max-lg:hidden   bg-black w-full h-[80px] ">
       <div className="container flex items-center h-full justify-between ">
-        <Link href="/" className="p-2 flex gap-2 items-center justify-center ">
+        <Link href="/" className=" flex gap-2 items-center justify-center ">
           <Image
             src="/assets/logomep-white.png"
             width={45}
